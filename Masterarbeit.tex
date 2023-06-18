@@ -1,0 +1,71 @@
+%\documentclass[12pt, a4paper]{article}
+
+\documentclass[fontsize=12pt, paper=a4, twoside=false, ]{scrreprt}
+
+\usepackage{lmodern}
+%\usepackage[onehalfspacing]{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+
+% to include sources, style
+\usepackage[style=ieee,natbib=true, backend=biber]{biblatex}
+
+% global layout
+\usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\widowpenalties=3 10000 10000 150
+\newcommand{\cparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\renewcommand{\baselinestretch}{1.1}
+\renewcommand*{\UrlFont}{\rmfamily}
+% settings for links, hyperrefs
+\usepackage[unicode=true,pdfusetitle,
+bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
+%\defbibheading{lit}{\section{Literaturverzeichnis}} \printbibliography[heading=lit]
+\addbibresource{bib.bib}
+\urlstyle{sf}
+
+
+\begin{document}
+	%\input{texes/Metadaten.tex}
+	%\input{texes/Titelseite.tex}
+	
+	\section*{}
+	\newpage
+	\pagestyle{empty}
+	
+	\tableofcontents
+	\pagebreak
+	\pagenumbering{arabic}
+
+	\section*{}
+	\newpage
+	\pagestyle{empty}
+	
+	%\input{texes/Saga.tex}
+	
+	\input{texes/Chapter1.tex}	
+	
+	\input{texes/Chapter2.tex}	
+	
+	\input{texes/Chapter3.tex}
+	
+	\input{texes/Chapter4.tex}
+	
+	\pagenumbering{Roman}
+	\pagebreak
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	\listoffigures
+	
+	\pagebreak
+	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+	\printbibliography
+	
+	\pagebreak
+	%\input{texes/Selbstständigkeitserklärung.tex}
+\end{document}

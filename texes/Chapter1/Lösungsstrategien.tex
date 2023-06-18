@@ -1,0 +1,22 @@
+\section{Lösungsstrategien}
+
+\subsection{Instrumente für Sicherstellung von Konsistenz in Monolithischen Anwendungen}
+- Definieren von Transaktionen
+- Folge von Anweisungen, die zusammen ausgeführt werden müssen
+- Commit oder Rollback
+- Unterstützung von Lokalen Transaktionen durch Datenbank-Transaktionen
+
+\subsection{Instrumente für Sicherstellung von Konsistenz in Verteilten Systemen}
+- Transaktion beinhaltet Aktion, die eine Abhängigkeit aufruft (zB Aufruf einer Http-Schnittstelle)
+- Zentrales Problem: Wie stelle ich sicher, dass ein Aufruf geklappt hat? Wie gehe ich vor, wenn eine Aktion einer Transaktion nicht geklappt hat?
+- 2 Phasen Commit als verteilte Umsetzung des Transaktionsvorgehens
+- Beschreibung
+- Nachteile: sehr hohe Chattines, sehr langsam, blockierend, geringer Throughput, komplexe Implementierung
+
+\subsection{Saga-Pattern}
+- Fehlerbehandlungsstrategie für monolithische und verteilte Systeme
+- Auflösen der atomarität der Transaktionen in einzelne lokale Transaktionen T
+- Definieren von Kompensationsaktionen C
+- jedes T hat ein C
+- sequentielle Ausführung der Ts
+- schlägt ein T fehl, kann ein entsprechendes C ausgeführt werden
