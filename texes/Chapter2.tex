@@ -5,7 +5,7 @@
 - Saga ist erfolgreich, wenn alle Ts erfolgreich ausgeführt werden -> Übergang von: Ausgangszustand -> Ausführung T1 -> Ausführung T2 -> Endzustand
 - Saga ist fehlgeschlagen, wenn ein T fehlschlägt
 - Ausführung der Cs
-- Systemzustand ist danach immernoch konsistent
+- Systemzustand ist danach immer noch konsistent
 - Backward Recovery: Alle Ts, die ausgeführt wurden, werden durch Ausführung des entsprechenden Cs gerollbackt
 - Forward Recovery: Einführung von Save Points zwischen den Ausführungen (zB T1-T5, Checkpoint nach T2 und Checkpoint nach T3)
 - Fehler in T3 führt zu Rollback bis letztem Save Point S1 (entspricht Ausführung von C3, Zustand nach Ausführung nach T1 und T2)

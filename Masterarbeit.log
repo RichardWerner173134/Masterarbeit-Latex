@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  18 JUN 2023 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  22 JUL 2023 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -763,36 +763,36 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 {C:/Users/richa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/2_Programm
 e/Office/latex/miktex/fonts/enc/dvips/lm/lm-ec.enc}] (Masterarbeit.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
 .
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
 .
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-3.
+4.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-3.
+4.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
+(Font)              <6> on input line 4.
 )
 \tf@toc=\write5
 \openout5 = `Masterarbeit.toc'.
@@ -805,27 +805,36 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.47 	\newpage
-               [1] (texes/Chapter1.tex
+               [1] (texes/Einleitung.tex
 chapter 1.
-(texes/Chapter1/Grundlagenzeugs.tex) (texes/Chapter1/Lösungsstrategien.tex))
-(texes/Chapter2.tex
+) (texes/Chapter1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Saga Pattern} [2
-
-] [3]
-chapter 2.
-) (texes/Chapter3.tex [4
+            {System, Konsistenz, Lösungsstrategien} [2
 
 ]
+chapter 2.
+(texes/Chapter1/Grundlagen.tex [3
+
+]
+Overfull \hbox (1.33565pt too wide) in paragraph at lines 39--40
+[]\T1/lmr/m/n/12 Dauerhaftigkeit von Trans-ak-tio-nen muss ge-w�hr-lei-stet sei
+n, da-mit bei ei-nem Aus-fall Trans-
+ []
+
+[4]) (texes/Chapter1/Lösungsstrategien.tex)) (texes/Chapter2.tex [5]
 chapter 3.
-) (texes/Chapter4.tex [5
+) (texes/Chapter3.tex [6
 
 ]
 chapter 4.
+) (texes/Chapter4.tex [7
+
+]
+chapter 5.
 ) [1
 
 ] (Masterarbeit.lof)
@@ -836,7 +845,7 @@ chapter 4.
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 67.
+LaTeX Warning: Empty bibliography on input line 69.
 
 (Masterarbeit.aux)
 Package rerunfilecheck Info: File `Masterarbeit.out' has not changed.
@@ -846,18 +855,19 @@ Package logreq Info: Writing requests to 'Masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20033 strings out of 476331
- 378702 string characters out of 5792455
- 1856660 words of memory out of 5000000
- 40200 multiletter control sequences out of 15000+600000
- 540465 words of font info for 49 fonts, out of 8000000 for 9000
+ 20056 strings out of 476331
+ 379001 string characters out of 5792455
+ 1862660 words of memory out of 5000000
+ 40210 multiletter control sequences out of 15000+600000
+ 544727 words of font info for 50 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,7n,106p,10909b,1926s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmr12.pfb><C:/2_Pro
-gramme/Office/latex/miktex/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on Masterarbeit.pdf (9 pages, 89442 bytes).
+gramme/Office/latex/miktex/fonts/type1/public/lm/lmri12.pfb><C:/2_Programme/Off
+ice/latex/miktex/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on Masterarbeit.pdf (11 pages, 120014 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
