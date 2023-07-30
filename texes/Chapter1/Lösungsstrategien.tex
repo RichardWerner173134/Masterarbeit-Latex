@@ -1,22 +1,46 @@
-\section{Lösungsstrategien}
+\section{Methoden für die Sicherstellung von Konsistenz}
 
-\subsection{Instrumente für Sicherstellung von Konsistenz in Monolithischen Anwendungen}
-- Definieren von Transaktionen
-- Folge von Anweisungen, die zusammen ausgeführt werden müssen
-- Commit oder Rollback
-- Unterstützung von Lokalen Transaktionen durch Datenbank-Transaktionen
+Um einen konsistenten Zustand zu gewährleisten gibt es verschiedene Werkzeuge. Dazu gehören vor allem die Unterstützung von lokalen Transaktionen der Datenbank und der 2 Phasencommit. In diesem Abschnitt werden die (...) beschrieben. %TODO welche Unterkapitel werden hier beschrieben
 
-\subsection{Instrumente für Sicherstellung von Konsistenz in Verteilten Systemen}
-- Transaktion beinhaltet Aktion, die eine Abhängigkeit aufruft (zB Aufruf einer Http-Schnittstelle)
-- Zentrales Problem: Wie stelle ich sicher, dass ein Aufruf geklappt hat? Wie gehe ich vor, wenn eine Aktion einer Transaktion nicht geklappt hat?
+% TODO DBMS
+\subsection{Transaktionen auf Datenbankebene}
+Eine lokale Transaktion einer Anwendung wird oft durch eine Nacheinanderausführung von SQL-Statements realisiert. Zu Beginn wird dem DBMS signalisiert, dass die folgenden Operationen als atomare Transaktion zu interpretieren sind. Analog dazu gibt es ein Signal, welches das Ende einer solchen Folge markiert, den \textit{Commit}. Tritt vor Erreichen des Commits ein Fehler auf, wird ein \textit{Rollback} ausgeführt. Dieser Rollback überführt die Daten in den Zustand vor Beginn der Transaktion. Die Datenbank 
+- Transaktion
+- Begin
+- Commit
+- Rollback
+- Aufruf aus der Anwendung
+
+\subsection{Transaktionen auf Anwendungsebene}
+- Operation ist ein Funktionsaufruf
+- Verkettung ist mittels try-catch Block behandelbar
+- Verantwortung des Entwicklers, dass alle Operationen erfolgreich sind 
+- Verantwortung des Entwicklers, Fehler zu behandeln
+- Abwicklung der Transaktion per DBMS Transaktionen sinnvoll
+
+\subsection{Grenzen der Konsistenz in Verteilten Systemen}
+- Transaktion kann Aktion beinhalten, die eine Abhängigkeit aufruft (zB Aufruf einer externen Http-Schnittstelle)
+- Zentrales Problem: Wie stelle ich sicher, dass ein Aufruf angekommen ist? ..., dass der Aufruf erfolgreich war? Wie gehe ich vor, wenn eine Aktion einer Transaktion nicht geklappt hat?
+- Folge von abhängigen Operationen (= Substitution: Ergebnis eines Aufrufs ist Argument der nächsten Aufrufs)
+
+\subsection{2 Phasencommit}
 - 2 Phasen Commit als verteilte Umsetzung des Transaktionsvorgehens
-- Beschreibung
+- zentraler Koordinator
+- Vorbereitungsphase: Alle teilhabende Akteure der Transaktion geben dem Koordinator die Bestätigung, dass die Operation ausgeführt werden kann. Damit sie dieses Versprechen halten können, beinhalten die Vorbereitungen oft Blockierungen auf Datenbankseite.
+- Commitphase: Koordinator gibt den Teilhabenden das Signal, ihre Operation auszuführen. Bei Erfolg werden auch alle Blockierungen aufgehoben. Die Transaktion wird als erfolgreich markiert.
+- Optionale Rollbackphase: Falls ein Teilhabender einen Fehler zurückgibt, werden alle ausgeführten Änderungen zurückgenommen (Rollback). Danach wird die Transaktion als abgebrochen markiert. Alle Blockierungen müssen zurückgenommen werden.
 - Nachteile: sehr hohe Chattines, sehr langsam, blockierend, geringer Throughput, komplexe Implementierung
 
 \subsection{Saga-Pattern}
 - Fehlerbehandlungsstrategie für monolithische und verteilte Systeme
-- Auflösen der atomarität der Transaktionen in einzelne lokale Transaktionen T
+- Auflösen der Atomarität der Transaktionen in einzelne lokale Transaktionen T
 - Definieren von Kompensationsaktionen C
 - jedes T hat ein C
 - sequentielle Ausführung der Ts
 - schlägt ein T fehl, kann ein entsprechendes C ausgeführt werden
+
+\subsection{Vergleich von 2 Phasencommit und Sagas}
+- In welcher Ebene wird der Fehler erkannt
+- Wird der Fehler zugelassen
+- In welcher Ebene wird der Fehler behoben
+- Gleichzeitig(atomare Operationen durch 2PC gleichzeitig auslösen) vs sequentiell (Atomarität wird ersetzt durch sequentielle Operationen, die einzeln behandelt werden können)

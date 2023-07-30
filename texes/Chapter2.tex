@@ -1,6 +1,15 @@
 \chapter{Saga Pattern}
 
-\section{Grundprinzipien}
+% TODO Referenzierung des ursprünglichen Papers - 1987
+
+\section{Allgemeine Probleme verteilter Transaktionen bei lang bestehenden Transaktionen}
+
+- "Long Lived Transactions"
+- Zentrales Problem: Locks in der Datenbank
+
+\section{Funktionsweise}
+
+
 
 - Saga ist erfolgreich, wenn alle Ts erfolgreich ausgeführt werden -> Übergang von: Ausgangszustand -> Ausführung T1 -> Ausführung T2 -> Endzustand
 - Saga ist fehlgeschlagen, wenn ein T fehlschlägt
@@ -22,6 +31,15 @@
 
 \subsection{Transaktionslog}
 
-\section{Orchestration und Choreographie}
 
-\section{Asynchronität}
+
+\section{Implementierungsstrategie}
+
+\subsection{Orchestration}
+
+\subsection{Choreographie}
+
+\section{Abwägung - wann 2PC und wann Saga}
+
+\section{Abwägung - Wann Orchestration und wann Choreographie}
+
