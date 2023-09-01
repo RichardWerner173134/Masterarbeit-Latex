@@ -1,11 +1,61 @@
 \chapter{Einleitung}
 
-- Transaktionen sind kritischer Bestandteil von vielen Anwendungen
-- In verteilten Systemen ist Konsistenz schwierig zu erreichen
-- Microservices bedeutet: Aufteilung des Systems in verschiedene Domänen
-- Fehlerbehandlung wird komplex
-- Ein System sollte sein: responsiveness, resilience, elasticity and asynchronous message passing
-- außerdem: ACID Garantie
-- 2PC: blockierend
+\section{Motivation}
 
-alles aus Quelle The Saga Pattern in a Reactive Microservices Environment
+Wieso, Weshalb, Warum?
+
+\section{Zielsetzung dieser Arbeit}
+
+These: Mittels Saga-Pattern implementierte lang andauernde Transaktionen (LLT) ermöglichen (k)eine ausfallsichere Konsistenz in Microservicesystemen. 
+
+Leitfragen: 
+Wie kann mithilfe von BASE-Eigenschaft und Softstate ausfallsichere Konsistenz hergestellt werden?
+
+(Wie) kann der 2 Phasencommit in eine Saga-Architektur integriert werden?
+
+\section{Aufbau dieser Arbeit}
+
+\begin{itemize}
+	\item Kapitel 1: Theoretische Grundlagen
+	\item Kapitel 2: Methodik
+	\begin{itemize}
+		\item Entwurf und Implementierung eines reinen Saga-Systems
+		\item Abänderung der Implementierung durch 
+		\begin{itemize}
+			\item Saga-Werkzeuge (Checkpoints, Recovery Mechanismen)
+			\item 2 Phasencommit
+		\end{itemize}
+		\item Bewertung der Systeme
+		\begin{itemize}
+			\item Wie Fehleranfällig ist das System?
+			\begin{itemize}
+				\item Welche Single-Point-of-Failures gibt es?
+				\item Welche Recovery-Mechanismen gibt es?
+				\item Welche Datenanomalien sind die Folge eines Ausfalls?
+			\end{itemize}
+			\item Wie komplex ist das System?
+			\item Wie hoch ist der Netzwerkverkehr? (Anzahl der benötigten Requests)
+			\begin{itemize}
+				\item Wie performant ist der Happy-Path? 
+				\item Wie performant ist der Sad-Path?	
+			\end{itemize}
+		\end{itemize}
+		\item Erläuterung des Mess- und Bewertungsvorgangs
+	\end{itemize}
+	\item Kapitel 3: Ergebnisse aus Kapitel 2
+	\item Kapitel 4: Diskussion - Bewerten der Ergebnisse in Bezug auf die These und der Leitfragen; Beantwortung der These und der Leitfragen
+	
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+

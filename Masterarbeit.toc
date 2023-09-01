@@ -1,37 +1,40 @@
 \babel@toc {german}{}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Grundlagen}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}System allgemein}{3}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}System in der Softwareentwicklung}{3}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Zustand von Systemen}{3}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Sichten auf Systeme}{3}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Transaktionen}{3}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}ACID Eigenschaft von Transaktionen}{4}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Konsistenz auf Datenbankebene}{4}{subsection.2.1.7}%
-\contentsline {section}{\numberline {2.2}Methoden für die Sicherstellung von Konsistenz}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Transaktionen auf Datenbankebene}{5}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Transaktionen auf Anwendungsebene}{5}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Grenzen der Konsistenz in Verteilten Systemen}{5}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}2 Phasencommit}{5}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Saga-Pattern}{6}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Vergleich von 2 Phasencommit und Sagas}{6}{subsection.2.2.6}%
-\contentsline {chapter}{\numberline {3}Saga Pattern}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Allgemeine Probleme verteilter Transaktionen bei lang bestehenden Transaktionen}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Funktionsweise}{7}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Ts und Cs}{7}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Forward Recovery}{7}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Backward Recovery}{7}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Saga Execution Component}{7}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Transaktionslog}{7}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Implementierungsstrategie}{7}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Orchestration}{7}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Choreographie}{7}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Abwägung - wann 2PC und wann Saga}{7}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Abwägung - Wann Orchestration und wann Choreographie}{7}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Design}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Design Choreografie}{8}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Design Orchestration}{8}{section.4.2}%
+\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Zielsetzung dieser Arbeit}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Aufbau dieser Arbeit}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Grundlagen}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Grundlagen}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}System allgemein}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}System in der Softwareentwicklung}{4}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Zustand von Systemen}{4}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Sichten auf Systeme}{4}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Transaktionen}{4}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}ACID Eigenschaft von Transaktionen}{5}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Konsistenz auf Datenbankebene}{5}{subsection.2.1.7}%
+\contentsline {section}{\numberline {2.2}Methoden für die Sicherstellung von Konsistenz}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Transaktionen auf Datenbankebene}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Transaktionen auf Anwendungsebene}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Grenzen der Konsistenz in Verteilten Systemen}{6}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}2 Phasencommit}{6}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Saga-Pattern}{7}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Vergleich von 2 Phasencommit und Sagas}{7}{subsection.2.2.6}%
+\contentsline {chapter}{\numberline {3}Saga Pattern}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Allgemeine Probleme verteilter Transaktionen bei lang bestehenden Transaktionen}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Funktionsweise}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Ts und Cs}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Forward Recovery}{8}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Backward Recovery}{8}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Saga Execution Component}{8}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Transaktionslog}{8}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Implementierungsstrategie}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Orchestration}{8}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Choreographie}{8}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Abwägung - wann 2PC und wann Saga}{8}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Abwägung - Wann Orchestration und wann Choreographie}{8}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Design}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Design Choreografie}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Design Orchestration}{9}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Implementierung}{I}{chapter.5}%
 \contentsline {chapter}{Abbildungsverzeichnis}{II}{chapter.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
