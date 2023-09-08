@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  11 AUG 2023 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  8 SEP 2023 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,7 +207,27 @@ Package babel Info: Making " an active character on input line 139.
 x
 Package babel Info: Importing font and identification data for german
 (babel)             from babel-de-1901.ini. Reported on input line 25.
-) (C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.sty
+) (C:\2_Programme\Office\latex\miktex\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (C:\2_Programme\Office\latex\miktex\tex/generic/pdftexcmds\pdftexcmds.sty
@@ -523,14 +543,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count395
 \Gm@cntv=\count396
 \c@Gm@tempcnt=\count397
-\Gm@bindingoffset=\dimen142
-\Gm@wd@mp=\dimen143
-\Gm@odd@mp=\dimen144
-\Gm@even@mp=\dimen145
-\Gm@layoutwidth=\dimen146
-\Gm@layoutheight=\dimen147
-\Gm@layouthoffset=\dimen148
-\Gm@layoutvoffset=\dimen149
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
 \Gm@dimlist=\toks19
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/geometry\geometry.cfg))
@@ -564,7 +584,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count398
 )
-\@linkdim=\dimen150
+\@linkdim=\dimen152
 \Hy@linkcounter=\count399
 \Hy@pagecounter=\count400
  (C:\2_Programme\Office\latex\miktex\tex/latex/hyperref\pd1enc.def
@@ -602,7 +622,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
 \c@Hy@tempcnt=\count402
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen151
+\XeTeXLinkMargin=\dimen153
 
 (C:\2_Programme\Office\latex\miktex\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -612,8 +632,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count403
-\Field@Width=\dimen152
-\Fld@charsize=\dimen153
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -663,24 +683,46 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (Masterarbeit.aux)
 \openout1 = `Masterarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+
+(C:\2_Programme\Office\latex\miktex\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count411
+\scratchdimen=\dimen156
+\scratchbox=\box54
+\nofMPsegments=\count412
+\nofMParguments=\count413
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count414
+\MPscratchDim=\dimen157
+\MPnumerator=\count415
+\makeMPintoPDFobject=\count416
+\everyMPtoPDFconversion=\toks21
+) (C:\2_Programme\Office\latex\miktex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
@@ -696,8 +738,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Masterarbeit.bbl' found.
 
 (Masterarbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 34.
-Package biblatex Info: Reference segment=0 on input line 34.
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -733,7 +775,7 @@ Package biblatex Info: Reference segment=0 on input line 34.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 34.
+Package hyperref Info: Link coloring OFF on input line 35.
 (Masterarbeit.out) (Masterarbeit.out)
 \@outlinefile=\write4
 \openout4 = `Masterarbeit.out'.
@@ -745,17 +787,17 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 34.
+(scrreprt)           before \begin{document} on input line 35.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count411
+\BKM@id=\count417
 ))
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 3
-8.
+9.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -795,16 +837,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 3.
  [2
 
-])
+] [3])
 \tf@toc=\write5
 \openout5 = `Masterarbeit.toc'.
 
- [3]
+ [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 	\newpage
+l.48 	\newpage
                [1] (texes/Einleitung.tex
 chapter 1.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
@@ -821,14 +863,14 @@ l.1 \chapter
             {Grundlagen} [2
 
 {C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-ts1.enc}]
+chapter 2.
+(texes/Chapter1/Grundlagen.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Grundlagen} [3]
-chapter 2.
-(texes/Chapter1/Grundlagen.tex [4
+l.29 \subsection
+                {ACID Eigenschaft von Transaktionen} [3
 
 ]
 Overfull \hbox (1.33565pt too wide) in paragraph at lines 38--39
@@ -836,19 +878,44 @@ Overfull \hbox (1.33565pt too wide) in paragraph at lines 38--39
 n, da-mit bei ei-nem Aus-fall Trans-
  []
 
-) (texes/Chapter1/Lösungsstrategien.tex [5] [6])) (texes/Chapter2.tex [7]
+) (texes/Chapter1/Lösungsstrategien.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \section
+            {Methoden für die Sicherstellung von Konsistenz} [4] [5])
+(texes/Chapter1/SagaPattern.tex)) (texes/Chapter2.tex [6] [7]
 chapter 3.
-) (texes/Chapter3.tex [8
+(texes/ChapterMethodik/Zielstellung.tex)
+(texes/ChapterMethodik/Bewertungsprozess.tex [8
 
-]
+])) (texes/Chapter3.tex [9]
 chapter 4.
-) (texes/Chapter4.tex [9
+(texes/ChapterImplementierung1/Implementierungsentwurf.tex
+<figures/SimplifiedBusinessProcess.png, id=228, 1230.5975pt x 201.75375pt>
+File: figures/SimplifiedBusinessProcess.png Graphic file (type png)
+<use figures/SimplifiedBusinessProcess.png>
+Package pdftex.def Info: figures/SimplifiedBusinessProcess.png  used on input l
+ine 12.
+(pdftex.def)             Requested size: 455.24417pt x 74.63539pt.
+ [10
+
+ <./figures/SimplifiedBusinessProcess.png>]
+Overfull \hbox (78.88513pt too wide) in paragraph at lines 31--40
+[][] 
+ []
+
+[11{C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathit.enc}{C:/2_P
+rogramme/Office/latex/miktex/fonts/enc/dvips/lm/lm-rm.enc}] [12] [13] [14{C:/2_
+Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathsy.enc}] [15])
+(texes/ChapterImplementierung1/Implementierung.tex)) (texes/Chapter4.tex
+[16]
+chapter 5.
+(texes/ChapterImplementierung2/ImplementierungsentwurfOptimiert.tex)) [1
 
 ]
-chapter 5.
-) [1
-
-] (Masterarbeit.lof)
+(Masterarbeit.lof)
 \tf@lof=\write6
 \openout6 = `Masterarbeit.lof'.
 
@@ -856,7 +923,7 @@ chapter 5.
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 69.
+LaTeX Warning: Empty bibliography on input line 70.
 
 (Masterarbeit.aux)
 Package rerunfilecheck Info: File `Masterarbeit.out' has not changed.
@@ -866,20 +933,23 @@ Package logreq Info: Writing requests to 'Masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20115 strings out of 476331
- 380138 string characters out of 5792455
- 1865660 words of memory out of 5000000
- 40253 multiletter control sequences out of 15000+600000
+ 21121 strings out of 476331
+ 397146 string characters out of 5792455
+ 1868660 words of memory out of 5000000
+ 41133 multiletter control sequences out of 15000+600000
  548100 words of font info for 52 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,7n,106p,10909b,2172s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmbx12.pfb><C:/2_Pr
-ogramme/Office/latex/miktex/fonts/type1/public/lm/lmr12.pfb><C:/2_Programme/Off
-ice/latex/miktex/fonts/type1/public/lm/lmri12.pfb><C:/2_Programme/Office/latex/
-miktex/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on Masterarbeit.pdf (14 pages, 139254 bytes).
+ogramme/Office/latex/miktex/fonts/type1/public/lm/lmmi12.pfb><C:/2_Programme/Of
+fice/latex/miktex/fonts/type1/public/lm/lmr12.pfb><C:/2_Programme/Office/latex/
+miktex/fonts/type1/public/lm/lmr8.pfb><C:/2_Programme/Office/latex/miktex/fonts
+/type1/public/lm/lmri12.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/pub
+lic/lm/lmssbx10.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/l
+msy10.pfb>
+Output written on Masterarbeit.pdf (22 pages, 239195 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 686 words of extra memory for PDF output out of 10000 (max. 10000000)
 

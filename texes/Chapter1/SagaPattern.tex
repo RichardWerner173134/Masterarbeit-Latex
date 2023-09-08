@@ -1,0 +1,40 @@
+\section{Saga Pattern}
+
+\section{Was sind die Probleme, die in verteilten ACID Transaktionen auftreten?}
+%TODO
+Im Grundlagenkapitel wurden die mit dem ACID-Konsistenzprinzip einhergehenden Probleme dargestellt:
+\begin{itemize}
+	\item Blockierung der Ressourcen
+	\item Viele Netzwerkaufrufe - Chattiness
+	\item Enge Kopplung der Dienste - 
+\end{itemize}
+\section{Woher kommt es?}
+Referenzierung des Papers 1987 Garcia
+
+\section{Bestandteile des Musters}
+\subsection{Aufteilung der Transaktion in lokale Transaktionen, Nacheinanderausführung}
+
+\subsection{Cs und Ts - Kompensierungen}
+
+\subsection{Betrachtung des Zustands nach Erfolg/Misserfolg}
+
+\subsection{Recovery-Mechanismen}
+\subsubsection{Forward Recovery}
+\subsubsection{Backward Recovery}
+\subsubsection{Save-Points}
+
+\subsection{Ausprägungen des Patterns}
+\subsubsection{Orchestration}
+
+
+\subsubsection{Choreografie}
+
+\section{Anwendungsgebiete des Patterns - Welche Usecases erlauben die Verwendung dieses Patterns? Welche nicht?}
+
+\subsection{Langlebige Transaktionen - LLT}
+\subsection{Bezug auf den Geschäftsprozess}
+\subsection{Verteilte Systemlandschaft}
+\subsection{Reaktion auf verschiedene Antwortmöglichkeiten in der Geschäftslogik}
+\subsection{Fehlerfälle - Geschäftslogik und Ausfälle}
+Hier soll der Unterschied zwischen Fehlern in der Geschäftslogik und Fehler aufgrund Ausfällen erläutert werden.
+
