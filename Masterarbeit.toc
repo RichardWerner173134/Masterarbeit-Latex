@@ -8,78 +8,86 @@
 \contentsline {subsection}{\numberline {2.1.1}System allgemein}{3}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}System in der Softwareentwicklung}{3}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Zustand von Systemen}{3}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Sichten auf Systeme}{3}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Transaktionen}{3}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}ACID Eigenschaft von Transaktionen}{4}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Konsistenz auf Datenbankebene}{4}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.4}Transaktionen}{3}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}ACID Eigenschaft von Transaktionen}{4}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Konsistenz auf Datenbankebene}{4}{subsection.2.1.6}%
 \contentsline {section}{\numberline {2.2}Methoden für die Sicherstellung von Konsistenz}{5}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Transaktionen auf Datenbankebene}{5}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Transaktionen auf Anwendungsebene}{5}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Grenzen der Konsistenz in Verteilten Systemen}{5}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}2 Phasencommit}{5}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Saga-Pattern}{6}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Vergleich von 2 Phasencommit und Sagas}{6}{subsection.2.2.6}%
 \contentsline {section}{\numberline {2.3}Saga Pattern}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Was sind die Probleme, die in verteilten ACID Transaktionen auftreten?}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Woher kommt es?}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Bestandteile des Musters}{7}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Aufteilung der Transaktion in lokale Transaktionen, Nacheinanderausführung}{7}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Cs und Ts - Kompensierungen}{7}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Betrachtung des Zustands nach Erfolg/Misserfolg}{7}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Recovery-Mechanismen}{7}{subsection.2.6.4}%
-\contentsline {subsubsection}{\numberline {2.6.4.1}Forward Recovery}{7}{subsubsection.2.6.4.1}%
-\contentsline {subsubsection}{\numberline {2.6.4.2}Backward Recovery}{7}{subsubsection.2.6.4.2}%
-\contentsline {subsubsection}{\numberline {2.6.4.3}Save-Points}{7}{subsubsection.2.6.4.3}%
-\contentsline {subsection}{\numberline {2.6.5}Ausprägungen des Patterns}{7}{subsection.2.6.5}%
-\contentsline {subsubsection}{\numberline {2.6.5.1}Orchestration}{7}{subsubsection.2.6.5.1}%
-\contentsline {subsubsection}{\numberline {2.6.5.2}Choreografie}{7}{subsubsection.2.6.5.2}%
-\contentsline {section}{\numberline {2.7}Anwendungsgebiete des Patterns - Welche Usecases erlauben die Verwendung dieses Patterns? Welche nicht?}{7}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Langlebige Transaktionen - LLT}{7}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Bezug auf den Geschäftsprozess}{7}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Verteilte Systemlandschaft}{7}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Reaktion auf verschiedene Antwortmöglichkeiten in der Geschäftslogik}{7}{subsection.2.7.4}%
-\contentsline {subsection}{\numberline {2.7.5}Fehlerfälle - Geschäftslogik und Ausfälle}{7}{subsection.2.7.5}%
-\contentsline {chapter}{\numberline {3}Methodik}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Zielstellung}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Bewertungskriterien}{8}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Anzahl der Pfade}{8}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Anzahl der Netzwerkaufrufe}{9}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Wahrscheinlichkeit für Ausfall}{9}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Konsistenzerhaltung im Falle eines Ausfalls der Nichtkoordinierenden Services}{9}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Konsistenzerhaltung im Falle eines Koordinatorausfalls}{9}{subsection.3.2.5}%
-\contentsline {chapter}{\numberline {4}Erstes Saga-System}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Entwurf des abzubildenden Geschäftsprozesses}{10}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Geschäftsprozess}{10}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Services}{11}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Transaktionen}{11}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Spezifikation der Services}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Frontend}{12}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Funktionalitäten}{12}{subsubsection.4.2.1.1}%
-\contentsline {subsection}{\numberline {4.2.2}ArticleService}{12}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Funktionalitäten}{12}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Endpunkte}{13}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Datenbanktabellen}{13}{subsubsection.4.2.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}Kompensierung}{13}{subsubsection.4.2.2.4}%
-\contentsline {subsection}{\numberline {4.2.3}StockService}{13}{subsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.1}Funktionalitäten}{13}{subsubsection.4.2.3.1}%
-\contentsline {paragraph}{\numberline {4.2.3.1.1}Darstellung des aktuellen Lagerbestands}{13}{paragraph.4.2.3.1.1}%
-\contentsline {paragraph}{\numberline {4.2.3.1.2}Reservierung von Artikeln}{13}{paragraph.4.2.3.1.2}%
-\contentsline {paragraph}{\numberline {4.2.3.1.3}Auslösen einer Lieferung}{13}{paragraph.4.2.3.1.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.2}Endpunkte}{14}{subsubsection.4.2.3.2}%
-\contentsline {subsubsection}{\numberline {4.2.3.3}Datenbanktabellen}{14}{subsubsection.4.2.3.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.4}Kompensierung}{14}{subsubsection.4.2.3.4}%
-\contentsline {subsection}{\numberline {4.2.4}BankingServices}{14}{subsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.4.1}Funktionalitäten}{14}{subsubsection.4.2.4.1}%
-\contentsline {subsubsection}{\numberline {4.2.4.2}Endpunkte}{15}{subsubsection.4.2.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.4.3}Datenbanktabellen}{15}{subsubsection.4.2.4.3}%
-\contentsline {subsubsection}{\numberline {4.2.4.4}Kompensierung}{15}{subsubsection.4.2.4.4}%
-\contentsline {section}{\numberline {4.3}OrderService}{15}{section.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.0.1}Funktionalitäten}{15}{subsubsection.4.3.0.1}%
-\contentsline {subsubsection}{\numberline {4.3.0.2}Endpunkte}{15}{subsubsection.4.3.0.2}%
-\contentsline {subsubsection}{\numberline {4.3.0.3}Datenbanktabellen}{16}{subsubsection.4.3.0.3}%
-\contentsline {subsubsection}{\numberline {4.3.0.4}Durchlauf einer erfolgreichen Saga}{16}{subsubsection.4.3.0.4}%
-\contentsline {subsubsection}{\numberline {4.3.0.5}Durchlauf einer gescheiterten, kompensierten Saga}{16}{subsubsection.4.3.0.5}%
-\contentsline {subsubsection}{\numberline {4.3.0.6}Durchlauf einer gescheiterten, nichtkompensierten Saga}{16}{subsubsection.4.3.0.6}%
+\contentsline {subsection}{\numberline {2.3.1}Was sind die Probleme, die in verteilten ACID Transaktionen auftreten?}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Woher kommt es?}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Bestandteile des Musters}{6}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Vereinfachtes Grundprinzip}{6}{subsubsection.2.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.3.2}Anforderungen an Ts und Cs}{6}{subsubsection.2.3.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3.3}Saga Execution Component}{8}{subsubsection.2.3.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.4}Formalisierung eines Saga-Zustandsautomaten als DEA}{8}{subsubsection.2.3.3.4}%
+\contentsline {paragraph}{\numberline {2.3.3.4.1}Formale Darstellung eines DEA}{8}{paragraph.2.3.3.4.1}%
+\contentsline {paragraph}{\numberline {2.3.3.4.2}Saga als formale Sprache}{8}{paragraph.2.3.3.4.2}%
+\contentsline {paragraph}{\numberline {2.3.3.4.3}Überführung einer Saga in einen DEA}{8}{paragraph.2.3.3.4.3}%
+\contentsline {paragraph}{\numberline {2.3.3.4.4}Konfiguration}{9}{paragraph.2.3.3.4.4}%
+\contentsline {subsubsection}{\numberline {2.3.3.5}Betrachtung des Zustands nach Erfolg/Misserfolg}{9}{subsubsection.2.3.3.5}%
+\contentsline {paragraph}{\numberline {2.3.3.5.1}Endzustand $q_{f1}$}{10}{paragraph.2.3.3.5.1}%
+\contentsline {paragraph}{\numberline {2.3.3.5.2}Endzustand $q_{f2}$}{10}{paragraph.2.3.3.5.2}%
+\contentsline {paragraph}{\numberline {2.3.3.5.3}Endzustand $q_{f3}$}{11}{paragraph.2.3.3.5.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.6}Unterschiede des Saga-Modells zu Hector Garcia-Molinas Definition}{11}{subsubsection.2.3.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.3.7}Recovery-Mechanismen}{11}{subsubsection.2.3.3.7}%
+\contentsline {paragraph}{\numberline {2.3.3.7.1}Backward Recovery}{11}{paragraph.2.3.3.7.1}%
+\contentsline {paragraph}{\numberline {2.3.3.7.2}Forward Recovery}{11}{paragraph.2.3.3.7.2}%
+\contentsline {paragraph}{\numberline {2.3.3.7.3}Voraussetzung für Forward-Recovery}{14}{paragraph.2.3.3.7.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.8}Implementierungsformen des Patterns}{14}{subsubsection.2.3.3.8}%
+\contentsline {paragraph}{\numberline {2.3.3.8.1}Orchestration}{14}{paragraph.2.3.3.8.1}%
+\contentsline {paragraph}{\numberline {2.3.3.8.2}Choreografie}{15}{paragraph.2.3.3.8.2}%
+\contentsline {paragraph}{\numberline {2.3.3.8.3}Kommunikationsstrategien}{15}{paragraph.2.3.3.8.3}%
+\contentsline {subsection}{\numberline {2.3.4}Anwendungsgebiete des Patterns - Welche Usecases erlauben die Verwendung dieses Patterns? Welche nicht?}{16}{subsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.4.1}Langlebige Transaktionen - LLT}{16}{subsubsection.2.3.4.1}%
+\contentsline {subsubsection}{\numberline {2.3.4.2}Bezug auf den Geschäftsprozess}{16}{subsubsection.2.3.4.2}%
+\contentsline {subsubsection}{\numberline {2.3.4.3}Verteilte Systemlandschaft}{16}{subsubsection.2.3.4.3}%
+\contentsline {subsubsection}{\numberline {2.3.4.4}Reaktion auf verschiedene Antwortmöglichkeiten in der Geschäftslogik}{16}{subsubsection.2.3.4.4}%
+\contentsline {subsubsection}{\numberline {2.3.4.5}Fehlerfälle - Geschäftslogik und Ausfälle}{16}{subsubsection.2.3.4.5}%
+\contentsline {chapter}{\numberline {3}Methodik}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Zielstellung}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Bewertungskriterien}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Anzahl der Pfade}{17}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Anzahl der Netzwerkaufrufe}{18}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Wahrscheinlichkeit für Ausfall}{18}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Konsistenzerhaltung im Falle eines Ausfalls der Nichtkoordinierenden Services}{18}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Konsistenzerhaltung im Falle eines Koordinatorausfalls}{18}{subsection.3.2.5}%
+\contentsline {chapter}{\numberline {4}Erstes Saga-System}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Entwurf des abzubildenden Geschäftsprozesses}{19}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Geschäftsprozess}{19}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Services}{20}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Transaktionen}{20}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Spezifikation der Services}{21}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Frontend}{21}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Funktionalitäten}{21}{subsubsection.4.2.1.1}%
+\contentsline {subsection}{\numberline {4.2.2}ArticleService}{21}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Funktionalitäten}{21}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Endpunkte}{22}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Datenbanktabellen}{22}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}Kompensierung}{22}{subsubsection.4.2.2.4}%
+\contentsline {subsection}{\numberline {4.2.3}StockService}{22}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Funktionalitäten}{22}{subsubsection.4.2.3.1}%
+\contentsline {paragraph}{\numberline {4.2.3.1.1}Darstellung des aktuellen Lagerbestands}{22}{paragraph.4.2.3.1.1}%
+\contentsline {paragraph}{\numberline {4.2.3.1.2}Reservierung von Artikeln}{22}{paragraph.4.2.3.1.2}%
+\contentsline {paragraph}{\numberline {4.2.3.1.3}Auslösen einer Lieferung}{22}{paragraph.4.2.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}Endpunkte}{23}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}Datenbanktabellen}{23}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}Kompensierung}{23}{subsubsection.4.2.3.4}%
+\contentsline {subsection}{\numberline {4.2.4}BankingServices}{23}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}Funktionalitäten}{23}{subsubsection.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}Endpunkte}{24}{subsubsection.4.2.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.4.3}Datenbanktabellen}{24}{subsubsection.4.2.4.3}%
+\contentsline {subsubsection}{\numberline {4.2.4.4}Kompensierung}{24}{subsubsection.4.2.4.4}%
+\contentsline {section}{\numberline {4.3}OrderService}{24}{section.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.0.1}Funktionalitäten}{24}{subsubsection.4.3.0.1}%
+\contentsline {subsubsection}{\numberline {4.3.0.2}Endpunkte}{24}{subsubsection.4.3.0.2}%
+\contentsline {subsubsection}{\numberline {4.3.0.3}Datenbanktabellen}{25}{subsubsection.4.3.0.3}%
+\contentsline {subsubsection}{\numberline {4.3.0.4}Durchlauf einer erfolgreichen Saga}{25}{subsubsection.4.3.0.4}%
+\contentsline {subsubsection}{\numberline {4.3.0.5}Durchlauf einer gescheiterten, kompensierten Saga}{25}{subsubsection.4.3.0.5}%
+\contentsline {subsubsection}{\numberline {4.3.0.6}Durchlauf einer gescheiterten, nichtkompensierten Saga}{25}{subsubsection.4.3.0.6}%
 \contentsline {chapter}{\numberline {5}Implementierung}{I}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Abänderung der Implementierung}{I}{section.5.1}%
 \contentsline {chapter}{Abbildungsverzeichnis}{II}{section.5.1}%

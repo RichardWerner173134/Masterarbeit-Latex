@@ -11,17 +11,6 @@ In der Softwareentwicklung besteht ein System aus einer Menge miteinander intera
 \subsection{Zustand von Systemen}
 Ein Softwaresystem befindet sich zu jedem Zeitpunkt in einem Zustand. Der Wechsel eines Zustands ist die Folge von Nutzerinteraktionen und festgelegten Routinen. Damit das System reibungslos funktionieren kann, darf es nur zwischen gültigen Zuständen wechseln. % TODO Was ist ein gültiger Zustand
 
-\subsection{Sichten auf Systeme}
-Softwaresysteme können unter verschiedenen Sichten betrachtet werden. TODO
-
-% TODO System als Zustandsautomat
-
-- mathematische Sicht: Endlicher Automat
-- Endliche Menge von Zuständen
-- Endliches Alphabet
-- Übergangsfunktion von Zustand x Alphabet -> Zustand
-- Startzustand
-- endliche Menge von Endzuständen
 
 \subsection{Transaktionen}
 Ein Übergang von einem Zustand in den nächsten Zustand im Modell des Zustandsautomats ist eine einzige Operation. Häufig äußert sich eine solche Operation jedoch in einer Folge von auszuführenden Operationen. Eine solche Folge von Operationen wird als Transaktion bezeichnet. Teil einer Transaktion kann beispielsweise eine oder mehrere Datenbankoperationen oder der Aufruf einer externen Schnittstelle sein. Transaktionen können auf verschiedenen Ebenen betrachtet werden. Auf Datenbankebene werden Transaktionen anders umgesetzt als auf Ebene der Geschäftslogik. 
