@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  7 OCT 2023 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  13 OCT 2023 12:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1320,36 +1320,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
 [8{C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/2_Pr
 ogramme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathex.enc}] [9]
-Package placeins Info: No floats held, on input line 170.
+Package placeins Info: No floats held, on input line 191.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 173.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 182.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
-
-[10
-Package placeins Info: Float barrier, from input line 170, processed on page 10
-, lands on page 10. 
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 194.
@@ -1363,107 +1335,233 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 194.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 207.
 
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 207.
 
 
-Overfull \hbox (2.69452pt too wide) in paragraph at lines 211--212
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 207.
+
+[10
+Package placeins Info: Float barrier, from input line 191, processed on page 10
+, lands on page 10. 
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 222.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 222.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 222.
+
+
+Overfull \hbox (2.69452pt too wide) in paragraph at lines 240--241
 []\T1/lmr/m/n/12 Neben der Back-ward Re-co-ve-ry wird ein wei-te-res Ver-hal-te
 n vor-ge-schla-gen, wel-ches Forward-
  []
 
-
-LaTeX Warning: Command \" invalid in math mode on input line 224.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 224.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--226
-
- []
-
 [11]
-Overfull \hbox (34.19373pt too wide) in paragraph at lines 234--235
+
+LaTeX Warning: Command \" invalid in math mode on input line 254.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 254.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 254.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 254.
+
+
+Overfull \hbox (34.19373pt too wide) in paragraph at lines 264--265
 \T1/lmr/m/n/12 Re-co-ve-ry ver-sucht, bis die Sa-ga er-folg-reich ist oder das 
 Ober-li-mit $\OML/lmm/m/it/12 maxSavepointExecutionCount$
  []
 
 
-Overfull \hbox (19.1003pt too wide) in paragraph at lines 264--265
+Overfull \hbox (19.1003pt too wide) in paragraph at lines 294--295
  [][] 
  []
 
-Package placeins Info: No floats held, on input line 267.
-
-LaTeX Warning: Command \" invalid in math mode on input line 279.
-
-
-LaTeX Warning: Command \" invalid in math mode on input line 279.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--281
-
- []
-
+Package placeins Info: No floats held, on input line 297.
 [12
-Package placeins Info: Float barrier, from input line 267, processed on page 12
+Package placeins Info: Float barrier, from input line 297, processed on page 12
 , lands on page 12. 
 ]
 
-LaTeX Warning: Command \" invalid in math mode on input line 294.
+LaTeX Warning: Command \" invalid in math mode on input line 310.
 
 
-LaTeX Warning: Command \" invalid in math mode on input line 294.
+LaTeX Warning: Command \" invalid in math mode on input line 310.
 
-Package placeins Info: No floats held, on input line 338.
-Package placeins Info: No floats held, on input line 363.
+
+LaTeX Warning: Command \" invalid in math mode on input line 325.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 325.
+
+Package placeins Info: No floats held, on input line 369.
 [13
-Package placeins Info: Float barrier, from input line 338, processed on page 13
+Package placeins Info: Float barrier, from input line 369, processed on page 13
 , lands on page 13. 
-Package placeins Info: Float barrier, from input line 363, processed on page 13
-, lands on page 13. 
-] [14]
-Overfull \hbox (19.38074pt too wide) in paragraph at lines 407--408
+]
+Package placeins Info: No floats held, on input line 394.
+ [14
+Package placeins Info: Float barrier, from input line 394, processed on page 14
+, lands on page 14. 
+] [15]
+Overfull \hbox (19.38074pt too wide) in paragraph at lines 438--439
 []\T1/lmr/m/n/12 Schlussendlich bie-tet die Or-che-strie-rung die Mög-lich-keit
 , asyn-chro-ne Messaging-Komponenten
  []
 
-[15])) (texes/Chapter2.tex [16]
+)) (texes/Chapter2.tex [16] [17]
 chapter 3.
 (texes/ChapterMethodik/Zielstellung.tex)
-(texes/ChapterMethodik/Bewertungsprozess.tex [17
+(texes/ChapterMethodik/Bewertungsprozess.tex [18
 
 ])) (texes/Chapter3.tex
-[18]
+[19]
 chapter 4.
 (texes/ChapterImplementierung1/Implementierungsentwurf.tex
-<figures/SimplifiedBusinessProcess.png, id=279, 1230.5975pt x 201.75375pt>
+<figures/SimplifiedBusinessProcess.png, id=298, 1230.5975pt x 201.75375pt>
 File: figures/SimplifiedBusinessProcess.png Graphic file (type png)
 <use figures/SimplifiedBusinessProcess.png>
 Package pdftex.def Info: figures/SimplifiedBusinessProcess.png  used on input l
 ine 12.
 (pdftex.def)             Requested size: 455.24417pt x 74.63539pt.
- [19
+ [20
 
  <./figures/SimplifiedBusinessProcess.png>]
-Overfull \hbox (78.88513pt too wide) in paragraph at lines 31--40
-[][] 
+Underfull \hbox (badness 2334) in paragraph at lines 34--34
+[]\T1/lmr/m/n/12 Name des Ser-
  []
 
-[20] [21] [22] [23]) (texes/ChapterImplementierung1/Implementierung.tex))
-(texes/Chapter4.tex [24]
+[21] [22] [23] [24]
+<figures/DatabaseER/ArticleServiceTables.png, id=335, 261.97874pt x 101.37875pt
+>
+File: figures/DatabaseER/ArticleServiceTables.png Graphic file (type png)
+<use figures/DatabaseER/ArticleServiceTables.png>
+Package pdftex.def Info: figures/DatabaseER/ArticleServiceTables.png  used on i
+nput line 141.
+(pdftex.def)             Requested size: 130.98904pt x 50.68924pt.
+Package placeins Info: No floats held, on input line 144.
+Package placeins Info: No floats held, on input line 159.
+ [25
+Package placeins Info: Float barrier, from input line 144, processed on page 25
+, lands on page 25. 
+Package placeins Info: Float barrier, from input line 159, processed on page 25
+, lands on page 25. 
+ <./figures/DatabaseER/ArticleServiceTables.png>]
+<figures/DatabaseER/StockServiceTables.png, id=342, 753.81625pt x 362.35374pt>
+File: figures/DatabaseER/StockServiceTables.png Graphic file (type png)
+<use figures/DatabaseER/StockServiceTables.png>
+Package pdftex.def Info: figures/DatabaseER/StockServiceTables.png  used on inp
+ut line 173.
+(pdftex.def)             Requested size: 376.90721pt x 181.17642pt.
+Package placeins Info: No floats held, on input line 176.
+
+[26
+Package placeins Info: Float barrier, from input line 176, processed on page 26
+, lands on page 26. 
+ <./figures/DatabaseER/StockServiceTables.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
+[]\T1/lmr/m/n/12 Http-
+ []
+
+
+Overfull \hbox (2.35852pt too wide) in paragraph at lines 209--209
+\T1/lmr/m/n/12 Methode| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/lmr/m/n/12 /api/blocked-articles-
+ []
+
+Package placeins Info: No floats held, on input line 218.
+<figures/DatabaseER/BankingServiceTables.png, id=354, 804.00375pt x 362.35374pt
+>
+File: figures/DatabaseER/BankingServiceTables.png Graphic file (type png)
+<use figures/DatabaseER/BankingServiceTables.png>
+Package pdftex.def Info: figures/DatabaseER/BankingServiceTables.png  used on i
+nput line 229.
+(pdftex.def)             Requested size: 402.0009pt x 181.17642pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package placeins Info: Must dump some floats on input line 232.
+[27
+Package placeins Info: Float barrier, from input line 218, processed on page 27
+, lands on page 27. 
+Package placeins Info: Float barrier, from input line 232, processed on page 27
+, lands on page 27. 
+]
+Package placeins Info: Check again: on input line 232.
+Package placeins Info: No floats held, on input line 232.
+Package placeins Info: No floats held, on input line 249.
+
+Overfull \hbox (1.93633pt too wide) in paragraph at lines 258--258
+[]\T1/lmr/m/n/12 Ergebnis| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+[]\T1/lmr/m/n/12 Get Ship-ment
+ []
+
+
+Overfull \hbox (21.77351pt too wide) in paragraph at lines 256--286
+ [] 
+ []
+
+[28
+Package placeins Info: Float barrier, from input line 232, processed on page 28
+, lands on page 28. 
+Package placeins Info: Float barrier, from input line 249, processed on page 28
+, lands on page 28. 
+ <./figures/DatabaseER/BankingServiceTables.png>]
+Package placeins Info: No floats held, on input line 287.
+
+Overfull \hbox (1.93633pt too wide) in paragraph at lines 293--293
+[]\T1/lmr/m/n/12 Ergebnis| 
+ []
+
+
+Overfull \hbox (21.77351pt too wide) in paragraph at lines 291--314
+ [] 
+ []
+
+[29
+Package placeins Info: Float barrier, from input line 287, processed on page 29
+, lands on page 29. 
+]
+Package placeins Info: No floats held, on input line 315.
+<figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png, id=373, 1893.0725pt x 
+691.58376pt>
+File: figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png Graphic file (type
+ png)
+<use figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png>
+Package pdftex.def Info: figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png
+  used on input line 319.
+(pdftex.def)             Requested size: 455.24417pt x 166.31062pt.
+Package placeins Info: No floats held, on input line 322.
+) (texes/ChapterImplementierung1/Implementierung.tex)) (texes/Chapter4.tex
+[30
+Package placeins Info: Float barrier, from input line 315, processed on page 30
+, lands on page 30. 
+Package placeins Info: Float barrier, from input line 322, processed on page 30
+, lands on page 30. 
+ <./figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png>] [31]
 chapter 5.
 (texes/ChapterImplementierung2/ImplementierungsentwurfOptimiert.tex)) [1
 
@@ -1486,10 +1584,10 @@ Package logreq Info: Writing requests to 'Masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33739 strings out of 476331
- 675145 string characters out of 5792455
- 1874660 words of memory out of 5000000
- 53474 multiletter control sequences out of 15000+600000
+ 33803 strings out of 476331
+ 676825 string characters out of 5792455
+ 1882660 words of memory out of 5000000
+ 53506 multiletter control sequences out of 15000+600000
  549335 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,10n,106p,10909b,2178s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1501,11 +1599,10 @@ ts/type1/public/lm/lmr12.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/pu
 blic/lm/lmr8.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmri
 12.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmssbx10.pfb><
 C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmsy10.pfb><C:/2_Progr
-amme/Office/latex/miktex/fonts/type1/public/lm/lmsy8.pfb><C:/2_Programme/Office
-/latex/miktex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Masterarbeit.pdf (30 pages, 310408 bytes).
+amme/Office/latex/miktex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Masterarbeit.pdf (37 pages, 412450 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
- 650 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 752 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 500000)
+ 734 words of extra memory for PDF output out of 10000 (max. 10000000)
 

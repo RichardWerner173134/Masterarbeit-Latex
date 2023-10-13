@@ -28,15 +28,17 @@ Die zum Prozess gehörenden Schritte sind folgende:
 \subsection{Services}
 Aus der Beschreibung des Geschäftsprozesses lassen sich folgende Services ableiten:
 
-\begin{tabular}[h]{|l|l|}
-	\hline
-	Name des Services & Aufgabe \\ \hline
-	Frontend & GUI, Anzeige der Produkte, Aufnahme der Bestellung, Platzieren der Bestellung \\ \hline
-	OrderService & Entgegennehmen der Bestellung, Koordinierung des Bestellprozesses \\ \hline
-	ArticleService & API für die angebotenen Produkte und Preise \\ \hline
-	StockService & Informationen über Lagerstand, Auslösen des Lieferprozesses \\ \hline
-	BankingServices & Schnittstellen für das Erhöhen und Verringern von Geldbeträten eines Kontos \\ \hline
-\end{tabular}
+\begin{center}
+	\begin{tabular}[h]{|p{3cm}|p{12cm}|}
+		\hline
+		Name des Services & Aufgabe \\ \hline
+		Frontend & GUI, Anzeige der Produkte, Aufnahme der Bestellung, Platzieren der Bestellung \\ \hline
+		OrderService & Entgegennehmen der Bestellung, Koordinierung des Bestellprozesses \\ \hline
+		ArticleService & API für die angebotenen Produkte und Preise \\ \hline
+		StockService & Informationen über Lagerstand, Auslösen des Lieferprozesses \\ \hline
+		BankingServices & Schnittstellen für das Erhöhen und Verringern von Geldbeträten eines Kontos \\ \hline
+	\end{tabular}
+\end{center}
 
 \subsection{Transaktionen}
 Sieht man den gesamten Geschäftsprozess als Transaktion, wären folgende lokale Transaktionen Teil der globalen Transaktion, die durch das Platzieren der Bestellung ausgelöst werden:
@@ -52,18 +54,19 @@ Sieht man den gesamten Geschäftsprozess als Transaktion, wären folgende lokale
 
 Nach der Funktionsweise des Saga-Patterns muss für jede lokale Transaktion eine Kompensierung angeboten werden:
 
-\begin{tabular}[h]{|l|l|}
-	\hline
-	Transaktion & Kompensierung \\ \hline
-	$T_1$ & - \\ \hline
-	$T_2$ & - \\ \hline
-	$T_3$ & $C_3$: StockService - Freigeben der Artikel \\ \hline
-	$T_4$ & $C_4$: Erhöhen des Geldbetrages des Kundenkontos \\ \hline
-	$T_5$ & $C_5$: Verringern des Geldbetrages des Händlerkontos \\ \hline
-	$T_6$ &  - \\ \hline
-	$T_7$ &  - \\ \hline
-\end{tabular}
-
+\begin{center}
+	\begin{tabular}[h]{|p{3cm}|p{9.5cm}|}
+		\hline
+		Transaktion & Kompensierung \\ \hline
+		$T_1$ & \\ \hline
+		$T_2$ & \\ \hline
+		$T_3$ & $C_3$: StockService - Freigeben der Artikel \\ \hline
+		$T_4$ & $C_4$: Erhöhen des Geldbetrages des Kundenkontos \\ \hline
+		$T_5$ & $C_5$: Verringern des Geldbetrages des Händlerkontos \\ \hline
+		$T_6$ & \\ \hline
+		$T_7$ & \\ \hline
+	\end{tabular}
+\end{center}
 
 \section{Fachliche Kontextabgrenzung}
 
@@ -72,7 +75,6 @@ Für die Realisierung des Microservicesystems im Rahmen dieser Arbeit wurde die 
 Die Rolle des Koordinators übernimmt der OrderService. Der OrderService übernimmt die Annahme des Bestellprozesses und löst somit die Saga aus. 
 
 \subsection{Frontend}
-\subsubsection{Funktionalitäten}
 In einem Online-Shop interagiert der Kunde per Frontend mit der Anwendung. Das Frontend soll übernimmt die grafische Schnittstelle zwischen Backend und dem Nutzer. Dazu gehört vor Allem die Darstellung der Artikel in einer Katalogansicht. Die darzustellenden Daten für eine solche Liste müssen zumindest Artikelbezeichnung und Artikelpreis enthalten. Diese Daten sollten aus einer API für Artikeldaten stammen. Darüber hinaus muss das Frontend einen Prozess unterstützen, in dem der Kunde ein Formular ausfüllt, welches die erforderlichen Daten für das Platzieren einer Bestellung enthält. Dazu gehört ein Warenkorbsystem sowie eine Authorisierung und Authentifizierung der Zahlungsidentität des Kunden. Die Bestellung kann also als Objekt mit folgenden Feldern zusammengefasst werden:
 \begin{itemize}
 	\item Zahlungsinformationen des Kunden: BankId, UserId
@@ -124,13 +126,201 @@ Neben der Schnittstelle zum Platzieren der Bestellung soll dem Nutzer ermöglich
 
 % Tabellen, Transaktionen, Endpunkte
 \section{Technische Kontextabgrenzung}
+% TODO Quelle Database per Service vs Shared Database
+Bei der Modellierung der Datenbankschicht wurde das Database-per-Service Muster verwendet. Dieses Muster erlaubt eine sehr lose Bindung der Services und lässt die Datenbasis in der Verantwortung eines Services. Es ist möglich, ein Microservice-System zu implementieren, welches das Muster einer gemeinsamen Datenbank verwendet. Dies würde die Implementierung atomaren und konsistenten Transaktionen vereinfachen. Die Voraussetzungen für eine solche Implementierungen sind jedoch nicht immer gegeben, da an der LLT teilhabende Services unter Umständen nicht in der Verantwortung des Entwicklerteams liegen könnten, welches die LLT zu implementieren hat. Aus diesem Grund wird im Rahmen der für diese Implementierung vorzunehmende Implementierung jeder Service als getrennte Komponente aufgefasst, die als alleinige Instanz auf ihre eigenen Daten zugreift und zugreifen kann.
+
+% TODO vereinfachte Darstellung der Schnittstellen im folgenden, ausführliche Beschreibung in Swaggerfile im Anhang
+
+\subsection{ArticleService}
+\subsubsection{Datenbankschicht}
+
+Der ArticleService soll lediglich Daten aus der Datenbanksicht zurückliefern. Deshalb wird für diesen Service lediglich eine Tabelle benötigt. Die Tabelle $article$ enthält für jeden anzubietenden Artikel den zugehörigen Namen und Preis.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{figures/DatabaseER/ArticleServiceTables.png}
+	\caption{ER-Diagramm ArticleService}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Schnittstellen} % TODO RESTful, Ressource
+Die Produktdaten sollen von dem Frontend abgefragt und dargestellt werden. Dabei werden alle vorhandenen Produktdaten selektiert und zurückgegeben. 
+
+Zusätzlich soll der Koordinator eine gezielte Abfrage durchführen können, welche den Preis eines Artikels für eine gegebene ProduktId liefert. Beide Schnittstellen sind RESTful, da jeder Artikel als Ressource angesehen wird. 
+
+\begin{center}
+	\begin{tabular}[h]{|p{3.5cm}|p{3cm}|p{2cm}|}
+	\hline
+	Endpunkt & Http-Methode & Argumente \\ \hline
+	/api/articles & GET & \\ \hline
+	/api/articles/\{id\} & GET & ArticleId \\ \hline
+\end{tabular}
+\end{center}
+\FloatBarrier
+
+\subsubsection{Mögliche Antwortmöglichkeiten}
+Die Schnittstelle  $/api/arcicles$ liefert die Produktdaten im Response-Body und antwortet mit einem Statuscode von $200, OK$. Es gibt hier keine möglichen Fehlerquellen, weshalb keine weiteren Antwortmöglichkeiten infrage.
+
+Die Schnittstelle $/api/articles/\{id\}$ sucht in der Datenbank gezielt nach dem Artikel mit der geforderten Id. Im Erfolgsfall antwortet die Schnittstelle ebenfalls mit $200, OK$. Wird der Artikel nicht gefunden, erfolgt die Antwort mit Statuscode $404, Not Found$.
+
+\subsection{StockService}
+\subsubsection{Datenbankschicht}
+
+Der StockService verwaltet vier Tabellen. Die zentrale Tabelle ist $articlestock$ und stellt für jeden bekannten Artikel den auf Lager befindlichen Vorrat dar. Eine Reservierung für eine gegebene Vorgangsnummer wird in der Tabelle $blockedarticles$ durch alle Tupel, bei denen diese Nummer auftritt. Die Lieferungen werden in der Tabelle $shipments$ dargestellt. Auch hier gehört eine Vorgangsnummer zu den Spalten. Zusätzlich gibt es das Attribut $hasarrived$, was Auskunft über den Status der Lieferung gibt. Die zu einer Lieferung gehörenden Artikel und deren Menge sind in der Tabelle $shippedarticles$ enthalten.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{figures/DatabaseER/StockServiceTables.png}
+	\caption{ER-Diagramm StockService}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Schnittstellen}
+
+Der Endpunkt $/api/blocked-articles$ überträgt frei verfügbare Artikel aus der Tabelle $articlestock$ in die Tabelle $blockedarticles$. Als Argumente werden die zu blockierenden Artikel-Ids und Artikel-Mengen sowie die Vorgangsnummer benötigt. Teil der lokalen Transaktion sind folgende Schritte:
+\begin{enumerate}
+	\item Reduzieren jedes Artikelvorrats in der Tabelle $articlestock$
+	\item Einfügen eines Elements in der Tabelle $blockedarticles$ für jede zu blockierende Artikel-Id
+\end{enumerate}
+
+Der Endpunkt $/api/blocked-articles-compensation$ stellt die Kompensierung für die Schnittstelle $/api/blocked-articles$ dar. Als Argument wird hier lediglich die Vorgangsnummer benötigt. Notwendige Schritte der auszuführenden lokalen Transaktion sind:
+\begin{enumerate}
+	\item Selektieren aller Elemente aus $blocked-articles$ mit der angefragten Vorgangsnummer
+	\item Löschen dieser Elemente
+	\item Erhöhen der Vorratsmengen in $articlestock$ für jede Artikelblockierunge
+\end{enumerate}
+
+Der Endpunkt $/api/start-shipment$ erwartet die Vorgangsnummer als Argument. Die reservierten Artikel werden in eine Lieferung umgewandelt und versendet. Die Schritte der ablaufenden lokalen Transaktion sind:
+\begin{enumerate}
+	\item Initialisieren eines Elements in $shipments$ mit dem Status $hasarrived=0$
+	\item Selektieren und Löschen aller Elemente in $blockedarticles$, die die OrderId enthalten
+	\item Einfügen der Selektierungen in der Tabelle $shippedarticles$
+\end{enumerate}
+
+Der Endpunkt $/api/finish-shipment$ wird ausschließlich vom Lieferanten verwendet und dient zur Bestätigung der Lieferung. Es wird lediglich der Status der entsprechenden ShipmentId in der Tabelle $shipments$ auf 1 gesetzt.
+
+Der Endpunkt $/api/shipments$ liefert lediglich den Status der angeforderten ShipmentId. Der Koordinator hat mit dem Aufruf von $/api/start-shipments$ die Lieferung ausgelöst. Der Koordinator hat mit der Schnittstelle $/api/shipments$ die Möglichkeit, den Status der Lieferung solange abzufragen, bis der Lieferant per Aufruf von $/api/finish-shipment$ den Lieferabschluss bestätigt. Die Kombination von $/api/start-shipment$, $/api/finish-shipment$ und $/api/shipments$ können als Polling-Implementierung eines asynchronen Request-Response Musters aufgefasst werden. 
+
+Der letzte Endpunkt des StockServices ist $/api/cancel-shipment$ und bietet dem Koordinator die Möglichkeit, auf eine Stornierung zu reagieren. Bis die Lieferung abgegeben und bestätigt wurde, kann diese Schnittstelle verwendet werden, um die Lieferung abzubrechen. Als Argument wird die ShipmentId benötigt.
+
+\begin{center}
+	\begin{tabular}[h]{|p{4.5cm}|p{1.5cm}|p{5.5cm}|}
+		\hline
+		Endpunkt & Http-Methode & Argumente \\ \hline
+		/api/blocked-articles & POST & ArticleId, Amount, OrderId\\ \hline
+		/api/blocked-articles-compensation & POST & OrderId \\ \hline
+		/api/start-shipment & POST & OrderId \\ \hline
+		/api/finish-shipment & POST & ShipmentId \\ \hline
+		/api/shipments & GET & ShipmentId \\ \hline
+		/api/cancel-shipment & POST & ShipmentId \\ \hline
+	\end{tabular}
+\end{center}
+\FloatBarrier
+
+\subsubsection{Mögliche Antwortmöglichkeiten}
+Für $/api/blocked-articles$ antwortet im Erfolgsfall mit einem $200, OK$. 
+
+\subsection{BankingService}
+\subsubsection{Datenbankschicht} % TODO Tabellenbezeichnungen anpassen
+Zur Verwaltung des BankingServices gehören drei Tabellen. Die Tabelle $bankuser$ enthält alle Nutzer, die Tabelle $bankusercredit$ ordnet jedem Nutzer einen Kontostand zu und die Tabelle $bankusertransaction$ stellt Veränderung des Kontostands der Tabelle $bankcredit$ in der Tabelle $bankusertransaction$ als Historie dar.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{figures/DatabaseER/BankingServiceTables.png}
+	\caption{ER-Diagramm BankingService}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Schnittstellen}
+Der BankingService bietet jeweils eine Schnittstelle zum Erhöhen und zum Verringern des Kontostandes an. Dabei wird lediglich in der Tabelle $bankcredit$ das Credit-Attribut erhöht oder verringert. Die Spalte ist im Datenbankmanagementsystem mit einer Einschränkung versehen, die verhindert, dass der Wert der Spalte unter 0 fällt. 
+
+Die Veränderung des Kontostandes ist der erste Schritt der lokalen Transaktion. Der zweite Schritt ist das Einfügen eines neuen Elementes in der Tabelle $bankusertransaction$. In dieser Tabelle wird der Transaktionstyp festgehalten, der den Typ
+
+\begin{center}
+	\begin{tabular}[h]{|l|l|l|}
+		\hline
+		Endpunkt & Http-Methode & Argumente \\ \hline
+		/api/add-money & POST & UserId, Amount, OrderId \\ \hline
+		/api/add-money-compensation & POST & UserId, Amount, OrderId \\ \hline
+		/api/remove-money & POST & UserId, Amount, OrderId \\ \hline
+		/api/remove-money-compensation & POST & UserId, Amount, OrderId \\ \hline 
+	\end{tabular}
+\end{center}
+\FloatBarrier
 
 \section{Darstellung als DEA}
-Damit der Prozess vollständig modelliert werden kann, müssen alls möglichen Fehler identifiziert werden, die in jeder lokalen Transaktion und Kompensierung auftreten können. Diese sollen 
+Der entworfene Prozess soll nun als DEA dargestellt werden. Dafür sind alle möglichen Ergebnisse zu erfassen, die jede lokale Transaktion aus Sicht des Koordinators liefern kann. 
+Für die Ts ergeben sich folgende Ergebnisse:
 
-\subsubsection{Ergebnisse der Cs}
+\begin{center}
+	\begin{tabular}[h]{|p{3cm}|p{1.5cm}|p{11cm}|}
+		\hline
+		Transaktion	& Ergebnis & Bedeutung \\ \hline
+		Initialize Saga 	& Success 	& Bestellung ist initialisiert \\ \hline
+		Get Article Data	& 200 		& Artikeldaten wurden vom ArticleService empfangen \\
+							& 404 		& Artikel wurde nicht gefunden \\ \hline
+		Validate Price 		& Success 	& Preis aus Bestellung und aus dem System stimmen überein \\
+							& Failure 	& Preise aus Bestellung und aus dem System stimmen nicht überein \\ \hline
+		Block Articles		& 200		& Produkte wurden reserviert \\
+							& 409 		& Lagervorrat ist erschöpft \\
+							& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Remove Money 		& 200		& Geldbetrag auf dem Konto wurde verringert \\
+							& 404		& Nutzer wurde nicht gefunden \\
+							& 409		& Lokale Transaktion ist fehlgeschlagen (Konto ist nicht gedeckt) \\
+							& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Add Money 			& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+							& 404		& Nutzer wurde nicht gefunden \\
+							& 409		& Lokale Transaktion ist fehlgeschlagen \\
+							& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Start Shipment 		& 200		& Lieferung wurde ausgelöst \\
+							& 404		& Zur geforderten Bestellnummer wurde keine Reservierung gefunden \\
+							& 409		& Lokale Transaktion ist fehlgeschlagen \\
+							& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Check Cancellation 	& Success	& Es wurde keine Stornierung festgestellt \\
+							& Failure	& Es wurde eine Stornierung festgestellt \\ \hline
+		Get Shipment Status	& 200 		& Status wurde vom StockService empfangen \\
+							& 404		& Lieferung existiert nicht \\ \hline
+		Check Shipment Status& Success	& Lieferstatus signalisiert abgeschlossene Lieferung \\
+							& Failure 	& Lieferstatus signalisiert noch nicht abgeschlossene Lieferung \\ \hline
+	\end{tabular}
+\end{center}
+\FloatBarrier
 
-\subsubsection{Darstellung des Systems als DEA}
+Für die Cs ergeben sich folgende Ergebnisse:
+\begin{center}
+	\begin{tabular}[h]{|p{5.5cm}|p{1.5cm}|p{8.5cm}|}
+		\hline
+		Transaktion 						& Ergebnis 	& Bedeutung \\ \hline
+		Initialize Saga Compensation	 	& Success 	& \\ \hline
+		Get Article Data Compensation	 	& Success 	& \\ \hline	
+		Validate Price Compensation	 		& Success 	& \\ \hline
+		Block Articles Compensation	 		& 200	 	& Reservierung wurde aufgehoben \\
+											& 409		& Lokale Transaktion ist fehlgeschlagen \\
+											& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Remove Money Compensation		 		& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+											& 404		& Nutzer wurde nicht gefunden \\
+											& 409		& Lokale Transaktion ist fehlgeschlagen \\
+											& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Add Money Compensation		 		& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+											& 404		& Nutzer wurde nicht gefunden \\
+											& 409		& Lokale Transaktion ist fehlgeschlagen \\
+											& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Start Shipment Compensation	 		& 200	 	& Lieferung wurde abgebrochen \\
+			 								& 404		& Lieferung existiert nicht \\
+											& 409		& Lokale Transaktion ist fehlgeschlagen \\
+											& 410		& Lieferung wurde nicht abgebrochen, da sie bereits abgeschlossen ist \\
+											& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+	\end{tabular}
+\end{center}
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png}
+	\caption{Saga als DEA}
+\end{figure}
+\FloatBarrier
+
 
 \subsubsection{Durchlauf einer erfolgreichen Saga}
 % TODO Ablaufdiagramm mit nummerierten Pfeilen

@@ -58,9 +58,9 @@ Der Prozessablauf einer Saga kann als detemernistischer endlicher Automat angese
 
 \paragraph{Saga als formale Sprache}
 %TODO Deterministisch, totale Funktion, Angenommene Sprache, referenz vorheriges subsubsection
-Im vorherigen Abschnitt wurde die Saga Execution Component definiert als ein Tupel aus Transaktionslog und Zustandsautomat. Nun soll dieses Tupel in einen DEA überführt werden. Ein solcher DEA $A_{Saga}$ akzeptiert die Sprache $L_{Saga}$, die alle gültigen Wörter enthält, die eine Saga darstellen.
+Im vorherigen Kapitel wurde die SEC definiert als ein Tupel aus Transaktionslog und Zustandsautomat. Nun soll dieses Tupel in einen DEA überführt werden. Ein solcher DEA $A_{Saga}$ akzeptiert die Sprache $L_{Saga}$, die alle gültigen Wörter enthält, die eine Saga darstellen.
 
-Das Eintabealphabet $\Sigma$ ist die Menge aller Elemente, die im Transaktionslog auftauchen können. Somit kann jedes Transaktionslog als Eingabewort aufgefasst werden. 
+Das Eintabealphabet $\Sigma$ enthält die Menge aller Elemente, die im Transaktionslog auftauchen können. Somit kann jedes Transaktionslog als Eingabewort aufgefasst werden. 
 
 Somit ist die von $A_{Saga}$ akzeptierte Sprache $L_{Saga} = L(A_{Saga})$: \\
 
@@ -80,25 +80,25 @@ Das Eingabealphabet $\Sigma$ drückt aus, welche möglichen Ergebnisse eine Akti
 Diese sind üblicherweise in einer Schnittstellendefinition aufgelistet. Im Folgenden wird davon ausgegangen, dass alle möglichen Antworten einer Http-Schnittstelle per Http-Statuscode ausgedrückt werden. Es wird ein Typ definiert, der für jede Aktion alle möglichen Http-Statuscodes enthält: 
 
 \begin{center}
-$API-Ergebnis\ AE \in \{tn_{200}, tn_{201}, tn_{400}, tn+1_{200}, tn+1_{400}, tn+1_{409}, ...\}$. 
+$API-Response\ AR \in \{tn_{200}, tn_{201}, tn_{400}, tn+1_{200}, tn+1_{400}, tn+1_{409}, ...\}$. 
 \end{center}
 
 Eine Aktion kann neben dem Aufruf einer Schnittstelle eine interne Verarbeitung sein. Das könnte beispielsweise eine Prüfung auf Vorhandensein eines Feldes in einer vorangegangenen Schnittstellenantwort sein. Eine solche Aktion wird definiert:
 
 \begin{center}
-$Internes\ Prozessergebnis\ IPE \in \{tn_{Success}, tn_{Failure}, tn+1_{Success}, tn+1_{Failure}, ...\}$.
+$Interner\ Prozessschritt\ IP \in \{tn_{Success}, tn_{Failure}, tn+1_{Success}, tn+1_{Failure}, ...\}$.
 \end{center}
 
 Ein Ergebnis einer Aktion wird also definiert als:
 
 \begin{center}
-$Ergebnis\ E = AE \cup IPE$.
+$Ergebnis\ E = API-Response \cup Interner\ Prozessschritt$.
 \end{center}
 
 Das Eingabealphabet beinhaltet Elemente aus dem Ergebnistyp: 
 
 \begin{center}
-$\Sigma = Ergebnis$.
+$\Sigma \in Ergebnis$.
 \end{center}
 
 Ein Übergang von einem Zustand in den Folgezustand drückt somit aus, dass die Saga eine Aktion ausgeführt hat und dem Ergebnis entsprechend einen Zustandswechsel durchgeführt hat. 
@@ -112,13 +112,14 @@ Ein Endzustand $q_{f1}$ wird erreicht, nachdem die letzte auszuführende Transak
 Die Ausführung eines DEA kann mittels Konfigurationen dargestellt werden. Eine Konfiguration $K$ ist definiert als: 
 
 \begin{center}
-$K = (q, w) \in Q \times \Sigma^{\star}$
+$q_{1}, q_{2} \in Q \land u,v \in \Sigma$
+$K = (q_{1}, u) \in Q \times \Sigma^{\star}$
 \end{center}
 
-Der Automat wechselt in einen Folgezustand, indem er ein Element aus dem Eingabewort abarbeitet und eine passende Übergangsrelation in $\delta$ findet. Somit gilt:
+Der Automat wechselt in einen Folgezustand, indem er ein Wort aus dem Eingabealphabet $\Sigma$ abarbeitet und eine passende Übergangsrelation in $\delta$ findet. Somit gilt:
 
 \begin{center}
-$q1, q2 \in Q \land u \in \Sigma \land v \in \Sigma^{\star}: (q_{1}, u \circ v)\vdash (q_{2}, v) \implies \delta(q_{1}, u) = q_{2}$
+$(q_{1}, u)\vdash (q_{2}, v), falls\ \delta(q_{1}, u) = q_{2}$
 \end{center}
 
 Außerdem können mehrere Konfigurationsübergänge mittels $\vdash^{\star}$ dargestellt werden:
@@ -137,7 +138,10 @@ Der Zustand des Systems soll nun in folgenden Fällen betrachtet werden:
 
 Die Ausführung der Saga als DEA soll an folgendem Beispiel illustriert werden:
 
-$Saga = (Q, \Sigma, \delta, q_0, F)$ mit
+
+$Saga = (Q, \Sigma, \delta, q_0, F)$
+
+mit
 \begin{align*}
 Q &= \{q_{t1}, q_{t2}, q_{t3}, q_{c1}, q_{c2}, q_{c3}, q_{f1}, q_{f2}, q_{f3}\}\\
 \Sigma &= \{t1_{200}, t1_{400}, t2_{Success}, t2_{Failure}, t3_{200}, t3_{400}, c1_{200}, c1_{400}, c2_{Sucess}, c2_{Failure}, c3_{200}, c3_{400}\}\\
@@ -246,18 +250,17 @@ Der DEA einer Saga, die Backward-Recovery implementiert, ist im vorherigen Absch
 \paragraph{Forward Recovery} % TODO referenz DEA
 Forward-Recovery ist auf verschiedenen Wegen erreichbar. Der erste Ansatz beinhaltet die Verwendung eines Save-Points. Der DEA aus Abschnitt soll um einen Checkpoint und Forward Recovery ergänzt werden. Es wird ein weiterer Zustand eingeführt, der nach erfolgreichem Ergebnis von $q_{t1}$ erreicht wird. Der Checkpoint wird hier dargestellt als ein interner Prozessschritt $q_{sp1}$ und hat somit die möglichen Ergebnisse $\in \{sp1_{Success}, sp1_{Failure}\}$. Es ist zu sehen, dass dieser DEA eine mögliche Endlosschleift zulässt. Wenn $q_{sp1}$ erreicht wird und in $q_{t2}$ oder $q_{t3}$ immer ein erfolgloses Ergebnis auftritt, darf im Zustand $qsp1$ nur endlich oft der Übergang $sp1_{Success}$ gewählt werden. 
 
-Die Funktion $f$ die in $q_{sp1}$ ein internes Prozessergebnis $IPE$ berechnet, sieht so aus:
+Die Funktion $f$ die in $q_{sp1}$ das Ergebnis des internen Prozessschritts $IP$ berechnet, sieht so aus:
 \begin{flalign*}
-&f: \mathbb{N} \rightarrow IE &&\\
-&maxSavepointExecutionCount \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{sp1}\ während\ &\\ 
-&der\ Ausführung\ der\ Saga 
+&f: \mathbb{N} \rightarrow Interner\ Prozessschritt &&\\
+&maxSavepointExecutionCount \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{sp1}\ & \\  &während\ der\ Ausführung\ der\ Saga
 \end{flalign*}
 
 \begin{equation*}
 f(x) = 
 	\begin{cases}
-		IE_{Success}, x < maxSavepointExecutionCount\\
-		IE_{Failure}, else
+		IP_{Success}, x < maxSavepointExecutionCount\\
+		IP_{Failure}, else
 	\end{cases}
 \end{equation*}
 
@@ -299,18 +302,17 @@ Die Anzahl an Ausführungen beginnend bei $q_{t2}$ ist begrenzt. Es wird also so
 Forward-Recovery kann alternativ auch als Retry interpretiert und somit ohne Save-Points realisiert werden. Einen solcher Retry kann sehr einfach in jedem Zustand ergänzt werden. Dazu wird eine Kante hinzugefügt, die im gleichen Zustand bleibt. Die Kante, die zuvor ein erfolgloses Ergebnis ausgedrückt hat, drückt nun ein Scheitern oberhalb des Retrylimits aus.
 
 Der Typ Ergebnis wird dafür definiert als:
-\begin{center}
+\\\\
 $Ergebnis\ E = \{t1_{Success}, t1_{Failure}, t1_{FinalFailure}, ...\}$
-\end{center}
-
-Die Funktion $fn_{AE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende API-Ergebnis $AE$ berechnet, ist:
-
+\\\\
+Die Funktion $fn_{AR}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende Ergebnis für eine API-Response berechnet, ist:
+\\\\
 \begin{math}
-	fn_{AE}: \mathbb{N} \times (AE) \rightarrow E\\
+	fn_{AR}: \mathbb{N} \times (API-Response) \rightarrow Ergebnis\\
 	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ während\ der\ Ausführung\ der\ Saga
 \end{math}
 \begin{equation*}
-	fn_{AE}(x, y) = 
+	fn_{AR}(x, y) = 
 	\begin{cases}
 		En_{Success}, y = tn_{200}\\
 		En_{Failure}, y \neq tn_{200} \land x < maxSavepointExecutionCount_n\\
@@ -318,10 +320,10 @@ Die Funktion $fn_{AE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende
 	\end{cases}
 \end{equation*}
 
-Die Funktion $fn_{IE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende interne Prozessergebnis $IPE$ berechnet, ist:
+Die Funktion $fn_{IP}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende Ergebnis für einen internen Prozessschritt berechnet, ist:
 
 \begin{math}
-	fn_{AE}: \mathbb{N} \times IPE \rightarrow Ergebnis\\
+	fn_{AR}: \mathbb{N} \times (Interner\ Prozessschritt) \rightarrow Ergebnis\\
 	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ während\ der\ Ausführung\ der\ Saga
 \end{math}
 \begin{equation*}
