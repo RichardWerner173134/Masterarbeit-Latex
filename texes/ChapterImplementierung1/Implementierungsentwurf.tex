@@ -29,7 +29,7 @@ Die zum Prozess gehörenden Schritte sind folgende:
 Aus der Beschreibung des Geschäftsprozesses lassen sich folgende Services ableiten:
 
 \begin{center}
-	\begin{tabular}[h]{|p{3cm}|p{12cm}|}
+	\begin{tabular}[h]{|p{3.5cm}|p{12cm}|}
 		\hline
 		Name des Services & Aufgabe \\ \hline
 		Frontend & GUI, Anzeige der Produkte, Aufnahme der Bestellung, Platzieren der Bestellung \\ \hline
@@ -158,11 +158,6 @@ Zusätzlich soll der Koordinator eine gezielte Abfrage durchführen können, wel
 \end{center}
 \FloatBarrier
 
-\subsubsection{Mögliche Antwortmöglichkeiten}
-Die Schnittstelle  $/api/arcicles$ liefert die Produktdaten im Response-Body und antwortet mit einem Statuscode von $200, OK$. Es gibt hier keine möglichen Fehlerquellen, weshalb keine weiteren Antwortmöglichkeiten infrage.
-
-Die Schnittstelle $/api/articles/\{id\}$ sucht in der Datenbank gezielt nach dem Artikel mit der geforderten Id. Im Erfolgsfall antwortet die Schnittstelle ebenfalls mit $200, OK$. Wird der Artikel nicht gefunden, erfolgt die Antwort mit Statuscode $404, Not Found$.
-
 \subsection{StockService}
 \subsubsection{Datenbankschicht}
 
@@ -204,7 +199,7 @@ Der Endpunkt $/api/shipments$ liefert lediglich den Status der angeforderten Shi
 Der letzte Endpunkt des StockServices ist $/api/cancel-shipment$ und bietet dem Koordinator die Möglichkeit, auf eine Stornierung zu reagieren. Bis die Lieferung abgegeben und bestätigt wurde, kann diese Schnittstelle verwendet werden, um die Lieferung abzubrechen. Als Argument wird die ShipmentId benötigt.
 
 \begin{center}
-	\begin{tabular}[h]{|p{4.5cm}|p{1.5cm}|p{5.5cm}|}
+	\begin{tabular}[h]{|p{6.5cm}|p{3cm}|p{5.1cm}|}
 		\hline
 		Endpunkt & Http-Methode & Argumente \\ \hline
 		/api/blocked-articles & POST & ArticleId, Amount, OrderId\\ \hline
@@ -216,9 +211,6 @@ Der letzte Endpunkt des StockServices ist $/api/cancel-shipment$ und bietet dem 
 	\end{tabular}
 \end{center}
 \FloatBarrier
-
-\subsubsection{Mögliche Antwortmöglichkeiten}
-Für $/api/blocked-articles$ antwortet im Erfolgsfall mit einem $200, OK$. 
 
 \subsection{BankingService}
 \subsubsection{Datenbankschicht} % TODO Tabellenbezeichnungen anpassen
@@ -250,8 +242,8 @@ Die Veränderung des Kontostandes ist der erste Schritt der lokalen Transaktion.
 
 \section{Darstellung als DEA}
 Der entworfene Prozess soll nun als DEA dargestellt werden. Dafür sind alle möglichen Ergebnisse zu erfassen, die jede lokale Transaktion aus Sicht des Koordinators liefern kann. 
-Für die Ts ergeben sich folgende Ergebnisse:
 
+\subsection{Ergebnisse aller Transaktionen}
 \begin{center}
 	\begin{tabular}[h]{|p{3cm}|p{1.5cm}|p{11cm}|}
 		\hline
@@ -286,7 +278,7 @@ Für die Ts ergeben sich folgende Ergebnisse:
 \end{center}
 \FloatBarrier
 
-Für die Cs ergeben sich folgende Ergebnisse:
+\subsection{Ergebnisse aller Kompensierungen}
 \begin{center}
 	\begin{tabular}[h]{|p{5.5cm}|p{1.5cm}|p{8.5cm}|}
 		\hline
@@ -314,13 +306,14 @@ Für die Cs ergeben sich folgende Ergebnisse:
 \end{center}
 \FloatBarrier
 
+Unter Berücksichtigung der dargestellten Antwortmöglichkeiten jeder lokalen Transaktion kann folgender Zustandsautomat formuliert werden.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png}
 	\caption{Saga als DEA}
 \end{figure}
 \FloatBarrier
-
 
 \subsubsection{Durchlauf einer erfolgreichen Saga}
 % TODO Ablaufdiagramm mit nummerierten Pfeilen
@@ -330,3 +323,5 @@ Für die Cs ergeben sich folgende Ergebnisse:
 
 \subsubsection{Durchlauf einer gescheiterten, nichtkompensierten Saga}
 % TODO Ablaufdiagramm mit nummerierten Pfeilen
+
+\section{}

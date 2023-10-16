@@ -74,7 +74,6 @@
 \contentsline {subsection}{\numberline {4.3.2}StockService}{26}{subsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.2.1}Datenbankschicht}{26}{subsubsection.4.3.2.1}%
 \contentsline {subsubsection}{\numberline {4.3.2.2}Schnittstellen}{26}{subsubsection.4.3.2.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}Mögliche Antwortmöglichkeiten}{27}{subsubsection.4.3.2.3}%
 \contentsline {subsection}{\numberline {4.3.3}BankingService}{27}{subsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.3.1}Datenbankschicht}{27}{subsubsection.4.3.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.3.2}Schnittstellen}{28}{subsubsection.4.3.3.2}%

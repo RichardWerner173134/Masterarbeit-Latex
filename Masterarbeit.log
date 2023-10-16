@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  13 OCT 2023 12:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.29)  13 OCT 2023 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1433,7 +1433,7 @@ chapter 3.
 [19]
 chapter 4.
 (texes/ChapterImplementierung1/Implementierungsentwurf.tex
-<figures/SimplifiedBusinessProcess.png, id=298, 1230.5975pt x 201.75375pt>
+<figures/SimplifiedBusinessProcess.png, id=296, 1230.5975pt x 201.75375pt>
 File: figures/SimplifiedBusinessProcess.png Graphic file (type png)
 <use figures/SimplifiedBusinessProcess.png>
 Package pdftex.def Info: figures/SimplifiedBusinessProcess.png  used on input l
@@ -1442,12 +1442,12 @@ ine 12.
  [20
 
  <./figures/SimplifiedBusinessProcess.png>]
-Underfull \hbox (badness 2334) in paragraph at lines 34--34
-[]\T1/lmr/m/n/12 Name des Ser-
+Overfull \hbox (9.77353pt too wide) in paragraph at lines 32--41
+ [] 
  []
 
 [21] [22] [23] [24]
-<figures/DatabaseER/ArticleServiceTables.png, id=335, 261.97874pt x 101.37875pt
+<figures/DatabaseER/ArticleServiceTables.png, id=333, 261.97874pt x 101.37875pt
 >
 File: figures/DatabaseER/ArticleServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/ArticleServiceTables.png>
@@ -1462,7 +1462,7 @@ Package placeins Info: Float barrier, from input line 144, processed on page 25
 Package placeins Info: Float barrier, from input line 159, processed on page 25
 , lands on page 25. 
  <./figures/DatabaseER/ArticleServiceTables.png>]
-<figures/DatabaseER/StockServiceTables.png, id=342, 753.81625pt x 362.35374pt>
+<figures/DatabaseER/StockServiceTables.png, id=340, 753.81625pt x 362.35374pt>
 File: figures/DatabaseER/StockServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/StockServiceTables.png>
 Package pdftex.def Info: figures/DatabaseER/StockServiceTables.png  used on inp
@@ -1474,92 +1474,79 @@ Package placeins Info: No floats held, on input line 176.
 Package placeins Info: Float barrier, from input line 176, processed on page 26
 , lands on page 26. 
  <./figures/DatabaseER/StockServiceTables.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 209--209
-[]\T1/lmr/m/n/12 Http-
- []
-
-
-Overfull \hbox (2.35852pt too wide) in paragraph at lines 209--209
-\T1/lmr/m/n/12 Methode| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
-[]\T1/lmr/m/n/12 /api/blocked-articles-
- []
-
 Package placeins Info: No floats held, on input line 218.
-<figures/DatabaseER/BankingServiceTables.png, id=354, 804.00375pt x 362.35374pt
+<figures/DatabaseER/BankingServiceTables.png, id=352, 804.00375pt x 362.35374pt
 >
 File: figures/DatabaseER/BankingServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/BankingServiceTables.png>
 Package pdftex.def Info: figures/DatabaseER/BankingServiceTables.png  used on i
-nput line 229.
+nput line 226.
 (pdftex.def)             Requested size: 402.0009pt x 181.17642pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package placeins Info: Must dump some floats on input line 232.
+Package placeins Info: Must dump some floats on input line 229.
 [27
 Package placeins Info: Float barrier, from input line 218, processed on page 27
 , lands on page 27. 
-Package placeins Info: Float barrier, from input line 232, processed on page 27
+Package placeins Info: Float barrier, from input line 229, processed on page 27
 , lands on page 27. 
 ]
-Package placeins Info: Check again: on input line 232.
-Package placeins Info: No floats held, on input line 232.
-Package placeins Info: No floats held, on input line 249.
+Package placeins Info: Check again: on input line 229.
+Package placeins Info: No floats held, on input line 229.
+Package placeins Info: No floats held, on input line 246.
 
-Overfull \hbox (1.93633pt too wide) in paragraph at lines 258--258
+Overfull \hbox (1.93633pt too wide) in paragraph at lines 255--255
 []\T1/lmr/m/n/12 Ergebnis| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 []\T1/lmr/m/n/12 Get Ship-ment
  []
 
 
-Overfull \hbox (21.77351pt too wide) in paragraph at lines 256--286
+Overfull \hbox (21.77351pt too wide) in paragraph at lines 253--283
  [] 
  []
 
 [28
-Package placeins Info: Float barrier, from input line 232, processed on page 28
+Package placeins Info: Float barrier, from input line 229, processed on page 28
 , lands on page 28. 
-Package placeins Info: Float barrier, from input line 249, processed on page 28
+Package placeins Info: Float barrier, from input line 246, processed on page 28
 , lands on page 28. 
  <./figures/DatabaseER/BankingServiceTables.png>]
-Package placeins Info: No floats held, on input line 287.
+Package placeins Info: No floats held, on input line 284.
 
-Overfull \hbox (1.93633pt too wide) in paragraph at lines 293--293
+Overfull \hbox (1.93633pt too wide) in paragraph at lines 290--290
 []\T1/lmr/m/n/12 Ergebnis| 
  []
 
 
-Overfull \hbox (21.77351pt too wide) in paragraph at lines 291--314
+Overfull \hbox (21.77351pt too wide) in paragraph at lines 288--311
  [] 
  []
 
 [29
-Package placeins Info: Float barrier, from input line 287, processed on page 29
+Package placeins Info: Float barrier, from input line 284, processed on page 29
 , lands on page 29. 
 ]
-Package placeins Info: No floats held, on input line 315.
-<figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png, id=373, 1893.0725pt x 
+Package placeins Info: No floats held, on input line 312.
+<figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png, id=371, 1893.0725pt x 
 691.58376pt>
 File: figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png Graphic file (type
  png)
 <use figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png>
 Package pdftex.def Info: figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png
-  used on input line 319.
+  used on input line 318.
 (pdftex.def)             Requested size: 455.24417pt x 166.31062pt.
-Package placeins Info: No floats held, on input line 322.
+Package placeins Info: No floats held, on input line 321.
 ) (texes/ChapterImplementierung1/Implementierung.tex)) (texes/Chapter4.tex
 [30
-Package placeins Info: Float barrier, from input line 315, processed on page 30
+Package placeins Info: Float barrier, from input line 312, processed on page 30
 , lands on page 30. 
-Package placeins Info: Float barrier, from input line 322, processed on page 30
+Package placeins Info: Float barrier, from input line 321, processed on page 30
 , lands on page 30. 
  <./figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png>] [31]
 chapter 5.
@@ -1584,10 +1571,10 @@ Package logreq Info: Writing requests to 'Masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33803 strings out of 476331
- 676825 string characters out of 5792455
+ 33801 strings out of 476331
+ 676798 string characters out of 5792455
  1882660 words of memory out of 5000000
- 53506 multiletter control sequences out of 15000+600000
+ 53505 multiletter control sequences out of 15000+600000
  549335 words of font info for 58 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,10n,106p,10909b,2178s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1600,9 +1587,9 @@ blic/lm/lmr8.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmri
 12.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmssbx10.pfb><
 C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmsy10.pfb><C:/2_Progr
 amme/Office/latex/miktex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Masterarbeit.pdf (37 pages, 412450 bytes).
+Output written on Masterarbeit.pdf (37 pages, 411576 bytes).
 PDF statistics:
- 752 PDF objects out of 1000 (max. 8388607)
- 157 named destinations out of 1000 (max. 500000)
- 734 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 746 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 500000)
+ 726 words of extra memory for PDF output out of 10000 (max. 10000000)
 
