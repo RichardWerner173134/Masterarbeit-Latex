@@ -1,0 +1,21 @@
+\section{Ausgangspunkt}
+
+Es soll ein Geschäftsvorgang mittels Saga-Pattern in einem Microservicesystem entworfen, implementiert und bewertet werden. Die gewählte Geschäftsvorgang soll als LLT aufgefasst werden und eine verteilte Transaktion abbilden. 
+
+Es soll eine Implementierungsform des Saga-Patterns gewählt werden. In der Zielstellung wird ein System gefordert, welches Request-Response-Kommunikation verwendet. Somit kann die Verwendung von Messagingkomponenten ausgeschlossen werden. Die auf diese Komponenten ausgerichtete Implementierung per Choreografie wird deshalb nicht gewählt. 
+
+Als Implementierungsform des Saga-Patterns wird für diesen Versuch die Orchestrierung gewählt. 
+
+
+%Der Koordinator enthält die Logik der abgebildeten LLT. Die in Abschnitt \ref{sec_saga_formalisierung_dea} %beschriebene Darstellung einer Saga in Form eines DEA soll hier verwendet werden. Der Koordinator soll %verschiedene DEAs enthalten, die jeweils die Regeln für die Ausführung einer Saga darstellen. Als %Ausgangspunkt soll ein DEA sein, der das Saga-Pattern in einfachster Form verwendet. 
+
+%Die Implementierung soll iterativ angepasst werden. Es erfolgt eine Messung. Die Ergebnisse sollen dazu %dienen, eine schrittweise Optimierung der Implementierung zu erreichen. 
+
+%Der gewünschte Zielzustand ist ein DEA, der die LLT korrekt abbildet und somit die %ACID-Transaktionseigenschaften gewährleistet. Außerdem soll der Koordinator auf alle möglichen $Ergebnisse$ %reagieren, die eine lokale Transaktion liefern kann. 
+
+%Der Typ $API-Ergebnis\ AE$ soll zusätzlich Elemente beinhalten, die einen Netzwerkfehler darstellen. Diese %neuen Elemente sollen immer dann im Transaktionslog auftauchen, wenn die aufzurufende Schnittstelle nicht %erreichbar ist. 
+
+%\begin{align*}
+%	API-Ergebnis\ AE \in \{tn_{200}, tn_{201}, tn_{400}, tn_{NetworkFailure},& \\
+%	tn+1_{200}, tn+1_{400}, tn+1_{409}, tn+1_{NetworkFailure}, ...\}. 
+%\end{align*}

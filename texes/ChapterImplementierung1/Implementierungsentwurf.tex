@@ -1,31 +1,4 @@
-\section{Entwurf des abzubildenden Geschäftsprozesses}
-
-Das zu implementierende System soll mittels Microservicearchitektur umgesetzt werden. Die einzelnen Services sollen das Saga-Pattern verwenden, um miteinander zu kommunizieren. Fehler in der Geschäftslogik sollen kompensiert werden. Für jeden auszuführenden Schritt soll es also einen kompensierenden Schritt geben. 
-
-\subsection{Geschäftsprozess}
-
-Als abzubildender Geschäftsprozess soll ein Bestell- und Liefervorgang eines Online-Shops dienen. Der Bestellvorgang soll durch das Platzierung einer Bestellung ausgelöst werden. Die Benutzeroberfläche gehört nicht zum Scope des umzusetzenden Systems. 
-
-Als Ausgangspunkt soll folgender Geschäftsprozess dienen:
-
-\begin{figure}[h!]
-	\includegraphics[width=\linewidth]{figures/SimplifiedBusinessProcess.png}
-\end{figure}
-
-
-% TODO Diagramm für den vereinfachten Prozess
-
-Die zum Prozess gehörenden Schritte sind folgende:
-\begin{enumerate}
-	\item Entgegennehmen der Bestellung: Die Bestellung wird über ein imaginäres Frontend entgegengenommen. Dieses Frontend baut einen Request auf und sendet diesen per Http-Schnittstelle an das Backend. Dort wird der Request entgegengenommen und muss alle für die Abwicklung der Bestellung erforderlichen Daten enthalten. Dazu gehören der bestellende Nutzer, die geforderten Artikel und die Zahlungsinformationen. Beim Entgegennehmen wird die Bestellung initialisiert.
-	\item Validierung des Preises: Der Bestellungsrequest enthält eine Liste von den gewünschten Produkten und dem bekannten Preis pro Produkt. Um zu überprüfen, ob der dem Nutzer (dem Frontend) bekannte Preis mit dem aktuellen Preis übereinstimmt, muss dieser validiert werden. % TODO warum ist dieser Schritt notwendig	
-	\item Blockieren der Artikel: Die geforderten Artikel sollten für diese Bestellung reserviert werden, bis der Bestellvorgang abgeschlossen ist. In einem Online-Shop wird angezeigt, wieviele Artikel auf Lager vorrätig sind. Beim Blockieren der Artikel wird dieser Betrag verändert. Somit sehen andere Nutzer nach Ausführung dieses Schrittes den aktuellen Wert der vorrätigen Artikel. 
-	\item Zahlungsabwicklung: Der berechnete Preis der Bestellung muss vom Konto des Kunden abgebucht und auf das Konto des Händlers gutgeschrieben werden. Die Konten des Kunden und des Online-Shop-Besitzers müssen nicht bei derselben Bank liegen. In diesem Schritt muss also eine verteilte Transaktion stattfinden.
-	\item Auslösen der Lieferung: Die blockierten Artikel werden versendet. Dieser Prozess dauert einen längeren Zeitraum an.
-	\item Abschluss der Lieferung: Die Saga ist abgeschlossen.
-\end{enumerate}
-
-\subsection{Services}
+\section{Services}
 Aus der Beschreibung des Geschäftsprozesses lassen sich folgende Services ableiten:
 
 \begin{center}
@@ -40,7 +13,7 @@ Aus der Beschreibung des Geschäftsprozesses lassen sich folgende Services ablei
 	\end{tabular}
 \end{center}
 
-\subsection{Transaktionen}
+\section{Transaktionen}
 Sieht man den gesamten Geschäftsprozess als Transaktion, wären folgende lokale Transaktionen Teil der globalen Transaktion, die durch das Platzieren der Bestellung ausgelöst werden:
 \begin{enumerate}
 	\item $T_1$: OrderService - Initialisieren der Bestellung
@@ -245,7 +218,7 @@ Der entworfene Prozess soll nun als DEA dargestellt werden. Dafür sind alle mö
 
 \subsection{Ergebnisse aller Transaktionen}
 \begin{center}
-	\begin{tabular}[h]{|p{3cm}|p{1.5cm}|p{11cm}|}
+	\begin{longtable}[h]{|p{3cm}|p{1.5cm}|p{11cm}|}
 		\hline
 		Transaktion	& Ergebnis & Bedeutung \\ \hline
 		Initialize Saga 	& Success 	& Bestellung ist initialisiert \\ \hline
@@ -254,47 +227,52 @@ Der entworfene Prozess soll nun als DEA dargestellt werden. Dafür sind alle mö
 		Validate Price 		& Success 	& Preis aus Bestellung und aus dem System stimmen überein \\
 							& Failure 	& Preise aus Bestellung und aus dem System stimmen nicht überein \\ \hline
 		Block Articles		& 200		& Produkte wurden reserviert \\
+							& 208		& Artikel wurden bereits blockiert \\
 							& 409 		& Lagervorrat ist erschöpft \\
 							& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
 		Remove Money 		& 200		& Geldbetrag auf dem Konto wurde verringert \\
-							& 404		& Nutzer wurde nicht gefunden \\
+							& 208		& Geldbetrag wurde auf vorherige Anfrage bereits verringert \\
 							& 409		& Lokale Transaktion ist fehlgeschlagen (Konto ist nicht gedeckt) \\
 							& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
 		Add Money 			& 200		& Geldbetrag auf dem Konto wurde erhöht \\
-							& 404		& Nutzer wurde nicht gefunden \\
+							& 208		& Geldbetrag wurde auf vorherige Anfrage bereits erhöht \\
 							& 409		& Lokale Transaktion ist fehlgeschlagen \\
 							& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
 		Start Shipment 		& 200		& Lieferung wurde ausgelöst \\
+							& 208		& Lieferung wurde auf vorherige Anfrage bereits gestartet \\
 							& 404		& Zur geforderten Bestellnummer wurde keine Reservierung gefunden \\
 							& 409		& Lokale Transaktion ist fehlgeschlagen \\
 							& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
-		Check Cancellation 	& Success	& Es wurde keine Stornierung festgestellt \\
+		Check No Cancellation 	& Success	& Es wurde keine Stornierung festgestellt \\
 							& Failure	& Es wurde eine Stornierung festgestellt \\ \hline
 		Get Shipment Status	& 200 		& Status wurde vom StockService empfangen \\
 							& 404		& Lieferung existiert nicht \\ \hline
-		Check Shipment Status& Success	& Lieferstatus signalisiert abgeschlossene Lieferung \\
+		Check Shipment Status & Success	& Lieferstatus signalisiert abgeschlossene Lieferung \\
 							& Failure 	& Lieferstatus signalisiert noch nicht abgeschlossene Lieferung \\ \hline
-	\end{tabular}
+	\end{longtable}
 \end{center}
 \FloatBarrier
 
 \subsection{Ergebnisse aller Kompensierungen}
 \begin{center}
-	\begin{tabular}[h]{|p{5.5cm}|p{1.5cm}|p{8.5cm}|}
+	\begin{longtable}[h]{|p{5.5cm}|p{1.5cm}|p{8.5cm}|}
 		\hline
 		Transaktion 						& Ergebnis 	& Bedeutung \\ \hline
 		Initialize Saga Compensation	 	& Success 	& \\ \hline
 		Get Article Data Compensation	 	& Success 	& \\ \hline	
 		Validate Price Compensation	 		& Success 	& \\ \hline
 		Block Articles Compensation	 		& 200	 	& Reservierung wurde aufgehoben \\
+											& 404		& Reservierung wurde nicht gefunden \\
 											& 409		& Lokale Transaktion ist fehlgeschlagen \\
 											& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
-		Remove Money Compensation		 		& 200		& Geldbetrag auf dem Konto wurde erhöht \\
-											& 404		& Nutzer wurde nicht gefunden \\
+		Remove Money Compensation		 	& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+											& 208		& Transaktion wurde auf vorherige Anfrage bereits kompensiert \\
+											& 404 		& keine zugehörige kompensierbare Transaktion gefunden \\
 											& 409		& Lokale Transaktion ist fehlgeschlagen \\
 											& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
 		Add Money Compensation		 		& 200		& Geldbetrag auf dem Konto wurde erhöht \\
-											& 404		& Nutzer wurde nicht gefunden \\
+											& 208		& Transaktion wurde auf vorherige Anfrage bereits kompensiert \\
+											& 404		& keine zugehörige kompensierbare Transaktion gefunden \\
 											& 409		& Lokale Transaktion ist fehlgeschlagen \\
 											& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
 		Start Shipment Compensation	 		& 200	 	& Lieferung wurde abgebrochen \\
@@ -302,7 +280,7 @@ Der entworfene Prozess soll nun als DEA dargestellt werden. Dafür sind alle mö
 											& 409		& Lokale Transaktion ist fehlgeschlagen \\
 											& 410		& Lieferung wurde nicht abgebrochen, da sie bereits abgeschlossen ist \\
 											& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
-	\end{tabular}
+	\end{longtable}
 \end{center}
 \FloatBarrier
 

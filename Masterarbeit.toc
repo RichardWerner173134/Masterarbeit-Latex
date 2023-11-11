@@ -47,41 +47,41 @@
 \contentsline {subsubsection}{\numberline {2.3.4.3}Verteilte Systemlandschaft}{17}{subsubsection.2.3.4.3}%
 \contentsline {subsubsection}{\numberline {2.3.4.4}Reaktion auf verschiedene Antwortmöglichkeiten in der Geschäftslogik}{17}{subsubsection.2.3.4.4}%
 \contentsline {subsubsection}{\numberline {2.3.4.5}Fehlerfälle - Geschäftslogik und Ausfälle}{17}{subsubsection.2.3.4.5}%
-\contentsline {chapter}{\numberline {3}Methodik}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Zielstellung}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Bewertungskriterien}{18}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Anzahl der Pfade}{18}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Anzahl der Netzwerkaufrufe}{19}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Wahrscheinlichkeit für Ausfall}{19}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Konsistenzerhaltung im Falle eines Ausfalls der Nichtkoordinierenden Services}{19}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Konsistenzerhaltung im Falle eines Koordinatorausfalls}{19}{subsection.3.2.5}%
-\contentsline {chapter}{\numberline {4}Erstes Saga-System}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Entwurf des abzubildenden Geschäftsprozesses}{20}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Geschäftsprozess}{20}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Services}{21}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Transaktionen}{21}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Fachliche Kontextabgrenzung}{22}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Frontend}{22}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}ArticleService}{22}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}StockService}{22}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}BankingServices}{23}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}OrderService}{24}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Technische Kontextabgrenzung}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}ArticleService}{25}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Datenbankschicht}{25}{subsubsection.4.3.1.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}Schnittstellen}{25}{subsubsection.4.3.1.2}%
-\contentsline {subsubsection}{\numberline {4.3.1.3}Mögliche Antwortmöglichkeiten}{25}{subsubsection.4.3.1.3}%
-\contentsline {subsection}{\numberline {4.3.2}StockService}{26}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Datenbankschicht}{26}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Schnittstellen}{26}{subsubsection.4.3.2.2}%
-\contentsline {subsection}{\numberline {4.3.3}BankingService}{27}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Datenbankschicht}{27}{subsubsection.4.3.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.3.2}Schnittstellen}{28}{subsubsection.4.3.3.2}%
-\contentsline {section}{\numberline {4.4}Darstellung als DEA}{28}{section.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.0.1}Durchlauf einer erfolgreichen Saga}{31}{subsubsection.4.4.0.1}%
-\contentsline {subsubsection}{\numberline {4.4.0.2}Durchlauf einer gescheiterten, kompensierten Saga}{31}{subsubsection.4.4.0.2}%
-\contentsline {subsubsection}{\numberline {4.4.0.3}Durchlauf einer gescheiterten, nichtkompensierten Saga}{31}{subsubsection.4.4.0.3}%
+\contentsline {chapter}{\numberline {3}Versuchsvorbereitung}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problemstellung}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Zielstellung}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Ausgangspunkt}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Methodik}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Schritt 1 - Entwurf und Implementierung eines GP}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Schritt 2 - Messung der verschiedenen Implementierungen}{20}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Schritt 3 - Analyse der Messdaten}{21}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Implementierung des Saga-Systems}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Services}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Transaktionen}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Fachliche Kontextabgrenzung}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Frontend}{23}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}ArticleService}{23}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}StockService}{23}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}BankingServices}{24}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}OrderService}{25}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Technische Kontextabgrenzung}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}ArticleService}{26}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Datenbankschicht}{26}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Schnittstellen}{26}{subsubsection.4.4.1.2}%
+\contentsline {subsection}{\numberline {4.4.2}StockService}{26}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Datenbankschicht}{26}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Schnittstellen}{27}{subsubsection.4.4.2.2}%
+\contentsline {subsection}{\numberline {4.4.3}BankingService}{28}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Datenbankschicht}{28}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}Schnittstellen}{29}{subsubsection.4.4.3.2}%
+\contentsline {section}{\numberline {4.5}Darstellung als DEA}{29}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Ergebnisse aller Transaktionen}{29}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Ergebnisse aller Kompensierungen}{30}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}Durchlauf einer erfolgreichen Saga}{31}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}Durchlauf einer gescheiterten, kompensierten Saga}{31}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}Durchlauf einer gescheiterten, nichtkompensierten Saga}{31}{subsubsection.4.5.2.3}%
 \contentsline {chapter}{\numberline {5}Implementierung}{I}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Abänderung der Implementierung}{I}{section.5.1}%
 \contentsline {chapter}{Abbildungsverzeichnis}{II}{section.5.1}%
+\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.18}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

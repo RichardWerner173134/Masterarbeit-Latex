@@ -7,14 +7,18 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
+\usepackage{microtype}% verbesserter Randausgleich
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{automata, positioning, arrows}
 \usepackage{amsfonts}
 \usepackage[verbose]{placeins} 
+\usepackage{longtable} %tabellen über mehrere seiten
+
 % to include sources, style
 \usepackage[style=ieee,natbib=true, backend=biber]{biblatex}
+\addbibresource{bib/sources.bib}
 
 % global layout
 \usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
@@ -27,12 +31,14 @@
 \setcounter{tocdepth}{4}
 \renewcommand{\baselinestretch}{1.1}
 \renewcommand*{\UrlFont}{\rmfamily}
+
 % settings for links, hyperrefs
 \usepackage[unicode=true,pdfusetitle,
 bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
-%\defbibheading{lit}{\section{Literaturverzeichnis}} \printbibliography[heading=lit]
-\addbibresource{bib.bib}
+
+
+
 \urlstyle{sf}
 
 
@@ -70,7 +76,9 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 	\listoffigures
 	
 	\pagebreak
+
 	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
 	\printbibliography
 	
 	\pagebreak

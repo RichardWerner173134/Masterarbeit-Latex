@@ -45,7 +45,8 @@ Der Transaktionslog ist eine Liste von Transaktionen und Kompensierungen, die al
 Der Zustandsautomat bestimmt aus den bisherigen Ts und Cs den nächsten Schritt. 
 
 
-\subsubsection{Formalisierung eines Saga-Zustandsautomaten als DEA}%TODO Abkürzung DEA
+\subsubsection{Formalisierung eines Saga-Zustandsautomaten als DEA} \label{sec_saga_formalisierung_dea}
+%TODO Abkürzung DEA
 \paragraph{Formale Darstellung eines DEA}
 Der Prozessablauf einer Saga kann als detemernistischer endlicher Automat angesehen werden. Ein DEA wird formal dargestellt als Tupel mit folgenden Elementen:
 \begin{itemize}
@@ -406,7 +407,7 @@ Im ersten Fall ist eine Forward Recovery möglich. Wenn ein andere Kunde seine R
 
 Im zweiten Fall ist Forward-Recovery ohne Effekt. Wenn eine Hotelbuchung für einen Zeitraum angefragt wird, in dem das Hotel im Betriebsurlaub ist, wird auch bei wiederholter Anfrage keine Buchung zustande kommen.
 
-\subsubsection{Implementierungsformen des Patterns}
+\subsubsection{Implementierungsformen des Patterns}\label{subs_Saga_Implementierungsformen}
 Um eine Saga als Microservice-System zu implementieren, gibt es zwei verschiedene Herangehensweisen. Die zwei Formen der Implementierung werden als Orchestrierung und als Choreografie bezeichnet. Beide Ausprägungen des Saga-Patterns verfolgen denselben Zweck: den Gedanken, eine globale verteilte Transaktion in einem verteilten System in lokale Teiltransaktionen aufzuteilen, die mittels passender Kompensierung zurückgerollt werden können. 
 
 Die zwei Ausprägungen unterscheiden sich hauptsächlich in der Softwarearchitektur. Es ist zu beachten, dass beide Implementierungen denselben Geschäftsprozess abbilden können und somit als äquivalent angesehen werden können. %TODO Quelle für diese Aussage
