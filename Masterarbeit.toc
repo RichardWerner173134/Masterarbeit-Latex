@@ -55,33 +55,42 @@
 \contentsline {subsection}{\numberline {3.4.1}Schritt 1 - Entwurf und Implementierung eines GP}{19}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Schritt 2 - Messung der verschiedenen Implementierungen}{20}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Schritt 3 - Analyse der Messdaten}{21}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Implementierung des Saga-Systems}{22}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Versuchsdurchführung}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Services}{22}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Transaktionen}{22}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Fachliche Kontextabgrenzung}{23}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Frontend}{23}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}ArticleService}{23}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}StockService}{23}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}BankingServices}{24}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}OrderService}{25}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Technische Kontextabgrenzung}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}ArticleService}{26}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Datenbankschicht}{26}{subsubsection.4.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Schnittstellen}{26}{subsubsection.4.4.1.2}%
-\contentsline {subsection}{\numberline {4.4.2}StockService}{26}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Datenbankschicht}{26}{subsubsection.4.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}Schnittstellen}{27}{subsubsection.4.4.2.2}%
-\contentsline {subsection}{\numberline {4.4.3}BankingService}{28}{subsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}Datenbankschicht}{28}{subsubsection.4.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}Schnittstellen}{29}{subsubsection.4.4.3.2}%
-\contentsline {section}{\numberline {4.5}Darstellung als DEA}{29}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Ergebnisse aller Transaktionen}{29}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Ergebnisse aller Kompensierungen}{30}{subsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}Durchlauf einer erfolgreichen Saga}{31}{subsubsection.4.5.2.1}%
-\contentsline {subsubsection}{\numberline {4.5.2.2}Durchlauf einer gescheiterten, kompensierten Saga}{31}{subsubsection.4.5.2.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.3}Durchlauf einer gescheiterten, nichtkompensierten Saga}{31}{subsubsection.4.5.2.3}%
-\contentsline {chapter}{\numberline {5}Implementierung}{I}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Abänderung der Implementierung}{I}{section.5.1}%
-\contentsline {chapter}{Abbildungsverzeichnis}{II}{section.5.1}%
-\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.18}%
+\contentsline {section}{\numberline {4.2}Lokale Transaktionen}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Kompensierungen}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Fachliche Kontextabgrenzung}{24}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Frontend}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}ArticleService}{24}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}StockService}{25}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}BankingServices}{25}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}OrderService}{26}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Technische Kontextabgrenzung}{27}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}ArticleService}{27}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}StockService}{27}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}BankingService}{29}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Ergebnisse}{30}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Ergebnisse aller Transaktionen}{30}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Ergebnisse aller Kompensierungen}{31}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Saga Execution Component}{32}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Rahmenbedingung für die Versuchsdurchführung}{32}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Ausführung eines DEAs}{32}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Modellierung eines DEAs}{32}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}Konstruktion eines DEAs}{33}{subsection.4.7.4}%
+\contentsline {section}{\numberline {4.8}Planung der Datenerfassung}{39}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Testszenarien}{39}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Fehlerquellen}{39}{subsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.8.3}Simulation der Testfälle}{41}{subsection.4.8.3}%
+\contentsline {subsection}{\numberline {4.8.4}Datengenerierung}{42}{subsection.4.8.4}%
+\contentsline {subsection}{\numberline {4.8.5}Messwerte}{42}{subsection.4.8.5}%
+\contentsline {section}{\numberline {4.9}Implementierung des SmBasic}{44}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Strategie für die Konstruierung des DEAs SmBasic}{45}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}StateAnalysisResult}{45}{subsection.4.9.2}%
+\contentsline {subsection}{\numberline {4.9.3}TransactionAnalysisResult}{47}{subsection.4.9.3}%
+\contentsline {section}{\numberline {4.10}Implementierung des SmBasicSafeRetries}{48}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Implementierung 3}{49}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Implementierung 4}{49}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Implementierung 5}{49}{section.4.13}%
+\contentsline {chapter}{Abbildungsverzeichnis}{II}{figure.caption.71}%
+\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.72}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

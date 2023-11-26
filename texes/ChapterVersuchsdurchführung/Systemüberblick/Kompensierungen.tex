@@ -1,0 +1,17 @@
+\section{Kompensierungen}
+
+Jede an der LLT teilhabende lokale Transaktion muss kompensierbar sein, damit das Saga-Pattern funktionieren kann. Führt eine lokale Transaktion zu keinem Wechsel des Systemzustands, muss keine Kompensierung stattfinden.
+
+\begin{center}
+	\begin{tabular}[h]{|p{5cm}|p{9.5cm}|}
+		\hline
+		Transaktion & Kompensierung \\ \hline
+		Initialisierung & \\ \hline
+		Validierung der Produktdaten & \\ \hline
+		Blockierug der Artikel & StockService - Freigeben der blockierten Artikel \\ \hline
+		Geldabbuchung & Erhöhen des Geldbetrages des Kundenkontos \\ \hline
+		Geldzubuchung & Verringern des Geldbetrages des Händlerkontos \\ \hline
+		Auslösung der Lieferung & Zurückrufen der Lieferung \\ \hline
+		Lieferabschluss & \\ \hline
+	\end{tabular}
+\end{center}

@@ -1,0 +1,69 @@
+\section{Ergebnisse}
+Der entworfene Prozess soll nun als DEA dargestellt werden. Dafür sind alle möglichen Ergebnisse zu erfassen, die jede lokale Transaktion aus Sicht des Koordinators liefern kann. 
+
+\subsection{Ergebnisse aller Transaktionen}
+\begin{center}
+	\begin{longtable}[h]{|p{3cm}|p{1.5cm}|p{11cm}|}
+		\hline
+		Transaktion	& Ergebnis & Bedeutung \\ \hline
+		Initialize Saga 	& Success 	& Bestellung ist initialisiert \\ \hline
+		Get Article Data	& 200 		& Artikeldaten wurden vom ArticleService empfangen \\
+		& 404 		& Artikel wurde nicht gefunden \\ \hline
+		Validate Price 		& Success 	& Preis aus Bestellung und aus dem System stimmen überein \\
+		& Failure 	& Preise aus Bestellung und aus dem System stimmen nicht überein \\ \hline
+		Block Articles		& 200		& Produkte wurden reserviert \\
+%		& 208		& Artikel wurden bereits blockiert \\
+		& 409 		& Conflict (Lagervorrat ist erschöpft) \\
+		& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Remove Money 		& 200		& Geldbetrag auf dem Konto wurde verringert \\
+%		& 208		& Geldbetrag wurde auf vorherige Anfrage bereits verringert \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen (Konto ist nicht gedeckt) \\
+		& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Add Money 			& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+%		& 208		& Geldbetrag wurde auf vorherige Anfrage bereits erhöht \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen \\
+		& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Start Shipment 		& 200		& Lieferung wurde ausgelöst \\
+%		& 208		& Lieferung wurde auf vorherige Anfrage bereits gestartet \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen \\
+		& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Check No Cancellation 	& Success	& Es wurde keine Stornierung festgestellt \\
+		& Failure	& Es wurde eine Stornierung festgestellt \\ \hline
+		Get Shipment Status	& 200 		& Status wurde vom StockService empfangen \\
+		& 404		& Lieferung existiert nicht \\ \hline
+		Check Shipment Status & Success	& Lieferstatus signalisiert abgeschlossene Lieferung \\
+		& Failure 	& Lieferstatus signalisiert noch nicht abgeschlossene Lieferung \\ \hline
+	\end{longtable}
+\end{center}
+\FloatBarrier
+
+\subsection{Ergebnisse aller Kompensierungen}
+\begin{center}
+	\begin{longtable}[h]{|p{5.5cm}|p{1.5cm}|p{8.5cm}|}
+		\hline
+		Transaktion 						& Ergebnis 	& Bedeutung \\ \hline
+		Initialize Saga Compensation	 	& Success 	& \\ \hline
+		Get Article Data Compensation	 	& Success 	& \\ \hline	
+		Validate Price Compensation	 		& Success 	& \\ \hline
+		Block Articles Compensation	 		& 200	 	& Reservierung wurde aufgehoben \\
+		& 404		& Reservierung wurde nicht gefunden \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen \\
+		& 429 		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Remove Money Compensation		 	& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+%		& 208		& Transaktion wurde auf vorherige Anfrage bereits kompensiert \\
+%		& 404 		& keine zugehörige kompensierbare Transaktion gefunden \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen \\
+		& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Add Money Compensation		 		& 200		& Geldbetrag auf dem Konto wurde erhöht \\
+		& 208		& Transaktion wurde auf vorherige Anfrage bereits kompensiert \\
+		& 404		& keine zugehörige kompensierbare Transaktion gefunden \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen \\
+		& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+		Start Shipment Compensation	 		& 200	 	& Lieferung wurde abgebrochen \\
+		& 404		& Lieferung existiert nicht \\
+		& 409		& Lokale Transaktion ist fehlgeschlagen \\
+		& 410		& Lieferung wurde nicht abgebrochen, da sie bereits abgeschlossen ist \\
+		& 429		& Mehrere Transaktionen behindern sich und lokale Transaktion schlägt fehl \\ \hline
+	\end{longtable}
+\end{center}
+\FloatBarrier

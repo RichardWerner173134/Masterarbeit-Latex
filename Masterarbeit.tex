@@ -15,10 +15,17 @@
 \usepackage{amsfonts}
 \usepackage[verbose]{placeins} 
 \usepackage{longtable} %tabellen über mehrere seiten
-
+\usepackage{listings}
+\usepackage{float}
 % to include sources, style
 \usepackage[style=ieee,natbib=true, backend=biber]{biblatex}
 \addbibresource{bib/sources.bib}
+\usepackage{pgfplots}
+\usepackage{pgf-pie}  
+\usepackage{subcaption}
+\usepackage[justification=centering]{caption}% or e.g. [format=hang]
+\usepackage{color, colortbl}
+\definecolor{Gray}{HTML}{d3d3d3}
 
 % global layout
 \usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
@@ -32,14 +39,23 @@
 \renewcommand{\baselinestretch}{1.1}
 \renewcommand*{\UrlFont}{\rmfamily}
 
+\usepackage{listings}
 % settings for links, hyperrefs
 \usepackage[unicode=true,pdfusetitle,
 bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
-
-
-
 \urlstyle{sf}
+
+\usepackage[capitalise, noabbrev]{cleveref}
+\renewcommand{\lstlistingname}{Codebeispiel}% Listing -> Codebeispiel
+
+\crefname{figure}{Abbildung}{Abbildungen}
+\Crefname{figure}{Abbildung}{Abbildungen}
+\crefname{listing}{Codebeispiel}{Codebeispiele}
+\Crefname{listing}{Codebeispiel}{Codebeispiele}
+\crefname{table}{Tabelle}{Tabellen}
+\Crefname{table}{Tabelle}{Tabellen}
+
 
 
 \begin{document}
@@ -67,8 +83,6 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 	\input{texes/Chapter2.tex}	
 	
 	\input{texes/Chapter3.tex}
-	
-	\input{texes/Chapter4.tex}
 	
 	\pagenumbering{Roman}
 	\pagebreak

@@ -1,5 +1,28 @@
-\chapter{Implementierung des Saga-Systems} \label{chapter_basic_saga}
+\chapter{Versuchsdurchführung} \label{chapter_basic_saga}
 
-\input{texes/ChapterImplementierung1/Implementierungsentwurf.tex}
+In diesem Kapitel soll die der in Kapitel \ref{chapter_versuchsvorbereitung} geforderte Versuch durchgeführt werden. Zunächst wird der initiale Systementwurf beschrieben. Dazu gehört die Modellierung der lokalen Transaktionen, die Implementierung der dafür vorgesehenen Services und die Implementierung des Koordinators.
 
-\input{texes/ChapterImplementierung1/Implementierung.tex}
+Es wird im Anschluss ein initialer DEA verwendet und iterativ angepasst. Jede Anpassung resultiert aus Messergebnissen und daraus ableitbaren Schlüssen.
+
+\input{texes/ChapterVersuchsdurchführung/Systemüberblick.tex}
+
+\input{texes/ChapterVersuchsdurchführung/SEC.tex}
+
+\input{texes/ChapterVersuchsdurchführung/PlanungDerDatenerfassung.tex}
+
+\input{texes/ChapterVersuchsdurchführung/Implementierung1.tex}
+
+\input{texes/ChapterVersuchsdurchführung/Implementierung2.tex}
+
+\input{texes/ChapterVersuchsdurchführung/Implementierung3.tex}
+
+\input{texes/ChapterVersuchsdurchführung/Implementierung4.tex}
+
+\input{texes/ChapterVersuchsdurchführung/Implementierung5.tex}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png}
+	\caption{Saga als DEA}
+\end{figure}
+\FloatBarrier

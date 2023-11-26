@@ -1,0 +1,27 @@
+\section{Services} \label{sec_Services}
+Es sollen zuerst die Teilnehmerservices identifiziert werden. 
+
+Die Schnittstelle zwischen dem Backend-System und dem Benutzer stellt ein Frontend dar. in diesem Frontend werdem dem Nutzer die Produkte dargestellt. Außerdem übernimmt das Frontend die Aufgabe der Verwaltung eines Warenkorbsystems. Der Nutzer kann Produkte zu seinem Warenkorb hinzufügen oder entfernen. Die Bestellung kann nun ausgelöst werden und an das Backend übermittelt werden. 
+
+Der Einstiegspunkt für die Abwicklung einer Bestellung soll der OrderService sein. Neben der Initialisierung dieser Bestellung und der Aktualisierung des Bestellungsstatus fallen aus Sicht der Prozessdefinition keine weiteren Aufgaben in den Bereich dieses Services. Die Aktualisierung des Bestellungsstatus ist sehr eng mit der Verwaltung des Prozesses aus Sicht des Koordinators verbunden. Deshalb kann der OrderService die Rolle des Koordinators übernehmen. 
+
+Die Artikeldaten sollen dem Nutzer und dem Geschäftsprozess in einer gemeinsamen Schnittstelle bekannt gemacht werden. Diese Aufgabe übernimmt ein eigener ArticleService. 
+
+Eine Aufgabengebiet ist die Verwaltung der Lagerbestände. Die Verwaltung des Lagers und den vorrätigen und reservierten Artikeln sowie die Verwaltung von Lieferungen übernimmt der StockService. 
+
+Zuletzt muss ein Service die Kontostände der Nutzerkonten und des Händlerkontos verwalten. Dies wird von einem BankService übernommen. Im Versuch sollen zwei Instanzen des BankServices verwendet werden, die zwei verschiedene BankServiceProvider darstellen sollen. 
+
+\begin{center}
+	\begin{tabular}[h]{|p{3.5cm}|p{12cm}|}
+		\hline
+		Name des Services & Aufgabe \\ \hline
+		Frontend & Nutzerschnittstelle (GUI), Anzeige der Produkte, Platzieren der Bestellung \\ \hline
+		OrderService & Entgegennehmen der Bestellung, Koordinierung des Bestellprozesses \\ \hline
+		ArticleService & API für die angebotenen Produkte und Preise \\ \hline
+		StockService & Verwaltung des Lagerbestands, Verwaltung des Lieferprozesses \\ \hline
+		BankingServices & Verwaltung von Kontonutzern und Kontoständen \\ \hline
+	\end{tabular}
+\end{center}
+
+\paragraph*{Entwicklungsscope}
+Für die Betrachtung des Bestell- und Lieferprozesses als LLT wird das Frontend außen vorgelassen. Die LLT beginnt mit der Entgegennahme eines Order-Requests im OrderService. Es werden lediglich die Backend-Services entwickelt, die Teil der LLT sind.
