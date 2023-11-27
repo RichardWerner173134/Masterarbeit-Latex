@@ -88,9 +88,10 @@
 \contentsline {subsection}{\numberline {4.9.2}StateAnalysisResult}{45}{subsection.4.9.2}%
 \contentsline {subsection}{\numberline {4.9.3}TransactionAnalysisResult}{47}{subsection.4.9.3}%
 \contentsline {section}{\numberline {4.10}Implementierung des SmBasicSafeRetries}{48}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Implementierung 3}{49}{section.4.11}%
-\contentsline {section}{\numberline {4.12}Implementierung 4}{49}{section.4.12}%
-\contentsline {section}{\numberline {4.13}Implementierung 5}{49}{section.4.13}%
-\contentsline {chapter}{Abbildungsverzeichnis}{II}{figure.caption.71}%
-\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.72}%
+\contentsline {subsection}{\numberline {4.10.1}StateAnalysisResult}{49}{subsection.4.10.1}%
+\contentsline {section}{\numberline {4.11}Implementierung 3}{50}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Implementierung 4}{50}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Implementierung 5}{I}{section.4.13}%
+\contentsline {chapter}{Abbildungsverzeichnis}{II}{figure.caption.76}%
+\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.77}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
