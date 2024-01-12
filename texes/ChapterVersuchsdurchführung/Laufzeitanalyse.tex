@@ -1,0 +1,70 @@
+\section{Laufzeitanalyse}
+
+Das primäre Werkzeug der Optimierung der Zustandsautomaten war die Einführung von Retries. Es ist zu erwarten, dass die Einführung von Retries die Laufzeit verlängert. Im Folgenden sind die Ergebnisse der Laufzeitanalyse per Boxplot dargestellt. Als Visualisierung wird ein modifizierter Boxplot verwendet. In jedem Diagramm sind das obere und untere Quartil, der Median, das Maximum und Minimum sowie Ausreißer ablesbar. Jeder Boxplot stellt die Werte eines DEAs dar. Aus Gründen der Übersicht wurden die langen Bezeichnungen der Zustandsautomaten durch folgende Nummerierung ersetzt:
+
+\begin{center}
+	\begin{tabular}[h]{|p{8cm}|p{3cm}|}
+		\hline
+		Zustandsautomat & Nummerierung \\ \hline
+		SmBasic & 1 \\ \hline
+		SmBasicSafeRetries & 2 \\ \hline
+		SmBasicNetworkFailureUnlimitedRetries & 3 \\ \hline
+		SmIdempotencyBackwardRecovery & 4 \\ \hline		
+		SmIdempotencyForwardRecovers & 5 \\ \hline
+	\end{tabular}
+\end{center}
+\FloatBarrier
+
+Es ist erkennbar, dass die Laufzeit für alle Automaten sehr nah beieinander liegt. Da im ersten Szenario keine Netzwerkfehler auftauchen, sind die Werte sehr wenig gestreut. Die Ausreißer sind ebenfalls erkennbar.
+
+\subsection{Testszenario1}
+
+\begin{figure}[!htbp]
+\begin{minipage}{.45\textwidth}
+	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario1.tex}
+	\caption{Boxplot FinishOrders in Szenario 1}
+	\label{fig:boxplot_finishorders_scenario1}
+\end{minipage}\hspace{\fill}%
+\begin{minipage}{.45\textwidth}
+	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario1.tex}
+	\caption{Boxplot CancelOrders in Szenario 1}
+	\label{fig:boxplot_cancelorders_scenario1}
+\end{minipage}
+\end{figure}
+\FloatBarrier
+
+\subsection{Testszenario2}
+
+\begin{figure}[!htbp]
+\begin{minipage}{.45\textwidth}
+	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario2.tex}
+	\caption{Boxplot FinishOrders in Szenario 2}
+	\label{fig:boxplot_finishorders_scenario2}
+\end{minipage}\hspace{\fill}%
+\begin{minipage}{.45\textwidth}
+	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario2.tex}
+	\caption{Boxplot CancelOrders in Szenario 2}
+	\label{fig:boxplot_cancelorders_scenario2}
+\end{minipage}
+\end{figure}
+\FloatBarrier
+
+\subsection{Testszenario3}
+
+\begin{figure}[!htbp]
+\begin{minipage}{.45\textwidth}
+	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario3.tex}
+	\caption{Boxplot FinishOrders in Szenario 3}
+	\label{fig:boxplot_finishorders_scenario3}
+\end{minipage}\hspace{\fill}%
+\begin{minipage}{.45\textwidth}
+	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario3.tex}
+	\caption{Boxplot CancelOrders in Szenario 3}
+	\label{fig:boxplot_cancelorders_scenario3}
+\end{minipage}
+\end{figure}
+
+
+
+
+

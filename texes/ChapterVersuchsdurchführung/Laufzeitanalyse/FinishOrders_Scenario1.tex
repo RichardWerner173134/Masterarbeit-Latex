@@ -1,0 +1,26 @@
+
+\begin{tikzpicture}
+	\begin{axis} [
+		boxplot/draw direction=y,
+		%area legend,
+		height=8.0cm, width=\linewidth,
+		xmin=0,xmax=6,xtick={1,2,3,4,5},
+		xtick style = {draw=none}, % Hide tick line
+		enlarge x limits,
+		ymin=0, ymax=100, ytick={0,20,...,100},
+		ylabel = {Laufzeit [s]},
+		ymajorgrids,
+		ytick style = {draw=none}, % Hide tick line
+		enlarge y limits,
+		every axis plot/.append style={fill,fill opacity=0.5},
+		every boxplot/.style={mark=x,every mark/.append style={mark size=1.0pt}}
+		]
+		% 
+		\addplot+ [boxplot prepared={upper quartile=54.29, lower quartile=42.51, upper whisker=71.96, lower whisker=24.84, median=50.05, draw position=1}, ] coordinates {(1, 11.2)(1, 16.85)(1, 17.92)(1, 18.43)(1, 18.52)(1, 18.85)(1, 19.1)(1, 19.35)(1, 19.39)(1, 19.47)(1, 20.03)(1, 20.16)(1, 20.71)(1, 21.52)(1, 21.63)(1, 22.54)(1, 22.74)(1, 23.11)(1, 23.18)(1, 23.27)(1, 23.45)(1, 23.7)(1, 24.12)(1, 24.38)};
+		\addplot+ [boxplot prepared={upper quartile=58.16, lower quartile=46.64, upper whisker=75.44, lower whisker=29.36, median=52.17, draw position=2}, ] coordinates {};
+		\addplot+ [boxplot prepared={upper quartile=58.33, lower quartile=45.94, upper whisker=76.92, lower whisker=27.36, median=50.05, draw position=3}, ] coordinates {(3, 80.85)(3, 83.43)};
+		\addplot+ [boxplot prepared={upper quartile=59.87, lower quartile=46.49, upper whisker=79.94, lower whisker=26.42, median=50.64, draw position=4}, ] coordinates {};
+		\addplot+ [boxplot prepared={upper quartile=58.71, lower quartile=50.14, upper whisker=71.57, lower whisker=37.29, median=53.97, draw position=5}, ] coordinates {};
+		
+	\end{axis}
+\end{tikzpicture}

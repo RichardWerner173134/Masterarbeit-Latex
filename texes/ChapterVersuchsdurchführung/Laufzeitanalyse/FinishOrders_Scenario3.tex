@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{axis} [
+		boxplot/draw direction=y,
+		%area legend,
+		height=8.0cm, width=\linewidth,
+		xmin=0,xmax=6,xtick={1,2,3,4,5},
+		xtick style = {draw=none}, % Hide tick line
+		enlarge x limits,
+		ymin=0, ymax=500, ytick={0,50,...,500},
+		ylabel = {Laufzeit [s]},
+		ymajorgrids,
+		ytick style = {draw=none}, % Hide tick line
+		enlarge y limits,
+		every axis plot/.append style={fill,fill opacity=0.5},
+		every boxplot/.style={mark=x,every mark/.append style={mark size=1.0pt}}
+		]
+		% 
+		\addplot+ [boxplot prepared={upper quartile=41.04, lower quartile=2.74, upper whisker=98.49, lower whisker=0.0, median=30.93, draw position=1}, ] coordinates {(1, 101.82)(1, 102.95)(1, 108.75)(1, 108.95)};
+		\addplot+ [boxplot prepared={upper quartile=66.71, lower quartile=29.92, upper whisker=121.9, lower whisker=0.0, median=45.8, draw position=2}, ] coordinates {(2, 129.58)(2, 130.59)(2, 143.72)(2, 154.37)(2, 182.7)(2, 203.3)(2, 243.21)(2, 244.16)(2, 248.2)(2, 254.98)(2, 309.51)(2, 344.46)(2, 432.65)(2, 440.62)};
+		\addplot+ [boxplot prepared={upper quartile=113.35, lower quartile=54.57, upper whisker=201.52, lower whisker=0.0, median=77.61, draw position=3}, ] coordinates {(3, 204.14)(3, 208.81)(3, 212.37)(3, 221.45)(3, 224.64)(3, 244.14)(3, 244.85)(3, 247.33)(3, 250.85)(3, 259.94)(3, 260.75)(3, 272.22)(3, 275.4)(3, 288.21)(3, 320.91)(3, 349.6)(3, 450.19)(3, 648.61)(3, 702.9)(3, 732.25)(3, 1618.39)};
+		\addplot+ [boxplot prepared={upper quartile=76.06, lower quartile=39.87, upper whisker=130.35, lower whisker=0.0, median=53.59, draw position=4}, ] coordinates {(4, 136.77)(4, 137.4)(4, 137.92)(4, 141.51)(4, 150.34)(4, 154.35)(4, 194.8)};
+		\addplot+ [boxplot prepared={upper quartile=115.15, lower quartile=55.41, upper whisker=204.76, lower whisker=0.0, median=80.81, draw position=5}, ] coordinates {(5, 207.89)(5, 215.69)(5, 223.47)(5, 237.18)(5, 242.56)(5, 243.06)(5, 258.77)(5, 261.44)(5, 272.91)(5, 289.96)(5, 296.15)(5, 319.09)(5, 328.18)(5, 336.99)(5, 408.06)(5, 411.49)(5, 412.02)(5, 577.31)(5, 1045.85)};
+		
+	\end{axis}
+\end{tikzpicture}

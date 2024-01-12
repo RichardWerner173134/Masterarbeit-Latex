@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.11.20)  27 NOV 2023 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.11.20)  11 JAN 2024 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,417 +621,6 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
-s\tikzlibraryautomata.code.tex
-File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
-s\tikzlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/libraries/shapes\pgflibrary
-shapes.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box67
-\pgfnodeparttwobox=\box68
-\pgfnodepartthreebox=\box69
-\pgfnodepartfourbox=\box70
-\pgfnodeparttwentybox=\box71
-\pgfnodepartnineteenbox=\box72
-\pgfnodeparteighteenbox=\box73
-\pgfnodepartseventeenbox=\box74
-\pgfnodepartsixteenbox=\box75
-\pgfnodepartfifteenbox=\box76
-\pgfnodepartfourteenbox=\box77
-\pgfnodepartthirteenbox=\box78
-\pgfnodeparttwelvebox=\box79
-\pgfnodepartelevenbox=\box80
-\pgfnodeparttenbox=\box81
-\pgfnodepartninebox=\box82
-\pgfnodeparteightbox=\box83
-\pgfnodepartsevenbox=\box84
-\pgfnodepartsixbox=\box85
-\pgfnodepartfivebox=\box86
-)))
-(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
-s\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
-s\tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/libraries\pgflibraryarrows.
-code.tex
-File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen260
-)) (C:\2_Programme\Office\latex\miktex\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (C:\2_Programme\Office\latex\miktex\tex/latex/placeins\placeins.sty
-Package: placeins 2005/04/18  v 2.2
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/tools\longtable.sty
-Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip69
-\LTright=\skip70
-\LTpre=\skip71
-\LTpost=\skip72
-\LTchunksize=\count299
-\LTcapwidth=\dimen261
-\LT@head=\box87
-\LT@firsthead=\box88
-\LT@foot=\box89
-\LT@lastfoot=\box90
-\LT@gbox=\box91
-\LT@cols=\count300
-\LT@rows=\count301
-\c@LT@tables=\count302
-\c@LT@chunks=\count303
-\LT@p@ftn=\toks38
-)
-Class scrreprt Info: longtable captions redefined on input line 18.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/listings\listings.sty
-\lst@mode=\count304
-\lst@gtempboxa=\box92
-\lst@token=\toks39
-\lst@length=\count305
-\lst@currlwidth=\dimen262
-\lst@column=\count306
-\lst@pos=\count307
-\lst@lostspace=\dimen263
-\lst@width=\dimen264
-\lst@newlines=\count308
-\lst@lineno=\count309
-\lst@maxwidth=\dimen265
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count310
-\lst@skipnumbers=\count311
-\lst@framebox=\box93
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/listings\listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
-))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count312
-\float@exts=\toks40
-\float@box=\box94
-\@float@everytoks=\toks41
-\@floatcapt=\box95
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.sty
-Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
-
-(C:\2_Programme\Office\latex\miktex\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\2_Programme\Office\latex\miktex\tex/generic/infwarerr\infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(C:\2_Programme\Office\latex\miktex\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-(C:\2_Programme\Office\latex\miktex\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(C:\2_Programme\Office\latex\miktex\tex/latex/logreq\logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count313
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/logreq\logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(C:\2_Programme\Office\latex\miktex\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-\c@tabx@nest=\count314
-\c@listtotal=\count315
-\c@listcount=\count316
-\c@liststart=\count317
-\c@liststop=\count318
-\c@citecount=\count319
-\c@citetotal=\count320
-\c@multicitecount=\count321
-\c@multicitetotal=\count322
-\c@instcount=\count323
-\c@maxnames=\count324
-\c@minnames=\count325
-\c@maxitems=\count326
-\c@minitems=\count327
-\c@citecounter=\count328
-\c@maxcitecounter=\count329
-\c@savedcitecounter=\count330
-\c@uniquelist=\count331
-\c@uniquename=\count332
-\c@refsection=\count333
-\c@refsegment=\count334
-\c@maxextratitle=\count335
-\c@maxextratitleyear=\count336
-\c@maxextraname=\count337
-\c@maxextradate=\count338
-\c@maxextraalpha=\count339
-\c@abbrvpenalty=\count340
-\c@highnamepenalty=\count341
-\c@lownamepenalty=\count342
-\c@maxparens=\count343
-\c@parenlevel=\count344
-\blx@tempcnta=\count345
-\blx@tempcntb=\count346
-\blx@tempcntc=\count347
-\c@blx@maxsection=\count348
-\blx@maxsegment@0=\count349
-\blx@notetype=\count350
-\blx@parenlevel@text=\count351
-\blx@parenlevel@foot=\count352
-\blx@sectionciteorder@0=\count353
-\blx@sectionciteorderinternal@0=\count354
-\blx@entrysetcounter=\count355
-\blx@biblioinstance=\count356
-\labelnumberwidth=\skip73
-\labelalphawidth=\skip74
-\biblabelsep=\skip75
-\bibitemsep=\skip76
-\bibnamesep=\skip77
-\bibinitsep=\skip78
-\bibparsep=\skip79
-\bibhang=\skip80
-\blx@bcfin=\read4
-\blx@bcfout=\write4
-\blx@langwohyphens=\language80
-\c@mincomprange=\count357
-\c@maxcomprange=\count358
-\c@mincompwidth=\count359
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-dm.def
-File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'ieee.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count360
-\c@savedafterword=\count361
-\c@annotator=\count362
-\c@savedannotator=\count363
-\c@author=\count364
-\c@savedauthor=\count365
-\c@bookauthor=\count366
-\c@savedbookauthor=\count367
-\c@commentator=\count368
-\c@savedcommentator=\count369
-\c@editor=\count370
-\c@savededitor=\count371
-\c@editora=\count372
-\c@savededitora=\count373
-\c@editorb=\count374
-\c@savededitorb=\count375
-\c@editorc=\count376
-\c@savededitorc=\count377
-\c@foreword=\count378
-\c@savedforeword=\count379
-\c@holder=\count380
-\c@savedholder=\count381
-\c@introduction=\count382
-\c@savedintroduction=\count383
-\c@namea=\count384
-\c@savednamea=\count385
-\c@nameb=\count386
-\c@savednameb=\count387
-\c@namec=\count388
-\c@savednamec=\count389
-\c@translator=\count390
-\c@savedtranslator=\count391
-\c@shortauthor=\count392
-\c@savedshortauthor=\count393
-\c@shorteditor=\count394
-\c@savedshorteditor=\count395
-\c@labelname=\count396
-\c@savedlabelname=\count397
-\c@institution=\count398
-\c@savedinstitution=\count399
-\c@lista=\count400
-\c@savedlista=\count401
-\c@listb=\count402
-\c@savedlistb=\count403
-\c@listc=\count404
-\c@savedlistc=\count405
-\c@listd=\count406
-\c@savedlistd=\count407
-\c@liste=\count408
-\c@savedliste=\count409
-\c@listf=\count410
-\c@savedlistf=\count411
-\c@location=\count412
-\c@savedlocation=\count413
-\c@organization=\count414
-\c@savedorganization=\count415
-\c@origlocation=\count416
-\c@savedoriglocation=\count417
-\c@origpublisher=\count418
-\c@savedorigpublisher=\count419
-\c@publisher=\count420
-\c@savedpublisher=\count421
-\c@language=\count422
-\c@savedlanguage=\count423
-\c@origlanguage=\count424
-\c@savedoriglanguage=\count425
-\c@pageref=\count426
-\c@savedpageref=\count427
-\shorthandwidth=\skip81
-\shortjournalwidth=\skip82
-\shortserieswidth=\skip83
-\shorttitlewidth=\skip84
-\shortauthorwidth=\skip85
-\shorteditorwidth=\skip86
-\locallabelnumberwidth=\skip87
-\locallabelalphawidth=\skip88
-\localshorthandwidth=\skip89
-\localshortjournalwidth=\skip90
-\localshortserieswidth=\skip91
-\localshorttitlewidth=\skip92
-\localshortauthorwidth=\skip93
-\localshorteditorwidth=\skip94
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-compat.def
-File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.def
-File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count428
-\c@textcitetotal=\count429
-\c@textcitemaxnames=\count430
-\c@biburlbigbreakpenalty=\count431
-\c@biburlbreakpenalty=\count432
-\c@biburlnumpenalty=\count433
-\c@biburlucpenalty=\count434
-\c@biburllcpenalty=\count435
-\biburlbigskip=\muskip18
-\biburlnumskip=\muskip19
-\biburlucskip=\muskip20
-\biburllcskip=\muskip21
-\c@smartand=\count436
-)
-Package biblatex Info: Trying to load natbib compatibility...
-Package biblatex Info: ... file 'blx-natbib.def' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-natbib.def
-File: blx-natbib.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
- overwriting.
-)
-Package biblatex Info: Trying to load bibliography style 'ieee'...
-Package biblatex Info: ... file 'ieee.bbx' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex-ieee\ieee.bbx
-File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
-Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
-Package biblatex Info: ... file 'numeric-comp.bbx' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/bbx\numeric-comp.bbx
-File: numeric-comp.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/bbx\numeric.bbx
-File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/bbx\standard.bbx
-File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count437
-\c@bbx:relatedtotal=\count438
-))))
-Package biblatex Info: Trying to load citation style 'ieee'...
-Package biblatex Info: ... file 'ieee.cbx' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex-ieee\ieee.cbx
-File: ieee.cbx 2021/12/06 v1.3f biblatex citation style
-Package biblatex Info: Trying to load citation style 'numeric-comp'...
-Package biblatex Info: ... file 'numeric-comp.cbx' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/cbx\numeric-comp.cbx
-File: numeric-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count439
-\c@cbx@tempcntb=\count440
-\c@cbx@tempcntc=\count441
-\c@cbx@tempcntd=\count442
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\cites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.cfg
-File: biblatex.cfg 
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Document encoding is UTF8 ....
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/l3kernel\expl3.sty
-Package: expl3 2023-03-30 L3 programming layer (loader) 
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count443
-\l__pdf_internal_box=\box96
-))
-Package biblatex Info: ... and expl3
-(biblatex)             2023-03-30 L3 programming layer (loader) 
-(biblatex)             is new enough (at least 2020/04/06),
-(biblatex)             setting 'casechanger=expl3'.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-case-expl3.sty
-(C:\2_Programme\Office\latex\miktex\tex/latex/l3packages/xparse\xparse.sty
-Package: xparse 2023-02-02 L3 Experimental document command parser
-)
-Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-))
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots\pgfplots.sty
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplots.revision.te
 x)
@@ -1039,12 +628,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
  (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplots.code.tex
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotscore.code.te
 x
-\t@pgfplots@toka=\toks42
-\t@pgfplots@tokb=\toks43
-\t@pgfplots@tokc=\toks44
-\pgfplots@tmpa=\dimen266
-\c@pgfplots@coordindex=\count444
-\c@pgfplots@scanlineindex=\count445
+\t@pgfplots@toka=\toks38
+\t@pgfplots@tokb=\toks39
+\t@pgfplots@tokc=\toks40
+\pgfplots@tmpa=\dimen260
+\c@pgfplots@coordindex=\count299
+\c@pgfplots@scanlineindex=\count300
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotssysgeneric.c
 ode.tex))
@@ -1055,9 +644,9 @@ oader.code.tex
 (C:\2_Programme\Office\latex\miktex\tex/generic/pgf/libraries\pgflibraryfpu.cod
 e.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks45
-\t@pgf@tokb=\toks46
-\t@pgf@tokc=\toks47
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotsoldpgfsupp_p
 gfutil-common-lists.tex))
@@ -1069,14 +658,14 @@ e.code.tex)
 eext.code.tex)
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotsarray.code.t
 ex
-\c@pgfplotsarray@tmp=\count446
+\c@pgfplotsarray@tmp=\count301
 )
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotsmatrix.code.
 tex)
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotstableshared.
 code.tex
-\c@pgfplotstable@counta=\count447
-\t@pgfplotstable@a=\toks48
+\c@pgfplotstable@counta=\count302
+\t@pgfplotstable@a=\toks44
 )
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgfplotsdeque.code.t
 ex)
@@ -1088,7 +677,7 @@ code.tex))
 de.tex)
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgflibrarypgfplots.s
 urfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count448
+\c@pgfplotslibrarysurf@no=\count303
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgflibrarypgfplots.s
 urfshading.pgfsys-pdftex.def)))
@@ -1120,16 +709,16 @@ tex)
 s\tikzlibrarydecorations.code.tex
 (C:\2_Programme\Office\latex\miktex\tex/generic/pgf/modules\pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen267
-\pgfdecoratedremainingdistance=\dimen268
-\pgfdecoratedinputsegmentcompleteddistance=\dimen269
-\pgfdecoratedinputsegmentremainingdistance=\dimen270
-\pgf@decorate@distancetomove=\dimen271
-\pgf@decorate@repeatstate=\count449
-\pgfdecorationsegmentamplitude=\dimen272
-\pgfdecorationsegmentlength=\dimen273
+\pgfdecoratedcompleteddistance=\dimen261
+\pgfdecoratedremainingdistance=\dimen262
+\pgfdecoratedinputsegmentcompleteddistance=\dimen263
+\pgfdecoratedinputsegmentremainingdistance=\dimen264
+\pgf@decorate@distancetomove=\dimen265
+\pgf@decorate@repeatstate=\count304
+\pgfdecorationsegmentamplitude=\dimen266
+\pgfdecorationsegmentlength=\dimen267
 )
-\tikz@lib@dec@box=\box97
+\tikz@lib@dec@box=\box67
 )
 (C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
 s\tikzlibrarydecorations.pathmorphing.code.tex
@@ -1141,13 +730,13 @@ s\tikzlibrarydecorations.pathreplacing.code.tex
 brarydecorations.pathreplacing.code.tex))
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\tikzlibrarypgfplots.
 contourlua.code.tex)
-\pgfplots@numplots=\count450
-\pgfplots@xmin@reg=\dimen274
-\pgfplots@xmax@reg=\dimen275
-\pgfplots@ymin@reg=\dimen276
-\pgfplots@ymax@reg=\dimen277
-\pgfplots@zmin@reg=\dimen278
-\pgfplots@zmax@reg=\dimen279
+\pgfplots@numplots=\count305
+\pgfplots@xmin@reg=\dimen268
+\pgfplots@xmax@reg=\dimen269
+\pgfplots@ymin@reg=\dimen270
+\pgfplots@ymax@reg=\dimen271
+\pgfplots@zmin@reg=\dimen272
+\pgfplots@zmax@reg=\dimen273
 )
 (C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
 s\tikzlibraryplotmarks.code.tex
@@ -1157,6 +746,426 @@ File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\pgflibrarypgfplots.c
+olorbrewer.code.tex
+(C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\tikzlibrarycolorbrew
+er.code.tex))
+(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
+s\tikzlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
+s\tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/libraries/shapes\pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box68
+\pgfnodeparttwobox=\box69
+\pgfnodepartthreebox=\box70
+\pgfnodepartfourbox=\box71
+\pgfnodeparttwentybox=\box72
+\pgfnodepartnineteenbox=\box73
+\pgfnodeparteighteenbox=\box74
+\pgfnodepartseventeenbox=\box75
+\pgfnodepartsixteenbox=\box76
+\pgfnodepartfifteenbox=\box77
+\pgfnodepartfourteenbox=\box78
+\pgfnodepartthirteenbox=\box79
+\pgfnodeparttwelvebox=\box80
+\pgfnodepartelevenbox=\box81
+\pgfnodeparttenbox=\box82
+\pgfnodepartninebox=\box83
+\pgfnodeparteightbox=\box84
+\pgfnodepartsevenbox=\box85
+\pgfnodepartsixbox=\box86
+\pgfnodepartfivebox=\box87
+)))
+(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
+s\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/frontendlayer/tikz/librarie
+s\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\2_Programme\Office\latex\miktex\tex/generic/pgf/libraries\pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen274
+)) (C:\2_Programme\Office\latex\miktex\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\2_Programme\Office\latex\miktex\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/tools\longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip69
+\LTright=\skip70
+\LTpre=\skip71
+\LTpost=\skip72
+\LTchunksize=\count306
+\LTcapwidth=\dimen275
+\LT@head=\box88
+\LT@firsthead=\box89
+\LT@foot=\box90
+\LT@lastfoot=\box91
+\LT@gbox=\box92
+\LT@cols=\count307
+\LT@rows=\count308
+\c@LT@tables=\count309
+\c@LT@chunks=\count310
+\LT@p@ftn=\toks45
+)
+Class scrreprt Info: longtable captions redefined on input line 21.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/needspace\needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/listings\listings.sty
+\lst@mode=\count311
+\lst@gtempboxa=\box93
+\lst@token=\toks46
+\lst@length=\count312
+\lst@currlwidth=\dimen276
+\lst@column=\count313
+\lst@pos=\count314
+\lst@lostspace=\dimen277
+\lst@width=\dimen278
+\lst@newlines=\count315
+\lst@lineno=\count316
+\lst@maxwidth=\dimen279
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count317
+\lst@skipnumbers=\count318
+\lst@framebox=\box94
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count319
+\float@exts=\toks47
+\float@box=\box95
+\@float@everytoks=\toks48
+\@floatcapt=\box96
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(C:\2_Programme\Office\latex\miktex\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\2_Programme\Office\latex\miktex\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\2_Programme\Office\latex\miktex\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\2_Programme\Office\latex\miktex\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(C:\2_Programme\Office\latex\miktex\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count320
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\2_Programme\Office\latex\miktex\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count321
+\c@listtotal=\count322
+\c@listcount=\count323
+\c@liststart=\count324
+\c@liststop=\count325
+\c@citecount=\count326
+\c@citetotal=\count327
+\c@multicitecount=\count328
+\c@multicitetotal=\count329
+\c@instcount=\count330
+\c@maxnames=\count331
+\c@minnames=\count332
+\c@maxitems=\count333
+\c@minitems=\count334
+\c@citecounter=\count335
+\c@maxcitecounter=\count336
+\c@savedcitecounter=\count337
+\c@uniquelist=\count338
+\c@uniquename=\count339
+\c@refsection=\count340
+\c@refsegment=\count341
+\c@maxextratitle=\count342
+\c@maxextratitleyear=\count343
+\c@maxextraname=\count344
+\c@maxextradate=\count345
+\c@maxextraalpha=\count346
+\c@abbrvpenalty=\count347
+\c@highnamepenalty=\count348
+\c@lownamepenalty=\count349
+\c@maxparens=\count350
+\c@parenlevel=\count351
+\blx@tempcnta=\count352
+\blx@tempcntb=\count353
+\blx@tempcntc=\count354
+\c@blx@maxsection=\count355
+\blx@maxsegment@0=\count356
+\blx@notetype=\count357
+\blx@parenlevel@text=\count358
+\blx@parenlevel@foot=\count359
+\blx@sectionciteorder@0=\count360
+\blx@sectionciteorderinternal@0=\count361
+\blx@entrysetcounter=\count362
+\blx@biblioinstance=\count363
+\labelnumberwidth=\skip73
+\labelalphawidth=\skip74
+\biblabelsep=\skip75
+\bibitemsep=\skip76
+\bibnamesep=\skip77
+\bibinitsep=\skip78
+\bibparsep=\skip79
+\bibhang=\skip80
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language80
+\c@mincomprange=\count364
+\c@maxcomprange=\count365
+\c@mincompwidth=\count366
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count367
+\c@savedafterword=\count368
+\c@annotator=\count369
+\c@savedannotator=\count370
+\c@author=\count371
+\c@savedauthor=\count372
+\c@bookauthor=\count373
+\c@savedbookauthor=\count374
+\c@commentator=\count375
+\c@savedcommentator=\count376
+\c@editor=\count377
+\c@savededitor=\count378
+\c@editora=\count379
+\c@savededitora=\count380
+\c@editorb=\count381
+\c@savededitorb=\count382
+\c@editorc=\count383
+\c@savededitorc=\count384
+\c@foreword=\count385
+\c@savedforeword=\count386
+\c@holder=\count387
+\c@savedholder=\count388
+\c@introduction=\count389
+\c@savedintroduction=\count390
+\c@namea=\count391
+\c@savednamea=\count392
+\c@nameb=\count393
+\c@savednameb=\count394
+\c@namec=\count395
+\c@savednamec=\count396
+\c@translator=\count397
+\c@savedtranslator=\count398
+\c@shortauthor=\count399
+\c@savedshortauthor=\count400
+\c@shorteditor=\count401
+\c@savedshorteditor=\count402
+\c@labelname=\count403
+\c@savedlabelname=\count404
+\c@institution=\count405
+\c@savedinstitution=\count406
+\c@lista=\count407
+\c@savedlista=\count408
+\c@listb=\count409
+\c@savedlistb=\count410
+\c@listc=\count411
+\c@savedlistc=\count412
+\c@listd=\count413
+\c@savedlistd=\count414
+\c@liste=\count415
+\c@savedliste=\count416
+\c@listf=\count417
+\c@savedlistf=\count418
+\c@location=\count419
+\c@savedlocation=\count420
+\c@organization=\count421
+\c@savedorganization=\count422
+\c@origlocation=\count423
+\c@savedoriglocation=\count424
+\c@origpublisher=\count425
+\c@savedorigpublisher=\count426
+\c@publisher=\count427
+\c@savedpublisher=\count428
+\c@language=\count429
+\c@savedlanguage=\count430
+\c@origlanguage=\count431
+\c@savedoriglanguage=\count432
+\c@pageref=\count433
+\c@savedpageref=\count434
+\shorthandwidth=\skip81
+\shortjournalwidth=\skip82
+\shortserieswidth=\skip83
+\shorttitlewidth=\skip84
+\shortauthorwidth=\skip85
+\shorteditorwidth=\skip86
+\locallabelnumberwidth=\skip87
+\locallabelalphawidth=\skip88
+\localshorthandwidth=\skip89
+\localshortjournalwidth=\skip90
+\localshortserieswidth=\skip91
+\localshorttitlewidth=\skip92
+\localshortauthorwidth=\skip93
+\localshorteditorwidth=\skip94
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count435
+\c@textcitetotal=\count436
+\c@textcitemaxnames=\count437
+\c@biburlbigbreakpenalty=\count438
+\c@biburlbreakpenalty=\count439
+\c@biburlnumpenalty=\count440
+\c@biburlucpenalty=\count441
+\c@biburllcpenalty=\count442
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count443
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-natbib.def
+File: blx-natbib.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex-ieee\ieee.bbx
+File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/bbx\numeric-comp.bbx
+File: numeric-comp.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count444
+\c@bbx:relatedtotal=\count445
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex-ieee\ieee.cbx
+File: ieee.cbx 2021/12/06 v1.3f biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/cbx\numeric-comp.cbx
+File: numeric-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count446
+\c@cbx@tempcntb=\count447
+\c@cbx@tempcntc=\count448
+\c@cbx@tempcntd=\count449
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\cites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-03-30 L3 programming layer (loader) 
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count450
+\l__pdf_internal_box=\box97
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2023-03-30 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/biblatex\blx-case-expl3.sty
+(C:\2_Programme\Office\latex\miktex\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+(C:\2_Programme\Office\latex\miktex\tex/latex/pgfplots/tex\tikzlibrarypgfplots.
+statistics.code.tex)
 (C:\2_Programme\Office\latex\miktex\tex/latex/pgf-pie\pgf-pie.sty
 Package: pgf-pie 2022/06/14 v0.7 Some LaTeX macros for pie chart by using PGF/T
 ikz package.
@@ -1224,6 +1233,10 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \everycr=\toks50
 \minrowclearance=\skip97
 \rownum=\count458
+)
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup6
 )
 (C:\2_Programme\Office\latex\miktex\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -1390,61 +1403,81 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count473
 \@quotereset=\count474
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 64
+.
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
 (Masterarbeit.aux
 
-LaTeX Warning: Label `code_simple_dea' multiply defined.
-
-
-LaTeX Warning: Label `code_simple_dea@cref' multiply defined.
-
-
-LaTeX Warning: Label `tab:smbasic_stateanalysisresult_finishorders' multiply de
+LaTeX Warning: Label `tab:transaktionslog_ts2_cancelorders_smbasic' multiply de
 fined.
 
 
-LaTeX Warning: Label `tab:smbasic_stateanalysisresult_finishorders@cref' multip
+LaTeX Warning: Label `tab:transaktionslog_ts2_cancelorders_smbasic@cref' multip
 ly defined.
 
-)
+
+LaTeX Warning: Label `tab:transaktionslog_ts2_cancelorders_smbasic' multiply de
+fined.
+
+
+LaTeX Warning: Label `tab:transaktionslog_ts2_cancelorders_smbasic@cref' multip
+ly defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+(texes/ChapterFazit/Versuchsergebnisse.aux)
+(texes/ChapterFazit/WissenschaftlicheBerührungspunkte.aux))
 \openout1 = `Masterarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Info: Redefining \microtypecontext on input line 61.
-Package microtype Info: Applying patch `item' on input line 61.
-Package microtype Info: Applying patch `toc' on input line 61.
-Package microtype Info: Applying patch `eqnum' on input line 61.
-Package microtype Info: Applying patch `footnote' on input line 61.
-Package microtype Info: Applying patch `verbatim' on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Info: Redefining \microtypecontext on input line 64.
+Package microtype Info: Applying patch `item' on input line 64.
+Package microtype Info: Applying patch `toc' on input line 64.
+Package microtype Info: Applying patch `eqnum' on input line 64.
+Package microtype Info: Applying patch `footnote' on input line 64.
+Package microtype Info: Applying patch `verbatim' on input line 64.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 61.
+LaTeX Info: Redefining \showhyphens on input line 64.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (C:\2_Programme\Office\latex\miktex\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/microtype\mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 (C:\2_Programme\Office\latex\miktex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1475,10 +1508,12 @@ G,.JBIG2,.JB2,.eps]
 (C:\2_Programme\Office\latex\miktex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
+
 \c@lstlisting=\count481
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
 (C:\2_Programme\Office\latex\miktex\tex/latex/biblatex/lbx\german.lbx
 File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
@@ -1491,18 +1526,12 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Masterarbeit.bbl' found.
 
 (Masterarbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 61.
-Package biblatex Info: Reference segment=0 on input line 61.
-
-
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
-your preamble.
- on input line 61.
-
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1537,7 +1566,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 61.
+Package hyperref Info: Link coloring OFF on input line 64.
 (Masterarbeit.out) (Masterarbeit.out)
 \@outlinefile=\write5
 \openout5 = `Masterarbeit.out'.
@@ -1549,7 +1578,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 61.
+(scrreprt)           before \begin{document} on input line 64.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
@@ -1558,8 +1587,76 @@ Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count482
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 6
+(texes/Titelseite.tex
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 5
 5.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+55.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+55.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+55.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 55.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 55.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 55.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 55.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 55.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 55.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+55.
+
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zplm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<misc/HTWK_Zusatz_de_V_Black.jpg, id=6, 1192.455pt x 644.4075pt>
+File: misc/HTWK_Zusatz_de_V_Black.jpg Graphic file (type jpg)
+<use misc/HTWK_Zusatz_de_V_Black.jpg>
+Package pdftex.def Info: misc/HTWK_Zusatz_de_V_Black.jpg  used on input line 99
+.
+(pdftex.def)             Requested size: 91.04744pt x 49.19376pt.
+ [1
+
+
+
+{C:/Users/richa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/2_Programm
+e/Office/latex/miktex/fonts/enc/dvips/base/8r.enc} <./misc/HTWK_Zusatz_de_V_Bla
+ck.jpg>])
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 6
+8.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1568,71 +1665,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
-
-{C:/Users/richa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/2_Programm
-e/Office/latex/miktex/fonts/enc/dvips/lm/lm-ec.enc}]
-Package tocbasic Info: character protrusion at toc deactivated on input line 69
-.
- (Masterarbeit.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+ [2]
+Package tocbasic Info: character protrusion at toc deactivated on input line 72
 .
 
-(C:\2_Programme\Office\latex\miktex\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-.
+(Masterarbeit.toc
+Overfull \hbox (5.70494pt too wide) in paragraph at lines 30--30
+ [][] [][]\T1/ppl/m/n/12 (-20) Unterschiede des Saga-Modells zu Hec-tor Garcia-
+Molinas 
+ []
 
-(C:\2_Programme\Office\latex\miktex\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-3.
+[3
 
-(C:\2_Programme\Office\latex\miktex\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-3.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(C:\2_Programme\Office\latex\miktex\tex/latex/microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [2
-
-{C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathit.enc}{C:/2_Prog
-ramme/Office/latex/miktex/fonts/enc/dvips/lm/lm-rm.enc}] [3])
+{C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-ec.enc}] [4])
 \tf@toc=\write6
 \openout6 = `Masterarbeit.toc'.
 
- [4]
+
+[5]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 	\newpage
+l.77 	\newpage
                [1] (texes/Einleitung.tex
 chapter 1.
 
@@ -1650,10 +1705,10 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
 9.
-(C:\2_Programme\Office\latex\miktex\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ))
 (texes/Chapter1.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
@@ -1663,7 +1718,7 @@ been already used, duplicate ignored
 l.1 \chapter
             {Grundlagen} [2
 
-{C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-ts1.enc}]
+]
 chapter 2.
 (texes/Chapter1/Grundlagen.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
@@ -1681,76 +1736,53 @@ been already used, duplicate ignored
                    \relax 
 l.6 \subsection
                {Transaktionen auf Datenbankebene} [4])
-(texes/Chapter1/SagaPattern.tex [5] [6] [7]
+(texes/Chapter1/SagaPattern.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 	\item B
+            lockierung der Ressourcen [5] [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-[8{C:/2_Programme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/2_Pr
-ogramme/Office/latex/miktex/fonts/enc/dvips/lm/lm-mathex.enc}] [9]
+[8] [9]
 Package placeins Info: No floats held, on input line 192.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 195.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 195.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 195.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 208.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
-
-[10
+ [10
 Package placeins Info: Float barrier, from input line 192, processed on page 10
 , lands on page 10. 
-]
+] [11]
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
+255.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 223.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 223.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 223.
-
-[11]
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
 
 LaTeX Warning: Command \" invalid in math mode on input line 255.
 
+Missing character: There is no � in font pplr7t!
 
 LaTeX Warning: Command \" invalid in math mode on input line 255.
 
+Missing character: There is no � in font pplr7t!
 
 LaTeX Warning: Command \" invalid in math mode on input line 255.
 
+Missing character: There is no � in font pplr7t!
 
 LaTeX Warning: Command \" invalid in math mode on input line 255.
 
+Missing character: There is no � in font pplr7t!
 
-Overfull \hbox (28.15369pt too wide) in paragraph at lines 265--266
-\T1/lmr/m/n/12 (-20) Re-co-ve-ry ver-sucht, bis die Sa-ga er-folg-reich ist ode
-r das Ober-li-mit $\OML/lmm/m/it/12 maxSavepointExecutionCount$
+Overfull \hbox (67.80429pt too wide) in paragraph at lines 265--266
+\T1/ppl/m/n/12 (-20) ward Re-co-ve-ry ver-sucht, bis die Sa-ga er-folg-reich is
+t oder das Ober-li-mit $\OML/zplm/m/it/12 maxSavepointExecutionCount$
  []
 
 
-Overfull \hbox (19.1003pt too wide) in paragraph at lines 295--296
+Overfull \hbox (22.99355pt too wide) in paragraph at lines 295--296
  [][] 
  []
 
@@ -1765,12 +1797,16 @@ LaTeX Warning: Command \" invalid in math mode on input line 311.
 
 LaTeX Warning: Command \" invalid in math mode on input line 311.
 
+Missing character: There is no � in font pplr7t!
+Missing character: There is no � in font pplr7t!
 
 LaTeX Warning: Command \" invalid in math mode on input line 326.
 
 
 LaTeX Warning: Command \" invalid in math mode on input line 326.
 
+Missing character: There is no � in font pplr7t!
+Missing character: There is no � in font pplr7t!
 Package placeins Info: No floats held, on input line 370.
 [13
 Package placeins Info: Float barrier, from input line 370, processed on page 13
@@ -1781,8 +1817,8 @@ Package placeins Info: No floats held, on input line 395.
 Package placeins Info: Float barrier, from input line 395, processed on page 14
 , lands on page 14. 
 ] [15]
-Overfull \hbox (10.2082pt too wide) in paragraph at lines 439--440
-[]\T1/lmr/m/n/12 (-20) Schlussendlich bie-tet die Or-che-strie-rung die M�g-lic
+Overfull \hbox (37.60349pt too wide) in paragraph at lines 439--440
+[]\T1/ppl/m/n/12 (-20) Schlussendlich bie-tet die Or-che-strie-rung die M�g-lic
 h-keit, asyn-chro-ne Messaging-Komponenten
  []
 
@@ -1796,21 +1832,15 @@ chapter 3.
 (texes/ChapterVersuchsvorbereitung/Methodik.tex
 (texes/ChapterVersuchsvorbereitung/SectionMethodik/GpEntwurfUndImplementierung.
 tex
-
-LaTeX Warning: Reference `' on page 19 undefined on input line 7.
-
-<figures/SimplifiedBusinessProcess.png, id=316, 1230.5975pt x 201.75375pt>
+<figures/SimplifiedBusinessProcess.png, id=355, 1230.5975pt x 201.75375pt>
 File: figures/SimplifiedBusinessProcess.png Graphic file (type png)
 <use figures/SimplifiedBusinessProcess.png>
 Package pdftex.def Info: figures/SimplifiedBusinessProcess.png  used on input l
 ine 18.
 (pdftex.def)             Requested size: 455.24417pt x 74.63539pt.
-[19 <./figures/SimplifiedBusinessProcess.png>])
-(texes/ChapterVersuchsvorbereitung/SectionMethodik/Messung.tex [20]
-
-LaTeX Warning: Reference `' on page 21 undefined on input line 21.
-
-) (texes/ChapterVersuchsvorbereitung/SectionMethodik/Analyse.tex)))
+ [19 <./figures/SimplifiedBusinessProcess.png>])
+(texes/ChapterVersuchsvorbereitung/SectionMethodik/Messung.tex [20])
+(texes/ChapterVersuchsvorbereitung/SectionMethodik/Analyse.tex)))
 (texes/Chapter3.tex [21]
 chapter 4.
 (texes/ChapterVersuchsdurchführung/Systemüberblick.tex
@@ -1819,16 +1849,17 @@ Overfull \hbox (10.97351pt too wide) in paragraph at lines 15--24
  [] 
  []
 
-) (texes/ChapterVersuchsdurchführung/Systemüberblick/LokaleTransaktionen.tex
 [22
 
-]) (texes/ChapterVersuchsdurchführung/Systemüberblick/Kompensierungen.tex
+])
+(texes/ChapterVersuchsdurchführung/Systemüberblick/LokaleTransaktionen.tex)
+(texes/ChapterVersuchsdurchführung/Systemüberblick/Kompensierungen.tex
 [23])
 (texes/ChapterVersuchsdurchführung/Systemüberblick/FachlicheKontextabgrenzung
-.tex [24] [25])
+.tex [24] [25]) [26]
 (texes/ChapterVersuchsdurchführung/Systemüberblick/TechnischeKontextabgrenzun
-g.tex [26]
-<figures/DatabaseER/ArticleServiceTables.png, id=381, 261.97874pt x 101.37875pt
+g.tex
+<figures/DatabaseER/ArticleServiceTables.png, id=423, 261.97874pt x 101.37875pt
 >
 File: figures/DatabaseER/ArticleServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/ArticleServiceTables.png>
@@ -1837,48 +1868,56 @@ nput line 15.
 (pdftex.def)             Requested size: 130.98904pt x 50.68924pt.
 Package placeins Info: No floats held, on input line 18.
 Package placeins Info: No floats held, on input line 35.
-<figures/DatabaseER/StockServiceTables.png, id=382, 753.81625pt x 362.35374pt>
+ [27
+Package placeins Info: Float barrier, from input line 18, processed on page 27,
+ lands on page 27. 
+ <./figures/DatabaseER/ArticleServiceTables.png>]
+<figures/DatabaseER/StockServiceTables.png, id=432, 753.81625pt x 362.35374pt>
 File: figures/DatabaseER/StockServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/StockServiceTables.png>
 Package pdftex.def Info: figures/DatabaseER/StockServiceTables.png  used on inp
 ut line 44.
 (pdftex.def)             Requested size: 376.90721pt x 181.17642pt.
- [27
-Package placeins Info: Float barrier, from input line 18, processed on page 27,
- lands on page 27. 
-Package placeins Info: Float barrier, from input line 35, processed on page 27,
- lands on page 27. 
- <./figures/DatabaseER/ArticleServiceTables.png>]
 Package placeins Info: No floats held, on input line 47.
  [28
+Package placeins Info: Float barrier, from input line 35, processed on page 27,
+ lands on page 28. 
 Package placeins Info: Float barrier, from input line 47, processed on page 28,
  lands on page 28. 
  <./figures/DatabaseER/StockServiceTables.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T1/ppl/m/n/12 (+20) /api/blocked-articles-
+ []
+
 Package placeins Info: No floats held, on input line 89.
-<figures/DatabaseER/BankingServiceTables.png, id=408, 804.00375pt x 362.35374pt
+<figures/DatabaseER/BankingServiceTables.png, id=446, 804.00375pt x 362.35374pt
 >
 File: figures/DatabaseER/BankingServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/BankingServiceTables.png>
 Package pdftex.def Info: figures/DatabaseER/BankingServiceTables.png  used on i
 nput line 97.
 (pdftex.def)             Requested size: 402.0009pt x 181.17642pt.
-Package placeins Info: No floats held, on input line 100.
- [29
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package placeins Info: Must dump some floats on input line 100.
+[29
 Package placeins Info: Float barrier, from input line 89, processed on page 29,
  lands on page 29. 
 Package placeins Info: Float barrier, from input line 100, processed on page 29
 , lands on page 29. 
- <./figures/DatabaseER/BankingServiceTables.png>]
+]
+Package placeins Info: Check again: on input line 100.
+Package placeins Info: No floats held, on input line 100.
 Package placeins Info: No floats held, on input line 117.
-)
-(texes/ChapterVersuchsdurchführung/Systemüberblick/DeaDarstellung.tex
-Overfull \hbox (1.04402pt too wide) in paragraph at lines 8--8
-[]|\T1/lmr/m/n/12 (-20) Ergebnis| 
+) (texes/ChapterVersuchsdurchführung/Systemüberblick/DeaDarstellung.tex
+Overfull \hbox (2.86253pt too wide) in paragraph at lines 8--8
+[]|\T1/ppl/m/n/12 (-20) Ergebnis| 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) Get Ship-ment
+[]|\T1/ppl/m/n/12 (+20) Get Ship-ment
  []
 
 
@@ -1887,13 +1926,15 @@ Overfull \hbox (23.37349pt too wide) in alignment at lines 6--36
  []
 
 [30
+Package placeins Info: Float barrier, from input line 100, processed on page 30
+, lands on page 30. 
 Package placeins Info: Float barrier, from input line 117, processed on page 30
 , lands on page 30. 
-]
+ <./figures/DatabaseER/BankingServiceTables.png>]
 Package placeins Info: No floats held, on input line 38.
 
-Overfull \hbox (1.04402pt too wide) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 (-20) Ergebnis| 
+Overfull \hbox (2.86253pt too wide) in paragraph at lines 44--44
+[]|\T1/ppl/m/n/12 (-20) Ergebnis| 
  []
 
 
@@ -1901,35 +1942,42 @@ Overfull \hbox (23.37349pt too wide) in alignment at lines 42--67
  [] [] [] 
  []
 
-Package placeins Info: No floats held, on input line 69.
-)) (texes/ChapterVersuchsdurchführung/SEC.tex [31
+[31
 Package placeins Info: Float barrier, from input line 38, processed on page 31,
  lands on page 31. 
-Package placeins Info: Float barrier, from input line 69, processed on page 31,
- lands on page 31. 
 ]
-(C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [32]
+Package placeins Info: No floats held, on input line 69.
+)) (texes/ChapterVersuchsdurchführung/SEC.tex [32
+Package placeins Info: Float barrier, from input line 69, processed on page 32,
+ lands on page 32. 
+]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 25.
+ [33]
 Package placeins Info: No floats held, on input line 83.
 
-[33
-Package placeins Info: Float barrier, from input line 83, processed on page 33,
- lands on page 33. 
-] [34] [35] [36] [37]
-<figures/ChapterVersuchsdurchführung/sec_execution_flow.png, id=663, 818.05624
+(C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) [34
+Package placeins Info: Float barrier, from input line 83, processed on page 34,
+ lands on page 34. 
+]
+[35] [36] [37] [38]
+<figures/ChapterVersuchsdurchführung/sec_execution_flow.png, id=729, 818.05624
 pt x 605.26125pt>
 File: figures/ChapterVersuchsdurchführung/sec_execution_flow.png Graphic file 
 (type png)
 <use figures/ChapterVersuchsdurchführung/sec_execution_flow.png>
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/sec_execution_flo
-w.png  used on input line 308.
+w.png  used on input line 309.
 (pdftex.def)             Requested size: 455.24417pt x 336.82904pt.
- [38]
-Package placeins Info: No floats held, on input line 312.
+Package placeins Info: No floats held, on input line 313.
 )
-(texes/ChapterVersuchsdurchführung/PlanungDerDatenerfassung.tex
-<figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png, id=691, 270.00874pt x
+(texes/ChapterVersuchsdurchführung/PlanungDerDatenerfassung.tex [39
+Package placeins Info: Float barrier, from input line 313, processed on page 39
+, lands on page 39. 
+ <./figures/ChapterVersuchsdurchführung/sec_execution_flow.png (PNG copy)>]
+<figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png, id=738, 270.00874pt x
  213.79875pt>
 File: figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png Graphic file (typ
 e png)
@@ -1937,12 +1985,8 @@ e png)
 Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-0.pn
 g  used on input line 15.
 (pdftex.def)             Requested size: 182.09488pt x 144.19048pt.
- [39
-Package placeins Info: Float barrier, from input line 312, processed on page 39
-, lands on page 39. 
- <./figures/ChapterVersuchsdurchführung/sec_execution_flow.png (PNG copy)>]
 Package placeins Info: No floats held, on input line 19.
-<figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png, id=697, 270.00874pt x
+<figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png, id=739, 270.00874pt x
  184.69pt>
 File: figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png Graphic file (typ
 e png)
@@ -1951,14 +1995,6 @@ Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-1.pn
 g  used on input line 26.
 (pdftex.def)             Requested size: 182.09488pt x 124.5589pt.
 Package placeins Info: No floats held, on input line 30.
-<figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png, id=698, 270.00874pt x
- 214.8025pt>
-File: figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png Graphic file (typ
-e png)
-<use figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png>
-Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-2.pn
-g  used on input line 39.
-(pdftex.def)             Requested size: 182.09488pt x 144.86743pt.
  [40
 Package placeins Info: Float barrier, from input line 19, processed on page 40,
  lands on page 40. 
@@ -1966,10 +2002,28 @@ Package placeins Info: Float barrier, from input line 30, processed on page 40,
  lands on page 40. 
  <./figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png (PNG copy)> <./figu
 res/ChapterVersuchsvorbereitung/TestSzenarien-1.png (PNG copy)>]
+<figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png, id=748, 270.00874pt x
+ 214.8025pt>
+File: figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png Graphic file (typ
+e png)
+<use figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png>
+Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-2.pn
+g  used on input line 39.
+(pdftex.def)             Requested size: 182.09488pt x 144.86743pt.
 Package placeins Info: No floats held, on input line 43.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[]|\T1/lmr/m/n/12 (+20) Platzieren ei-ner
+Overfull \hbox (3.06725pt too wide) in paragraph at lines 58--58
+[]|\T1/ppl/m/n/12 (-20) OrderService| 
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 58--58
+[]|\T1/ppl/m/n/12 (+20) Platzieren ei-ner
+ []
+
+
+Overfull \hbox (3.06725pt too wide) in paragraph at lines 60--60
+[]|\T1/ppl/m/n/12 (-20) OrderService| 
  []
 
 Package placeins Info: No floats held, on input line 63.
@@ -1979,27 +2033,24 @@ Package placeins Info: Float barrier, from input line 43, processed on page 41,
 Package placeins Info: Float barrier, from input line 63, processed on page 41,
  lands on page 41. 
  <./figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png (PNG copy)>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 92.
-
 [42]
 Underfull \hbox (badness 10000) in paragraph at lines 126--126
-[]|\T1/lmr/m/n/12 (+20) failedWithCompensation-
+[]|\T1/ppl/m/n/12 (+20) failedWithCompensation-
  []
 
 
-Overfull \hbox (1.37794pt too wide) in paragraph at lines 127--127
-[]|\T1/lmr/m/n/12 (-20) failedWithoutCompensation-
+Overfull \hbox (7.73897pt too wide) in paragraph at lines 127--127
+[]|\T1/ppl/m/n/12 (-20) failedWithoutCompensation-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 129--129
-[]|\T1/lmr/m/n/12 (+20) containsAllExpectedLogs-
+[]|\T1/ppl/m/n/12 (+20) containsAllExpectedLogs-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 130--130
-[]|\T1/lmr/m/n/12 (+20) isSuccessfullTestInstance-
+[]|\T1/ppl/m/n/12 (+20) isSuccessfullTestInstance-
  []
 
 
@@ -2008,65 +2059,64 @@ Overfull \hbox (53.65265pt too wide) in alignment at lines 119--131
  []
 
 Package placeins Info: No floats held, on input line 133.
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]|\T1/lmr/m/n/12 (+20) diffRemoveMoney-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--146
-[]|\T1/lmr/m/n/12 (+20) diffRemoveMoney-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\T1/lmr/m/n/12 (+20) diffAddMoney-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--148
-[]|\T1/lmr/m/n/12 (+20) diffBlockArticles-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
-[]|\T1/lmr/m/n/12 (+20) diffStartShipment-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--150
-[]|\T1/lmr/m/n/12 (+20) diffBlockArticles-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
-[]|\T1/lmr/m/n/12 (+20) diffStartShipment-
- []
-
-
-Overfull \hbox (53.65265pt too wide) in alignment at lines 141--153
- [] [] 
- []
-
 [43
 Package placeins Info: Float barrier, from input line 133, processed on page 43
 , lands on page 43. 
 ]
-Package placeins Info: No floats held, on input line 155.
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\T1/ppl/m/n/12 (+20) diffRemoveMoney-
+ []
 
-Overfull \hbox (53.65265pt too wide) in alignment at lines 161--170
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[]|\T1/ppl/m/n/12 (+20) diffRemoveMoney-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\T1/ppl/m/n/12 (+20) diffAddMoney-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\T1/ppl/m/n/12 (+20) diffBlockArticles-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]|\T1/ppl/m/n/12 (+20) diffStartShipment-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\T1/ppl/m/n/12 (+20) diffBlockArticles-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+[]|\T1/ppl/m/n/12 (+20) diffStartShipment-
+ []
+
+
+Overfull \hbox (53.65265pt too wide) in alignment at lines 142--154
  [] [] 
  []
 
-Package placeins Info: No floats held, on input line 172.
+Package placeins Info: No floats held, on input line 156.
+
+Overfull \hbox (53.65265pt too wide) in alignment at lines 162--171
+ [] [] 
+ []
+
+Package placeins Info: No floats held, on input line 173.
 ) (texes/ChapterVersuchsdurchführung/Implementierung1.tex [44
-Package placeins Info: Float barrier, from input line 155, processed on page 44
+Package placeins Info: Float barrier, from input line 156, processed on page 44
 , lands on page 44. 
-Package placeins Info: Float barrier, from input line 172, processed on page 44
+Package placeins Info: Float barrier, from input line 173, processed on page 44
 , lands on page 44. 
 ]
 Package placeins Info: No floats held, on input line 23.
-<figures/ChapterVersuchsdurchführung/sm_basic.jpg, id=756, 1865.97125pt x 564.
+<figures/ChapterVersuchsdurchführung/sm_basic.jpg, id=799, 1865.97125pt x 564.
 1075pt>
 File: figures/ChapterVersuchsdurchführung/sm_basic.jpg Graphic file (type jpg)
 
@@ -2076,23 +2126,23 @@ d on input line 29.
 (pdftex.def)             Requested size: 455.24417pt x 137.62653pt.
 Package placeins Info: No floats held, on input line 33.
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
-[]|\T1/lmr/m/n/9 (+20) failedWithCompensation-
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
-[]|\T1/lmr/m/n/9 (+20) failedWithoutCompensation-
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 55--55
-[]|\T1/lmr/m/n/9 (+20) containsAllExpectedLogs-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
-[]|\T1/lmr/m/n/9 (+20) isSuccessfullTestInstance-
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
 [45
@@ -2101,174 +2151,462 @@ Package placeins Info: Float barrier, from input line 23, processed on page 45,
 Package placeins Info: Float barrier, from input line 33, processed on page 45,
  lands on page 45. 
  <./figures/ChapterVersuchsdurchführung/sm_basic.jpg>]
-Package placeins Info: No floats held, on input line 59.
-Package placeins Info: No floats held, on input line 89.
+Package placeins Info: No floats held, on input line 58.
+Package placeins Info: No floats held, on input line 88.
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-[]|\T1/lmr/m/n/9 (+20) failedWithCompensation-
+
+LaTeX Warning: Reference `tab:smbasic_stateanalysisresult_cancelorders' on page
+ 1 undefined on input line 91.
+
+[46
+Package placeins Info: Float barrier, from input line 58, processed on page 46,
+ lands on page 46. 
+Package placeins Info: Float barrier, from input line 88, processed on page 46,
+ lands on page 46. 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 107--107
-[]|\T1/lmr/m/n/9 (+20) failedWithoutCompensation-
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
-[]|\T1/lmr/m/n/9 (+20) containsAllExpectedLogs-
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
-[]|\T1/lmr/m/n/9 (+20) isSuccessfullTestInstance-
- []
-
-[46
-Package placeins Info: Float barrier, from input line 59, processed on page 46,
- lands on page 46. 
-Package placeins Info: Float barrier, from input line 89, processed on page 46,
- lands on page 46. 
-]
-Package placeins Info: No floats held, on input line 113.
-Package placeins Info: No floats held, on input line 146.
- [47
-Package placeins Info: Float barrier, from input line 113, processed on page 47
+Package placeins Info: No floats held, on input line 111.
+Package placeins Info: No floats held, on input line 144.
+[47
+Package placeins Info: Float barrier, from input line 111, processed on page 47
 , lands on page 47. 
-Package placeins Info: Float barrier, from input line 146, processed on page 47
+Package placeins Info: Float barrier, from input line 144, processed on page 47
 , lands on page 47. 
 ]
-Package placeins Info: No floats held, on input line 164.
-Package placeins Info: No floats held, on input line 192.
+Package placeins Info: No floats held, on input line 161.
+Package placeins Info: No floats held, on input line 189.
 ) (texes/ChapterVersuchsdurchführung/Implementierung2.tex [48
-Package placeins Info: Float barrier, from input line 164, processed on page 48
+Package placeins Info: Float barrier, from input line 161, processed on page 48
 , lands on page 48. 
-Package placeins Info: Float barrier, from input line 192, processed on page 48
+Package placeins Info: Float barrier, from input line 189, processed on page 48
 , lands on page 48. 
 ]
-<figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg, id=794, 1865.9
+<figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg, id=834, 1865.9
 7125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg Graphic fi
 le (type jpg)
 <use figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg>
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/sm_basic_safe_ret
-ries.jpg  used on input line 18.
+ries.jpg  used on input line 20.
 (pdftex.def)             Requested size: 455.24417pt x 147.42201pt.
-Package placeins Info: No floats held, on input line 22.
+Package placeins Info: No floats held, on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-[]|\T1/lmr/m/n/9 (+20) failedWithCompensation-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--41
-[]|\T1/lmr/m/n/9 (+20) failedWithoutCompensation-
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]|\T1/lmr/m/n/9 (+20) containsAllExpectedLogs-
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/9 (+20) isSuccessfullTestInstance-
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
  []
 
-Package placeins Info: No floats held, on input line 47.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
 [49
-Package placeins Info: Float barrier, from input line 22, processed on page 49,
- lands on page 49. 
-Package placeins Info: Float barrier, from input line 47, processed on page 49,
+Package placeins Info: Float barrier, from input line 24, processed on page 49,
  lands on page 49. 
  <./figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg>]
+Package placeins Info: No floats held, on input line 49.
+
 Underfull \hbox (badness 10000) in paragraph at lines 63--63
-[]|\T1/lmr/m/n/9 (+20) failedWithCompensation-
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 64--64
-[]|\T1/lmr/m/n/9 (+20) failedWithoutCompensation-
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--66
-[]|\T1/lmr/m/n/9 (+20) containsAllExpectedLogs-
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 67--67
-[]|\T1/lmr/m/n/9 (+20) isSuccessfullTestInstance-
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
 Package placeins Info: No floats held, on input line 70.
+[50
+Package placeins Info: Float barrier, from input line 49, processed on page 50,
+ lands on page 50. 
+Package placeins Info: Float barrier, from input line 70, processed on page 50,
+ lands on page 50. 
+]
+Package placeins Info: No floats held, on input line 89.
 ) (texes/ChapterVersuchsdurchführung/Implementierung3.tex
-<figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg, id=804, 1
+<figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg, id=854, 1
 865.97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg Graph
 ic file (type jpg)
 <use figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg>
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/sm_basic_unlimite
-d_retries.jpg  used on input line 5.
+d_retries.jpg  used on input line 7.
 (pdftex.def)             Requested size: 455.24417pt x 147.42201pt.
-Package placeins Info: No floats held, on input line 8.
-)
+Package placeins Info: No floats held, on input line 11.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
+[51
+Package placeins Info: Float barrier, from input line 89, processed on page 51,
+ lands on page 51. 
+Package placeins Info: Float barrier, from input line 11, processed on page 51,
+ lands on page 51. 
+ <./figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg>]
+Package placeins Info: No floats held, on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
+Package placeins Info: No floats held, on input line 59.
+Package placeins Info: No floats held, on input line 76.
+) (texes/ChapterVersuchsdurchführung/Wiederholbarkeitsproblem.tex [52
+Package placeins Info: Float barrier, from input line 37, processed on page 52,
+ lands on page 52. 
+Package placeins Info: Float barrier, from input line 59, processed on page 52,
+ lands on page 52. 
+Package placeins Info: Float barrier, from input line 76, processed on page 52,
+ lands on page 52. 
+])
 (texes/ChapterVersuchsdurchführung/Implementierung4.tex
+<figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png, id=8
+72, 287.0725pt x 282.05376pt>
+File: figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png 
+Graphic file (type png)
+<use figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png>
+Package pdftex.def Info: figures/ChapterVersuchsdurchführung/SmIdempotencyBack
+wardRecovery-0.png  used on input line 6.
+(pdftex.def)             Requested size: 136.57463pt x 134.1878pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package placeins Info: Must dump some floats on input line 11.
+[53
+Package placeins Info: Float barrier, from input line 11, processed on page 53,
+ lands on page 53. 
+]
+Package placeins Info: Check again: on input line 11.
+Package placeins Info: No floats held, on input line 11.
+<figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-1.png, id=8
+81, 287.0725pt x 315.1775pt>
+File: figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-1.png 
+Graphic file (type png)
+<use figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-1.png>
+Package pdftex.def Info: figures/ChapterVersuchsdurchführung/SmIdempotencyBack
+wardRecovery-1.png  used on input line 14.
+(pdftex.def)             Requested size: 136.57463pt x 149.94652pt.
+Package placeins Info: No floats held, on input line 18.
 <figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg, id=
-805, 1865.97125pt x 604.2575pt>
+883, 1865.97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg
  Graphic file (type jpg)
 <use figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg>
 
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/sm_idempotency_ba
-ckward_recovery.jpg  used on input line 5.
+ckward_recovery.jpg  used on input line 33.
 (pdftex.def)             Requested size: 455.24417pt x 147.42201pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package placeins Info: Must dump some floats on input line 8.
-[50
-Package placeins Info: Float barrier, from input line 70, processed on page 50,
- lands on page 50. 
-Package placeins Info: Float barrier, from input line 8, processed on page 50, 
-lands on page 50. 
-Package placeins Info: Float barrier, from input line 8, processed on page 50, 
-lands on page 50. 
- <./figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg>]
-Package placeins Info: Check again: on input line 8.
-Package placeins Info: No floats held, on input line 8.
+Package placeins Info: Must dump some floats on input line 37.
+[54
+Package placeins Info: Float barrier, from input line 11, processed on page 54,
+ lands on page 54. 
+Package placeins Info: Float barrier, from input line 18, processed on page 54,
+ lands on page 54. 
+Package placeins Info: Float barrier, from input line 37, processed on page 54,
+ lands on page 54. 
+ <./figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png (P
+NG copy)> <./figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery
+-1.png (PNG copy)>]
+Package placeins Info: Check again: on input line 37.
+Package placeins Info: No floats held, on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
+Package placeins Info: No floats held, on input line 63.
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
+[55
+Package placeins Info: Float barrier, from input line 37, processed on page 55,
+ lands on page 55. 
+Package placeins Info: Float barrier, from input line 63, processed on page 55,
+ lands on page 55. 
+ <./figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg>]
+Package placeins Info: No floats held, on input line 85.
+Package placeins Info: No floats held, on input line 102.
+
+
+LaTeX Warning: Reference `fig:fig' on page 1 undefined on input line 106.
+
+[56
+Package placeins Info: Float barrier, from input line 85, processed on page 56,
+ lands on page 56. 
+Package placeins Info: Float barrier, from input line 102, processed on page 56
+, lands on page 56. 
+]
+Package placeins Info: No floats held, on input line 139.
+ (C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-(texes/ChapterVersuchsdurchführung/Implementierung5.tex
-<figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg, id=8
-13, 1865.97125pt x 604.2575pt>
+[57
+Package placeins Info: Float barrier, from input line 139, processed on page 57
+, lands on page 57. 
+] [58]
+Package placeins Info: No floats held, on input line 238.
+) (texes/ChapterVersuchsdurchführung/Implementierung5.tex
+<figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg, id=9
+59, 1865.97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg 
 Graphic file (type jpg)
 <use figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg>
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/sm_idempotency_fo
-rward_recovery.jpg  used on input line 5.
+rward_recovery.jpg  used on input line 11.
 (pdftex.def)             Requested size: 455.24417pt x 147.42201pt.
-Package placeins Info: No floats held, on input line 8.
-)
-<figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png, id=814, 1893.0725pt x 
-691.58376pt>
-File: figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png Graphic file (type
- png)
-<use figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png>
-Package pdftex.def Info: figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png
-  used on input line 25.
-(pdftex.def)             Requested size: 455.24417pt x 166.31062pt.
-Package placeins Info: No floats held, on input line 28.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package placeins Info: Must dump some floats on input line 15.
+[59
+Package placeins Info: Float barrier, from input line 238, processed on page 59
+, lands on page 59. 
+Package placeins Info: Float barrier, from input line 15, processed on page 59,
+ lands on page 59. 
+]
+Package placeins Info: Check again: on input line 15.
+Package placeins Info: No floats held, on input line 15.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
+Package placeins Info: No floats held, on input line 41.
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]|\T1/ppl/m/n/9 (+20) failedWithCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[]|\T1/ppl/m/n/9 (+20) failedWithoutCompensation-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\T1/ppl/m/n/9 (+20) containsAllExpectedLogs-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
+ []
+
+[60
+Package placeins Info: Float barrier, from input line 15, processed on page 60,
+ lands on page 60. 
+Package placeins Info: Float barrier, from input line 41, processed on page 60,
+ lands on page 60. 
+ <./figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg>]
+Package placeins Info: No floats held, on input line 63.
+Package placeins Info: No floats held, on input line 80.
+) (texes/ChapterVersuchsdurchführung/Laufzeitanalyse.tex
+Package placeins Info: No floats held, on input line 16.
+
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario1.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--25
+
+ []
+
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario1.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+Package placeins Info: Must dump some floats on input line 34.
+[61
+Package placeins Info: Float barrier, from input line 63, processed on page 61,
+ lands on page 61. 
+Package placeins Info: Float barrier, from input line 80, processed on page 61,
+ lands on page 61. 
+Package placeins Info: Float barrier, from input line 16, processed on page 61,
+ lands on page 61. 
+Package placeins Info: Float barrier, from input line 34, processed on page 61,
+ lands on page 61. 
+]
+Package placeins Info: Check again: on input line 34.
+Package placeins Info: No floats held, on input line 34.
+
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario2.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--41
+
+ []
+
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario2.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--46
+
+ []
+
+Package placeins Info: No floats held, on input line 50.
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario3.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--57
+
+ []
+
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario3.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--62
+
+ []
+
+)) (texes/Chapter4.tex [62
+Package placeins Info: Float barrier, from input line 34, processed on page 62,
+ lands on page 62. 
+Package placeins Info: Float barrier, from input line 50, processed on page 62,
+ lands on page 62. 
+] [63]
+chapter 5.
+[64
+
+]
+\openout2 = `texes/ChapterFazit/Versuchsergebnisse.aux'.
+
+ (texes/ChapterFazit/Versuchsergebnisse.tex) [65
+
+]
+\openout2 = `texes/ChapterFazit/WissenschaftlicheBerührungspunkte.aux'.
+
+
+(texes/ChapterFazit/WissenschaftlicheBerührungspunkte.tex) [66
+
+
+
+])
+(texes/Chapter5.tex
+chapter 6.
 ) [1
-Package placeins Info: Float barrier, from input line 8, processed on page 51, 
-lands on page I. 
-Package placeins Info: Float barrier, from input line 8, processed on page 51, 
-lands on page I. 
-Package placeins Info: Float barrier, from input line 28, processed on page 51,
- lands on page I. 
- <./figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg> 
-<./figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg> <.
-/figures/DatabaseER/DEA_No_NetworkErrors_No_Retries.png>]
-Package tocbasic Info: character protrusion at lof deactivated on input line 90
+
+
+
+]
+Package tocbasic Info: character protrusion at lof deactivated on input line 97
 .
  (Masterarbeit.lof)
 \tf@lof=\write7
@@ -2276,14 +2614,11 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 90
 
  [2
 
-]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
- [3
+] [3
 
-]
-(Masterarbeit.aux)
+] (Masterarbeit.aux
+(texes/ChapterFazit/Versuchsergebnisse.aux)
+(texes/ChapterFazit/WissenschaftlicheBerührungspunkte.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2297,31 +2632,28 @@ Package logreq Info: Writing requests to 'Masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52086 strings out of 476331
- 1174203 string characters out of 5792454
- 2434909 words of memory out of 5000000
- 70928 multiletter control sequences out of 15000+600000
- 577351 words of font info for 181 fonts, out of 8000000 for 9000
+ 55567 strings out of 476331
+ 1271462 string characters out of 5792454
+ 2628612 words of memory out of 5000000
+ 74026 multiletter control sequences out of 15000+600000
+ 587445 words of font info for 352 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,10n,106p,10909b,2205s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmbx10.pfb><C:/2_Pr
-ogramme/Office/latex/miktex/fonts/type1/public/lm/lmbx12.pfb><C:/2_Programme/Of
-fice/latex/miktex/fonts/type1/public/lm/lmcsc10.pfb><C:/2_Programme/Office/late
-x/miktex/fonts/type1/public/lm/lmex10.pfb><C:/2_Programme/Office/latex/miktex/f
-onts/type1/public/lm/lmmi12.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1
-/public/lm/lmmi8.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/
-lmr10.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmr12.pfb><
-C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmr8.pfb><C:/2_Program
-me/Office/latex/miktex/fonts/type1/public/lm/lmr9.pfb><C:/2_Programme/Office/la
-tex/miktex/fonts/type1/public/lm/lmri10.pfb><C:/2_Programme/Office/latex/miktex
-/fonts/type1/public/lm/lmri12.pfb><C:/2_Programme/Office/latex/miktex/fonts/typ
-e1/public/lm/lmss12.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/
-lm/lmssbx10.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmsy1
-0.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/public/lm/lmsy8.pfb><C:/2
-_Programme/Office/latex/miktex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Masterarbeit.pdf (57 pages, 1338324 bytes).
+ 108i,13n,106p,10909b,2504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/2_Programme/Office/latex/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb
+><C:/2_Programme/Office/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/2_Programme/Office/latex/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/2_Programme/Office/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/2_Programme/Office/latex/miktex/fonts/type1/public/mathpazo/fplmbb.pfb><C:/2_P
+rogramme/Office/latex/miktex/fonts/type1/public/mathpazo/fplmr.pfb><C:/2_Progra
+mme/Office/latex/miktex/fonts/type1/public/mathpazo/fplmri.pfb><C:/2_Programme/
+Office/latex/miktex/fonts/type1/public/lm/lmss12.pfb><C:/2_Programme/Office/lat
+ex/miktex/fonts/type1/public/lm/lmssbx10.pfb><C:/2_Programme/Office/latex/mikte
+x/fonts/type1/urw/palatino/uplb8a.pfb><C:/2_Programme/Office/latex/miktex/fonts
+/type1/urw/palatino/uplr8a.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/
+urw/palatino/uplri8a.pfb>
+Output written on Masterarbeit.pdf (74 pages, 1329717 bytes).
 PDF statistics:
- 1324 PDF objects out of 1440 (max. 8388607)
- 497 named destinations out of 1000 (max. 500000)
- 35659 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1559 PDF objects out of 1728 (max. 8388607)
+ 614 named destinations out of 1000 (max. 500000)
+ 90549 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -14,7 +14,7 @@ Im ersten Szenario entstehen keine Netzwerkfehler. Dieses Szenario ist der Ausga
 	\centering
 	\includegraphics[width=.4\linewidth]{figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png}
 	\label{fig:Testszenario1}
-	\caption{Szenario 1}
+	\caption{Sequenzdiagramm für Szenario 1}
 \end{figure}
 \FloatBarrier
 
@@ -25,7 +25,7 @@ Es können Netzwerkfehler auftreten, die verhindern, dass der Request den Empfä
 	\centering
 	\includegraphics[width=.4\linewidth]{figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png}
 	\label{fig:Testszenario2}
-	\caption{Szenario 2}
+	\caption{Sequenzdiagramm für Szenario 2}
 \end{figure}
 \FloatBarrier
 
@@ -38,7 +38,7 @@ Findet ein Netzwerkfehler nach der Verarbeitung des Requests im Empfängerservic
 	\centering
 	\includegraphics[width=.4\linewidth]{figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png}
 	\label{fig:Testszenario3}
-	\caption{Szenario 3}
+	\caption{Sequenzdiagramm für Szenario 3}
 \end{figure}
 \FloatBarrier
 
@@ -89,7 +89,7 @@ Die in der TestApi generierten Bestellungen werden dynamisch erzeugt. Jede Beste
 Eine solche zufällig generierte Bestellung ist in \cref{lst:PlaceOrderJson} abgebildet.
 
 
-\begin{lstlisting}[breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small, label = {lst:PlaceOrderJson}, caption={Dynamisch generierte Bestellung}, captionpos=b] 
+\begin{lstlisting}[breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small, label = {lst:PlaceOrderJson}, caption={Json für dynamisch generierte Bestellung}, captionpos=b] 
 {
 	"consument": {
 		"userId": "Xena",
@@ -137,6 +137,7 @@ Für jeden dieser Werte gibt wir einen normalisierter Wert berechnet, der ins Ve
 \paragraph*{TransactionAnalysisResult}
 Um Aussagen über die Konsistenz einer LLT zu treffen, werden die durchgeführten Transaktionen, die im Transaktionslog des Koordinators festgehalten sind, mit den durchgeführten Transaktionen der Teilnehmerservices verglichen. Für jede Saga kann der Unterschied zwischen Transaktionsanzahl aus Koordinatorsicht und aus Teilnehmerservicesicht berechnet werden. Enthält eine Saga mindestens eine Transaktion, bei der dieser Unterschied auftritt, wird sie als inkonsistent bezeichnet. Die Summe der Unterschiede pro Transaktionstyp kann ebenfalls gebildet werden. Es ergibt sich folgende Tabelle:
 
+\Needspace{5\baselineskip}
 \begin{center}
 	\begin{longtable}[h]{|p{5cm}|p{12cm}|}
 		\hline

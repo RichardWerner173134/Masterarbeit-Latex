@@ -27,7 +27,7 @@ Aus diesem Regelwerk ergibt sich der in \cref{fig:fig_sm_basic} dargestellte DEA
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{figures/ChapterVersuchsdurchführung/sm_basic.jpg}
-	\caption{SmBasic}
+	\caption{DEA für SmBasic}
 	\label{fig:fig_sm_basic}
 \end{figure}
 \FloatBarrier
@@ -43,22 +43,21 @@ Folgende Tabelle bildet das StateAnalysisResult der Messung des SmBasic in Testf
 		\hline
 		Messwert & S1 & S2 & S3 \\ \hline
 		\endhead
-		\caption{StateAnalysisResult SmBasic im Testfall FinishOrders}
-		\label{tab:smbasic_stateanalysisresult_finishorders}
+		%\label{tab:smbasic_stateanalysisresult_finishorders}
 		\endfoot
-		successfull\-Percentage & 0.74 & 0.36 & 0.17 \\ \hline
+		successfull\-Percentage & 0.80 & 0.42 & 0.19 \\ \hline
 		finished\-Percentage & 1.0 & 1.0 & 1.0 \\ \hline
 		pending\-Percentage & 0.0 & 0.0 & 0.0 \\ \hline
-		failedWithCompensation\-Percentage & 0.26 & 0.59 & 0.75 \\ \hline
-		failedWithoutCompensation\-Percentage & 0.0 & 0.05 & 0.08 \\ \hline
-		hasCorrectEndstate\-Percentage & 0.74 & 0.36 & 0.17 \\ \hline
-		containsAllExpectedLogs\-Percentage & 0.74 & 0.31 & 0.13 \\ \hline
-		isSuccessfullTestInstance\-Percentage & 0.74 & 0.31 & 0.13 \\ \hline
+		failedWithCompensation\-Percentage & 0.20 & 0.53 & 0.72 \\ \hline
+		failedWithoutCompensation\-Percentage & 0.0 & 0.06 & 0.10 \\ \hline
+		hasCorrectEndstate\-Percentage & 0.80 & 0.42 & 0.19 \\ \hline
+		containsAllExpectedLogs\-Percentage & 0.80 & 0.38 & 0.15 \\ \hline
+		isSuccessfullTestInstance\-Percentage & 0.80 & 0.38 & 0.15 \\ \hline
 	\end{longtable}
 \end{center}
 \FloatBarrier
 
-Die Messung zeigt, dass bereits in Testszenario 1 nur 74\% der Sagas zum erwarteten Endzustand führen. Der Anteil der Sagas, die den Zustand \textit{Success} erreichen, wird mit jedem Testszenario geringer: 74\% in Testszenario S1, 36\% in S2 und 17\% in S3.
+Die Messung zeigt, dass bereits in Testszenario 1 nur 80\% der Sagas zum erwarteten Endzustand führen. Der Anteil der Sagas, die den Zustand \textit{Success} erreichen, wird mit jedem Testszenario geringer: 80\% in Testszenario S1, 42\% in S2 und 19\% in S3.
 
 Das ist damit zu begründen, dass jeglicher Fehler in der Ausführung des SmBasic zur Kompensierung führt. Zu den Fehlern, die zur Kompensierung (für Ts) oder zum Zustand \textit{FailedWithoutCompensation} (für Cs) führen, gehören neben den Fehlern, die einen kritischen Konflikt ausdrücken auch vorübergehende Fehler (API-Ergebnisse mit $tn_{429}$) und in S2 und S3 Netzwerkfehler. 
 
@@ -89,7 +88,7 @@ In \cref{tab:transaktionslog_ts1_tc1_429} ist das Transaktionslog einer Saga abg
 \FloatBarrier
 
 \paragraph*{Testfall CancelOrders}
-In \cref{tab:smbasic_stateanalysisresult_cancelorders} ist das StateAnalysisResult für den Testfall CancelOrders dargestellt. Hier zeigt sich die Berechtigung des Messwertes \textit{isSuccessfullTestInstancePercentage}. Der erwartete Endzustand \textit{FailedWithCompensation} wird in diesem Testfall erwartet und in Testszenario 1 in 95\% aller Sagas erreicht. Davon haben jedoch 21\% bereits vor Erreichen des Zustands \textit{CheckNoCancellation} die Ausführung aufgrund eines Fehlers abgebrochen und stellen somit keine erfolgreiche Testinstanzen mehr dar.
+In \cref{tab:smbasic_stateanalysisresult_cancelorders} ist das StateAnalysisResult für den Testfall CancelOrders dargestellt. Hier zeigt sich die Berechtigung des Messwertes \textit{isSuccessfullTestInstancePercentage}. Der erwartete Endzustand \textit{FailedWithCompensation} wird in diesem Testfall erwartet und in Testszenario 1 in 95\% aller Sagas erreicht. Der Messwert \textit{containsAllExpectedLogsPercentage} zeigt, dass in Testszenario 1 lediglich 87\% die erwarteten Logs enthalten. Das bedeutet, dass ein Anteil der Sagas mit Endzustand \textit{FailedWithCompensation} aufgrund eines Fehlers zur Kompensierung gewechselt haben und nicht wie erwartet den Zustand \textit{CheckNoCancellation} erreicht haben. Somit stellen diese Sagas keine erfolgreichen Testinstanzen mehr dar.
 
 \begin{center}
 	\fontsize{9}{12}\selectfont
@@ -97,17 +96,16 @@ In \cref{tab:smbasic_stateanalysisresult_cancelorders} ist das StateAnalysisResu
 		\hline
 		Messwert & S1 & S2 & S3 \\ \hline
 		\endhead
-		\caption{StateAnalysisResult SmBasic im Testfall CancelOrders}
-		\label{tab:smbasic_stateanalysisresult_cancelorders}
+		%\label{tab:smbasic_stateanalysisresult_cancelorders}
 		\endfoot
 		successfull\-Percentage & 0.0 & 0.0 & 0.0 \\ \hline
 		finished\-Percentage & 1.0 & 1.0 & 1.0 \\ \hline
 		pending\-Percentage & 0.0 & 0.0 & 0.0 \\ \hline
-		failedWithCompensation\-Percentage & 0.95 & 0.7533 & 0.7733 \\ \hline
-		failedWithoutCompensation\-Percentage & 0.0 & 0.05 & 0.08 \\ \hline
-		hasCorrectEndstate\-Percentage & 0.74 & 0.36 & 0.17 \\ \hline
-		containsAllExpectedLogs\-Percentage & 0.74 & 0.31 & 0.13 \\ \hline
-		isSuccessfullTestInstance\-Percentage & 0.74 & 0.31 & 0.13 \\ \hline
+		failedWithCompensation\-Percentage & 0.95 & 0.77 & 0.75 \\ \hline
+		failedWithoutCompensation\-Percentage & 0.05 & 0.23 & 0.25 \\ \hline
+		hasCorrectEndstate\-Percentage & 0.95 & 0.77 & 0.75 \\ \hline
+		containsAllExpectedLogs\-Percentage & 0.87 & 0.27 & 0.06 \\ \hline
+		isSuccessfullTestInstance\-Percentage & 0.87 & 0.27 & 0.06 \\ \hline
 	\end{longtable}
 \end{center}
 \FloatBarrier
@@ -154,18 +152,17 @@ In \cref{tab:smbasic_stateanalysisresult} sind die TransactionAnalysisResults f�
 		\hline
 		 & S1 & S2 & S3 \\ \hline
 		\endhead
-		\caption{Messwert \textit{consistentSagasPercentage} für SmBasic}
-		\label{tab:smbasic_stateanalysisresult}
+		%\label{tab:smbasic_stateanalysisresult}
 		\endfoot
-		FinishOrders & 1 & 1 & 0.89\\ \hline	
+		FinishOrders & 1 & 1 & 0.87\\ \hline	
 		CancelOrders & 1 & 1 & 0.81\\ \hline
 	\end{longtable}
 \end{center}
 \FloatBarrier
 
-In beiden Testfällen treten unter den Bedingungen von Testszenario 1 und 2 keine Inkonsistenzen auf. In Testszenario 3 führen 89\% im Testfall \textit{FinishOrders} und 81\% im Testfall \textit{CancelOrders} aller Sagas zu mindestens zu einem inkonsistenten Zustand innerhalb der Teilnehmerservices. 
+In beiden Testfällen treten unter den Bedingungen von Testszenario 1 und 2 keine Inkonsistenzen auf. In Testszenario 3 führen 87\% im Testfall \textit{FinishOrders} und 81\% im Testfall \textit{CancelOrders} aller Sagas zu mindestens zu einem inkonsistenten Zustand innerhalb der Teilnehmerservices. 
 
-Neben den Sagas, die im Endzustand \textit{failedWithoutCompensation} landen, führen auch Sagas zu einem inkonsistenten Systemzustand, die nach einem Netzwerkfehler mit der Kompensierung fortfahren. Ein Beispiel dafür ist das Transaktionslog in \cref{tab:transaktionslog_cancelorders_ts3}. Der BankService hat die lokale Transaktion \textit{RemoveMoney} erfolgreich ausgeführt. Die Response ging verloren, weshalb der Koordinator mit der Kompensierung fortgefahren hat. Die lokale Transaktion \textit{RemoveMoney} wurde nicht kompensiert. 
+Neben den Sagas, die im Endzustand \textit{FailedWithoutCompensation} landen, führen auch Sagas zu einem inkonsistenten Systemzustand, die nach einem Netzwerkfehler mit der Kompensierung fortfahren. Ein Beispiel dafür ist das Transaktionslog in \cref{tab:transaktionslog_cancelorders_ts3}. Der BankService hat die lokale Transaktion \textit{RemoveMoney} erfolgreich ausgeführt. Die Response ging verloren, weshalb der Koordinator mit der Kompensierung fortgefahren hat. Die lokale Transaktion \textit{RemoveMoney} wurde nicht kompensiert. Fachlich stellt dieses Saga-Log einen Bestellprozess dar, der abgebrochen wurde. Das Geld des Kundenkontos wurde abgebucht und nicht rückerstattet. Der Saga-Prozess hat keine Kenntnis von diesem fachlichen Fehler.
 
 \begin{center}
 	\fontsize{9}{12}\selectfont

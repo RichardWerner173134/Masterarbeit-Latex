@@ -20,9 +20,9 @@ Zunächste soll der Ablauf eines Durchlaufs eines DEAs innerhalb der SEC dargest
 \end{enumerate}
 
 \subsection{Modellierung eines DEAs}
-Die Modellierung eines DEAs ist in \ref{code_dea_class} abgebildet. 
+Die Modellierung eines DEAs ist in \cref{lst:dea-model-csharp} abgebildet. 
 
-\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
+\begin{lstlisting}[breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small, label = {lst:dea-model-csharp}, caption={Modellierung eines DEA in C\#}, captionpos=b] 
 public class SimpleStateMachine
 {
 	public List<string> States;
@@ -45,7 +45,7 @@ public class SimpleStateMachine
 		Relations = relations;
 	}
 }
-\end{lstlisting}\label{code_dea_class}
+\end{lstlisting}
 
 \paragraph*{Relations}
 Das Feld \textit{Relations} stellt Liste von möglichen Zustandsübergängen dar. Die SEC kann aus einem Zustand und einem Element aus Sigma den entsprechenden Zustandsübergang berechnen. Damit diese Berechnung deterministisch ist, darf für einen gegebenen Zustand und einen gegebenes Element aus Sigma nur ein Element existieren. 
@@ -78,13 +78,13 @@ Nun soll ein solcher DEA initialisiert werden. Dazu wird der Konstruktor dieser 
 		(qc2)			edge					node		{$c2_{Success}$}	(qc1)
 						edge					node		{$c2_{Failure}$}	(qf3);
 	\end{tikzpicture}
-	\caption{Saga als DEA}
+	\caption{Zu konstruierender DEA}
 \end{figure}
 \FloatBarrier
 
-Die Initialisierung ist in folgendem Code abgebildet:
+Die Initialisierung ist in \cref{lst:dea-model-example-csharp} abgebildet:
 
-\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
+\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small,label = {lst:dea-model-example-csharp}, caption={Modellierung eines Beispiel DEA in C\#}, captionpos=b] 
 public class ExampleDea
 {
  	// representation of states
@@ -160,12 +160,12 @@ public class ExampleDea
 		newState);
 	}
 }
-\end{lstlisting}\label{code_simple_dea}
+\end{lstlisting}
 
 \paragraph*{Verwaltung der DEAs}
-Nach Vorbild des Beispiels in \label{code_simple_dea} werden alle ausführbaren DEAs definiert. Diese Initialisierung geschieht innerhalb einer Klasse. 
+Nach Vorbild des Beispiels in \cref{lst:dea-model-example-csharp} werden alle ausführbaren DEAs definiert. Diese Initialisierung geschieht innerhalb der in \cref{lst:statemachinemapper-csharp} definierten Klasse. 
 
-\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
+\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small,label = {lst:statemachinemapper-csharp}, caption={Modellierung eines StateMachineMappers in C\#}, captionpos=b] 
 public interface IStateMachineMapper 
 {
 	StateMachine MapToStateMachine(int smValue);
@@ -198,8 +198,9 @@ Per Dependency Injection kann die SEC diese Klasse verwenden. Per Strategie-Patt
 \paragraph*{Kontrollfluss der SEC}
 Die SEC verwendet den StateMachineMapper, um den gewünschten DEA auszuführen. Die tatsächliche Ausführung findet in einer separaten Komponente, dem StateMachineExecutor statt. Diese Klasse enthält eine Funktion \textit{ExecuteStateMachine}, die für einen DEA und ein Eingabewort den aktuellen Zustand berechnet. Dazu wird jedes Element des Eingabeworts abgearbeitet. Für jedes Element und den aktuellen Zustand wird in der Funktion \textit{FindRelation} die zugeordnete Relation berechnet. Der in der Relation enthaltene Folgezustand wird gesetzt und das abgearbeitete Element des Eingabeworts wird entfernt. 
 
-Das Ergebnis der Berechnung ist eine Liste von Konfigurationsübergängen. Eine Konfiguration durch folgende Klasse modelliert.
-\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single] 
+Das Ergebnis der Berechnung ist eine Liste von Konfigurationsübergängen. Eine Konfiguration wird durch die in \cref{lst:statemachineconfiguration-csharp} dargestellten Klasse modelliert.
+
+\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small,label = {lst:statemachineconfiguration-csharp}, caption={Modellierung einer StateMachineConfiguration in C\#}, captionpos=b] 
 public class StateMachineConfiguration
 {
 	public List<string> Word { get; set; } = new();
@@ -211,7 +212,7 @@ public class StateMachineConfiguration
 
 Ein Konfigurationsübergang stellt den Wechsel von einer Konfiguration in eine Folgekonfiguration dar. Dabei wird die Länge des Eingabeworts stets verringert.
 
-\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
+\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small,label = {lst:statemachineconfigurationtransition-csharp}, caption={Modellierung einer StateMachineConfigurationTransition in C\#}, captionpos=b] 
 public class StateMachineConfigurationTransition
 {
 	public StateMachineConfiguration C1 { get; set; }
@@ -232,7 +233,7 @@ public class StateMachineConfigurationTransition
 
 Solange das Eingabewort noch nicht vollständig abgearbeitet wurde, werden Konfigurationsübergänge berechnet. Die resultierende Liste von Konfigurationsübergängen beschreibt eindeutig den gewählten Graphen. 
 
-\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
+\begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small,label = {lst:statemachineexecutor-csharp}, caption={Modellierung einer StateMachineExecutors in C\#}, captionpos=b] 
 public interface IStateMachineExecutor
 {
 	List<StateMachineConfigurationTransition> ExecuteStateMachine(StateMachine sm, List<Status> word);
@@ -299,7 +300,7 @@ public class StateMachineExecutor : IStateMachineExecutor
 }
 \end{lstlisting}
 
-Das Ergebnis der Berechnung ist die Liste von Konfigurationsübergängen. Der letzte Konfigurationsübergang enthält den Zielzustand, der noch auszuführen ist. Über den ActionExecutor wird die mit diesem Zustand korrespondierende Aktion ausgeführt. Die Kommunikation der von der SEC verwendeten Klassen ist in \cref{sequence_diagramm_sec_control_flow} abgebildet. 
+Das Ergebnis der Berechnung ist die Liste von Konfigurationsübergängen. Der letzte Konfigurationsübergang enthält den Zielzustand, der noch auszuführen ist. Über den ActionExecutor wird die mit diesem Zustand korrespondierende Aktion ausgeführt. Die Kommunikation der von der SEC verwendeten Klassen ist in \cref{fig:sequence_diagramm_sec_control_flow} abgebildet. 
 
 Die Funktion \textit{GetTransactionsForOrderSaga} greift auf die Datenbanktabelle \textit{ordersagatransactions} zu und liefert das Transaktionslog. Das Transaktionslog wird lediglich von den mit einem Zustand korrespondierenden Aktionen ergänzt. Die SEC selbst greift nur lesend auf dieses Log zu.
 
@@ -307,6 +308,6 @@ Die Funktion \textit{GetTransactionsForOrderSaga} greift auf die Datenbanktabell
 	\centering
 	\includegraphics[width=\linewidth]{figures/ChapterVersuchsdurchführung/sec_execution_flow.png}
 	\caption{Kontrollfluss der SEC}
-	\label{sequence_diagramm_sec_control_flow}
+	\label{fig:sequence_diagramm_sec_control_flow}
 \end{figure}
 \FloatBarrier

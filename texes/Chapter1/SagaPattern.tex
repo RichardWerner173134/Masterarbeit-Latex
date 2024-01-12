@@ -12,7 +12,7 @@ Im vorherigen Abschnitt wurden die mit dem ACID-Konsistenzprinzip einhergehenden
 Referenzierung des Papers 1987 Garcia
 
 \subsection{Bestandteile des Musters}
-\subsubsection{Vereinfachtes Grundprinzip}
+\subsubsection{Funktionsweise}
 Das Saga-Pattern ist ein Entwurfsmuster, um eine verteilte Transaktion abzubilden. Eine Transaktion wird hier auch durch eine Menge von auszuführenden Operationen gebildet. Auch für das Saga-Pattern gehört die Gewährleistung der ACID-Eigenschaft zu den Anforderungen. Die Art und Weise, wie diese Eigenschaften erreicht werden unterscheidet sich jedoch vom 2-Phasencommit. 
 Anstatt alle teilnehmenden Operationen durch einen Befehl gleichzeitig auszulösen, werden alle Operationen sequentiell ausgeführt. Eine Operation ist im Saga-Pattern eine lokale Transaktion, die in sich geschlossen ist und ebenfalls die ACID-Eigenschaft erfüllen muss. Für eine solche Operation wird gleichzeitig eine Schnittstelle angeboten, die die Veränderungen rückgängig macht. Somit besteht die Möglichkeit eine Operation zu neutralisieren. Es wird also die Voraussetzung an den Entwickler gestellt, für jede angebotene Operation eine Umkehroperation bereitzustellen, die selbst eine lokale Transaktion darstellt. 
 Im Paper werden lokale Transaktionen, die eine Operation der Transaktion darstellen, als Ts bezeichnet. Die dazugehörigen lokalen Transaktionen werden als Cs bezeichnet. 
@@ -70,7 +70,7 @@ $\forall w \in \Sigma^{\star}: w \in L(A_{Saga}) \iff w \in L_{Saga}$
 \end{center}
 
 % TODO prüfen von hier. Passt das auf 
-\paragraph{Überführung einer Saga in einen DEA}
+\paragraph*{Überführung einer Saga in einen DEA}
 Um eine Saga in einen DEA überführen zu können, müssen zuerst einige Definitionen vorgenommen werden. Die Unterscheidung zwischen Ts und Cs wird im Modell eines Zustandsautomaten per Zustand ausgedrückt. Es muss also eine Abstrahierung vorgenommen werden, die Ts und Cs vereinigt. Diese Abstrahierung wird im Folgenden als $Aktion\ A$ bezeichnet. Eine solche Aktion $a_n$ wird immer im entsprechenden Zustsand $q_n \in Q$ ausgeführt. In der folgenden Erläuterung kann die Zustandsmenge $Q$ mit der Menge $T \cup C$ gleichgesetzt werden.
 
 Das Eingabealphabet $\Sigma$ drückt aus, welche möglichen Ergebnisse eine Aktion haben kann. Eine Aktion kann einerseits ein Aufruf einer externen Schnittstelle sein. Die Antwort dieser Schnittstelle kann das Ergebnis in unterschiedlichen Formen ausdrücken. Das können beispielsweise folgende Ausdrucksformen sein:
@@ -109,7 +109,7 @@ Der Startzustand $q_0$ ist die erste auszuführende Transaktion.
 Ein Endzustand $q_{f1}$ wird erreicht, nachdem die letzte auszuführende Transaktion erfolgreich beendet wurde. Ein weiterer Endzustand $q_{f2}$ wird erreicht, nachdem die letzte Kompensierung erfolgreich beendet wurde. Der letzte Endzustand $q_{f3}$ wird erreicht, nachdem die erste Kompensierung erfolglos beendet wurde.
 % TODO vielleicht qf3 nicht als akzeptierenden Zustand markieren: beeinflusst, welche Sprache der DEA akzeptiert
 
-\paragraph{Konfiguration}% TODO https://www.cs.uni-potsdam.de/ti/lehre/06-Theorie-I/slides/slides-2.1.pdf
+\paragraph*{Konfiguration}% TODO https://www.cs.uni-potsdam.de/ti/lehre/06-Theorie-I/slides/slides-2.1.pdf
 Die Ausführung eines DEA kann mittels Konfigurationen dargestellt werden. Eine Konfiguration $K$ ist definiert als: 
 
 \begin{center}
@@ -187,11 +187,11 @@ F &= \{q_{f1}, q_{f2}, q_{f3}\}
 			  (qc3)		edge					node		{$c3_{200}$}		(qc2)
 			  			edge	[bend left]		node		{$c3_{400}$}		(qf3);
 	\end{tikzpicture}
-	\caption{Saga als DEA}
+	\caption{Darstellung einer Saga als Deterministischen endlichen Automaten}
 \end{figure}
 \FloatBarrier
 
-\paragraph{Endzustand $q_{f1}$}
+\paragraph*{Endzustand $q_{f1}$}
 Im Folgenden wird davon ausgegangen, dass die Aktionen der Zustände $q_{t1}$, $q_{t2}$ und $q_{t3}$ in einem erfolgreichen Ergebnis resultieren. Somit wird am Ende der Endzustand $q_{f1}$ erreicht. Dieser Zustand drückt einen erfolgreichen Durchlauf einer Saga aus. Das Eingabewort $e_1 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{200} \circ \#$.
 
 Die Konfigurationsübergänge für $e_1$ sind:
@@ -204,7 +204,7 @@ Die Konfigurationsübergänge für $e_1$ sind:
 \end{align*}
 
 
-\paragraph{Endzustand $q_{f2}$}
+\paragraph*{Endzustand $q_{f2}$}
 Es wird nun davon ausgegangen, dass bei der Aktion im Zustand $q_{t3}$ ein Ergebnis $t3_{400}$ erfolgt. Ein solches Ergebnis führt dazu, dass der Zustand $q_{c2}$ erreicht wird. Hier wird davon ausgegangen, dass die Aktionen $q_{c2}$ und $q_{c1}$ erfolgreiche Ergebnisse haben. Das Eingabewort $e_2 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{400} \circ c2_{Success} \circ c1_{200}$.
 
 Die Konfigurationsübergänge für $e_2$ sind:
@@ -219,7 +219,7 @@ Die Konfigurationsübergänge für $e_2$ sind:
 \end{align*}
 
 
-\paragraph{Endzustand $q_{f3}$}
+\paragraph*{Endzustand $q_{f3}$}
 Zuletzt soll der Zustand $q_{f3}$ betrachtet werden. Dafür soll die Aktion in $q_{t3}$ das Ergebnis $t3_{400}$ haben. Danach schlägt die Aktion $q_{c2}$ fehl und liefert das Ergebnis $c2_{Failure}$. Das Eingabewort $e_3 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{400} \circ c2_{Failure} \circ \#$.
 
 Die Konfigurationsübergänge für $e_3$ sind:
@@ -241,10 +241,10 @@ Eine Saga, die in der Ausführung einer Transaktion fehlschlägt, wechselt nach 
 Neben der Backward Recovery wird ein weiteres Verhalten vorgeschlagen, welches Forward-Recovery genannt wird. Das Ziel der Forward Recovery ist es, seltener in einem erfolglosen Endzustand zu gelangen. Im Modell der hier aufgestellten DEA-Saga sind das Zustände $q_{f2}$ und $q_{f3}$. Um dies zu erreichen, werden Save-Points definiert. Ein Save-Point stellt einen Zustand dar, von dem bei einem Systemabsturz oder einem erfolglosen Ergebnis die Ausführung weitergeführt werden kann. Es wird im Fehlerfall Backward-Recovery bis zum nächsten Save-Point ausgeführt. Wird dieser erreicht, werden alle noch fehlenden Ts ausgeführt, um zum erfolgreichen Endzustand zu gelangen. Das bedeutet, dass von der Kompensierungskette zurück auf die Transaktionskette gesprungen wird.
 
 
-\paragraph{Backward Recovery} %TODO referenz DEA
+\paragraph*{Backward Recovery} %TODO referenz DEA
 Der DEA einer Saga, die Backward-Recovery implementiert, ist im vorherigen Abschnitt beschrieben.
 
-\paragraph{Forward Recovery} % TODO referenz DEA
+\paragraph*{Forward Recovery} % TODO referenz DEA
 Forward-Recovery ist auf verschiedenen Wegen erreichbar. Der erste Ansatz beinhaltet die Verwendung eines Save-Points. Der DEA aus Abschnitt soll um einen Checkpoint und Forward Recovery ergänzt werden. Es wird ein weiterer Zustand eingeführt, der nach erfolgreichem Ergebnis von $q_{t1}$ erreicht wird. Der Checkpoint wird hier dargestellt als ein interner Prozessschritt $q_{sp1}$ und hat somit die möglichen Ergebnisse $\in \{sp1_{Success}, sp1_{Failure}\}$. Es ist zu sehen, dass dieser DEA eine mögliche Endlosschleift zulässt. Wenn $q_{sp1}$ erreicht wird und in $q_{t2}$ oder $q_{t3}$ immer ein erfolgloses Ergebnis auftritt, darf im Zustand $qsp1$ nur endlich oft der Übergang $sp1_{Success}$ gewählt werden. 
 
 Die Funktion $f$ die in $q_{sp1}$ ein internes Prozessergebnis $IPE$ berechnet, sieht so aus:
@@ -293,7 +293,7 @@ Die Anzahl an Ausführungen beginnend bei $q_{t2}$ ist begrenzt. Es wird also so
 			  (qsp1) 	edge	[bend left]		node		{$sp1_{Success}$}	(qt2)
 						edge	[bend right]	node		{$sp1_{Failure}$}	(qc1);
 	\end{tikzpicture}
-	\caption{Saga als DEA}
+	\caption{Forwardrecovery in einem DEA}
 \end{figure}
 \FloatBarrier
 
@@ -365,7 +365,7 @@ Die Funktion $fn_{IE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende
 			  (qc3)		edge					node		{$c3_{200}$}		(qc2)
 						edge	[bend left]		node		{$c3_{400}$}		(qf3);
 	\end{tikzpicture}
-	\caption{Saga als DEA}
+	\caption{Backwardrecovery in einem DEA}
 \end{figure}
 \FloatBarrier
 
@@ -390,13 +390,13 @@ Der DEA für dieses Verhalten sieht so aus:
 						edge	[loop above]	node		{$t3_{400}$}		(qt3);
 
 	\end{tikzpicture}
-	\caption{Saga als DEA}
+	\caption{Erzwungene Forwardrecovery in einem DEA}
 \end{figure}
 \FloatBarrier
 
 Es ist zu sehen, dass in diesem DEA keine Zustände enthalten sind, die eine Kompensierungsaktion ausdrücken. Somit geht in dieser Implementierung der Gedanke der Kompensierung verloren, der eine zentrale Rolle im Saga-Pattern innehat. Bei wiederholtem Auftreten eines erfolglosen Ergebnisses endet die Saga nie. 
 
-\paragraph{Voraussetzung für Forward-Recovery}
+\paragraph*{Voraussetzung für Forward-Recovery}
 Damit eine Forward-Recovery sinnvoll ist, muss die Möglichkeit bestehen, dass ein gescheitertes T bei erneutem Ausführen ein erfolgreiches Ergebnis liefert. Das ist abhängig von der Semantik des Ergebnisses. Ist ein T beispielsweise ein Aufruf einer Schnittstelle zum Buchen eines Hotels, so könnten erfolglose Ergebnisse beispielsweise folgende Bedeutungen haben:
 \begin{enumerate}
 	\item Hotel ist im angefragten Zeitraum ausgebucht
@@ -414,18 +414,18 @@ Die zwei Ausprägungen unterscheiden sich hauptsächlich in der Softwarearchitek
 
 Im Folgenden sollen die beiden Implementierungsansätze vorgestellt werden. Um die Unterschiede zu verdeutlichen, soll in den nachfolgenden Erläuterungen von einem Geschäftsprozess ausgegangen werden, der Ts enthält, die Teil einer verteilten, globalen Transaktion sind. Jedes T soll eine andere Schnittstelle aufrufen. Jedes T hat ein entsprechendes C zugeordnet. Sowohl die Ts als auch die Cs entsprechen den Anforderungen, die in XXX beschrieben sind. % TODO Referenz einfügen
 
-\paragraph{Orchestration}
+\paragraph*{Orchestration}
 Die Orchestrierung zentralisiert die Logik für eine Saga in einem einzigen Service. Dieser Service wird als Koordinator oder Orchestrator bezeichnet. Der Koordinator ist verantwortlich für die Einhaltung der Transaktionsanforderungen. Er ruft aktiv die restlichen teilhabenden Services auf und muss die Ergebnisse der Aufrufe auswerten. Die teilhabenden Services haben nur Verantwortung für die Korrektheit der Prozessierung ihre eigenen Servicegrenzen. Ein solcher vom Koordinator aufgerufener Service hat keine Kenntnis vom ablaufenden Geschäftsprozess. 
 
 Der Orchestrator stellt einen Prozessmanager dar. Als solcher muss dieser Service garantieren, dass eine gestartete Saga nicht abbricht. Damit ein Absturz des Orchestrators dies gewährleisten kann, muss der Zustand der gestarteten Saga persistiert werden. Häufig wird das Transaktionslog in einer Datenbank gespeichert und erlaubt damit die Weiterführung der Saga auch nach Absturz der Anwendung. 
 
-\paragraph{Choreografie}
+\paragraph*{Choreografie}
 Bei der Choreographie gibt es keinen koordinierenden Service. Alle teilhabenden Services kennen den Ablauf des Geschäftsprozesses. Die Logik ist über alle Services verteilt. 
 
 Ein Service ist auch hier für die Korrektheit der Prozessierung innerhalb der eigenen Servicegrenzen verantwortlich. Zusätzlich muss jeder Service nach der Prozessierung den Prozess weiterführen. Dazu gehören sowohl mögliche weitere Transaktionen als auch mögliche Kompensierungsaufrufe. 
 
 
-\paragraph{Kommunikationsstrategien}
+\paragraph*{Kommunikationsstrategien}
 Die Orchestration unterstützt sowohl synchrone als auch asynchrone Kommunikation mit den teilhabenden Services. 
 
 Bietet ein an der globalen Transaktion teilhabender Service eine synchrone Schnittstelle zur Verfügung, muss der Koordinator warten, bis der aufgerufene Service eine Antwort liefert und ist solange blockiert. Bei einem Ausfall des aufgerufenen Services hat der Koordinator keine Möglichkeit, die Transaktion fortzufahren. Die Verfügbarkeit aller Services zum Aufrufzeitpunkt ist Voraussetzung für den erfolgreichen Abschluss einer orchestrierten Saga. Dafür ist dem Koordinator in einem solchen Fall die Unerreichbarkeit des Services bekannt und kann entsprechend reagieren. 
