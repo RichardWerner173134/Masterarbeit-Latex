@@ -1,0 +1,56 @@
+\glsdefs@newdocentry{llt}%
+{%
+name={\acronymfont {\glsentryshort {llt}}},%
+sort={LLT},%
+type={acronym},%
+first={LLT},%
+firstplural={LLTs},%
+text={LLT},%
+plural={LLTs},%
+description={Long Lived Transaction},%
+descriptionplural={Long Lived Transaction},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Long Lived Transaction},%
+longplural={Long Lived Transactions},%
+short={LLT},%
+shortplural={LLTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{test}%
+{%
+name={\acronymfont {\glsentryshort {test}}},%
+sort={short},%
+type={acronym},%
+first={short},%
+firstplural={shorts},%
+text={short},%
+plural={shorts},%
+description={long},%
+descriptionplural={long},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={long},%
+longplural={longs},%
+short={short},%
+shortplural={shorts},%
+counter={page},%
+parent={},%
+%
+}%
+

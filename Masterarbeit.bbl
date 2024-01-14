@@ -44,15 +44,38 @@
       \field{labeltitlesource}{title}
       \field{issn}{0163-5808}
       \field{journaltitle}{ACM SIGMOD Record}
-      \field{number}{3}
       \field{title}{Sagas}
-      \field{volume}{16}
       \field{year}{1987}
-      \field{pages}{249\bibrangedash 259}
-      \range{pages}{11}
       \verb{doi}
       \verb 10.1145/38714.38742
       \endverb
+    \endentry
+    \entry{microservices.io.12.01.2024}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c08fef3398603e92beb65d3adf0d59f}{%
+           family={microservices.io},
+           familyi={m\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c08fef3398603e92beb65d3adf0d59f}
+      \strng{fullhash}{9c08fef3398603e92beb65d3adf0d59f}
+      \strng{bibnamehash}{9c08fef3398603e92beb65d3adf0d59f}
+      \strng{authorbibnamehash}{9c08fef3398603e92beb65d3adf0d59f}
+      \strng{authornamehash}{9c08fef3398603e92beb65d3adf0d59f}
+      \strng{authorfullhash}{9c08fef3398603e92beb65d3adf0d59f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A service's database is private to that service}
+      \field{title}{Microservices Pattern: Database per service}
+      \field{year}{12.01.2024}
+      \verb{urlraw}
+      \verb https://microservices.io/patterns/data/database-per-service.html
+      \endverb
+      \verb{url}
+      \verb https://microservices.io/patterns/data/database-per-service.html
+      \endverb
+      \warn{\item misc entry 'microservices.io.12.01.2024' (bib/sources.bib): Invalid format '14.01.2024' of date field 'urldate' - ignoring}
     \endentry
   \enddatalist
 \endrefsection

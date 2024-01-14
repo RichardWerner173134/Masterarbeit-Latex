@@ -34,7 +34,7 @@ Aus diesem Regelwerk ergibt sich der in \cref{fig:fig_sm_basic} dargestellte DEA
 
 \subsection{StateAnalysisResult}
 
-\paragraph*{Testfall FinishOrders}
+\paragraph*{Testfall FinishOrders} \mbox{}\\
 Folgende Tabelle bildet das StateAnalysisResult der Messung des SmBasic in Testfall FinishOrders.
 
 \begin{center}
@@ -87,7 +87,7 @@ In \cref{tab:transaktionslog_ts1_tc1_429} ist das Transaktionslog einer Saga abg
 \end{center}
 \FloatBarrier
 
-\paragraph*{Testfall CancelOrders}
+\paragraph*{Testfall CancelOrders} \mbox{}\\
 In \cref{tab:smbasic_stateanalysisresult_cancelorders} ist das StateAnalysisResult für den Testfall CancelOrders dargestellt. Hier zeigt sich die Berechtigung des Messwertes \textit{isSuccessfullTestInstancePercentage}. Der erwartete Endzustand \textit{FailedWithCompensation} wird in diesem Testfall erwartet und in Testszenario 1 in 95\% aller Sagas erreicht. Der Messwert \textit{containsAllExpectedLogsPercentage} zeigt, dass in Testszenario 1 lediglich 87\% die erwarteten Logs enthalten. Das bedeutet, dass ein Anteil der Sagas mit Endzustand \textit{FailedWithCompensation} aufgrund eines Fehlers zur Kompensierung gewechselt haben und nicht wie erwartet den Zustand \textit{CheckNoCancellation} erreicht haben. Somit stellen diese Sagas keine erfolgreichen Testinstanzen mehr dar.
 
 \begin{center}
@@ -110,7 +110,7 @@ In \cref{tab:smbasic_stateanalysisresult_cancelorders} ist das StateAnalysisResu
 \end{center}
 \FloatBarrier
 
-\paragraph*{Abgebrochene Sagas}
+\paragraph*{Abgebrochene Sagas} \mbox{}\\
 Der Messwert \textit{failedWithoutCompensationPercentage} stellt den Anteil der Sagas dar, die aufgrund eines Fehlers während einer Kompensierung die Ausführung abbrechen. Im konstruierten SmBasic gibt es keine Retries. Das bedeutet, dass jede Saga, die zwei fehlerhafte Ergebnisse im Log enthält, in diesem Zustand landet. Ein Beispiel dafür ist im Transaktionslog in \cref{tab:transaktionslog_ts2_cancelorders_smbasic} abgebildet. 
 
 \begin{center}

@@ -47,7 +47,7 @@ public class SimpleStateMachine
 }
 \end{lstlisting}
 
-\paragraph*{Relations}
+\paragraph*{Relations} \mbox{}\\
 Das Feld \textit{Relations} stellt Liste von möglichen Zustandsübergängen dar. Die SEC kann aus einem Zustand und einem Element aus Sigma den entsprechenden Zustandsübergang berechnen. Damit diese Berechnung deterministisch ist, darf für einen gegebenen Zustand und einen gegebenes Element aus Sigma nur ein Element existieren. 
 
 \subsection{Konstruktion eines DEAs}
@@ -162,7 +162,7 @@ public class ExampleDea
 }
 \end{lstlisting}
 
-\paragraph*{Verwaltung der DEAs}
+\paragraph*{Verwaltung der DEAs} \mbox{}\\
 Nach Vorbild des Beispiels in \cref{lst:dea-model-example-csharp} werden alle ausführbaren DEAs definiert. Diese Initialisierung geschieht innerhalb der in \cref{lst:statemachinemapper-csharp} definierten Klasse. 
 
 \begin{lstlisting}[language={[Sharp]C}, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small,label = {lst:statemachinemapper-csharp}, caption={Modellierung eines StateMachineMappers in C\#}, captionpos=b] 
@@ -195,7 +195,7 @@ public class StateMachineMapper : IStateMachineMapper
 
 Per Dependency Injection kann die SEC diese Klasse verwenden. Per Strategie-Pattern wird in einer Funktion der gewünschte DEA ermittelt werden.
 
-\paragraph*{Kontrollfluss der SEC}
+\paragraph*{Kontrollfluss der SEC} \mbox{}\\
 Die SEC verwendet den StateMachineMapper, um den gewünschten DEA auszuführen. Die tatsächliche Ausführung findet in einer separaten Komponente, dem StateMachineExecutor statt. Diese Klasse enthält eine Funktion \textit{ExecuteStateMachine}, die für einen DEA und ein Eingabewort den aktuellen Zustand berechnet. Dazu wird jedes Element des Eingabeworts abgearbeitet. Für jedes Element und den aktuellen Zustand wird in der Funktion \textit{FindRelation} die zugeordnete Relation berechnet. Der in der Relation enthaltene Folgezustand wird gesetzt und das abgearbeitete Element des Eingabeworts wird entfernt. 
 
 Das Ergebnis der Berechnung ist eine Liste von Konfigurationsübergängen. Eine Konfiguration wird durch die in \cref{lst:statemachineconfiguration-csharp} dargestellten Klasse modelliert.

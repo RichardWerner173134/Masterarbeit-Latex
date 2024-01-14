@@ -1,0 +1,62 @@
+\section{Bestandteile des Musters}
+\subsection{Funktionsweise}
+Eine Operation ist im Saga-Pattern eine lokale Transaktion, die in sich geschlossen ist und die ACID-Eigenschaft erfüllen muss. Für eine solche Operation wird gleichzeitig eine Schnittstelle angeboten, die die Veränderungen rückgängig macht. Somit besteht die Möglichkeit eine Operation zu neutralisieren. Es wird also die Anforderung an den Entwickler gestellt, für jede angebotene Operation eine Umkehroperation bereitzustellen, die selbst eine lokale Transaktion darstellt. 
+Im Paper werden lokale Transaktionen, die eine Operation der Transaktion darstellen, als Ts bezeichnet. Die dazugehörigen lokalen Transaktionen werden als Cs bezeichnet. 
+
+Zur Ausführung der LLT werden die Ts sequentiell aufgerufen (im Gegensatz zum gleichzeitig ausgelösten Transaktionsstart im \acrshort{2pc}). Tritt bei der Ausführung eines Ts ein Fehler auf, können alle bereits ausgeführten Operationen in ihren Ursprungszustand zurückgesetzt werden, indem in der umgekehrten Reihenfolge die notwendigen Cs aufgerufen werden. Im Fehlerfall wird der Ausgangszustand in allen Services wiederhergestellt und die Atomarität der Transaktion ist gewährleistet. Sind alle Operationen erfolgreich, wird nach Ausführung aller Ts der Endzustand erreicht und die Transaktion hat einen neuen Zustand hergestellt. Sowohl im erfolgreichen als auch im kompensierten Endzustand ist die Konsistenz gewahrt.
+
+\subsection{Transaktionsteilnehmer}
+Die verteilte Saga setzt voraus, dass die Operation nicht zentralisiert innerhalb eines geschlossenen Systems umgesetzt werden kann. Die Teiloperationen sind über mehrere Services verteilt. Diese Services werden als Teilnehmerservice bezeichnet. Es liegt in der Verantwortung der Entwickler des entsprechenden Teilnehmerservices, die Teiloperation über eine Schnittstelle anzubieten und korrekt zu implementieren. Darunter fällt auch die Implementierung der dazugehörigen Kompensierung. Dabei verwaltet jeder Service seine eigenen Daten in einer eigenen Datenbank. Dieses Muster nennt sich Database-per-Service-Pattern und ist sehr verbreitet in der Entwicklung von Microservices \cite{microservices.io.12.01.2024}. 
+
+\subsection{Formulieren der Kompensierungstransaktionen}
+Die einzelnen Operationen, die ausgeführt werden müssen, müssen kompensiert werden können. Eine solches T wird als lokale Transaktion betrachtet, die in einem anderen Service stattfindet. Der Nebeneffekt der Transaktion ist häufig eine Veränderung in der Datenbank. Es wird nun betrachtet, welche verschiedenen Effekte T in der Datenbank haben kann und welchen Effekt das entsprechende C haben muss.
+
+\paragraph*{Insert} \mbox{}\\
+Äußert sich der Effekt von T in einem Insert, dann ist der kompensierende Effekt von C ein Delete. Alternativ kann ein Soft-Delete implementiert werden, der den Datensatz als ungültig markiert.
+
+\paragraph*{Update} \mbox{}\\
+Beim Kompensieren von Updates wird zwischen idempotenten und nicht-idempotenten Updates unterschieden. Zur Veranschaulichung sollen die in \cref{lst:sql-idempotent-update} und \cref{lst:sql-nicht-idempotent-update} dargestellten SQL-Statements betrachtet werden. 
+
+\begin{figure}[!htbp]
+\centering
+\begin{minipage}{.42\textwidth}
+	\begin{lstlisting}[language=SQL, breaklines=true, tabsize=2, showstringspaces=false, frame=single, basicstyle=\small, label = {lst:sql-idempotent-update}, caption={SQL Skript für ein idempotentes Update}, captionpos=b]
+update stock 
+set amount = 10
+where id = 42 and ...
+	\end{lstlisting}
+\end{minipage}
+\hspace{1.5cm}
+\begin{minipage}{.42\textwidth}
+	\begin{lstlisting}[language=SQL, breaklines=true, tabsize=2, showstringspaces=false, frame=single, basicstyle=\small, label = {lst:sql-nicht-idempotent-update}, caption={SQL Skript für ein nicht-idempotentes Update}, captionpos=b]
+update stock 
+set amount = amount - 1
+where id = 42 and ...
+	\end{lstlisting}
+\end{minipage}
+\end{figure}
+\FloatBarrier
+
+In \cref{lst:sql-idempotent-update} wird ein Update-Statement ausgeführt, welches den entsprechenden Wert \textit{amount} auf 10 setzt. Dabei geht die Information des vorherigen Zustands verloren. Eine Kompensierung ist hier nur möglich, indem eine zusätzliche History-Tabelle verwendet wird. 
+
+In \cref{lst:sql-nicht-idempotent-update} wird ein Update-Statement ausgeführt, welches den entprechenden Wert \textit{amount} um 1 verringert. Um dieses Update zu kompensieren, muss der alte Wert nicht bekannt sein, wenn die LLT Kenntnis von dem Wert der Änderung hat. Es kann eine Kompensierung in Form einer Addition um den selben Wert durchgeführt werden. 
+
+\paragraph*{Delete} \mbox{}\\
+Das Löschen eines Datensätzes kann nur kompensiert werden, wenn der gesamte Eintrag vor dem Löschen gespeichert wurde (History-Tabelle). Falls T nur ein Soft-Delete ausgelöst hat, kann die Markierung der Ungültigkeit zur Kompensierung aufgehoben werden.
+
+\paragraph*{Ts ohne Nebeneffekte} \mbox{}\\
+Es ist möglich, dass ein T eine Operation durchführt, die zu keiner Nebenwirkung führt. Beispielsweise kann dies der Aufruf einer Schnittstelle sein, um einen Wert zu validieren. In diesem Fall muss die Kompensierung nicht implementiert werden. 
+
+Es ist hervorzuheben, dass der Effekt eines Ts neben Änderungen in der Datenbank oder Aufrufe von anderen Schnittstellen auch reale Geschäftsprozesse auslösen können. Ein solcher Prozess kann unter Umständen nicht kompensierbar sein. Hier kann auch weiter differenziert werden. 
+
+\paragraph*{Nicht kompensierbare Ts} \mbox{}\\
+Ist der Effekt von T die Versendung eines Briefs, so kann diese Versendung nicht kompensiert werden. Ein Folgebrief kann jedoch als Kompensierung angesehen werden, die den ausgelösten Effekt neutralisiert. Im Folgebrief können beispielsweise Anweisungen stehen, die den Empfänger informieren, dass der vorherige Brief als ungültig angesehen werden kann. Der Effekt von T kann hier als kompensiert angesehen werden. 
+
+Es gibt jedoch auch Effekte, die nicht kompensierbar sind und im Scheitern einer Saga resultieren. In solchen Fällen kann das System in einen inkonsistenten Zustand überführt werden. Dieses Verhalten tritt immer dann auf, wenn der Effekt einer Transaktion in einer endgültigen Aktion resultiert. \citeauthor{GarciaMolina.1987} nennen als Beispiel für ein nicht kompensierbares T das Starten einer Rakete \cite[p.257]{GarciaMolina.1987}.
+
+\subsection{Saga Execution Component} % TODO Zitat Saga Paper 1987, Abkürzung SEC
+In Garcia-Molinas Paper wird eine Saga Execution Component beschrieben, welche alle ausgeführten Aktionen einer Saga protokolliert und die nächste auszuführende Aktion bestimmt. Grundlegend besteht diese Komponente aus einem Transaktionslog und einem Zustandsautomaten. 
+
+Der Transaktionslog ist eine Liste von Transaktionen und Kompensierungen, die als Kommandos dargestellt werden. Jedes Transaktionslog enthält ein Kommando, welches den Start ($Beginn Saga$) und den Abschluss ($End Saga$) der Saga darstellt. Neben den Ts und Cs zwischen $Beginn Saga$ und $End Saga$ können weitere Kommandos definiert werden, um den Kontrollfluss zu beeinflussen. 
+
+Der Zustandsautomat bestimmt aus den bisherigen Ts und Cs den nächsten Schritt. 

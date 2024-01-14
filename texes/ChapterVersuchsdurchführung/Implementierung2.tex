@@ -4,15 +4,15 @@ Der nächste DEA verwendet den SmBasic als Grundlage und soll das Problem des vo
 
 \subsection{Verhinderung eines Vorzeitigen Abbruchs}
 
-\paragraph*{Netzwerkfehler}
+\paragraph*{Netzwerkfehler} \mbox{}\\
 Für alle Transaktionen, die nicht zu einer Änderung des Systemzustands eines Teilnehmerservices führen, können Retries im Falle eines Netzwerkfehlers eingeführt werden. Dazu gehören \textit{GetArticleData} und \textit{GetShipmentStatus}. 
 
-\paragraph*{Lastfehler}
+\paragraph*{Lastfehler} \mbox{}\\
 Behindern sich mehrere parallele lokale Transaktionen innerhalb eines Teilnehmerservices, kommt es zu einer Race Condition (Wettlaufsituation). Dabei gewinnt die erste lokale Transaktion T1 und kann wie gewohnt abgeschlossen werden. Alle lokalen Transaktionen, die innerhalb der Bearbeitungszeit von T1 auf die gesperrten Ressourcen zugreifen, schlagen fehl. Die aus diesem Fehler resultierende Response enthält den Http-Statuscode 429 und wird vom Koordinator auf ein entsprechendes Ergebnis gemappt. Dieses Verhalten ist für den StockService und die BankServices implementiert. 
 
 Antwortet ein Service mit einer solchen Response, ist der Fehler durch einen Retry auflösbar. Das bedeutet, dass für die lokalen Transaktionen \textit{BlockArticles}, \textit{RemoveMoney}, \textit{AddMoney} und \textit{StartShipment} ein Retry eingeführt werden kann. Ebenso kann diese Stategie auf alle zugehörigen Kompensierungen angewendet werden.
 
-\paragraph*{DEA SmBasicSafeRetries}
+\paragraph*{DEA SmBasicSafeRetries} \mbox{}\\
 Aus den beschriebenen Anpassungen ergibt sich der SmBasicSafeRetries in \cref{fig:SmBasicSafeRetries}. 
 
 \begin{figure}[h!]
@@ -27,7 +27,7 @@ Aus den beschriebenen Anpassungen ergibt sich der SmBasicSafeRetries in \cref{fi
 
 Das StateAnalysisResult von SmBasicSafeRetries und SmBasic sind wie erwartet sehr ähnlich. Im Testfall FinishOrders ist zu sehen, dass die Werte für \textit{isSuccessFullTestInstancePercentage} deutlich höher sind. Die vorzeitigen Abbrüche aufgrund von Last- und Netzwerkfehlern an unkritischen nicht-transaktionellen Stellen wurden durch das Einführen von Retries eliminiert. In Testszenario 1 führt dies dazu, dass 100\% der Sagas erfolgreich sind. Das gilt auch für den Testfall CancelOrders.
 
-\paragraph*{Testfall FinishOrders}
+\paragraph*{Testfall FinishOrders} \mbox{}\\
 \begin{center}
 	\fontsize{9}{12}\selectfont
 	\begin{longtable}[h]{|p{5cm}|p{1cm}|p{1cm}|p{1cm}|}
@@ -48,7 +48,7 @@ Das StateAnalysisResult von SmBasicSafeRetries und SmBasic sind wie erwartet seh
 \end{center}
 \FloatBarrier
 
-\paragraph*{Testfall CancelOrders}
+\paragraph*{Testfall CancelOrders} \mbox{}\\
 \begin{center}
 	\fontsize{9}{12}\selectfont
 	\begin{longtable}[h]{|p{5cm}|p{1cm}|p{1cm}|p{1cm}|}

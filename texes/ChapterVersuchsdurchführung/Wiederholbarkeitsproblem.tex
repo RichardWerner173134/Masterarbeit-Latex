@@ -2,10 +2,10 @@
 
 In der Analyse des SmBasicNetworkFailureUnlimitedRetries hat sich gezeigt, dass die für die 4 Ts \textit{BlockArticles}, \textit{RemoveMoney}, \textit{AddMoney} und \textit{StartShipment} und ihre zugehörigen Cs eingeführten Retries zu inkonsistentem Verhalten in Testszenario 3 geführt haben. Das Problem besteht darin, dass lokale Transaktionen bei Wiederholung erneut ausgeführt werden. Dem Koordinator fehlt die Information, ob die lokale Transaktion im Fall eines Netzwerkfehlers bereits ausgeführt wurde oder nicht. 
 
-\paragraph*{Implementierung von idempotentem Verhalten}
+\subsection{Implementierung von idempotentem Verhalten} 
 Es wird ein idempotentes Verhalten benötigt, bei dem der Koordinator gefahrlos Aufrufe an den Teilnehmerservice wiederholen kann. Dazu muss jeder Teilnehmerservice die ausgeführten Transaktionen mit einer zugehörigen RequestId speichern. Taucht ein Request mit einer bereits verwendeten RequestId auf, wird der Request nicht erneut bearbeitet, sondern eine Response mit dem Statuscode 208 zurückgegeben. Damit erhält der Aufrufer die Information, dass der Request bereits erfolgreich verarbeitet wurde. 
 
 Um idempotentes Verhalten zu implementieren, muss ein Service jeden erfolgreichen Request mit der zugehörigen RequestId abspeichern. Diese Information werden in einer Tabelle persistiert. Die Prüfung, ob ein Request prozessiert werden kann, ist eine Fallunterscheidung. Wenn ein Eintrag in der Idempotenztabelle existiert, der in RequestId und Transaktion übereinstimmt, wird der Request mit 208 abgelehnt. Existiert kein solcher Datensatz, kann die Transaktion prozessiert werden.
 
-\paragraph*{Idempotente DEAs}
+\subsection{Idempotente DEAs}
 Die drei DEAs SmBasic, SmBasicSafeRetries und SmBasicNetworkFailureUnlimitedRetries verwenden die nicht-idempotenten Implementierungen der Teilnehmerservices. Damit nicht-idempotente und idempotente DEAs verglichen werden können, sind alle Teilnehmerservices hinsichtlich Idempotenz konfigurierbar. Die Fallunterscheidung, die bereits ausgeführte Transaktionen ablehnt, wird bei einer nicht-idempotenten Konfiguration des Services übersprungen. Die folgenden zwei DEAs verwenden eine idempotente Konfiguration. 

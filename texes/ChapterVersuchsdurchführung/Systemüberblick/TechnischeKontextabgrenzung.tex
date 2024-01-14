@@ -17,7 +17,8 @@ Der ArticleService soll lediglich Daten aus der Datenbanksicht zurückliefern. D
 \end{figure}
 \FloatBarrier
 
-\paragraph*{Schnittstellen} % TODO RESTful, Ressource
+\paragraph*{Schnittstellen} \mbox{}\\
+% TODO RESTful, Ressource
 Die Produktdaten sollen von dem Frontend abgefragt und dargestellt werden. Dabei werden alle vorhandenen Produktdaten selektiert und zurückgegeben. 
 
 Zusätzlich soll der Koordinator eine gezielte Abfrage durchführen können, welche den Preis eines Artikels für eine gegebene ProduktId liefert. Beide Schnittstellen sind RESTful, da jeder Artikel als Ressource angesehen wird. 
@@ -35,7 +36,7 @@ Da eine Bestellung mehrere unterschiedliche Artikel enthalten darf, wird zusätz
 \FloatBarrier
 
 \subsection{StockService}
-\paragraph*{Datenbankschicht}
+\paragraph*{Datenbankschicht} \mbox{}\\
 
 Der StockService verwaltet vier Tabellen. Die zentrale Tabelle ist \textit{articlestock} und stellt für jeden bekannten Artikel den auf Lager befindlichen Vorrat dar. Eine Reservierung für eine gegebene Vorgangsnummer wird in der Tabelle \textit{blockedarticles} durch alle Tupel, bei denen diese Nummer auftritt. Die Lieferungen werden in der Tabelle \textit{shipments} dargestellt. Auch hier gehört eine Vorgangsnummer zu den Spalten. Zusätzlich gibt es das Attribut \textit{hasarrived}, was Auskunft über den Status der Lieferung gibt. Die zu einer Lieferung gehörenden Artikel und deren Menge sind in der Tabelle \textit{shippedarticles} enthalten.
 
@@ -46,7 +47,7 @@ Der StockService verwaltet vier Tabellen. Die zentrale Tabelle ist \textit{artic
 \end{figure}
 \FloatBarrier
 
-\paragraph*{Schnittstellen}
+\paragraph*{Schnittstellen} \mbox{}\\
 
 Der Endpunkt \textit{/api/blocked-articles} überträgt frei verfügbare Artikel aus der Tabelle \textit{articlestock} in die Tabelle \textit{blockedarticles}. Als Argumente werden die zu blockierenden Artikel-Ids und Artikel-Mengen sowie die Vorgangsnummer benötigt. Teil der lokalen Transaktion sind folgende Schritte:
 \begin{enumerate}
@@ -89,7 +90,8 @@ Der letzte Endpunkt des StockServices ist \textit{/api/cancel-shipment} und biet
 \FloatBarrier
 
 \subsection{BankingService}
-\paragraph*{Datenbankschicht} % TODO Tabellenbezeichnungen anpassen
+\paragraph*{Datenbankschicht} \mbox{}\\
+% TODO Tabellenbezeichnungen anpassen
 Zur Verwaltung des BankingServices gehören drei Tabellen. Die Tabelle \textit{bankuser} enthält alle Nutzer, die Tabelle \textit{bankusercredit} ordnet jedem Nutzer einen Kontostand zu und die Tabelle \textit{bankusertransaction} stellt Veränderung des Kontostands der Tabelle \textit{bankcredit} in der Tabelle \textit{bankusertransaction} als Historie dar.
 
 \begin{figure}[h!]
@@ -99,7 +101,7 @@ Zur Verwaltung des BankingServices gehören drei Tabellen. Die Tabelle \textit{b
 \end{figure}
 \FloatBarrier
 
-\paragraph*{Schnittstellen}
+\paragraph*{Schnittstellen} \mbox{}\\
 Der BankingService bietet jeweils eine Schnittstelle zum Erhöhen und zum Verringern des Kontostandes an. Dabei wird lediglich in der Tabelle \textit{bankcredit} das Credit-Attribut erhöht oder verringert. Die Spalte ist im Datenbankmanagementsystem mit einer Einschränkung versehen, die verhindert, dass der Wert der Spalte unter 0 fällt. 
 
 Die Veränderung des Kontostandes ist der erste Schritt der lokalen Transaktion. Der zweite Schritt ist das Einfügen eines neuen Elementes in der Tabelle \textit{bankusertransaction}. In dieser Tabelle wird der Transaktionstyp festgehalten. 

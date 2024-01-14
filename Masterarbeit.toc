@@ -10,100 +10,108 @@
 \contentsline {subsection}{\numberline {2.1.3}Zustand von Systemen}{3}{subsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.1.4}Transaktionen}{3}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}ACID Eigenschaft von Transaktionen}{4}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Konsistenz auf Datenbankebene}{4}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.6}BASE Eigenschaft}{4}{subsection.2.1.6}%
 \contentsline {section}{\numberline {2.2}Methoden für die Sicherstellung von Konsistenz}{5}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Transaktionen auf Datenbankebene}{5}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Transaktionen auf Anwendungsebene}{5}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Grenzen der Konsistenz in Verteilten Systemen}{5}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}2 Phasencommit}{5}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Saga Pattern}{6}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Was sind die Probleme, die in verteilten ACID Transaktionen auftreten?}{6}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Woher kommt es?}{6}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Bestandteile des Musters}{6}{subsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.3.1}Funktionsweise}{6}{subsubsection.2.3.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.3.2}Anforderungen an Ts und Cs}{7}{subsubsection.2.3.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3.3}Saga Execution Component}{8}{subsubsection.2.3.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.3.4}Formalisierung eines Saga-Zustandsautomaten als DEA}{8}{subsubsection.2.3.3.4}%
-\contentsline {paragraph}{\numberline {2.3.3.4.1}Formale Darstellung eines DEA}{8}{paragraph.2.3.3.4.1}%
-\contentsline {paragraph}{\numberline {2.3.3.4.2}Saga als formale Sprache}{8}{paragraph.2.3.3.4.2}%
-\contentsline {subsubsection}{\numberline {2.3.3.5}Betrachtung des Zustands nach Erfolg/Misserfolg}{10}{subsubsection.2.3.3.5}%
-\contentsline {subsubsection}{\numberline {2.3.3.6}Unterschiede des Saga-Modells zu Hector Garcia-Molinas Definition}{11}{subsubsection.2.3.3.6}%
-\contentsline {subsubsection}{\numberline {2.3.3.7}Recovery-Mechanismen}{11}{subsubsection.2.3.3.7}%
-\contentsline {subsubsection}{\numberline {2.3.3.8}Implementierungsformen des Patterns}{14}{subsubsection.2.3.3.8}%
-\contentsline {subsection}{\numberline {2.3.4}Anwendungsgebiete des Patterns - Welche Usecases erlauben die Verwendung dieses Patterns? Welche nicht?}{17}{subsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.4.1}Langlebige Transaktionen - LLT}{17}{subsubsection.2.3.4.1}%
-\contentsline {subsubsection}{\numberline {2.3.4.2}Bezug auf den Geschäftsprozess}{17}{subsubsection.2.3.4.2}%
-\contentsline {subsubsection}{\numberline {2.3.4.3}Verteilte Systemlandschaft}{17}{subsubsection.2.3.4.3}%
-\contentsline {subsubsection}{\numberline {2.3.4.4}Reaktion auf verschiedene Antwortmöglichkeiten in der Geschäftslogik}{17}{subsubsection.2.3.4.4}%
-\contentsline {subsubsection}{\numberline {2.3.4.5}Fehlerfälle - Geschäftslogik und Ausfälle}{17}{subsubsection.2.3.4.5}%
-\contentsline {chapter}{\numberline {3}Versuchsvorbereitung}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Problemstellung}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Zielstellung}{18}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Ausgangspunkt}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Methodik}{19}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Schritt 1 - Entwurf und Implementierung eines GP}{19}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Schritt 2 - Messung der verschiedenen Implementierungen}{20}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Schritt 3 - Analyse der Messdaten}{21}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Versuchsdurchführung}{22}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Services}{22}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Lokale Transaktionen}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Kompensierungen}{24}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Fachliche Kontextabgrenzung}{24}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Frontend}{24}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}ArticleService}{24}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}StockService}{25}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}BankingServices}{26}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}OrderService}{26}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}Technische Kontextabgrenzung}{27}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}ArticleService}{27}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}StockService}{28}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}BankingService}{29}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}Ergebnisse}{30}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Ergebnisse aller Transaktionen}{30}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Ergebnisse aller Kompensierungen}{31}{subsection.4.6.2}%
-\contentsline {section}{\numberline {4.7}Saga Execution Component}{32}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Rahmenbedingung für die Versuchsdurchführung}{32}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Ausführung eines DEAs}{32}{subsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.7.3}Modellierung eines DEAs}{33}{subsection.4.7.3}%
-\contentsline {subsection}{\numberline {4.7.4}Konstruktion eines DEAs}{34}{subsection.4.7.4}%
-\contentsline {section}{\numberline {4.8}Planung der Datenerfassung}{39}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Testszenarien}{40}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}Fehlerquellen}{40}{subsection.4.8.2}%
-\contentsline {subsection}{\numberline {4.8.3}Simulation der Testfälle}{41}{subsection.4.8.3}%
-\contentsline {subsection}{\numberline {4.8.4}Datengenerierung}{42}{subsection.4.8.4}%
-\contentsline {subsection}{\numberline {4.8.5}Messwerte}{43}{subsection.4.8.5}%
-\contentsline {section}{\numberline {4.9}Implementierung des SmBasic}{45}{section.4.9}%
-\contentsline {subsection}{\numberline {4.9.1}Strategie für die Konstruierung des DEAs SmBasic}{45}{subsection.4.9.1}%
-\contentsline {subsection}{\numberline {4.9.2}StateAnalysisResult}{45}{subsection.4.9.2}%
-\contentsline {subsection}{\numberline {4.9.3}TransactionAnalysisResult}{48}{subsection.4.9.3}%
-\contentsline {section}{\numberline {4.10}Implementierung des SmBasicSafeRetries}{48}{section.4.10}%
-\contentsline {subsection}{\numberline {4.10.1}Verhinderung eines Vorzeitigen Abbruchs}{49}{subsection.4.10.1}%
-\contentsline {subsection}{\numberline {4.10.2}StateAnalysisResult}{49}{subsection.4.10.2}%
-\contentsline {subsection}{\numberline {4.10.3}TransactionAnalysisResult}{50}{subsection.4.10.3}%
-\contentsline {section}{\numberline {4.11}Implementierung des SmBasicNetworkFailureUnlimitedRetries}{51}{section.4.11}%
-\contentsline {subsection}{\numberline {4.11.1}StateAnalysisResult}{51}{subsection.4.11.1}%
-\contentsline {subsection}{\numberline {4.11.2}TransactionAnalysisResult}{52}{subsection.4.11.2}%
-\contentsline {section}{\numberline {4.12}Das Problem der Wiederholbarkeit}{53}{section.4.12}%
-\contentsline {section}{\numberline {4.13}Implementierung des SmIdempotencyBackwardRecovery}{53}{section.4.13}%
-\contentsline {subsection}{\numberline {4.13.1}StateAnalysisResult}{55}{subsection.4.13.1}%
-\contentsline {subsection}{\numberline {4.13.2}TransactionAnalysisResult}{56}{subsection.4.13.2}%
-\contentsline {subsection}{\numberline {4.13.3}Alternative Sicherstellung der Konsistenz}{57}{subsection.4.13.3}%
-\contentsline {paragraph}{\numberline {4.13.3.0.1}Messung}{57}{paragraph.4.13.3.0.1}%
-\contentsline {section}{\numberline {4.14}Implementierung SmIdempotencyForwardRecovery}{59}{section.4.14}%
-\contentsline {subsection}{\numberline {4.14.1}StateAnalysisResult}{60}{subsection.4.14.1}%
-\contentsline {subsection}{\numberline {4.14.2}TransactionAnalysisResult}{61}{subsection.4.14.2}%
-\contentsline {section}{\numberline {4.15}Laufzeitanalyse}{61}{section.4.15}%
-\contentsline {subsection}{\numberline {4.15.1}Testszenario1}{61}{subsection.4.15.1}%
-\contentsline {subsection}{\numberline {4.15.2}Testszenario2}{62}{subsection.4.15.2}%
-\contentsline {subsection}{\numberline {4.15.3}Testszenario3}{62}{subsection.4.15.3}%
-\contentsline {chapter}{\numberline {5}Ergebnisse der Versuchsdurchführung}{64}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Versuchsergebnisse}{65}{section.5.1}%
-\contentsline {section}{\numberline {5.2}title}{65}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Technische Voraussetzungen}{65}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Technische Grenzen}{65}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Wissenschaftliche Berührungspunkte}{66}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}CAP-Theorem}{66}{subsection.5.5.1}%
-\contentsline {chapter}{\numberline {6}Ausblick, Ansatz für weitere Untersuchungen}{I}{chapter.6}%
-\contentsline {chapter}{Abbildungsverzeichnis}{II}{chapter.6}%
-\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.103}%
+\contentsline {subsection}{\numberline {2.2.4}2 Phasencommit}{6}{subsection.2.2.4}%
+\contentsline {chapter}{\numberline {3}Das Saga Pattern}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Herkunft des Saga-Patterns}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Langlebige Transaktionen}{7}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Auftrennung einer LLT in Teiltransaktionen}{7}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Übertragung des Saga-Patterns auf verteilte Transaktionen}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Saga-Patterns und BASE-Eigenschaft}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Anwendung des Patterns auf verteilte Transaktionen}{8}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Bestandteile des Musters}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Funktionsweise}{9}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Transaktionsteilnehmer}{9}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Anforderungen an Ts und Cs}{10}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Saga Execution Component}{11}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Formalisierung eines Saga-Zustandsautomaten als DEA}{11}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Formale Darstellung eines DEA}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Saga als formale Sprache}{12}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Überführung einer Saga in einen DEA}{12}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Betrachtung des Zustands nach Erfolg/Misserfolg}{13}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Recovery-Mechanismen}{15}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Implementierungsformen des Patterns}{18}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Anwendungsgebiete des Patterns - Welche Usecases erlauben die Verwendung dieses Patterns? Welche nicht?}{21}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Langlebige Transaktionen - LLT}{21}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Bezug auf den Geschäftsprozess}{21}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Verteilte Systemlandschaft}{21}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Reaktion auf verschiedene Antwortmöglichkeiten in der Geschäftslogik}{21}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Fehlerfälle - Geschäftslogik und Ausfälle}{21}{subsection.3.5.5}%
+\contentsline {chapter}{\numberline {4}Versuchsvorbereitung}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Problemstellung}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zielstellung}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Ausgangspunkt}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Methodik}{23}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Schritt 1 - Entwurf und Implementierung eines GP}{23}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Schritt 2 - Messung der verschiedenen Implementierungen}{25}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Schritt 3 - Analyse der Messdaten}{26}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Versuchsdurchführung}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Services}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Lokale Transaktionen}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Kompensierungen}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Fachliche Kontextabgrenzung}{29}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Frontend}{29}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}ArticleService}{30}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}StockService}{30}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}BankingServices}{31}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}OrderService}{31}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Technische Kontextabgrenzung}{32}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}ArticleService}{32}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}StockService}{33}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}BankingService}{35}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Ergebnisse}{35}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Ergebnisse aller Transaktionen}{36}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Ergebnisse aller Kompensierungen}{36}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Saga Execution Component}{37}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Rahmenbedingung für die Versuchsdurchführung}{38}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Ausführung eines DEAs}{38}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Modellierung eines DEAs}{38}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Konstruktion eines DEAs}{39}{subsection.5.7.4}%
+\contentsline {section}{\numberline {5.8}Planung der Datenerfassung}{45}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Testszenarien}{45}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Fehlerquellen}{45}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}Simulation der Testfälle}{47}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4}Datengenerierung}{48}{subsection.5.8.4}%
+\contentsline {subsection}{\numberline {5.8.5}Messwerte}{49}{subsection.5.8.5}%
+\contentsline {section}{\numberline {5.9}Implementierung des SmBasic}{51}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Strategie für die Konstruierung des DEAs SmBasic}{51}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}StateAnalysisResult}{51}{subsection.5.9.2}%
+\contentsline {subsection}{\numberline {5.9.3}TransactionAnalysisResult}{54}{subsection.5.9.3}%
+\contentsline {section}{\numberline {5.10}Implementierung des SmBasicSafeRetries}{54}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Verhinderung eines Vorzeitigen Abbruchs}{55}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}StateAnalysisResult}{55}{subsection.5.10.2}%
+\contentsline {subsection}{\numberline {5.10.3}TransactionAnalysisResult}{56}{subsection.5.10.3}%
+\contentsline {section}{\numberline {5.11}Implementierung des SmBasicNetworkFailureUnlimitedRetries}{57}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}StateAnalysisResult}{57}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}TransactionAnalysisResult}{58}{subsection.5.11.2}%
+\contentsline {section}{\numberline {5.12}Das Problem der Wiederholbarkeit}{59}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Implementierung von idempotentem Verhalten}{59}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Idempotente DEAs}{59}{subsection.5.12.2}%
+\contentsline {section}{\numberline {5.13}Implementierung des SmIdempotencyBackwardRecovery}{60}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}StateAnalysisResult}{61}{subsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.13.2}TransactionAnalysisResult}{62}{subsection.5.13.2}%
+\contentsline {subsection}{\numberline {5.13.3}Alternative Sicherstellung der Konsistenz}{63}{subsection.5.13.3}%
+\contentsline {section}{\numberline {5.14}Implementierung SmIdempotencyForwardRecovery}{65}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}StateAnalysisResult}{66}{subsection.5.14.1}%
+\contentsline {subsection}{\numberline {5.14.2}TransactionAnalysisResult}{67}{subsection.5.14.2}%
+\contentsline {section}{\numberline {5.15}Laufzeitanalyse}{67}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Testszenario1}{68}{subsection.5.15.1}%
+\contentsline {subsection}{\numberline {5.15.2}Testszenario2}{68}{subsection.5.15.2}%
+\contentsline {subsection}{\numberline {5.15.3}Testszenario3}{68}{subsection.5.15.3}%
+\contentsline {chapter}{\numberline {6}Ergebnisse der Versuchsdurchführung}{70}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Versuchsergebnisse}{71}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Technische Voraussetzungen}{71}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Technische Grenzen}{71}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Wissenschaftliche Berührungspunkte}{72}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}CAP-Theorem}{72}{subsection.6.4.1}%
+\contentsline {chapter}{\numberline {7}Ausblick, Ansatz für weitere Untersuchungen}{73}{chapter.7}%
+\contentsline {section}{\numberline {7.1}asdasdas}{73}{section.7.1}%
+\contentsline {chapter}{Abbildungsverzeichnis}{I}{chapter*.112}%
+\contentsline {chapter}{Akronyme}{II}{section*.113}%
+\contentsline {chapter}{Akronyme}{II}{chapter*.114}%
+\contentsline {chapter}{Literaturverzeichnis}{III}{chapter*.115}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

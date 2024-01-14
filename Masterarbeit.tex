@@ -1,5 +1,3 @@
-%\documentclass[12pt, a4paper]{article}
-
 \documentclass[fontsize=12pt, paper=a4, twoside=false, ]{scrreprt}
 
 \usepackage{lmodern}
@@ -23,6 +21,8 @@
 % to include sources, style
 \usepackage[style=ieee,natbib=true, backend=biber]{biblatex}
 \addbibresource{bib/sources.bib}
+
+
 \usepgfplotslibrary{statistics}
 \usepackage{pgf-pie}  
 \usepackage{subcaption}
@@ -30,6 +30,7 @@
 \usepackage{color, colortbl}
 \definecolor{Gray}{HTML}{d3d3d3}
 \usepackage{mathpazo} % Palatino font
+\usepackage[acronym, toc]{glossaries}
 
 % global layout
 \usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
@@ -61,9 +62,12 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 \crefname{table}{Tabelle}{Tabellen}
 \Crefname{table}{Tabelle}{Tabellen}
 
+\makenoidxglossaries
+\input{glossary/Acronyms.tex}
+
 \begin{document}
 	%\input{texes/Metadaten.tex}
-	\input{texes/Titelseite.tex}
+	%\input{texes/Titelseite.tex}
 	
 	\section*{}
 	\newpage
@@ -79,28 +83,31 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 	
 	%\input{texes/Saga.tex}
 	
-	\input{texes/Einleitung.tex}
+	\input{texes/ChapterEinleitung.tex}
 	
-	\input{texes/Chapter1.tex}	
+	\input{texes/ChapterGrundlagen.tex}	
 	
-	\input{texes/Chapter2.tex}	
+	\input{texes/ChapterSaga.tex}
 	
-	\input{texes/Chapter3.tex}
+	\input{texes/ChapterVersuchsvorbereitung.tex}	
+	
+	\input{texes/ChapterVersuchsdurchführung.tex}
 	
 	\input{texes/Chapter4.tex}
 	
 	\input{texes/Chapter5.tex}
 	
-	\pagenumbering{Roman}
 	\pagebreak
-	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-	\listoffigures
 	
-	\pagebreak
-
-	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-
+	\pagenumbering{Roman}
+	\listoffigures
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	
+	\printnoidxglossaries
+	\addcontentsline{toc}{chapter}{Akronyme}
+	
 	\printbibliography
+	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 	
 	\pagebreak
 	%\input{texes/Selbstständigkeitserklärung.tex}

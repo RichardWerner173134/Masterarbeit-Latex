@@ -7,7 +7,7 @@ Ein Testszenario soll das Verhalten des Netztwerks beschreiben. Ziel der in dies
 \subsection{Fehlerquellen}
 Zuerst ist zu identifizieren, an welchen Stellen eine Kommunikation in einem verteilten System mittels Request-Response-Muster fehlschlagen kann. Im folgenden Beispiel wird dies anhand einer simplen Kommunikation illustriert, die aus einem Request und einer Response besteht. Es wird davon ausgegangen, dass die Verarbeitung des Requests zu einer Änderung des Systemzustands des Empfängers führt. 
 
-\paragraph*{Szenario 1}
+\paragraph*{Szenario 1} \mbox{}\\
 Im ersten Szenario entstehen keine Netzwerkfehler. Dieses Szenario ist der Ausgangspunkt. Die Korrektheit der Saga in diesem Fall ist eine Voraussetzung für die Formulierung und Analyse in folgenden Szenarien. 
 
 \begin{figure}[H]
@@ -18,7 +18,7 @@ Im ersten Szenario entstehen keine Netzwerkfehler. Dieses Szenario ist der Ausga
 \end{figure}
 \FloatBarrier
 
-\paragraph*{Szenario 2}
+\paragraph*{Szenario 2} \mbox{}\\
 Es können Netzwerkfehler auftreten, die verhindern, dass der Request den Empfänger erreicht. Dabei findet keine Verarbeitung der Nachricht im Empfängerservice statt. Es findet weder eine Veränderung des Systemzustands des Empfängers noch eine Versendung einer Response statt.
 
 \begin{figure}[H]
@@ -31,7 +31,7 @@ Es können Netzwerkfehler auftreten, die verhindern, dass der Request den Empfä
 
 Im Rahmen dieses Versuchs wird das Auftreten solcher Fehler in Testszenario 2 simuliert. 
 
-\paragraph*{Szenario 3}
+\paragraph*{Szenario 3} \mbox{}\\
 Findet ein Netzwerkfehler nach der Verarbeitung des Requests im Empfängerservice statt, erreicht die Response den Sender nicht. Die abgeschlossene Verarbeitung des Requests hat zu einer Veränderung des Systemzustands im Empfängerservice geführt. Dies führt dazu, dass der Sender keine Kenntnis über den Erfolg oder Misserfolg des ursprünglichen Requests hat.
 
 \begin{figure}[H]
@@ -48,7 +48,7 @@ Das Testszenario 3 simuliert somit ein Netzwerkverhalten, welches verschiedene A
 
 % TODO
 
-\subsection{Simulation der Testfälle}
+\subsection{Simulation der Testfälle} \mbox{}\\
 Die zu simulierenden Testfälle werden durch einen separaten Service durchgeführt, die TestApi. Die Schnittstellen, die direkt mit der Durchführung der LLT interagieren sind:
 
 \begin{center}
@@ -62,12 +62,12 @@ Die zu simulierenden Testfälle werden durch einen separaten Service durchgefüh
 \end{center}
 \FloatBarrier
 
-\paragraph*{FinishOrders}
+\paragraph*{FinishOrders} \mbox{}\\
 Der erste Testfall simuliert eine erfolgreiche Verarbeitung des Bestell- und Lieferprozesses. Die TestApi generiert Bestellungen und ruft den entsprechenden Endpunkt zum Platzieren im OrderService auf. Für jede der Bestellungen wird in der TestApi gewartet, bis die Lieferung ausgelöst wurde. Dann wird die Lieferbestätigung simuliert, indem der entsprechende Endpunkt im StockService aufgerufen wird. 
 
 Der Koordinator erhält die Möglichkeit, den erfolgreichen Endzustand zu erreichen. Dies ist der erwartete Endzustand. Dieser Testfall wird als \textit{FinishOrders} bezeichnet. 
 
-\paragraph*{CancelOrders}
+\paragraph*{CancelOrders} \mbox{}\\
 Der zweite Testfall simuliert eine Stornierung der Bestellung. Die TestApi generiert Bestellungen und platziert diese. Nachdem die Lieferung ausgelöst wurde, platziert die TestApi die Stornierung. 
 
 Der Koordinator erkennt die Stornierung und hat die Verantwortung, die Lieferung zu stoppen und im Anschluss alle lokalen Transaktionen zu kompensieren. In diesem Testfall werden alle Kompensierungen aufgerufen. Dieser Testfall wird mit \textit{CancelOrders} bezeichnet. 
@@ -76,14 +76,14 @@ Der erwartete Endzustand dieser Bestellung ist \textit{FailedWithCompensation}.
 \subsection{Datengenerierung}
 Um den Ablauf der Services zu simulieren, müssen Daten in jedem Teilsystem generiert werden. Dabei wird in dieser Versuchsdurchführung zwischen zwei Arten der Datengenerierung unterschieden: statische und dynamische Datengenerierung.
 
-\paragraph*{Statisch generierte Daten}
+\paragraph*{Statisch generierte Daten} \mbox{}\\
 Zu den statisch generierten Daten gehören die Daten, die manuell einmalig generiert und anschließend in die Datenbank eingefügt werden.
 
 Im ArticleService werden die Daten der Produkttabelle generiert. Dazu gehören die verschiedenen Produktbezeichnungen und Preise.
 
 In den zwei BankServices werden die Daten der Nutzertabellen generiert. Für jeden BankService werden 100 verschiedene Nutzer erstellt. Initial erhält jeder dieser Nutzer einen ausreichend großen Geldbetrag als Startguthaben. 
 
-\paragraph*{Dynamisch generierte Daten}
+\paragraph*{Dynamisch generierte Daten} \mbox{}\\
 Die in der TestApi generierten Bestellungen werden dynamisch erzeugt. Jede Bestellung wählt einen zufälligen BankService-Nutzer und eine Menge von zwischen 1 und 10 verschiedenen Artikeln mit einer zufälligen Menge zwischen 1 und 4.
 
 Eine solche zufällig generierte Bestellung ist in \cref{lst:PlaceOrderJson} abgebildet.
@@ -112,7 +112,7 @@ Eine solche zufällig generierte Bestellung ist in \cref{lst:PlaceOrderJson} abg
 \subsection{Messwerte}
 Um die verschiedenen Messungen vergleichen zu können, werden die Messungen eines DEAs in jedem Testfall und in jedem Testszenario durchgeführt. Nach der Messung sollen daraus Aussagen über die Konsistenz und über die Korrektheit der modellierten LLT getroffen werden. Dazu werden folgende Messwerte erhoben:
 
-\paragraph*{StateAnalysisResult}
+\paragraph*{StateAnalysisResult} \mbox{}\\
 Dieser Teil des Messergebnisses verwendet die im Koordinator enthaltenen Zustände. Als Scope wird ein konkreter Testfall, ein konkretes Testszenario und ein DEA festgelegt.
 
 \begin{center}
@@ -134,7 +134,7 @@ Dieser Teil des Messergebnisses verwendet die im Koordinator enthaltenen Zustän
 
 Für jeden dieser Werte gibt wir einen normalisierter Wert berechnet, der ins Verhältnis zum Messwert \textit{totalCount} gesetzt wird. Da diese Werte ausschließlich aus der Sicht des Koordinators gemessen werden, geben diese Werte lediglich Auskunft über den erreichten Endzustand einer Saga. Eine Saga mit dem Endzustand $q_{Success}$ ist nicht gleichbedeutend mit einer konsistenten LLT. 
 
-\paragraph*{TransactionAnalysisResult}
+\paragraph*{TransactionAnalysisResult} \mbox{}\\
 Um Aussagen über die Konsistenz einer LLT zu treffen, werden die durchgeführten Transaktionen, die im Transaktionslog des Koordinators festgehalten sind, mit den durchgeführten Transaktionen der Teilnehmerservices verglichen. Für jede Saga kann der Unterschied zwischen Transaktionsanzahl aus Koordinatorsicht und aus Teilnehmerservicesicht berechnet werden. Enthält eine Saga mindestens eine Transaktion, bei der dieser Unterschied auftritt, wird sie als inkonsistent bezeichnet. Die Summe der Unterschiede pro Transaktionstyp kann ebenfalls gebildet werden. Es ergibt sich folgende Tabelle:
 
 \Needspace{5\baselineskip}
@@ -155,7 +155,7 @@ Um Aussagen über die Konsistenz einer LLT zu treffen, werden die durchgeführte
 \end{center}
 \FloatBarrier
 
-\paragraph*{ExecutionTimeAnalysisResult}
+\paragraph*{ExecutionTimeAnalysisResult} \mbox{}\\
 Schlussendlich wird ein weiteres Messergebnis definiert. Dieses Ergebnis dient dazu, die verschiedenen DEAs hinsichtlich ihrer Laufzeit zu untersuchen. Dabei wird die Differenz der ersten und letzten Transaktion im Log des Koordinators gebildet. 
 
 \begin{center}

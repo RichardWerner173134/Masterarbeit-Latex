@@ -1,27 +1,27 @@
 \section{Lokale Transaktionen}
 Die einzelnen lokalen Transaktionen sollen nun identifiziert werden. Im Folgenden wird beschrieben, durch welchen Teilnehmer die lokale Transaktion jeweils ausgeführt wird. 
 
-\paragraph*{Initialisierung} 
+\paragraph*{Initialisierung} \mbox{}\\
 Die Bestellung wird im OrderService entgegengenommen. Die Bestellung wird initialisiert. Der Saga-Prozess wird erstellt. 
 
-\paragraph*{Validierung der Produktdaten}
+\paragraph*{Validierung der Produktdaten} \mbox{}\\
 Die in der Bestellung enthaltenen Produktdaten müssen validiert werden. Dies geschieht in zwei Schritten:
 \begin{enumerate}
 	\item Abfrage aller in der Bestellung enthaltenen Produktdaten am ArticleService
 	\item Validierung
 \end{enumerate}
 
-\paragraph*{Blockierug der Artikel}
+\paragraph*{Blockierug der Artikel} \mbox{}\\
 Die Ware wird im StockService für andere Bestellungen blockiert. 
 
-\paragraph*{Geldabbuchung}
+\paragraph*{Geldabbuchung} \mbox{}\\
 Das Käuferkonto muss belastet werden. Dabei wird der Geldbetrag des Käuferkontos in der entsprechenden Instanz des BankService verringert.
 
-\paragraph*{Geldzubuchung}
+\paragraph*{Geldzubuchung} \mbox{}\\
 Das Händlerkonto bekommt den selben Geldbetrag gutgeschrieben. Dies geschieht ebenfalls in der entsprechenden Instanz des BankService. 
 
-\paragraph*{Auslösung der Lieferung}
+\paragraph*{Auslösung der Lieferung} \mbox{}\\
 Die blockierten Artikel der Lieferung werden aus dem Lager entfernt und die Lieferung wird ausgelöst. Dies geschieht im StockService.
 
-\paragraph*{Lieferabschluss}
+\paragraph*{Lieferabschluss} \mbox{}\\
 Die Ware trifft beim Kunden ein. Die Lieferung wird durch den Lieferanten bestätigt. Diese Information erreicht den StockService.

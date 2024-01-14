@@ -40,7 +40,7 @@ Der resultierende Zustandsautomat ist in \cref{fig:fig_sm_idempotency_backward_r
 
 Das StateAnalysisResult zeigt einen hohen Anteil an vorzeitig abgebrochenen Sagas. Das ist mit dem Konzept der Backwardrecovery begründet. Lediglich Testszenario 1 liefert in beiden Testfällen eine Erfolgsrate von 100\%.
 
-\paragraph*{Testfall FinishOrders}
+\paragraph*{Testfall FinishOrders} \mbox{}\\
 
 \begin{center}
 	\fontsize{9}{12}\selectfont
@@ -62,7 +62,7 @@ Das StateAnalysisResult zeigt einen hohen Anteil an vorzeitig abgebrochenen Saga
 \end{center}
 \FloatBarrier
 
-\paragraph*{Testfall CancelOrders}
+\paragraph*{Testfall CancelOrders} \mbox{}\\
 
 \begin{center}
 	\fontsize{9}{12}\selectfont
@@ -141,21 +141,21 @@ Das Log zeigt eine Saga, die aufgrund eines Netzwerkfehlers im Zustand \textit{S
 \subsection{Alternative Sicherstellung der Konsistenz}
 Damit der Zustandsautomat trotz dieser verfälschten Messung bewertet werden kann, wird eine Alternative benötigt. Um eine Aussage über die Konsistenz zu treffen, kann der Inhalt der eigentlichen Tabellen der Services verwendet werden. 
 
-\paragraph*{Alternative Konsistenzdefinition}\label{par:consistency_definition_alt}
+\paragraph*{Alternative Konsistenzdefinition}\label{par:consistency_definition_alt} \mbox{}\\
 Als Konsistenzkriterien dienen folgende Annahmen:
 \begin{itemize}
 	\item Die Summe des Geldes im System bleibt gleich.
 	\item Die Summer aller Artikel im System bleibt gleich.
 \end{itemize}
 
-\paragraph*{Einordnung dieser Definition}
+\paragraph*{Einordnung dieser Definition} \mbox{}\\
 Diese Vorgehensweise kann entscheiden, ob das System nach den definierten Regeln im konsistenten Zustand bleibt oder ob eine Transaktion das System in einen inkonsistenten Zustand überführt hat. Dies ist eine binäre Messung, über die Qualität der Konsistenz kann im vorliegenden System, unter Verwendung dieses Zustandsautomaten und unter Verwendung des aktuellen Versuchsaufbaus keine Aussage getroffen werden. 
 
 Nach den genannten Annahmen ist das System auch konsistent, wenn zwei parallele Sagas fehlschlagen und eine Saga \textit{AddMoney} und die andere Saga \textit{RemoveMoney} jeweils doppelt mit dem (zufällig) identischen Betrag ausführen. Die Menge des Geldes im System bleibt trotz Auftreten eines solchen hypothetischen Bugs konsistent. 
 
 Diese Erläuterung soll verdeutlichen, dass die sehr vage Definition von Konsistenz mit Vorsicht verwendet werden sollte. Für diesen Automaten soll dies jedoch ausreichen. 
 
-\paragraph{Messung}
+\paragraph*{Messung} \mbox{}\\
 Die Messung erfolgt manuell. Die Summe des im System befindlichen Geldes wird vor Ausführung der Tests gemessen. Dabei ist jedes Konto mit einem Startcredit von 15000.00 initialisiert. Tritt ein Konsistenzfehler bei Verwendung der BankServices auf, so wird dies in diesem Statement deutlich, wenn sich die zwei Werte \textit{expectedCreditSum} und \textit{actualCreditSum} unterscheiden.
 
 \begin{lstlisting}[language=SQL, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
@@ -218,7 +218,8 @@ select moneyMightBeConsistent.mightBeConsistent as moneyMightBeConsistent,
 from moneyMightBeConsistent, articleMightBeConsistent;
 \end{lstlisting}\label{}
 
-\paragraph*{Ergebnis}
+\paragraph*{Ergebnis} \mbox{}\\
+TODO %TODO
 Die Messung ist für beide 
 
 \begin{center}

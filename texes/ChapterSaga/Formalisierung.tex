@@ -1,0 +1,404 @@
+\section{Formalisierung eines Saga-Zustandsautomaten als DEA} \label{sec_saga_formalisierung_dea}
+%TODO Abkürzung DEA
+\subsection{Formale Darstellung eines DEA}
+Der Prozessablauf einer Saga kann als detemernistischer endlicher Automat angesehen werden. Ein DEA wird formal dargestellt als Tupel mit folgenden Elementen:
+\begin{itemize}
+	\item $Q$: Zustandsmenge
+	\item $\Sigma$: endliches Eingabealphabet
+	\item $\delta: Q \times \sum \rightarrow Q$: Übergangsrelation 
+	\item $q_0 \in Q$: Startzustand
+	\item $F \subseteq Q$: Menge an akzeptierenden Zuständen
+\end{itemize}
+
+\subsection{Saga als formale Sprache}
+%TODO Deterministisch, totale Funktion, Angenommene Sprache, referenz vorheriges subsubsection
+Im vorherigen Abschnitt wurde die Saga Execution Component definiert als ein Tupel aus Transaktionslog und Zustandsautomat. Nun soll dieses Tupel in einen DEA überführt werden. Ein solcher DEA $A_{Saga}$ akzeptiert die Sprache $L_{Saga}$, die alle gültigen Wörter enthält, die eine Saga darstellen.
+
+Das Eintabealphabet $\Sigma$ ist die Menge aller Elemente, die im Transaktionslog auftauchen können. Somit kann jedes Transaktionslog als Eingabewort aufgefasst werden. 
+
+Somit ist die von $A_{Saga}$ akzeptierte Sprache $L_{Saga} = L(A_{Saga})$: \\
+
+\begin{center}
+	$\forall w \in \Sigma^{\star}: w \in L(A_{Saga}) \iff w \in L_{Saga}$
+\end{center}
+
+% TODO prüfen von hier. Passt das auf 
+\subsection{Überführung einer Saga in einen DEA}
+Um eine Saga in einen DEA überführen zu können, müssen zuerst einige Definitionen vorgenommen werden. Die Unterscheidung zwischen Ts und Cs wird im Modell eines Zustandsautomaten per Zustand ausgedrückt. Es muss also eine Abstrahierung vorgenommen werden, die Ts und Cs vereinigt. Diese Abstrahierung wird im Folgenden als $Aktion\ A$ bezeichnet. Eine solche Aktion $a_n$ wird immer im entsprechenden Zustsand $q_n \in Q$ ausgeführt. In der folgenden Erläuterung kann die Zustandsmenge $Q$ mit der Menge $T \cup C$ gleichgesetzt werden.
+
+Das Eingabealphabet $\Sigma$ drückt aus, welche möglichen Ergebnisse eine Aktion haben kann. Eine Aktion kann einerseits ein Aufruf einer externen Schnittstelle sein. Die Antwort dieser Schnittstelle kann das Ergebnis in unterschiedlichen Formen ausdrücken. Das können beispielsweise folgende Ausdrucksformen sein:
+\begin{itemize}
+	\item Http-Statuscode
+	\item Custom Http-Responsebody
+\end{itemize}
+Diese sind üblicherweise in einer Schnittstellendefinition aufgelistet. Im Folgenden wird davon ausgegangen, dass alle möglichen Antworten einer Http-Schnittstelle per Http-Statuscode ausgedrückt werden. Es wird ein Typ definiert, der für jede Aktion alle möglichen Http-Statuscodes enthält: 
+
+\begin{center}
+	$API-Ergebnis\ AE \in \{tn_{200}, tn_{201}, tn_{400}, tn+1_{200}, tn+1_{400}, tn+1_{409}, ...\}$. 
+\end{center}
+
+Eine Aktion kann neben dem Aufruf einer Schnittstelle eine interne Verarbeitung sein. Das könnte beispielsweise eine Prüfung auf Vorhandensein eines Feldes in einer vorangegangenen Schnittstellenantwort sein. Eine solche Aktion wird definiert:
+
+\begin{center}
+	$Internes\ Prozessergebnis\ IPE \in \{tn_{Success}, tn_{Failure}, tn+1_{Success}, tn+1_{Failure}, ...\}$.
+\end{center}
+
+Ein Ergebnis einer Aktion wird also definiert als:
+
+\begin{center}
+	$Ergebnis\ E = AE \cup IPE$.
+\end{center}
+
+Das Eingabealphabet beinhaltet Elemente aus dem Ergebnistyp: 
+
+\begin{center}
+	$\Sigma = Ergebnis$.
+\end{center}
+
+Ein Übergang von einem Zustand in den Folgezustand drückt somit aus, dass die Saga eine Aktion ausgeführt hat und dem Ergebnis entsprechend einen Zustandswechsel durchgeführt hat. 
+
+Der Startzustand $q_0$ ist die erste auszuführende Transaktion. 
+
+Ein Endzustand $q_{f1}$ wird erreicht, nachdem die letzte auszuführende Transaktion erfolgreich beendet wurde. Ein weiterer Endzustand $q_{f2}$ wird erreicht, nachdem die letzte Kompensierung erfolgreich beendet wurde. Der letzte Endzustand $q_{f3}$ wird erreicht, nachdem die erste Kompensierung erfolglos beendet wurde.
+% TODO vielleicht qf3 nicht als akzeptierenden Zustand markieren: beeinflusst, welche Sprache der DEA akzeptiert
+
+\paragraph*{Konfiguration}\mbox{}\\
+% TODO https://www.cs.uni-potsdam.de/ti/lehre/06-Theorie-I/slides/slides-2.1.pdf
+Die Ausführung eines DEA kann mittels Konfigurationen dargestellt werden. Eine Konfiguration $K$ ist definiert als: 
+
+\begin{center}
+	$K = (q, w) \in Q \times \Sigma^{\star}$
+\end{center}
+
+Der Automat wechselt in einen Folgezustand, indem er ein Element aus dem Eingabewort abarbeitet und eine passende Übergangsrelation in $\delta$ findet. Somit gilt:
+
+\begin{center}
+	$q1, q2 \in Q \land u \in \Sigma \land v \in \Sigma^{\star}: (q_{1}, u \circ v)\vdash (q_{2}, v) \implies \delta(q_{1}, u) = q_{2}$
+\end{center}
+
+Außerdem können mehrere Konfigurationsübergänge mittels $\vdash^{\star}$ dargestellt werden:
+
+\begin{center}
+	$K_1 \vdash^{\star} K_2 \implies \ K_1 = K_2 \lor \exists K: K_1 \vdash K \land K \vdash^{\star} K_2$
+\end{center}
+
+\subsection{Betrachtung des Zustands nach Erfolg/Misserfolg}\label{subsubsection_dea_simple}
+Der Zustand des Systems soll nun in folgenden Fällen betrachtet werden:
+\begin{enumerate}%TODO Anpassen an Paragraphenüberschriften
+	\item Erfolgreicher Ablauf einer Saga
+	\item Scheitern der Saga nach n Schritten
+	\item Scheitern der Saga nach n Schritten und Scheitern der Kompensierung nach m Schritten
+\end{enumerate}
+
+Die Ausführung der Saga als DEA soll an folgendem Beispiel illustriert werden:
+
+$Saga = (Q, \Sigma, \delta, q_0, F)$ mit
+\begin{align*}
+	Q &= \{q_{t1}, q_{t2}, q_{t3}, q_{c1}, q_{c2}, q_{c3}, q_{f1}, q_{f2}, q_{f3}\}\\
+	\Sigma &= \{t1_{200}, t1_{400}, t2_{Success}, t2_{Failure}, t3_{200}, t3_{400}, c1_{200}, c1_{400}, c2_{Sucess}, c2_{Failure}, c3_{200}, c3_{400}\}\\
+	\delta &= \{((q_{t1}, t1_{200}), q_{t2}), 
+	((q_{t2}, t2_{Sucess}), q_{t3}), 
+	((q_{t3}, t3_{200}), q_{f1}), 
+	((q_{t1}, t1_{400}), q_{f2}), \\
+	&((q_{t2}, t2_{Failure}), q_{c1}), 
+	((q_{t3}, t3_{400}), q_{c2}), 
+	((q_{c1}, c1_{200}), q_{f2}), 
+	((q_{c2}, c2_{Sucess}), q_{c1}),\\ 
+	&((q_{c3}, c3_{200}), q_{c2}), 
+	((q_{c1}, c1_{400}), q_{f3}), 
+	((q_{c2}, c2_{Failure}), q_{f3}), 
+	((q_{c3}, c3_{Failure}), q_{f3})\} \\
+	q_0 &= q_{t1}\\
+	F &= \{q_{f1}, q_{f2}, q_{f3}\}
+\end{align*}
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm, semithick]
+		\node [state, initial] 		(qt1) 					{$q_{t1}$};
+		\node [state] 				(qt2) [right of=qt1] 	{$q_{t2}$};
+		\node [state] 				(qt3) [right of=qt2] 	{$q_{t3}$};
+		
+		\node [state] 				(qc1) [below of=qt2] 	{$q_{c1}$};
+		\node [state] 				(qc2) [right of=qc1] 	{$q_{c2}$};
+		\node [state] 				(qc3) [right of=qc2] 	{$q_{c3}$};
+		
+		\node [state, accepting] 	(qf1) [right of=qt3] 	{$q_{f1}$};
+		\node [state, accepting] 	(qf2) [left of=qc1] 	{$q_{f2}$};
+		\node [state, accepting] 	(qf3) [below of=qc2] 	{$q_{f3}$};
+		
+		\path (qt1) 	edge					node 		{$t1_{200}$}		(qt2)
+		edge					node		{$t1_{400}$}		(qf2)
+		(qt2)		edge					node		{$t2_{Success}$}	(qt3)
+		edge					node		{$t2_{Failure}$}	(qc1)
+		(qt3)		edge					node		{$t3_{200}$}		(qf1)
+		edge					node		{$t3_{400}$}		(qc2)
+		(qc1)		edge					node		{$c1_{200}$}		(qf2)
+		edge	[bend right]	node		{$c1_{400}$}		(qf3)
+		(qc2)		edge					node		{$c2_{Success}$}	(qc1)
+		edge					node		{$c2_{Failure}$}	(qf3)
+		(qc3)		edge					node		{$c3_{200}$}		(qc2)
+		edge	[bend left]		node		{$c3_{400}$}		(qf3);
+	\end{tikzpicture}
+	\caption{Darstellung einer Saga als Deterministischen endlichen Automaten}
+\end{figure}
+\FloatBarrier
+
+\paragraph*{Endzustand $q_{f1}$} \mbox{}\\
+Im Folgenden wird davon ausgegangen, dass die Aktionen der Zustände $q_{t1}$, $q_{t2}$ und $q_{t3}$ in einem erfolgreichen Ergebnis resultieren. Somit wird am Ende der Endzustand $q_{f1}$ erreicht. Dieser Zustand drückt einen erfolgreichen Durchlauf einer Saga aus. Das Eingabewort $e_1 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{200} \circ \#$.
+
+Die Konfigurationsübergänge für $e_1$ sind:
+
+\begin{align*}
+	(q_{t1}, t1_{200} \circ t2_{Success} \circ t3_{200} \circ \#)\\
+	\vdash(q_{t2}, t2_{Success} \circ t3_{200} \circ \#)\\
+	\vdash (q_{t3}, t3_{200} \circ \#)  \\
+	\vdash (q_{f1}, \#)
+\end{align*}
+
+
+\paragraph*{Endzustand $q_{f2}$} \mbox{}\\
+Es wird nun davon ausgegangen, dass bei der Aktion im Zustand $q_{t3}$ ein Ergebnis $t3_{400}$ erfolgt. Ein solches Ergebnis führt dazu, dass der Zustand $q_{c2}$ erreicht wird. Hier wird davon ausgegangen, dass die Aktionen $q_{c2}$ und $q_{c1}$ erfolgreiche Ergebnisse haben. Das Eingabewort $e_2 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{400} \circ c2_{Success} \circ c1_{200}$.
+
+Die Konfigurationsübergänge für $e_2$ sind:
+
+\begin{align*}
+	(q_{t1}, t1_{200} \circ t2_{Success} \circ t3_{400} \circ c2_{Success} \circ c1_{200} \circ \#)\\
+	\vdash (q_{t2}, t2_{Success} \circ t3_{400} \circ c2_{Success} \circ c1_{200} \circ \#))\\
+	\vdash (q_{t3}, t3_{400} \circ c2_{Success} \circ c1_{200} \circ \#))\\
+	\vdash (q_{c2}, c2_{Success} \circ c1_{200} \circ \#))\\
+	\vdash (q_{c1}, c1_{200} \circ \#))\\
+	\vdash (q_{f2}, \#))
+\end{align*}
+
+
+\paragraph*{Endzustand $q_{f3}$} \mbox{}\\
+Zuletzt soll der Zustand $q_{f3}$ betrachtet werden. Dafür soll die Aktion in $q_{t3}$ das Ergebnis $t3_{400}$ haben. Danach schlägt die Aktion $q_{c2}$ fehl und liefert das Ergebnis $c2_{Failure}$. Das Eingabewort $e_3 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{400} \circ c2_{Failure} \circ \#$.
+
+Die Konfigurationsübergänge für $e_3$ sind:
+
+\begin{align*}
+	(q_{t1}, t1_{200} \circ t2_{Success} \circ t3_{400} \circ c2_{Failure} \circ \#) \\
+	\vdash (q_{t2}, t2_{Success} \circ t3_{400} \circ c2_{Failure} \circ \#) \\
+	\vdash (q_{t3}, t3_{400} \circ c2_{Failure} \circ \#) \\
+	\vdash (q_{c2}, c2_{Failure} \circ \#) \\
+	\vdash (q_{f3}, \#) \\
+\end{align*}
+
+\subsection{Recovery-Mechanismen} %TODO klare Definition einfügen und hier referenzieren, Zitat Paper Saga 1987
+Eine Saga, die in der Ausführung einer Transaktion fehlschlägt, wechselt nach der Definition in die entsprechende Kompensierung und versucht, alle bis dahin ausgeführten Transaktionen zu kompensieren. Somit wird der Anfangszustand des Systems wiederhergestellt. Dieses Verhalten wird als Backward-Recovery bezeichnet. 
+
+Neben der Backward Recovery wird ein weiteres Verhalten vorgeschlagen, welches Forward-Recovery genannt wird. Das Ziel der Forward Recovery ist es, seltener in einem erfolglosen Endzustand zu gelangen. Im Modell der hier aufgestellten DEA-Saga sind das Zustände $q_{f2}$ und $q_{f3}$. Um dies zu erreichen, werden Save-Points definiert. Ein Save-Point stellt einen Zustand dar, von dem bei einem Systemabsturz oder einem erfolglosen Ergebnis die Ausführung weitergeführt werden kann. Es wird im Fehlerfall Backward-Recovery bis zum nächsten Save-Point ausgeführt. Wird dieser erreicht, werden alle noch fehlenden Ts ausgeführt, um zum erfolgreichen Endzustand zu gelangen. Das bedeutet, dass von der Kompensierungskette zurück auf die Transaktionskette gesprungen wird.
+
+
+\paragraph*{Backward Recovery}\mbox{}\\
+ %TODO referenz DEA
+Der DEA einer Saga, die Backward-Recovery implementiert, ist im vorherigen Abschnitt beschrieben.
+
+\paragraph*{Forward Recovery} \mbox{}\\
+% TODO referenz DEA
+Forward-Recovery ist auf verschiedenen Wegen erreichbar. Der erste Ansatz beinhaltet die Verwendung eines Save-Points. Der DEA aus Abschnitt soll um einen Checkpoint und Forward Recovery ergänzt werden. Es wird ein weiterer Zustand eingeführt, der nach erfolgreichem Ergebnis von $q_{t1}$ erreicht wird. Der Checkpoint wird hier dargestellt als ein interner Prozessschritt $q_{sp1}$ und hat somit die möglichen Ergebnisse $\in \{sp1_{Success}, sp1_{Failure}\}$. Es ist zu sehen, dass dieser DEA eine mögliche Endlosschleift zulässt. Wenn $q_{sp1}$ erreicht wird und in $q_{t2}$ oder $q_{t3}$ immer ein erfolgloses Ergebnis auftritt, darf im Zustand $qsp1$ nur endlich oft der Übergang $sp1_{Success}$ gewählt werden. 
+
+Die Funktion $f$ die in $q_{sp1}$ ein internes Prozessergebnis $IPE$ berechnet, sieht so aus:
+\begin{flalign*}
+	&f: \mathbb{N} \rightarrow IE &&\\
+	&maxSavepointExecutionCount \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{sp1}\ während\ &\\ 
+	&der\ Ausführung\ der\ Saga 
+\end{flalign*}
+
+\begin{equation*}
+	f(x) = 
+	\begin{cases}
+		IE_{Success}, x < maxSavepointExecutionCount\\
+		IE_{Failure}, else
+	\end{cases}
+\end{equation*}
+
+Die Anzahl an Ausführungen beginnend bei $q_{t2}$ ist begrenzt. Es wird also solange Forward Recovery versucht, bis die Saga erfolgreich ist oder das Oberlimit $maxSavepointExecutionCount$ erreicht wird. Wenn dieses Oberlimit erreicht ist, wird die Forward Recovery aufgegeben und in den Zustand $q_{c1}$ gewechselt.
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm, semithick]
+		\node [state, initial] 		(qt1) 					{$q_{t1}$};
+		\node [state]				(qsp1)[below right=2cm and 3cm of qt1]	{$q_{sp1}$};
+		\node [state] 				(qt2) [above right=2cm and 3cm of qsp1] 	{$q_{t2}$};
+		\node [state] 				(qt3) [right=2cm of qt2] 	{$q_{t3}$};
+		
+		\node [state] 				(qc1) [below left=2cm and 3cm of qsp1]{$q_{c1}$};
+		\node [state] 				(qc2) [below right=2cm and 3cm of qsp1] 	{$q_{c2}$};
+		
+		\node [state, accepting] 	(qf1) [right of=qt3] 	{$q_{f1}$};
+		\node [state, accepting] 	(qf2) [left of=qc1] 	{$q_{f2}$};
+		\node [state, accepting] 	(qf3) [below of=qc2] 	{$q_{f3}$};
+		
+		\path (qt1) 	edge	[bend right]	node 		{$t1_{200}$}		(qsp1)
+		edge					node		{$t1_{400}$}		(qf2)
+		(qt2)		edge					node		{$t2_{Success}$}	(qt3)
+		edge	[bend left]		node		{$t2_{Failure}$}	(qsp1)
+		(qt3)		edge					node		{$t3_{200}$}		(qf1)
+		edge					node		{$t3_{400}$}		(qc2)
+		(qc1)		edge					node		{$c1_{200}$}		(qf2)
+		edge	[bend right]	node		{$c1_{400}$}		(qf3)
+		(qc2)		edge	[bend right]	node		{$c2_{Success}$}	(qsp1)
+		edge					node		{$c2_{Failure}$}	(qf3)
+		(qsp1) 	edge	[bend left]		node		{$sp1_{Success}$}	(qt2)
+		edge	[bend right]	node		{$sp1_{Failure}$}	(qc1);
+	\end{tikzpicture}
+	\caption{Forwardrecovery in einem DEA}
+\end{figure}
+\FloatBarrier
+
+Forward-Recovery kann alternativ auch als Retry interpretiert und somit ohne Save-Points realisiert werden. Einen solcher Retry kann sehr einfach in jedem Zustand ergänzt werden. Dazu wird eine Kante hinzugefügt, die im gleichen Zustand bleibt. Die Kante, die zuvor ein erfolgloses Ergebnis ausgedrückt hat, drückt nun ein Scheitern oberhalb des Retrylimits aus.
+
+Der Typ Ergebnis wird dafür definiert als:
+\begin{center}
+	$Ergebnis\ E = \{t1_{Success}, t1_{Failure}, t1_{FinalFailure}, ...\}$
+\end{center}
+
+Die Funktion $fn_{AE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende API-Ergebnis $AE$ berechnet, ist:
+
+\begin{math}
+	fn_{AE}: \mathbb{N} \times AE \rightarrow E\\
+	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ während\ der\ Ausführung\ der\ Saga
+\end{math}
+\begin{equation*}
+	fn_{AE}(x, y) = 
+	\begin{cases}
+		En_{Success}, y = tn_{200}\\
+		En_{Failure}, y \neq tn_{200} \land x < maxSavepointExecutionCount_n\\
+		En_{FinalFailure}, else
+	\end{cases}
+\end{equation*}
+
+Die Funktion $fn_{IE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende interne Prozessergebnis $IPE$ berechnet, ist:
+
+\begin{math}
+	fn_{AE}: \mathbb{N} \times IPE \rightarrow Ergebnis\\
+	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ während\ der\ Ausführung\ der\ Saga
+\end{math}
+\begin{equation*}
+	fn_{AR}(x, y) = 
+	\begin{cases}
+		En_{Success}, y = tn_{Success}\\
+		En_{Failure}, y \neq tn_{Failure} \land x < maxSavepointExecutionCount_n\\
+		En_{FinalFailure}, else
+	\end{cases}
+\end{equation*}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm, semithick]
+		\node [state, initial] 		(qt1) 					{$q_{t1}$};
+		\node [state] 				(qt2) [right of=qt1] 	{$q_{t2}$};
+		\node [state] 				(qt3) [right of=qt2] 	{$q_{t3}$};
+		
+		\node [state] 				(qc1) [below of=qt2] 	{$q_{c1}$};
+		\node [state] 				(qc2) [right of=qc1] 	{$q_{c2}$};
+		\node [state] 				(qc3) [right of=qc2] 	{$q_{c3}$};
+		
+		\node [state, accepting] 	(qf1) [right of=qt3] 	{$q_{f1}$};
+		\node [state, accepting] 	(qf2) [left of=qc1] 	{$q_{f2}$};
+		\node [state, accepting] 	(qf3) [below of=qc2] 	{$q_{f3}$};
+		
+		\path (qt1) 	edge					node 		{$t1_{Success}$}		(qt2)
+		edge	[loop above]	node		{$t1_{Failure}$}		(qt1)
+		edge					node 		{$t1_{FinalFailure}$}		(qf2)
+		(qt2)		edge					node		{$t2_{Success}$}	(qt3)
+		edge	[loop above]	node		{$t2_{Failure}$}	(qt2)
+		edge					node		{$t2_{FinalFailure}$}	(qc1)
+		(qt3)		edge					node		{$t3_{Success}$}		(qf1)
+		edge	[loop above]	node		{$t3_{Failure}$}		(qt3)
+		edge					node		{$q_{FinalFailure}$}		(qc2)
+		(qc1)		edge					node		{$c1_{200}$}		(qf2)
+		edge	[bend right]	node		{$c1_{400}$}		(qf3)
+		(qc2)		edge					node		{$c2_{Success}$}	(qc1)
+		edge					node		{$c2_{Failure}$}	(qf3)
+		(qc3)		edge					node		{$c3_{200}$}		(qc2)
+		edge	[bend left]		node		{$c3_{400}$}		(qf3);
+	\end{tikzpicture}
+	\caption{Backwardrecovery in einem DEA}
+\end{figure}
+\FloatBarrier
+
+Es kann außerdem verboten werden, dass in einer Implementierung von Forward-Recovery der Fall verboten wird, der zu einer Backward-Recovery führt. Dabei wird erreicht, dass es nur einen gültigen Endzustand gibt. Dieser Endzustand drückt einen erfolgreichen Abschluss der Saga aus. Dabei ist zu beachten, dass das wiederholte Ausführen einer Aktion schlussendlich zu einem erfolgreichen Ergebnis führen muss. 
+
+Der DEA für dieses Verhalten sieht so aus:
+
+\begin{figure}[ht!]
+	\centering
+	\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm, semithick]
+		\node [state, initial] 		(qt1) 					{$q_{t1}$};
+		\node [state] 				(qt2) [right=2cm of qt1] 	{$q_{t2}$};
+		\node [state] 				(qt3) [right=2cm of qt2] 	{$q_{t3}$};
+		
+		\node [state, accepting] 	(qf1) [right=2cm of qt3] 	{$q_{f1}$};
+		
+		\path (qt1) 	edge					node 		{$t1_{200}$}		(qt2)
+		edge	[loop above]	node		{$t1_{400}$}		(qt1)
+		(qt2)		edge					node		{$t2_{Success}$}	(qt3)
+		edge	[loop above]	node		{$t2_{Failure}$}	(qt2)
+		(qt3)		edge					node		{$t3_{200}$}		(qf1)
+		edge	[loop above]	node		{$t3_{400}$}		(qt3);
+		
+	\end{tikzpicture}
+	\caption{Erzwungene Forwardrecovery in einem DEA}
+\end{figure}
+\FloatBarrier
+
+Es ist zu sehen, dass in diesem DEA keine Zustände enthalten sind, die eine Kompensierungsaktion ausdrücken. Somit geht in dieser Implementierung der Gedanke der Kompensierung verloren, der eine zentrale Rolle im Saga-Pattern innehat. Bei wiederholtem Auftreten eines erfolglosen Ergebnisses endet die Saga nie. 
+
+\paragraph*{Voraussetzung für Forward-Recovery} \mbox{}\\
+Damit eine Forward-Recovery sinnvoll ist, muss die Möglichkeit bestehen, dass ein gescheitertes T bei erneutem Ausführen ein erfolgreiches Ergebnis liefert. Das ist abhängig von der Semantik des Ergebnisses. Ist ein T beispielsweise ein Aufruf einer Schnittstelle zum Buchen eines Hotels, so könnten erfolglose Ergebnisse beispielsweise folgende Bedeutungen haben:
+\begin{enumerate}
+	\item Hotel ist im angefragten Zeitraum ausgebucht
+	\item Hotel ist im angefragten Zeitraum im Betriebsurlaub 
+\end{enumerate}
+
+Im ersten Fall ist eine Forward Recovery möglich. Wenn ein andere Kunde seine Reservierung storniert, ist es es möglich, dass bei erneutem Anfragen eine Reservierung zustande kommt, die vorher abgelehnt wurde.
+
+Im zweiten Fall ist Forward-Recovery ohne Effekt. Wenn eine Hotelbuchung für einen Zeitraum angefragt wird, in dem das Hotel im Betriebsurlaub ist, wird auch bei wiederholter Anfrage keine Buchung zustande kommen.
+
+\subsection{Implementierungsformen des Patterns}\label{subs_Saga_Implementierungsformen}
+Um eine Saga als Microservice-System zu implementieren, gibt es zwei verschiedene Herangehensweisen. Die zwei Formen der Implementierung werden als Orchestrierung und als Choreografie bezeichnet. Beide Ausprägungen des Saga-Patterns verfolgen denselben Zweck: den Gedanken, eine globale verteilte Transaktion in einem verteilten System in lokale Teiltransaktionen aufzuteilen, die mittels passender Kompensierung zurückgerollt werden können. 
+
+Die zwei Ausprägungen unterscheiden sich hauptsächlich in der Softwarearchitektur. Es ist zu beachten, dass beide Implementierungen denselben Geschäftsprozess abbilden können und somit als äquivalent angesehen werden können. %TODO Quelle für diese Aussage
+
+Im Folgenden sollen die beiden Implementierungsansätze vorgestellt werden. Um die Unterschiede zu verdeutlichen, soll in den nachfolgenden Erläuterungen von einem Geschäftsprozess ausgegangen werden, der Ts enthält, die Teil einer verteilten, globalen Transaktion sind. Jedes T soll eine andere Schnittstelle aufrufen. Jedes T hat ein entsprechendes C zugeordnet. Sowohl die Ts als auch die Cs entsprechen den Anforderungen, die in XXX beschrieben sind. % TODO Referenz einfügen
+
+\paragraph*{Orchestration} \mbox{}\\
+Die Orchestrierung zentralisiert die Logik für eine Saga in einem einzigen Service. Dieser Service wird als Koordinator oder Orchestrator bezeichnet. Der Koordinator ist verantwortlich für die Einhaltung der Transaktionsanforderungen. Er ruft aktiv die restlichen teilhabenden Services auf und muss die Ergebnisse der Aufrufe auswerten. Die teilhabenden Services haben nur Verantwortung für die Korrektheit der Prozessierung ihre eigenen Servicegrenzen. Ein solcher vom Koordinator aufgerufener Service hat keine Kenntnis vom ablaufenden Geschäftsprozess. 
+
+Der Orchestrator stellt einen Prozessmanager dar. Als solcher muss dieser Service garantieren, dass eine gestartete Saga nicht abbricht. Damit ein Absturz des Orchestrators dies gewährleisten kann, muss der Zustand der gestarteten Saga persistiert werden. Häufig wird das Transaktionslog in einer Datenbank gespeichert und erlaubt damit die Weiterführung der Saga auch nach Absturz der Anwendung. 
+
+\paragraph*{Choreografie} \mbox{}\\
+Bei der Choreographie gibt es keinen koordinierenden Service. Alle teilhabenden Services kennen den Ablauf des Geschäftsprozesses. Die Logik ist über alle Services verteilt. 
+
+Ein Service ist auch hier für die Korrektheit der Prozessierung innerhalb der eigenen Servicegrenzen verantwortlich. Zusätzlich muss jeder Service nach der Prozessierung den Prozess weiterführen. Dazu gehören sowohl mögliche weitere Transaktionen als auch mögliche Kompensierungsaufrufe. 
+
+
+\paragraph*{Kommunikationsstrategien} \mbox{}\\
+Die Orchestration unterstützt sowohl synchrone als auch asynchrone Kommunikation mit den teilhabenden Services. 
+
+Bietet ein an der globalen Transaktion teilhabender Service eine synchrone Schnittstelle zur Verfügung, muss der Koordinator warten, bis der aufgerufene Service eine Antwort liefert und ist solange blockiert. Bei einem Ausfall des aufgerufenen Services hat der Koordinator keine Möglichkeit, die Transaktion fortzufahren. Die Verfügbarkeit aller Services zum Aufrufzeitpunkt ist Voraussetzung für den erfolgreichen Abschluss einer orchestrierten Saga. Dafür ist dem Koordinator in einem solchen Fall die Unerreichbarkeit des Services bekannt und kann entsprechend reagieren. 
+
+% TODO Zitat asynchrones Request-Response Pattern
+% Orchestration bietet Unterstützung für synchrone, asynchrone Request-Response Muster und asynchrones Messaging
+Des weiteren kann ein Service eine asynchrone Schnittstelle zur Verfügung stellen. Diese Schnittstelle kann eine Implementierung des asynchronen Request-Response Musters sein (Polling Pattern, Callback Pattern). Um eine asynchrone Request-Response Schnittstelle zu verwenden muss der Orchestrator das entsprechende Protokoll des Musters einhalten. Der Vorteil in der Verwendung asynchroner Kommunikation liegt darin, dass der Orchestrator nicht blockiert. In der Zeit zwischen der Platzierung der Anfrage und dem Erhalt der Antwort kann der Orchestrator die Prozessierung der aktuellen Saga pausieren und mit der Verarbeitung anderer Anfragen fortfahren. Der Vorteil dieser Implementierungen ist die Entkopplung von Request und Response. Das zahlt sich in Fällen aus, in denen die Verarbeitung der Anfrage einen längeren Zeitraum in Anspruch nimmt.  
+
+Die Implementierung eines asynchronen Request-Response Musters ist wesentlich komplizierter als die Entwicklung einer synchronen Schnittstelle. Deshalbt sollte dies als Implementierung einer lokalen Transaktion unter Verwendung einer Orchestrierung nur in Szenarien gewählt werden, die die Entkopplung von Anfrage und Antwort voraussetzen.
+
+Schlussendlich bietet die Orchestrierung die Möglichkeit, asynchrone Messaging-Komponenten zu verwenden. Anstatt direkt miteinander zu kommunizieren platziert der Koordinator die Anfrage als Event in einer Messaging-Middleware und kann mit der Prozessierung der Saga pausieren. Der angefragte Service erhält dieses Event und kann eine beliebig lang andauernde Verarbeitung ausführen. Nachdem die Verarbeitung abgeschlossen ist, kann die Antwort wiederum als Event in der Middleware platziert werden. Der Koordinator erhält dieses Event und kann darin das Ergebnis ablesen.
+
+% Choreographie ist nur mit Messaging brauchbar
+Um eine Saga mittels Choreographie zu implementieren, sollte asynchrones Messaging verwendet werden. Da die Geschäftslogik über alle Komponenten verteilt ist, ist selten ein Service am Ergebnis des nächsten Transaktionsschrittes interessiert. Ein Service $S_1$ verarbeitet seinen Teil der Transaktion und informiert den nächsten Service $S_2$ über den Erfolg der Berechnung. $S_2$ ist so implementiert, dass er die Logik für seine eigenen Berechnungen kennt. Somit muss $S_1$ nicht über den Erfolg informiert werden. Ein Erfolg von der in $S_2$ ablaufenden Transaktion endet in einem Event für einen nachfolgenden Service $S_3$. Die Kommunikation ist hier nicht auf ein Request-Response Muster ausgelegt, es werden Einweg-Nachrichten genutzt.
+Die Ausnahme ist ein erfolgloses Ergebnis in $S_2$. In diesem Fall wird $S_3$ nicht per Event informiert. Es wird lediglich $S_1$ mit einem erfolglosen Ergebnis benachrichtigt. Als Reaktion auf dieses Event kann $S_1$ mit Forward- oder Backward-Recovery reagieren.
+
+% Choreographie mit Request-Response ist unnütz
+Die Implementierung einer Choreographie per Request-Response Muster ist nicht unmöglich. $S_1$ ruft $S_2$ per synchroner oder asynchroner Request-Response Schnittstelle auf. Daraufhin erhält $S_1$ eine Antwort mit dem Ergebnis von der Berechnung von $S_2$. Bei einem Erfolg findet in $S_1$ jedoch keine Reaktion statt. Lediglich bei einem Misserfolg muss $S_1$ Kenntnis vom Ergebnis der Transaktion in $S_2$ haben. Somit hat die Verwendung einer Response nur einen Nutzen, falls ein Misserfolg vorliegt.
+
+% Choreographie mit Request-Response führt zu Aufrufkaskadierung
+Des Weiteren hat die Verwendung einer synchronen Kommunikation in der Implementierung der Choreographie den Nachteil, dass es zu Blockierungen aller teilhabenden Services führt. Auch $S_2$ ruft $S_3$ synchron auf. Somit muss $S_2$ warten, bis die Response in $S_3$ erfolgt. Erst danach kann $S_2$ die Response für $S_1$ absenden. Dieses Verhalten wird als Aufrufkaskadierung bezeichnet und wirkt sich sowohl auf den Fall eines Erfolgs als auch den eines Misserfolgs aus. 
+
+Aus den genannten Gründen ist es zu empfehlen, bei der Implementierung einer Saga per Choreographie eine eventbasierte Architektur mit asynchronen Messaging-Komponenten zu verwenden.
