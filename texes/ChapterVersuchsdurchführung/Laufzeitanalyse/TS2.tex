@@ -1,0 +1,29 @@
+\subsection{Testszenario 2}
+Die Ergebnisse von Testszenario 2 zeigen wesentlich mehr ablesbare Unterschiede in der Laufzeit. 
+
+\paragraph*{Steigende Laufzeit} \mbox{} \\
+Die Messwerte der ersten drei aufeinander basierenden Implementierungen (1, 2, 3) zeigen einen deutlichen Anstieg der Laufzeit. Der Median steigt von $\SI{22.41}{\second}$ Sekunden auf $\SI{56.77}{\second}$. 
+
+Analog dazu steigt die Laufzeit von den zwei idempotenten DEAs (4, 5). Die niedrigere Laufzeit von SmIdempotencyBackwardRecovery ist ebenfalls mit vorzeitigen Abbrüchen zu erklären. Da diese auftreten, liegen die Werte für den vierten DEA in beiden Testfällen sehr weit auseinander. 
+
+\paragraph*{Streuung der Werte} \mbox{} \\
+Die Streuung der Laufzeit ist als Abstand zwischen oberem und unterem Quartil ablesbar. In dem ersten DEA ist die Streuung sehr hoch. Die Messwerte für den zweiten DEA sind etwas weniger gestreut, da Retries für Lastfehler und nebenwirkungslose Aufrufe eingeführt wurden. Die Veränderung vom zweiten zum dritten DEA zeigt den selben Effekt.
+
+Auch die zwei idempotenten DEAs bestätigen diese Beobachtung. Die Streuung für den mittels BackwardRecovery umgesetzten DEA ist deutlich größer als der per ForwardRecovery umgesetzte DEA. 
+
+\paragraph*{Ausreißer} \mbox{} \\
+Besonders sind die Ausreißer des dritten und fünften DEAs. In beiden Fällen ist der Großteil der Werte sehr nah beieinander, jedoch sind eine Menge an Ausreißern über dem Boxplot erkennbar. Dies ist erneut mit der ForwardRecovery zu erklären. Da in den beiden DEAs die Netzwerkfehler zu einem unendlichen Retryverhalten führen, sind die Ausreißer genau die LLTs, die übermäßig viele Retries benötigt haben, jedoch trotzdem zum gewünschten Endzustand gefunden haben.
+
+\begin{figure}[!htbp]
+	\begin{minipage}{.45\textwidth}
+		\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario2.tex}
+		\caption{Boxplot FinishOrders in Szenario 2}
+		\label{fig:boxplot_finishorders_scenario2}
+	\end{minipage}\hspace{\fill}%
+	\begin{minipage}{.45\textwidth}
+		\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario2.tex}
+		\caption{Boxplot CancelOrders in Szenario 2}
+		\label{fig:boxplot_cancelorders_scenario2}
+	\end{minipage}
+\end{figure}
+\FloatBarrier

@@ -1,0 +1,5 @@
+\subsection{Leitfrage 3}
+Es soll eine Antwort darauf gefunden werden, welche Kriterien eine Schnittstelle erfüllen muss, um an einer LLT teilnehmen zu können.
+
+\paragraph*{Beantwortung} \mbox{} \\
+Damit ein Service zum Saga-Transaktionsteilnehmer werden kann, müssen die in der Schnittstelle stattfindenden Änderungen innerhalb einer ACID-Transaktion stattfinden. Dies verhindert die durch fehlende Isolation verursachten Anomalien. Außerdem besteht die Voraussetzung, dass Requests höchstens einmal erfolgreich verarbeitet werden. Dies kann realisiert werden, indem im Request eine Id erwartet wird, um die versehentliche Mehrfachverarbeitung auszuschließen.

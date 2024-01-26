@@ -1,0 +1,9 @@
+\subsection{Leitfrage 2}
+Es sind Fehlerquellen und Fehlertypen zu identifizieren, die einen inkonsistenten Systemzustand verursachen können. Es sollen Lösungen im Rahmen des Saga-Patterns formuliert, implementiert und evaluiert werden. 
+
+\paragraph*{Beantwortung} \mbox{} \\
+Die im Versuch aufgetretenen Fehlerquellen wurden als Isolationsanomalien und Netzwerkfehler identifiziert. 
+
+Die durch Verletzung der Isolationseigenschaft verursachten Fehler wurden auf Ebene der Teilnehmerservices mittels Anpassung der Isolationsstufe und auf Ebene der LLT mittels Einschränkung des Systems verhindert. 
+
+Die durch das Auftreten von Netzwerkpartitionen verursachten Fehler konnten durch die Verwendung idempotenter Schnittstellen und Recoverymechanismen behoben werden.

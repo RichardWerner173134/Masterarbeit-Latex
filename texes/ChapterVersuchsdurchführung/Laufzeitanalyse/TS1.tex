@@ -1,0 +1,18 @@
+\subsection{Testszenario 1}
+Im ersten Testszenario liegen die Laufzeiten alle sehr nah beieinander. Es sind lediglich kleine Unterschiede zu erkennen. Diese Unterschiede liegen in der Behandlung der Behandlung von Fehlern, die durch hohe Last verursacht werden (429). Der einzige DEA, bei dem diese Antworten zu vorzeitigen Abbrüchen führt, ist der SmBasic (1). Bei diesem DEA sind entsprechend viele Ausreißer nach unten zu erkennen. Dies gilt für beide Testfälle.
+
+Die einzige weitere erkennbare Abweichung in Testszenario 1 ist die geringe Spanne von Laufzeitwerten in Testfall CancelOrders des SmIdempotencyBackwardRecovery. Die mittleren 50\% der Ergebnisse liegen lediglich 13,38 Sekunden auseinander. Da in Testszenario 1 keine Netzwerkfehler auftreten, sind zumindest ähnliche Laufzeiten für DEAs SmIdempotencyBackwardRecovery und SmIdempotencyForwardRecovery zu erwarten. Die abweichenden Ergebnissen sind den in \cref{subsec:messungenauigkeiten} beschriebenen Ursachen zuzuschreiben.
+
+\begin{figure}[!htbp]
+	\begin{minipage}{.45\textwidth}
+		\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario1.tex}
+		\caption{Boxplot FinishOrders in Szenario 1}
+		\label{fig:boxplot_finishorders_scenario1}
+	\end{minipage}\hspace{\fill}%
+	\begin{minipage}{.45\textwidth}
+		\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario1.tex}
+		\caption{Boxplot CancelOrders in Szenario 1}
+		\label{fig:boxplot_cancelorders_scenario1}
+	\end{minipage}
+\end{figure}
+\FloatBarrier

@@ -1,7 +1,9 @@
-\section{Formalisierung eines Saga-Zustandsautomaten als DEA} \label{sec_saga_formalisierung_dea}
-%TODO Abkürzung DEA
-\subsection{Formale Darstellung eines DEA}
-Der Prozessablauf einer Saga kann als detemernistischer endlicher Automat angesehen werden. Ein DEA wird formal dargestellt als Tupel mit folgenden Elementen:
+\section{Formalisierung von Sagas} \label{sec_saga_formalisierung_dea}
+
+Die \acrshort{sec} wurde als die Komponente definiert, die für die Ausführung und Steuerung des Saga-Prozesses zuständig ist. Die Steuerung des Ablaufs auf Basis eines dazugehörigen Transaktionslogs ist sehr ähnlich zur Funktionsweise eines \acrfull{dea}. Deshalb soll nun eine Formalisierung von Sagas als \acrshort{dea} vorgenommen werden.
+
+\subsection{Darstellung eines DEA}
+Ein DEA wird dargestellt als Tupel mit folgenden Elementen:
 \begin{itemize}
 	\item $Q$: Zustandsmenge
 	\item $\Sigma$: endliches Eingabealphabet
@@ -146,9 +148,10 @@ $Saga = (Q, \Sigma, \delta, q_0, F)$ mit
 \FloatBarrier
 
 \paragraph*{Endzustand $q_{f1}$} \mbox{}\\
-Im Folgenden wird davon ausgegangen, dass die Aktionen der Zustände $q_{t1}$, $q_{t2}$ und $q_{t3}$ in einem erfolgreichen Ergebnis resultieren. Somit wird am Ende der Endzustand $q_{f1}$ erreicht. Dieser Zustand drückt einen erfolgreichen Durchlauf einer Saga aus. Das Eingabewort $e_1 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{200} \circ \#$.
+Im Folgenden wird davon ausgegangen, dass die Aktionen der Zustände $q_{t1}$, $q_{t2}$ und $q_{t3}$ in einem erfolgreichen Ergebnis resultieren. Somit wird am Ende der Endzustand $q_{f1}$ erreicht. Dieser Zustand drückt einen erfolgreichen Durchlauf einer Saga aus. 
+Als Darstellung für das leere Element wird $\#$ verwendet.
 
-Die Konfigurationsübergänge für $e_1$ sind:
+Das Eingabewort $e_1 \in \Sigma^{\star}$ ist $t1_{200} \circ t2_{Success} \circ t3_{200} \circ \#$. Die Konfigurationsübergänge für $e_1$ sind:
 
 \begin{align*}
 	(q_{t1}, t1_{200} \circ t2_{Success} \circ t3_{200} \circ \#)\\
@@ -203,8 +206,8 @@ Forward-Recovery ist auf verschiedenen Wegen erreichbar. Der erste Ansatz beinha
 Die Funktion $f$ die in $q_{sp1}$ ein internes Prozessergebnis $IPE$ berechnet, sieht so aus:
 \begin{flalign*}
 	&f: \mathbb{N} \rightarrow IE &&\\
-	&maxSavepointExecutionCount \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{sp1}\ während\ &\\ 
-	&der\ Ausführung\ der\ Saga 
+	&maxSavepointExecutionCount \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{sp1}\ w\ddot{a}hrend\ &\\ 
+	&der\ Ausf\ddot{u}hrung\ der\ Saga
 \end{flalign*}
 
 \begin{equation*}
@@ -261,7 +264,7 @@ Die Funktion $fn_{AE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende
 
 \begin{math}
 	fn_{AE}: \mathbb{N} \times AE \rightarrow E\\
-	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ während\ der\ Ausführung\ der\ Saga
+	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ w\ddot{a}hrend\ der\ Ausf\ddot{u}hrung\ der\ Saga
 \end{math}
 \begin{equation*}
 	fn_{AE}(x, y) = 
@@ -276,7 +279,7 @@ Die Funktion $fn_{IE}$, die in dem jeweiligen Zustand $q_{tn}$ das entsprechende
 
 \begin{math}
 	fn_{AE}: \mathbb{N} \times IPE \rightarrow Ergebnis\\
-	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ während\ der\ Ausführung\ der\ Saga
+	maxSavepointExecutionCount_n \in \mathbb{N}: Anzahl\ des\ Erreichens\ von\ q_{tn}\ \\ w\ddot{a}hrend\ der\ Ausf\ddot{u}hrung\ der\ Saga
 \end{math}
 \begin{equation*}
 	fn_{AR}(x, y) = 
@@ -365,7 +368,7 @@ Um eine Saga als Microservice-System zu implementieren, gibt es zwei verschieden
 
 Die zwei Ausprägungen unterscheiden sich hauptsächlich in der Softwarearchitektur. Es ist zu beachten, dass beide Implementierungen denselben Geschäftsprozess abbilden können und somit als äquivalent angesehen werden können. %TODO Quelle für diese Aussage
 
-Im Folgenden sollen die beiden Implementierungsansätze vorgestellt werden. Um die Unterschiede zu verdeutlichen, soll in den nachfolgenden Erläuterungen von einem Geschäftsprozess ausgegangen werden, der Ts enthält, die Teil einer verteilten, globalen Transaktion sind. Jedes T soll eine andere Schnittstelle aufrufen. Jedes T hat ein entsprechendes C zugeordnet. Sowohl die Ts als auch die Cs entsprechen den Anforderungen, die in XXX beschrieben sind. % TODO Referenz einfügen
+Im Folgenden sollen die beiden Implementierungsansätze vorgestellt werden. Um die Unterschiede zu verdeutlichen, soll in den nachfolgenden Erläuterungen von einem Geschäftsprozess ausgegangen werden, der Ts enthält, die Teil einer verteilten, globalen Transaktion sind. Jedes T soll eine andere Schnittstelle aufrufen. Jedes T hat ein entsprechendes C zugeordnet. 
 
 \paragraph*{Orchestration} \mbox{}\\
 Die Orchestrierung zentralisiert die Logik für eine Saga in einem einzigen Service. Dieser Service wird als Koordinator oder Orchestrator bezeichnet. Der Koordinator ist verantwortlich für die Einhaltung der Transaktionsanforderungen. Er ruft aktiv die restlichen teilhabenden Services auf und muss die Ergebnisse der Aufrufe auswerten. Die teilhabenden Services haben nur Verantwortung für die Korrektheit der Prozessierung ihre eigenen Servicegrenzen. Ein solcher vom Koordinator aufgerufener Service hat keine Kenntnis vom ablaufenden Geschäftsprozess. 
@@ -389,7 +392,7 @@ Des weiteren kann ein Service eine asynchrone Schnittstelle zur Verfügung stell
 
 Die Implementierung eines asynchronen Request-Response Musters ist wesentlich komplizierter als die Entwicklung einer synchronen Schnittstelle. Deshalbt sollte dies als Implementierung einer lokalen Transaktion unter Verwendung einer Orchestrierung nur in Szenarien gewählt werden, die die Entkopplung von Anfrage und Antwort voraussetzen.
 
-Schlussendlich bietet die Orchestrierung die Möglichkeit, asynchrone Messaging-Komponenten zu verwenden. Anstatt direkt miteinander zu kommunizieren platziert der Koordinator die Anfrage als Event in einer Messaging-Middleware und kann mit der Prozessierung der Saga pausieren. Der angefragte Service erhält dieses Event und kann eine beliebig lang andauernde Verarbeitung ausführen. Nachdem die Verarbeitung abgeschlossen ist, kann die Antwort wiederum als Event in der Middleware platziert werden. Der Koordinator erhält dieses Event und kann darin das Ergebnis ablesen.
+Schlussendlich bietet die Orchestrierung die Möglichkeit, asynchrone Messaging Komponenten zu verwenden. Anstatt direkt miteinander zu kommunizieren platziert der Koordinator die Anfrage als Event in einer Messaging-Middleware und kann mit der Prozessierung der Saga pausieren. Der angefragte Service erhält dieses Event und kann eine beliebig lang andauernde Verarbeitung ausführen. Nachdem die Verarbeitung abgeschlossen ist, kann die Antwort wiederum als Event in der Middleware platziert werden. Der Koordinator erhält dieses Event und kann darin das Ergebnis ablesen.
 
 % Choreographie ist nur mit Messaging brauchbar
 Um eine Saga mittels Choreographie zu implementieren, sollte asynchrones Messaging verwendet werden. Da die Geschäftslogik über alle Komponenten verteilt ist, ist selten ein Service am Ergebnis des nächsten Transaktionsschrittes interessiert. Ein Service $S_1$ verarbeitet seinen Teil der Transaktion und informiert den nächsten Service $S_2$ über den Erfolg der Berechnung. $S_2$ ist so implementiert, dass er die Logik für seine eigenen Berechnungen kennt. Somit muss $S_1$ nicht über den Erfolg informiert werden. Ein Erfolg von der in $S_2$ ablaufenden Transaktion endet in einem Event für einen nachfolgenden Service $S_3$. Die Kommunikation ist hier nicht auf ein Request-Response Muster ausgelegt, es werden Einweg-Nachrichten genutzt.

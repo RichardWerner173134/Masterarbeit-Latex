@@ -1,5 +1,5 @@
 \section{Implementierung SmIdempotencyForwardRecovery}
-Die Auswertung der Ergebnisse des SmIdempotencyBackwardRecovery hat gezeigt, dass die Strategie der BackwardRecovery Konsistenz gewährleisten kann. Dabei trat jedoch erneut das Problem des vorzeitigen Abbruchs auf. Das erste Vorkommen eines Netzwerkfehlers innerhalb eines Ts führte zur Kompensierung. Der nächste zu implementierende Zustandsautomat verfolgt zwei Ziele: eine möglichst hohe Erfolgsrate sowie Konsistenz. Mittels ForwardRecovery kann eine Weiterführung der Saga erzwungen werden. Abgebrochen wird lediglich in Zuständen, bei denen ein Ergebnis auftritt, das nicht behebbar ist. 
+Die Auswertung der Ergebnisse des SmIdempotencyBackwardRecovery hat gezeigt, dass die Strategie der BackwardRecovery Konsistenz gewährleisten kann. Dabei trat jedoch erneut das Problem des vorzeitigen Abbruchs auf. Das erste Vorkommen eines Netzwerkfehlers innerhalb eines Ts führte zur Kompensierung. Der nächste zu implementierende Zustandsautomat verfolgt zwei Ziele: eine möglichst hohe Erfolgsrate sowie eine möglichst hohe Konsistenz. Mittels ForwardRecovery kann eine Weiterführung der Saga erzwungen werden. Abgebrochen wird lediglich in Zuständen, bei denen ein Ergebnis auftritt, das nicht behebbar ist. 
 
 Für Ts ist lediglich ein Ergebnis wie 409 unbehebbar und es wird zum vorherigen C gewechselt. Für Netzwerkfehler werden Retries eingeführt. Aufgrund der Idempotenz der Teilnehmerservices ist dies problemlos möglich. Nur bei einem eindeutigen Ergebnis wird fortgefahren (200, 208) oder abgebrochen (409). 
 
@@ -63,7 +63,7 @@ Das StateAnalysisResult zeigt, dass unabhängig vom Testfall und Testszenario al
 \FloatBarrier
 
 \subsection{TransactionAnalysisResult}
-In \cref{tab:smbasic_stateanalysisresult} sind die TransactionAnalysisResults für beide Testfälle dargestellt. Es ist erkennbar, dass die Konsistenz in beiden Testfällen für alle Testszenarios eingehalten wird. 
+In \cref{asd} sind die TransactionAnalysisResults für beide Testfälle dargestellt. Es ist erkennbar, dass die Konsistenz in beiden Testfällen für alle Testszenarios eingehalten wird. 
 
 \begin{center}
 	\fontsize{9}{12}\selectfont

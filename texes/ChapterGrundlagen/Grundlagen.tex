@@ -1,40 +1,13 @@
-\section{Grundlagen}
-
-Um das in dieser Arbeit betrachtete Saga-Pattern zu verstehen, sollen zuerst einige Grundlagen erläutert werden. Besonders die im Titel der Arbeit enthaltenen Begriffe \textit{System} und \textit{Konsistenz} sollen in diesem Abschnitt erläutert werden. 
-
-\subsection{System allgemein}
-Ein System beschreibt einen abgegrenzten Bereich der objektiven Realität. Außerhalb dieses Bereichs liegt die Umgebung, die somit nicht zum System gehört. Zwischen des Systems und seiner Umgebung befindet sich der Systemrand. 
-
-\subsection{System in der Softwareentwicklung}
-In der Softwareentwicklung besteht ein System aus einer Menge miteinander interagierenden Softwarekomponenten. Diese Komponenten arbeiten an einem gemeinsamen Ziel. Neben der Software und deren Quellcode gehören auch Nutzerhandbücher, Tests, Bestandteile für die Instandhaltung sowie Spezifikationen und Konzepte zum System. 
-
-\subsection{Zustand von Systemen}
-Ein Softwaresystem befindet sich zu jedem Zeitpunkt in einem Zustand. Der Wechsel eines Zustands ist die Folge von Nutzerinteraktionen und festgelegten Routinen. Damit das System reibungslos funktionieren kann, darf es nur zwischen gültigen Zuständen wechseln. % TODO Was ist ein gültiger Zustand
+%Um das in dieser Arbeit betrachtete Saga-Pattern zu verstehen, sollen zuerst einige Grundlagen erläutert werden. Besonders die im Titel der Arbeit enthaltenen Begriffe \textit{System} und \textit{Konsistenz} sollen in diesem Abschnitt erläutert werden. 
+%
+%\subsection{System allgemein}
+%Ein System beschreibt einen abgegrenzten Bereich der objektiven Realität. Außerhalb dieses Bereichs liegt die Umgebung, die somit nicht zum System gehört. Zwischen des Systems und seiner Umgebung befindet sich der Systemrand. 
+%
+%\subsection{System in der Softwareentwicklung}
+%In der Softwareentwicklung besteht ein System aus einer Menge miteinander interagierenden Softwarekomponenten. Diese Komponenten arbeiten an einem gemeinsamen Ziel. Neben der Software und deren Quellcode gehören auch Nutzerhandbücher, Tests, Bestandteile für die Instandhaltung sowie Spezifikationen und Konzepte zum System. 
+%
+%\subsection{Zustand von Systemen}
+%Ein Softwaresystem befindet sich zu jedem Zeitpunkt in einem Zustand. Der Wechsel eines Zustands ist die Folge von Nutzerinteraktionen und festgelegten Routinen. Damit das System reibungslos funktionieren kann, darf es nur zwischen gültigen Zuständen wechseln. % TODO Was ist ein gültiger Zustand
 
 
-\subsection{Transaktionen}
-Ein Übergang von einem Zustand in den nächsten Zustand im Modell des Zustandsautomats ist eine einzige Operation. Häufig äußert sich eine solche Operation jedoch in einer Folge von auszuführenden Operationen. Eine solche Folge von Operationen wird als Transaktion bezeichnet. Teil einer Transaktion kann beispielsweise eine oder mehrere Datenbankoperationen oder der Aufruf einer externen Schnittstelle sein. Transaktionen können auf verschiedenen Ebenen betrachtet werden. Auf Datenbankebene werden Transaktionen anders umgesetzt als auf Ebene der Geschäftslogik. 
 
-\subsection{ACID Eigenschaft von Transaktionen}
-\textit{ACID} ist ein Akronym, welches häufig verwendet wird, um Eigenschaften auszudrücken, die eine Transaktion auf Datenbankebene aufweisen sollte. Die Buchstaben stehen für \textit{A}tomicity (Atomarität), \textit{C}onsistency (Konsistenz), \textit{I}solation (Isolation) und \textit{D}urability (Dauerhaftigkeit). 
-
-\par Atomarität beschreibt das Alles-Oder-Nichts-Prinzip. Eine Transaktion, also eine Folge von Datenbankoperationen, muss entweder alle Operationen ausführen oder in einem Fehlerfall alle Änderungen auf den ursprünglichen Zustand zurückrollen. Als illustratives Beispiel soll das Szenario einer Überweisung dienen. Eine Überweisung besteht aus dem Erhöhen des Kontostands des Debitors und dem Verringern des Kontostands des Kreditors. Eine solche Transaktion kann fehlschlagen. Dabei ist sicherzustellen, dass die initialen Kontostände wiederhergestellt werden. Wird die Atomarität nicht gewährleistet, könnte sich die Gesamtsumme des im System enthaltenen Systems verändern, Geld geht also verloren oder Geld wird aus dem Nichts generiert. Das ist natürlich nicht akzeptabel. 
-
-\par Konsistenz lässt sich mit widerspruchsfrei übersetzen. War das System vor Ausführung der Transaktion widerspruchsfrei, also konsistent, dann ist es das nach Ausführung der Transaktion ebenso. Um dies zu gewährleisten, sind verschiedene Mechanismen im Datenbanksystem im Einsatz. Dies werden im folgenden Abschnitt beschrieben.
-
-\par Isolation stellt sicher, dass sich parallel in Ausführung befindliche Transaktionen nicht gegenseitig beeinflussen können. Das bedeutet, dass eine Transaktion Teile der Datenbasis sperren können muss. Eine solche Sperre führt jedoch zu blockierendem Verhalten und schränkt somit die nebenläufige Benutzung der Datenbank ein. 
-
-\par Dauerhaftigkeit von Transaktionen muss gewährleistet sein, damit bei einem Ausfall Transaktionsdaten nicht verloren gehen. Um Dauerhaftigkeit zu erreichen, wird ein Transaktionslog gefährt, welches im Ausfall verwendet werden kann, um die verlorenen Transaktionen nachzuspielen. 
-
-\subsection{BASE Eigenschaft}
-%TODO
-Als Alternative zum Konsistenzmodell \acrshort{acid} soll nun \acrfull{base} vorgestellt werden. BASE ist schwächer als ACID, verfolgt jedoch ebenfalls die Wahrung der Konsistenz in einem System. Es kommt am häufigsten in NoSql-Datenbank zum Einsatz, die die Daten hauptsächlich in Aggregaten zusammenfassen. Innerhalb eines Aggregats können Daten transaktionell verändert werden. Transaktionen über die Daten mehrerer Aggregate werden jedoch nicht atomar sondern sequentiell ausgeführt. Dabei kann das System die Ausführung der Commits der Teilschritte unter hoher Last aufschieben und zu einem späteren Zeitpunkt durchführen. Dadurch erreichen Datenbanksysteme mit BASE-Eigenschaften eine höhere Erreichbarkeit. Diese hohe Erreichbarkeit wird eingetauscht für Atomarität und strenge Konsistenz. 
-
-\paragraph*{Grundsätzlich verfügbar (BA)}\mbox{}\\
-Das System ist hochverfügbar. Trotz hoher Last beantwortet das System Anfragen. Die Antworten können unter Umständen einen intermediären Zustand abbilden, der inkonsistent ist. 
-
-\paragraph*{Weicher Zustand (S)}
-Bevor alle Operationen einer Transaktion ausgeführt wurden, befindet sich das System in einem Übergangszustand. Dieser Übergangszustand kann Konsistenzfehler aufweisen. In Bezug auf ACID verletzt dieser \textit{Soft State} die Atomarität und die Isolation.
-
-\paragraph*{Schlussendliche Konsistenz (E)}
-Als schlussendlich konsistent wird das System angesehen, wenn alle Teiloperationen aller Transaktionen abgeschlossen sind. Der Zustandsübergang beginnt in einem konsistenten Zustand, geht in einen inkonsistenten \textit{Soft State} über und befindet sich nach Abschluss aller Teiloperationen in einem konsistenten Endzustand. 

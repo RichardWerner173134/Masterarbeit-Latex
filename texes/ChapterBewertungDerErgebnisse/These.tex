@@ -1,0 +1,15 @@
+\subsection{These}
+Zu Beginn dieser Arbeit wurde folgende These gestellt:
+
+\begin{thesis*} 
+Mittels Saga-Pattern implementierte langlebige Transaktionen (LLT) ermöglichen Konsistenz in Microservicesystemen, die per Request-Response Pattern kommunizieren. 	
+\end{thesis*}
+
+Es wurde ein System entworfen, welches eine LLT abbildet. Dabei wurden alle Teiloperationen im Rahmen einer Teiltransaktion innerhalb des entsprechenden Teilnehmerservices durchführen kann. Nach Vorbild des Saga-Patterns wurden alle Schnittstellen mit jeweils einer Kompensierung ergänzt. 
+
+Der Koordinator war in der Lage den grundlegenden Ablauf der LLT ohne Auftreten von Netzwerkfehlern zu steuern. Unter Auftreten von Netzwerkfehlern führte die anfängliche Implementierung zu inkonsistenten Systemzuständen. Die Messung der Ergebnisse der ursprünglichen Implementierung zeigte vorzeitige Abbrüche und Inkonsistenzen auf. 
+
+Diese Lösung wurde iterativ erweitert. Es wurde der Zusammenhang des CAP-Theorems deutlich, dass eine verteilte Saga die Entscheidung treffen muss, ob es den Fokus auf Verfügbarkeit oder Konsistenz legt. Dies äußerte sich in der Implementierung darin, dass Netzwerkfehler sich nicht in das Fehlermanagement des Saga-Patterns integrieren ließen. Die einzige Implementierung, die die Konsistenz innerhalb des Systems wahrte, beinhaltete die Verwendung von idempotenten Schnittstellen in Kombination mit Retrymechanismen.
+
+Es wurde demnach gezeigt, dass der Koordinator zwischen Netzwerkfehlern und Fehlern der lokalen Transaktionen unterscheiden muss. Die Fehlerbehandlung der Ergebnisse der lokalen Transaktionen führt zu einer Behandlung im Rahmen des Saga-Patterns (Forward- oder Backward-Recovery) während die Fehlerbehandlung für Netzwerkfehler den Prozess zum Pausieren zwingt, bis die Netzwerkpartition aufgelöst ist (Retries). 
+

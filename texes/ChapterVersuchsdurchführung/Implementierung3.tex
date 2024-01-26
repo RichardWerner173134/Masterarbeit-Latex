@@ -1,4 +1,4 @@
-\section{Implementierung des SmBasicNetworkFailureUnlimitedRetries}
+\section{Implementierung SmBasicNetworkFailureUnlimitedRetries}
 
 Der SmBasicNetworkFailureUnlimitedRetries baut auf das Konzept des vorherigen DEAs SmBasicSafeRetries auf. Es hat sich gezeigt, dass der Anteil der erfolgreichen Sagas erhöht werden kann, indem auf Netzwerkfehler per Forwardrecovery reagiert wird. Das Ziel dieses DEAs ist, den Anteil der vorzeitig abgebrochenen Sagas zu erhöhen. Dafür werden für die Ts \textit{BlockArticles}, \textit{RemoveMoney}, \textit{AddMoney} und \textit{StartShipment} sowie für die zugehörigen Cs ein Retry für Netzwerkfehler eingeführt. Es entsteht der DEA in \cref{fig:SmBasicNetworkfailureUnlimitedRetries}.
 

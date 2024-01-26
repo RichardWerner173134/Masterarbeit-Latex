@@ -54,9 +54,21 @@ Ist der Effekt von T die Versendung eines Briefs, so kann diese Versendung nicht
 
 Es gibt jedoch auch Effekte, die nicht kompensierbar sind und im Scheitern einer Saga resultieren. In solchen Fällen kann das System in einen inkonsistenten Zustand überführt werden. Dieses Verhalten tritt immer dann auf, wenn der Effekt einer Transaktion in einer endgültigen Aktion resultiert. \citeauthor{GarciaMolina.1987} nennen als Beispiel für ein nicht kompensierbares T das Starten einer Rakete \cite[p.257]{GarciaMolina.1987}.
 
-\subsection{Saga Execution Component} % TODO Zitat Saga Paper 1987, Abkürzung SEC
-In Garcia-Molinas Paper wird eine Saga Execution Component beschrieben, welche alle ausgeführten Aktionen einer Saga protokolliert und die nächste auszuführende Aktion bestimmt. Grundlegend besteht diese Komponente aus einem Transaktionslog und einem Zustandsautomaten. 
+\subsection{Komponenten des Saga-Patterns}
+\citeauthor{GarciaMolina.1987} nennt folgende Komponenten als Grundbausteine des Saga-Patterns:
+\begin{itemize}
+	\item Transaktionen und Kompensierungen
+	\item Transaction Execution Component
+	\item Saga Execution Component
+\end{itemize}
 
-Der Transaktionslog ist eine Liste von Transaktionen und Kompensierungen, die als Kommandos dargestellt werden. Jedes Transaktionslog enthält ein Kommando, welches den Start ($Beginn Saga$) und den Abschluss ($End Saga$) der Saga darstellt. Neben den Ts und Cs zwischen $Beginn Saga$ und $End Saga$ können weitere Kommandos definiert werden, um den Kontrollfluss zu beeinflussen. 
+\paragraph*{Transaktionen und Kompensierungen} \mbox{} \\
+Das Aufteilen einer Transaktion in die entsprechenden Teiltransaktionen sowie das Verhalten im Falle eines Fehlers wurden bereits in erläutert. Nach Übertragung des Musters auf ein verteiltes System finden diese Ts und Cs innerhalb eines Teilnehmerservices statt. 
 
-Der Zustandsautomat bestimmt aus den bisherigen Ts und Cs den nächsten Schritt. 
+\paragraph*{Transaction Execution Component} \mbox{} \\
+Die \acrfull{tec} wird beschrieben als eine Komponente, die die Ausführung der zu einer Teiltransaktion gehörenden Aktionen ausführt. Eine an die \acrshort{tec} gestellte Anfrage für die Ausführung einer Teiltransaktion wird atomar verarbeitet. In der verteilten Implementierung einer Saga befindet sich die \acrshort{tec} innerhalb eines jeden Teilnehmerservices. Auf Anfrage wird ein T oder ein C ausgeführt. Alle dafür erforderlichen Datenbankoperationen bestehen innerhalb eines herkömmlichen ACID-Transaktionskontexts. 
+
+\paragraph*{Saga Execution Component} \mbox{} \\
+Die \acrfull{sec} ist die äußerste Schicht aller Sagakomponenten. Sie ist zuständig für die Ausführung der Saga. Dazu gehört das sequentielle Aufrufen aller Teiltransaktionen und die Reaktion mit Kompensierungstransaktionen im Falle von Fehlschlägen. Eine weitere Aufgabe der \acrshort{sec} ist das Neustarten der Saga im Falle eines Absturzes. 
+
+Die \acrshort{sec} verwendet ein Transaktionslog, um den Prozessablauf zu steuern. Dieses Log enthält für jede Saga die Liste an ausgeführten Schritten. Eine Liste der vergangenen Werte kann auch Bestandteil des Logs sein, damit im Falle von Kompensierungen der ursprüngliche Stand gesetzt werden kann. 

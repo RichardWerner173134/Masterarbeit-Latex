@@ -1,5 +1,44 @@
 ﻿% This file was created with Citavi 6.17.0.0
 
+@misc{Brewer.,
+ author = {Brewer, Eric},
+ title = {Towards robust distributed systems},
+ url = {https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/brewer_podc_keynote_2000.pdf},
+ address = {New York, NY, USA},
+ series = {Proceedings of the nineteenth annual ACM symposium on Principles of distributed},
+ file = {Towards robust distributed systems 2000:Attachments/Towards robust distributed systems 2000.pdf:application/pdf}
+}
+
+
+@book{DatabaseManagementSystems.2003,
+ author = {DatabaseManagementSystems},
+ year = {2003},
+ title = {Database management systems},
+ url = {https://scholar.google.com/citations?user=udzsrkyaaaaj&hl=de&oi=sra}
+}
+
+
+@phdthesis{Dey.,
+ abstract = {In recent years, cloud or utility computing has revolutionized the way software, hardware and network infrastructure is provisioned and deployed into production. A key component of these vast, diverse and heterogeneous systems is the persistence layer provided by a variety of data store and database services, broadly categorised into what is referred to as NoSQL (Not only SQL) databases or data stores. These come in many flavours from simple key-value stores and column stores to database services with support for SQL-like interfaces.  These systems are primarily designed to operate at internet-scale with high scalability and fault-tolerance in mind. As a result, they typically sacrifice consistency guarantees and often support only single-item consistent operations or no transactions at all. While these consistency limitations are fine for a wide class of applications, there are a few or sometimes only parts of larger applications that need ACID transactional guarantees in order to function correctly.  To address this, we define a data store client API, we call REST+T (REST with Transactions), an extension of HTTP that supports transactions on one store. Then, we use this to define a client-coordinated transaction commitment protocol and library, called Cherry Garcia, to enable easy applications development across diverse, heterogeneous data stores that each support single-item transactions. We extend the well known YCSB benchmark, to present YCSB+T, to enable us to group multiple data store operations into ACID transactions and evaluate properties such as throughput. YCSB+T also provides the ability to detect and quantify data store anomalies that result from the execution of the workload. Finally, we describe our prototype implementations of REST+T in a system called Tora, and our client-coordinated transaction library, also called Cherry Garcia, that supports transactions across Windows Azure Storage (WAS), Google Cloud Storage (GCS) and Tora. We evaluate these using both YCSB+T and micro-benchmarks.},
+ author = {Dey, Akon Samir},
+ title = {Cherry Garcia: Transactions across Heterogeneous Data Stores: Cherry Garcia: Transactions across Heterogeneous Data Stores},
+ url = {https://ses.library.usyd.edu.au/handle/2123/14212},
+ file = {Dey - Cherry Garcia:Attachments/Dey - Cherry Garcia.pdf:application/pdf}
+}
+
+
+@article{Gaitonde.24.03.2021,
+ abstract = {In today's world, data is growing at an enormous rate. Enterprises have built innovative solutions to handle a humongous amount of data. It's not uncommon to see data distributed across many machines$\ldots$},
+ author = {Gaitonde, Animesh},
+ year = {24.03.2021},
+ title = {Distributed Transactions {\&} Two-phase Commit - Geek Culture - Medium},
+ url = {https://medium.com/geekculture/distributed-transactions-two-phase-commit-c82752d69324},
+ urldate = {19.01.2024},
+ journal = {Geek Culture},
+ file = {Gaitonde 24.03.2021 - Distributed Transactions {\&} Two-phase Commit:Attachments/Gaitonde 24.03.2021 - Distributed Transactions {\&} Two-phase Commit.pdf:application/pdf}
+}
+
+
 @article{GarciaMolina.1987,
  author = {Garcia-Molina, Hector and Salem, Kenneth},
  year = {1987},
@@ -7,6 +46,39 @@
  issn = {0163-5808},
  journal = {ACM SIGMOD Record},
  doi = {10.1145/38714.38742}
+}
+
+
+@article{Gilbert.2002,
+ author = {Gilbert, Seth and Lynch, Nancy},
+ year = {2002},
+ title = {Brewer's Conjecture and the Feasibility of Consistent Available Partition-Tolerant Web Services},
+ volume = {33},
+ journal = {ACM SIGACT News},
+ doi = {10.1145/564585.564601}
+}
+
+
+@misc{IBMDocumentation.2021,
+ abstract = {IBM Documentation.},
+ author = {{IBM Documentation}},
+ year = {2021},
+ title = {IBM Documentation},
+ url = {https://www.ibm.com/docs/ko/iis/8.5?topic=levels-data-anomalies},
+ urldate = {24.01.2024}
+}
+
+
+@article{Jarke.1984,
+ author = {Jarke, Matthias and Koch, Jurgen},
+ year = {1984},
+ title = {Query Optimization in Database Systems},
+ pages = {111--152},
+ volume = {16},
+ number = {2},
+ issn = {0360-0300},
+ journal = {ACM Comput. Surv.},
+ doi = {10.1145/356924.356928}
 }
 
 
@@ -20,10 +92,31 @@
 }
 
 
+@misc{PostgreSQLDocumentation.2023,
+ abstract = {13.2.{\&}nbsp;Transaction Isolation {\#} 13.2.1. Read Committed Isolation Level 13.2.2. Repeatable Read Isolation Level 13.2.3. Serializable Isolation Level The SQL standard $\ldots$},
+ author = {{PostgreSQL Documentation}},
+ year = {2023},
+ title = {PostgreSQL},
+ url = {https://www.postgresql.org/docs/current/transaction-iso.html},
+ urldate = {24.01.2024}
+}
+
+
 @article{SadalagePramodJ.andFowlerMartin.2012,
  author = {{Sadalage, Pramod J. and Fowler, Martin}},
  year = {2012},
  title = {NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence}
+}
+
+
+@misc{Zeleny.20220601,
+ author = {Zelen{\'y}, Ale{\v{s}}},
+ year = {2022-06-01},
+ title = {Transaction{\_}Isolation{\_}Levels{\_}and{\_}anomalies{\_}p2d2{\_}2022: P2D2 2022},
+ url = {https://p2d2.cz/files/isolation-levels-p2d2-zeleny.pdf},
+ address = {Prague, Czech Republic},
+ series = {PostgreSQL Developer Day 2022},
+ file = {Transaction{\_}Isolation{\_}Levels{\_}and{\_}anomalies{\_}p2d2{\_}2022:Attachments/Transaction{\_}Isolation{\_}Levels{\_}and{\_}anomalies{\_}p2d2{\_}2022.pdf:application/pdf}
 }
 
 

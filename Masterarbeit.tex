@@ -4,7 +4,7 @@
 %\usepackage[onehalfspacing]{setspace}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[german]{babel}
+\usepackage[german, english]{babel}
 \usepackage{microtype}% verbesserter Randausgleich
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -30,7 +30,13 @@
 \usepackage{color, colortbl}
 \definecolor{Gray}{HTML}{d3d3d3}
 \usepackage{mathpazo} % Palatino font
-\usepackage[acronym, toc]{glossaries}
+\usepackage[acronym, toc, nonumberlist]{glossaries}
+\usepackage{abstract}
+
+\usepackage{amsthm}
+
+\usepackage{siunitx}
+\sisetup{locale = DE}
 
 % global layout
 \usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
@@ -61,13 +67,26 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 \Crefname{listing}{Codebeispiel}{Codebeispiele}
 \crefname{table}{Tabelle}{Tabellen}
 \Crefname{table}{Tabelle}{Tabellen}
+\crefname{chapter}{Kapitel}{Kapitel}
+\Crefname{chapter}{Kapitel}{Kapitel}
+\crefname{section}{Abschnitt}{Abschnitte}
+\Crefname{section}{Abschnitt}{Abschnitte}
+
 
 \makenoidxglossaries
 \input{glossary/Acronyms.tex}
 
+\input{theorems/Theorems.tex}
+
 \begin{document}
-	%\input{texes/Metadaten.tex}
-	%\input{texes/Titelseite.tex}
+	\input{texes/Titelseite.tex}
+	
+	% use english abstractname
+	\selectlanguage{english}
+	\input{texes/Abstract.tex}
+	
+	% use german from here onwards
+	\selectlanguage{german}
 	
 	\section*{}
 	\newpage
@@ -81,9 +100,9 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 	\newpage
 	\pagestyle{empty}
 	
-	%\input{texes/Saga.tex}
-	
 	\input{texes/ChapterEinleitung.tex}
+	
+%	\input{texes/ChapterEinleitungOld.tex}
 	
 	\input{texes/ChapterGrundlagen.tex}	
 	
@@ -93,19 +112,21 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
 	
 	\input{texes/ChapterVersuchsdurchführung.tex}
 	
-	\input{texes/Chapter4.tex}
+	\input{texes/ChapterBewertungDerErgebnisse.tex}
 	
-	\input{texes/Chapter5.tex}
+%	\input{texes/Chapter5.tex}
 	
 	\pagebreak
-	
+
 	\pagenumbering{Roman}
+	
+	\printnoidxglossary[type=\acronymtype,nonumberlist,title=Abkürzungen,toctitle=Abkürzungen]	
+	%\printnoidxglossaries
+	%\addcontentsline{toc}{chapter}{Akronyme}
+	
 	\listoffigures
 	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-	
-	\printnoidxglossaries
-	\addcontentsline{toc}{chapter}{Akronyme}
-	
+		
 	\printbibliography
 	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 	

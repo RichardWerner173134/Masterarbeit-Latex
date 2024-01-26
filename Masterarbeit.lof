@@ -1,39 +1,44 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {german}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Visuelle Darstellung des CAP-Theorems\relax }}{5}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Sequenzdiagramm für erfolgreichen \acrshort {2pc}\relax }}{8}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sequenzdiagramm für erfolglosen \acrshort {2pc}\relax }}{8}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer normalen Transaktion mit 3 Operationen\relax }}{7}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer Saga mit 3 Operationen\relax }}{7}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer zentralisierten Saga mit 3 Operationen\relax }}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer verteilten Transaktion mit 3 Operationen\relax }}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Darstellung einer Saga als Deterministischen endlichen Automaten\relax }}{14}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Forwardrecovery in einem DEA\relax }}{16}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Backwardrecovery in einem DEA\relax }}{17}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Erzwungene Forwardrecovery in einem DEA\relax }}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer normalen Transaktion mit 3 Operationen\relax }}{10}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer Saga mit 3 Operationen\relax }}{10}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer zentralisierten Saga mit 3 Operationen\relax }}{12}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \small \add@extra@listi {sml}Komponentendiagramm Scope einer verteilten Transaktion mit 3 Operationen\relax }}{12}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Darstellung einer Saga als Deterministischen endlichen Automaten\relax }}{18}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Forwardrecovery in einem DEA\relax }}{20}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Backwardrecovery in einem DEA\relax }}{21}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Erzwungene Forwardrecovery in einem DEA\relax }}{21}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Vereinfachte Darstellung eines Bestell- und Lieferprozesses\relax }}{23}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Vereinfachte Darstellung eines Bestell- und Lieferprozesses\relax }}{26}{figure.caption.51}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces ER-Diagramm ArticleService\relax }}{32}{figure.caption.58}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ER-Diagramm StockService\relax }}{33}{figure.caption.61}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces ER-Diagramm BankingService\relax }}{35}{figure.caption.64}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Zu konstruierender DEA\relax }}{39}{figure.caption.67}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Kontrollfluss der SEC\relax }}{45}{figure.caption.70}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequenzdiagramm für Szenario 1\relax }}{46}{figure.caption.72}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Sequenzdiagramm für Szenario 2\relax }}{46}{figure.caption.74}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Sequenzdiagramm für Szenario 3\relax }}{47}{figure.caption.76}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces DEA für SmBasic\relax }}{51}{figure.caption.84}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces DEA für SmBasicSafeRetries\relax }}{55}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces DEA für SmBasicNetworkfailureUnlimitedRetries\relax }}{57}{figure.caption.94}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Sequenzdiagramm für Idempotentes Verhalten bei wiederholten Anfragen in Szenario 3\relax }}{60}{figure.caption.97}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Sequenzdiagramm für Idempotentes Verhalten bei wiederholten Anfragen in Szenario 3\relax }}{60}{figure.caption.98}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces DEA für SmIdempotencyBackwardRecovery\relax }}{61}{figure.caption.99}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces DEA für SmIdempotencyForwardRecovery\relax }}{66}{figure.caption.106}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Boxplot FinishOrders in Szenario 1\relax }}{68}{figure.caption.109}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Boxplot CancelOrders in Szenario 1\relax }}{68}{figure.caption.109}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Boxplot FinishOrders in Szenario 2\relax }}{68}{figure.caption.110}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Boxplot CancelOrders in Szenario 2\relax }}{68}{figure.caption.110}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Boxplot FinishOrders in Szenario 3\relax }}{69}{figure.caption.111}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Boxplot CancelOrders in Szenario 3\relax }}{69}{figure.caption.111}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces ER-Diagramm ArticleService\relax }}{35}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ER-Diagramm StockService\relax }}{36}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces ER-Diagramm BankingService\relax }}{38}{figure.caption.78}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Zu konstruierender DEA\relax }}{42}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Kontrollfluss der SEC\relax }}{48}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sequenzdiagramm für Szenario 1\relax }}{49}{figure.caption.86}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Sequenzdiagramm für Szenario 2\relax }}{49}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Sequenzdiagramm für Szenario 3\relax }}{50}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Sequenzdiagramm für eine Implementierung für \textit {RemoveMoney}, die Dirty Reads verursacht\relax }}{56}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces DEA für SmBasic\relax }}{57}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces DEA für SmBasicSafeRetries\relax }}{61}{figure.caption.111}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces DEA für SmBasicNetworkfailureUnlimitedRetries\relax }}{63}{figure.caption.114}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Sequenzdiagramm für Idempotentes Verhalten bei wiederholten Anfragen in Szenario 3\relax }}{66}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Sequenzdiagramm für Idempotentes Verhalten bei wiederholten Anfragen in Szenario 3\relax }}{66}{figure.caption.118}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces DEA für SmIdempotencyBackwardRecovery\relax }}{67}{figure.caption.119}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces DEA für SmIdempotencyForwardRecovery\relax }}{72}{figure.caption.126}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Boxplot FinishOrders in Szenario 1\relax }}{74}{figure.caption.129}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Boxplot CancelOrders in Szenario 1\relax }}{74}{figure.caption.129}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Boxplot FinishOrders in Szenario 2\relax }}{75}{figure.caption.133}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Boxplot CancelOrders in Szenario 2\relax }}{75}{figure.caption.133}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Boxplot FinishOrders in Szenario 3\relax }}{76}{figure.caption.134}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Boxplot CancelOrders in Szenario 3\relax }}{76}{figure.caption.134}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

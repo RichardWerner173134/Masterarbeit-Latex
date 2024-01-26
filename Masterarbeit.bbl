@@ -50,6 +50,301 @@
       \verb 10.1145/38714.38742
       \endverb
     \endentry
+    \entry{DatabaseManagementSystems.2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2d0f9004bcc1a7ad8ab8685d73313533}{%
+           family={DatabaseManagementSystems},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d0f9004bcc1a7ad8ab8685d73313533}
+      \strng{fullhash}{2d0f9004bcc1a7ad8ab8685d73313533}
+      \strng{bibnamehash}{2d0f9004bcc1a7ad8ab8685d73313533}
+      \strng{authorbibnamehash}{2d0f9004bcc1a7ad8ab8685d73313533}
+      \strng{authornamehash}{2d0f9004bcc1a7ad8ab8685d73313533}
+      \strng{authorfullhash}{2d0f9004bcc1a7ad8ab8685d73313533}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Database management systems}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://scholar.google.com/citations?user=udzsrkyaaaaj&hl=de&oi=sra
+      \endverb
+      \verb{url}
+      \verb https://scholar.google.com/citations?user=udzsrkyaaaaj&hl=de&oi=sra
+      \endverb
+    \endentry
+    \entry{Jarke.1984}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3eab98ab9a04966951163e3c9ce829a5}{%
+           family={Jarke},
+           familyi={J\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=025ccc59cfa840e1c5c5a7c89841f34c}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Jurgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f5b57546277cc921160f33e08d42cb4}
+      \strng{fullhash}{2f5b57546277cc921160f33e08d42cb4}
+      \strng{bibnamehash}{2f5b57546277cc921160f33e08d42cb4}
+      \strng{authorbibnamehash}{2f5b57546277cc921160f33e08d42cb4}
+      \strng{authornamehash}{2f5b57546277cc921160f33e08d42cb4}
+      \strng{authorfullhash}{2f5b57546277cc921160f33e08d42cb4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0360-0300}
+      \field{journaltitle}{ACM Comput. Surv.}
+      \field{number}{2}
+      \field{title}{Query Optimization in Database Systems}
+      \field{volume}{16}
+      \field{year}{1984}
+      \field{pages}{111\bibrangedash 152}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1145/356924.356928
+      \endverb
+    \endentry
+    \entry{Dey.}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b52cf4e959611a6b312ae00c20b7ea71}{%
+           family={Dey},
+           familyi={D\bibinitperiod},
+           given={Akon\bibnamedelima Samir},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b52cf4e959611a6b312ae00c20b7ea71}
+      \strng{fullhash}{b52cf4e959611a6b312ae00c20b7ea71}
+      \strng{bibnamehash}{b52cf4e959611a6b312ae00c20b7ea71}
+      \strng{authorbibnamehash}{b52cf4e959611a6b312ae00c20b7ea71}
+      \strng{authornamehash}{b52cf4e959611a6b312ae00c20b7ea71}
+      \strng{authorfullhash}{b52cf4e959611a6b312ae00c20b7ea71}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, cloud or utility computing has revolutionized the way software, hardware and network infrastructure is provisioned and deployed into production. A key component of these vast, diverse and heterogeneous systems is the persistence layer provided by a variety of data store and database services, broadly categorised into what is referred to as NoSQL (Not only SQL) databases or data stores. These come in many flavours from simple key-value stores and column stores to database services with support for SQL-like interfaces. These systems are primarily designed to operate at internet-scale with high scalability and fault-tolerance in mind. As a result, they typically sacrifice consistency guarantees and often support only single-item consistent operations or no transactions at all. While these consistency limitations are fine for a wide class of applications, there are a few or sometimes only parts of larger applications that need ACID transactional guarantees in order to function correctly. To address this, we define a data store client API, we call REST+T (REST with Transactions), an extension of HTTP that supports transactions on one store. Then, we use this to define a client-coordinated transaction commitment protocol and library, called Cherry Garcia, to enable easy applications development across diverse, heterogeneous data stores that each support single-item transactions. We extend the well known YCSB benchmark, to present YCSB+T, to enable us to group multiple data store operations into ACID transactions and evaluate properties such as throughput. YCSB+T also provides the ability to detect and quantify data store anomalies that result from the execution of the workload. Finally, we describe our prototype implementations of REST+T in a system called Tora, and our client-coordinated transaction library, also called Cherry Garcia, that supports transactions across Windows Azure Storage (WAS), Google Cloud Storage (GCS) and Tora. We evaluate these using both YCSB+T and micro-benchmarks.}
+      \field{title}{Cherry Garcia: Transactions across Heterogeneous Data Stores: Cherry Garcia: Transactions across Heterogeneous Data Stores}
+      \field{type}{phdthesis}
+      \verb{file}
+      \verb Dey - Cherry Garcia:Attachments/Dey - Cherry Garcia.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ses.library.usyd.edu.au/handle/2123/14212
+      \endverb
+      \verb{url}
+      \verb https://ses.library.usyd.edu.au/handle/2123/14212
+      \endverb
+    \endentry
+    \entry{SadalagePramodJ.andFowlerMartin.2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c851f24c971e0eb5d7a01cb66220ef69}{%
+           family={{Sadalage, Pramod J. and Fowler, Martin}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c851f24c971e0eb5d7a01cb66220ef69}
+      \strng{fullhash}{c851f24c971e0eb5d7a01cb66220ef69}
+      \strng{bibnamehash}{c851f24c971e0eb5d7a01cb66220ef69}
+      \strng{authorbibnamehash}{c851f24c971e0eb5d7a01cb66220ef69}
+      \strng{authornamehash}{c851f24c971e0eb5d7a01cb66220ef69}
+      \strng{authorfullhash}{c851f24c971e0eb5d7a01cb66220ef69}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence}
+      \field{year}{2012}
+    \endentry
+    \entry{Brewer.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=781eec3551b6a48285790e48b277e991}{%
+           family={Brewer},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \strng{namehash}{781eec3551b6a48285790e48b277e991}
+      \strng{fullhash}{781eec3551b6a48285790e48b277e991}
+      \strng{bibnamehash}{781eec3551b6a48285790e48b277e991}
+      \strng{authorbibnamehash}{781eec3551b6a48285790e48b277e991}
+      \strng{authornamehash}{781eec3551b6a48285790e48b277e991}
+      \strng{authorfullhash}{781eec3551b6a48285790e48b277e991}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Proceedings of the nineteenth annual ACM symposium on Principles of distributed}
+      \field{title}{Towards robust distributed systems}
+      \verb{file}
+      \verb Towards robust distributed systems 2000:Attachments/Towards robust distributed systems 2000.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/brewer_podc_keynote_2000.pdf
+      \endverb
+      \verb{url}
+      \verb https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/brewer_podc_keynote_2000.pdf
+      \endverb
+    \endentry
+    \entry{Gilbert.2002}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1de0da84dd43d0f480ffc9c70be34dc5}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6613a6fcc0482e691a0e8d84039b9458}{%
+           family={Lynch},
+           familyi={L\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{220e8940797e44af8a50c3d3d438c505}
+      \strng{fullhash}{220e8940797e44af8a50c3d3d438c505}
+      \strng{bibnamehash}{220e8940797e44af8a50c3d3d438c505}
+      \strng{authorbibnamehash}{220e8940797e44af8a50c3d3d438c505}
+      \strng{authornamehash}{220e8940797e44af8a50c3d3d438c505}
+      \strng{authorfullhash}{220e8940797e44af8a50c3d3d438c505}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGACT News}
+      \field{title}{Brewer's Conjecture and the Feasibility of Consistent Available Partition-Tolerant Web Services}
+      \field{volume}{33}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.1145/564585.564601
+      \endverb
+    \endentry
+    \entry{IBMDocumentation.2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80ff07c9ae5f2c7a8309f9641ebbc794}{%
+           family={{IBM Documentation}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{80ff07c9ae5f2c7a8309f9641ebbc794}
+      \strng{fullhash}{80ff07c9ae5f2c7a8309f9641ebbc794}
+      \strng{bibnamehash}{80ff07c9ae5f2c7a8309f9641ebbc794}
+      \strng{authorbibnamehash}{80ff07c9ae5f2c7a8309f9641ebbc794}
+      \strng{authornamehash}{80ff07c9ae5f2c7a8309f9641ebbc794}
+      \strng{authorfullhash}{80ff07c9ae5f2c7a8309f9641ebbc794}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{IBM Documentation.}
+      \field{title}{IBM Documentation}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.ibm.com/docs/ko/iis/8.5?topic=levels-data-anomalies
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/docs/ko/iis/8.5?topic=levels-data-anomalies
+      \endverb
+      \warn{\item misc entry 'IBMDocumentation.2021' (bib/sources.bib): Invalid format '24.01.2024' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{PostgreSQLDocumentation.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f7344eaf81e071847f1a5d0510f57b1d}{%
+           family={{PostgreSQL Documentation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7344eaf81e071847f1a5d0510f57b1d}
+      \strng{fullhash}{f7344eaf81e071847f1a5d0510f57b1d}
+      \strng{bibnamehash}{f7344eaf81e071847f1a5d0510f57b1d}
+      \strng{authorbibnamehash}{f7344eaf81e071847f1a5d0510f57b1d}
+      \strng{authornamehash}{f7344eaf81e071847f1a5d0510f57b1d}
+      \strng{authorfullhash}{f7344eaf81e071847f1a5d0510f57b1d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{13.2.{\&}nbsp;Transaction Isolation {\#} 13.2.1. Read Committed Isolation Level 13.2.2. Repeatable Read Isolation Level 13.2.3. Serializable Isolation Level The SQL standard $\ldots$}
+      \field{title}{PostgreSQL}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/current/transaction-iso.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/current/transaction-iso.html
+      \endverb
+      \warn{\item misc entry 'PostgreSQLDocumentation.2023' (bib/sources.bib): Invalid format '24.01.2024' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Zeleny.20220601}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f9b78ecd5c6885e76b2a214fcc65dc03}{%
+           family={Zelený},
+           familyi={Z\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Prague, Czech Republic}%
+      }
+      \strng{namehash}{f9b78ecd5c6885e76b2a214fcc65dc03}
+      \strng{fullhash}{f9b78ecd5c6885e76b2a214fcc65dc03}
+      \strng{bibnamehash}{f9b78ecd5c6885e76b2a214fcc65dc03}
+      \strng{authorbibnamehash}{f9b78ecd5c6885e76b2a214fcc65dc03}
+      \strng{authornamehash}{f9b78ecd5c6885e76b2a214fcc65dc03}
+      \strng{authorfullhash}{f9b78ecd5c6885e76b2a214fcc65dc03}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{PostgreSQL Developer Day 2022}
+      \field{title}{Transaction{\_}Isolation{\_}Levels{\_}and{\_}anomalies{\_}p2d2{\_}2022: P2D2 2022}
+      \field{year}{2022-06-01}
+      \verb{file}
+      \verb Transaction{\_}Isolation{\_}Levels{\_}and{\_}anomalies{\_}p2d2{\_}2022:Attachments/Transaction{\_}Isolation{\_}Levels{\_}and{\_}anomalies{\_}p2d2{\_}2022.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://p2d2.cz/files/isolation-levels-p2d2-zeleny.pdf
+      \endverb
+      \verb{url}
+      \verb https://p2d2.cz/files/isolation-levels-p2d2-zeleny.pdf
+      \endverb
+    \endentry
+    \entry{Gaitonde.24.03.2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dda54c459f55d34244cfb8cbeedbe20a}{%
+           family={Gaitonde},
+           familyi={G\bibinitperiod},
+           given={Animesh},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dda54c459f55d34244cfb8cbeedbe20a}
+      \strng{fullhash}{dda54c459f55d34244cfb8cbeedbe20a}
+      \strng{bibnamehash}{dda54c459f55d34244cfb8cbeedbe20a}
+      \strng{authorbibnamehash}{dda54c459f55d34244cfb8cbeedbe20a}
+      \strng{authornamehash}{dda54c459f55d34244cfb8cbeedbe20a}
+      \strng{authorfullhash}{dda54c459f55d34244cfb8cbeedbe20a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In today's world, data is growing at an enormous rate. Enterprises have built innovative solutions to handle a humongous amount of data. It's not uncommon to see data distributed across many machines$\ldots$}
+      \field{journaltitle}{Geek Culture}
+      \field{title}{Distributed Transactions {\&} Two-phase Commit - Geek Culture - Medium}
+      \field{year}{24.03.2021}
+      \verb{file}
+      \verb Gaitonde 24.03.2021 - Distributed Transactions {\&} Two-phase Commit:Attachments/Gaitonde 24.03.2021 - Distributed Transactions {\&} Two-phase Commit.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://medium.com/geekculture/distributed-transactions-two-phase-commit-c82752d69324
+      \endverb
+      \verb{url}
+      \verb https://medium.com/geekculture/distributed-transactions-two-phase-commit-c82752d69324
+      \endverb
+      \warn{\item article entry 'Gaitonde.24.03.2021' (bib/sources.bib): Invalid format '19.01.2024' of date field 'urldate' - ignoring}
+    \endentry
     \entry{microservices.io.12.01.2024}{misc}{}
       \name{author}{1}{}{%
         {{hash=9c08fef3398603e92beb65d3adf0d59f}{%
@@ -62,8 +357,8 @@
       \strng{authorbibnamehash}{9c08fef3398603e92beb65d3adf0d59f}
       \strng{authornamehash}{9c08fef3398603e92beb65d3adf0d59f}
       \strng{authorfullhash}{9c08fef3398603e92beb65d3adf0d59f}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A service's database is private to that service}

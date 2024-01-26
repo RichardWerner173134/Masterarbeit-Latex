@@ -1,0 +1,27 @@
+\section{Zielsetzung dieser Arbeit}
+
+These: Mittels Saga-Pattern implementierte langlebige Transaktionen (LLT) ermöglichen Konsistenz in Microservicesystemen, die per Request-Response Pattern kommunizieren. 
+
+Leitfragen: 
+Wie kann mithilfe von BASE-Eigenschaft und Softstate ausfallsichere Konsistenz hergestellt werden?
+
+(Wie) kann der 2 Phasencommit in eine Saga-Architektur integriert werden?
+
+\section{Aufbau dieser Arbeit}
+
+\begin{itemize}
+	\item Kapitel 1: Theoretische Grundlagen: In diesem Kapitel sollen dem Leser die Grundlagen vermittelt werden, die er benötigt, um den Rest der Arbeit zu verstehen. Dazu gehören Begriffe und Konzepte aus der Welt der Microservices. 
+	\item Kapitel 2: Methodik: Ziel des Kapitels: Entwurf, Implementierung, Messen und Bewertung des Systems. Fokus auf Saga-Pattern, Konsistenz, Ausfallsicherheit -> Der Systementwurf und der Bewertungsprozess aus diesem Kapitel sollen in Kapitel 3 umgesetzt werden.
+	\begin{itemize}
+		\item Bewertungskriterien
+		\item Entwurf und Implementierung eines reinen Saga-Systems
+		\item Abänderung der Implementierung durch 
+		\begin{itemize}
+			\item Saga-Werkzeuge (Checkpoints, Recovery Mechanismen)
+			\item 2 Phasencommit
+		\end{itemize}
+	\end{itemize}
+	\item Kapitel 3: Ergebnisse aus Kapitel 2: Die Ergebnisse dieses Kapitels sollen in Kapitel 4 verwendet werden, um die anfängliche These und die Leitfragen zu beantworten.
+	\item Kapitel 4: Diskussion - Bewerten der Ergebnisse in Bezug auf die These und der Leitfragen; Beantwortung der These und der Leitfragen
+	
+\end{itemize}

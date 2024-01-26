@@ -1,4 +1,4 @@
-\subsection{Schritt 2 - Messung der verschiedenen Implementierungen}
+\subsection{Messung der verschiedenen Implementierungen}
 
 Die Bewertung der Implementierungen soll auf Grundlage von Messdaten erfolgen. Es soll nun beschrieben werden, wie die Erfassung dieser Daten erfolgen soll.
 
@@ -18,14 +18,10 @@ Ein Netzwerkszenario ist ebenfalls Teil der Testkonfiguration. Wird ein Systemte
 
 % TODO wie misst man Konsistenz
 \paragraph*{Messgegenstand} \mbox{}\\
-Das Ziel der Messung ist, Aussagen über die Konsistenz des Systems zu treffen. In Abschnitt \ref{} wurden verschiedene Vorgehensweisen dargestellt, wie die Konsistenz eines Systems gemessen werden kann. 
+Das Ziel der Messung ist, Aussagen über die Konsistenz des Systems zu treffen.
 
 Die verwendete Implementierung per Orchestrierung setzt das Vorhandensein eines Koordinators voraus. Die darin befindliche Steuerung der LLT durch die SEC gibt Auskunft über die ausgeführten lokalen Transaktionen einer Saga. Es kann für jede lokale Transaktion gemessen werden, wie oft die SEC davon ausgeht, dass eine Transaktion ausgeführt wurde. Analog dazu kann die tatsächlich ausgeführte Anzahl an Transaktionen bestimmt werden, indem die Sicht der Transaktionsteilnehmer verwendet wird. Stimmen die korrespondierenden Werte aller lokalen Transaktionen in beiden Sichten überein, kann davon ausgegangen werden, dass die LLT keine Inkonsistenzen in das System eingeführt hat.
 
 Ein weiterer Anhaltspunkt für Konsistenzanomalien ist der erreichte Endzustand einer Transaktion. In \ref{sec_saga_formalisierung_dea} wurde ein Endzustand für einen DEA definiert, der erreicht wird, nachdem eine Saga in einer kompensierenden Aktion eine Fehlerantwort erhält. In solchen Fällen ist der Koordinator nicht in der Lage die LLT abzuschließen und endet in einem weder erfolgreichen noch kompensierten Zustand. 
 
 Da dieser Zustand einen Fall aufzeigt, in dem die Atomarität der LLT verletzt wird, ist das Auftreten solcher Endzustände ein unmittelbares Zeichen für Inkonsistenz.
-
-\paragraph*{Metriken} \mbox{}\\
-% TODO
-TODO Beschreibung, wie die Messdaten in eine (oder mehrere) Kennzahlen umgewandelt wird

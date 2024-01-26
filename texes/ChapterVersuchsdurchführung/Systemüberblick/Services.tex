@@ -1,7 +1,5 @@
 \section{Services} \label{sec_Services}
-Es sollen zuerst die Teilnehmerservices identifiziert werden. 
-
-Die Schnittstelle zwischen dem Backend-System und dem Benutzer stellt ein Frontend dar. in diesem Frontend werdem dem Nutzer die Produkte dargestellt. Außerdem übernimmt das Frontend die Aufgabe der Verwaltung eines Warenkorbsystems. Der Nutzer kann Produkte zu seinem Warenkorb hinzufügen oder entfernen. Die Bestellung kann nun ausgelöst werden und an das Backend übermittelt werden. 
+Es sollen zuerst die Teilnehmerservices identifiziert werden. Die Schnittstelle zwischen dem Backend-System und dem Benutzer stellt ein Frontend dar. in diesem Frontend werdem dem Nutzer die Produkte dargestellt. Außerdem übernimmt das Frontend die Aufgabe der Verwaltung eines Warenkorbsystems. Der Nutzer kann Produkte zu seinem Warenkorb hinzufügen oder entfernen. Die Bestellung kann nun ausgelöst werden und an das Backend übermittelt werden. 
 
 Der Einstiegspunkt für die Abwicklung einer Bestellung soll der OrderService sein. Neben der Initialisierung dieser Bestellung und der Aktualisierung des Bestellungsstatus fallen aus Sicht der Prozessdefinition keine weiteren Aufgaben in den Bereich dieses Services. Die Aktualisierung des Bestellungsstatus ist sehr eng mit der Verwaltung des Prozesses aus Sicht des Koordinators verbunden. Deshalb kann der OrderService die Rolle des Koordinators übernehmen. 
 
@@ -23,5 +21,5 @@ Zuletzt muss ein Service die Kontostände der Nutzerkonten und des Händlerkonto
 	\end{tabular}
 \end{center}
 
-\paragraph*{Entwicklungsscope}
+\paragraph*{Entwicklungsscope} \mbox{} \\
 Für die Betrachtung des Bestell- und Lieferprozesses als LLT wird das Frontend außen vorgelassen. Die LLT beginnt mit der Entgegennahme eines Order-Requests im OrderService. Es werden lediglich die Backend-Services entwickelt, die Teil der LLT sind.

@@ -1,4 +1,4 @@
-\section{Implementierung des SmIdempotencyBackwardRecovery}
+\section{Implementierung SmIdempotencyBackwardRecovery}
 Der erste idempotente DEA wird als SmIdempotencyBackwardRecovery bezeichnet. Im Falle eines Netzwerkfehlers bei einem T wird ein Übergang zum entsprechenden C eingeführt; die Saga wird also versucht zurückzurollen, unabhängig ob das T ausgeführt wurde oder nicht. In \cref{fig:fig_sm_idempotency_backward_recovery_testcase2} ist der Fall abgebildet, dass ein T einen Netzwerkfehler verursacht ohne eine Zustandsänderung im Teilnehmerservice zu bewirken. \Cref{fig:fig_sm_idempotency_backward_recovery_testcase3} zeigt den Ablauf im Fall eines Netzwerkfehlers mit Zustandsänderung. 
 
 \begin{figure}[h!]
@@ -183,7 +183,7 @@ select case when
 		select articleidfk as articleid, sum(amount) as amount from shippedarticles group by articleidfk) as actualarticlesum
 	)
 	then 1 else 0 end as mightBeConsistent;
-\end{lstlisting}\label{}
+\end{lstlisting}
 
 Ändert sich in beiden Tests die Summe nicht, ist laut \cref{par:consistency_definition_alt} die notwendige Bedingung für Konsistenz erreicht. Das Gesamtergebnis berechnet sich durch folgendes Statement:
 \begin{lstlisting}[language=SQL, breaklines=true, tabsize=2, showstringspaces=false, frame=single, numbers=left, basicstyle=\small] 
@@ -216,11 +216,10 @@ select moneyMightBeConsistent.mightBeConsistent as moneyMightBeConsistent,
 		articleMightBeConsistent.mightBeConsistent 
 	then 1 else 0 end as mightBeConsistent
 from moneyMightBeConsistent, articleMightBeConsistent;
-\end{lstlisting}\label{}
+\end{lstlisting}
 
 \paragraph*{Ergebnis} \mbox{}\\
-TODO %TODO
-Die Messung ist für beide 
+Die Messung zeigt, dass zumindest die Menge der Produkte und Geldbeträge konsistent bleibt.
 
 \begin{center}
 	\fontsize{9}{12}\selectfont

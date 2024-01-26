@@ -1,4 +1,4 @@
-\section{Das Problem der Wiederholbarkeit}
+\section{Wiederholbarkeit}
 
 In der Analyse des SmBasicNetworkFailureUnlimitedRetries hat sich gezeigt, dass die für die 4 Ts \textit{BlockArticles}, \textit{RemoveMoney}, \textit{AddMoney} und \textit{StartShipment} und ihre zugehörigen Cs eingeführten Retries zu inkonsistentem Verhalten in Testszenario 3 geführt haben. Das Problem besteht darin, dass lokale Transaktionen bei Wiederholung erneut ausgeführt werden. Dem Koordinator fehlt die Information, ob die lokale Transaktion im Fall eines Netzwerkfehlers bereits ausgeführt wurde oder nicht. 
 

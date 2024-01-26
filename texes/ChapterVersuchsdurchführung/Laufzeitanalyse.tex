@@ -1,6 +1,6 @@
 \section{Laufzeitanalyse}
 
-Das primäre Werkzeug der Optimierung der Zustandsautomaten war die Einführung von Retries. Es ist zu erwarten, dass die Einführung von Retries die Laufzeit verlängert. Im Folgenden sind die Ergebnisse der Laufzeitanalyse per Boxplot dargestellt. Als Visualisierung wird ein modifizierter Boxplot verwendet. In jedem Diagramm sind das obere und untere Quartil, der Median, das Maximum und Minimum sowie Ausreißer ablesbar. Jeder Boxplot stellt die Werte eines DEAs dar. Aus Gründen der Übersicht wurden die langen Bezeichnungen der Zustandsautomaten durch folgende Nummerierung ersetzt:
+Das primäre Werkzeug der Optimierung der Zustandsautomaten war die Einführung von Retries. Es ist zu erwarten, dass die Einführung von Retries die Laufzeit verlängert. Im Folgenden sind die Ergebnisse der Laufzeitanalyse per Boxplot dargestellt. Als Visualisierung wird ein modifizierter Boxplot verwendet. In jedem Diagramm sind das obere und untere Quartil, der Median, das Maximum und Minimum sowie Ausreißer ablesbar. Jeder Boxplot stellt die Werte eines DEAs dar. Aus Gründen der Übersicht wurden die langen Bezeichnungen der Zustandsautomaten in der Reihenfolge der Implementierung durch folgende Nummerierung ersetzt:
 
 \begin{center}
 	\begin{tabular}[h]{|p{8cm}|p{3cm}|}
@@ -15,54 +15,22 @@ Das primäre Werkzeug der Optimierung der Zustandsautomaten war die Einführung 
 \end{center}
 \FloatBarrier
 
-Es ist erkennbar, dass die Laufzeit für alle Automaten sehr nah beieinander liegt. Da im ersten Szenario keine Netzwerkfehler auftauchen, sind die Werte sehr wenig gestreut. Die Ausreißer sind ebenfalls erkennbar.
+\subsection{Messungenauigkeiten} \label{subsec:messungenauigkeiten}
+Die Durchführung des Versuchs ist ausgelegt auf die Vergleiche der unterschiedlichen DEAs hinsichtlich der Systemkonsistenz. Die Systemperformance war kein primäres Ziel des Versuchs. Die Messungen wurden zwar auf derselben Hardware ausgeführt, jedoch ist dies keineswegs mit einem Benchmark vergleichbar. Die Tätigkeit des Systems wurde für die Durchführung des Versuchs nicht eingeschränkt und kann variieren. Deshalb dienen die folgenden Ergebnisse nur einem illustrativen Zweck. Die Einführung der Retries beeinflusst die Laufzeit des Systems. Die Bestimmung des exakten Einflusses ist hier nicht zu zeigen.
 
-\subsection{Testszenario1}
+\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS1.tex}
 
-\begin{figure}[!htbp]
-\begin{minipage}{.45\textwidth}
-	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario1.tex}
-	\caption{Boxplot FinishOrders in Szenario 1}
-	\label{fig:boxplot_finishorders_scenario1}
-\end{minipage}\hspace{\fill}%
-\begin{minipage}{.45\textwidth}
-	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario1.tex}
-	\caption{Boxplot CancelOrders in Szenario 1}
-	\label{fig:boxplot_cancelorders_scenario1}
-\end{minipage}
-\end{figure}
-\FloatBarrier
+\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS2.tex}
 
-\subsection{Testszenario2}
+\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS3.tex}
 
-\begin{figure}[!htbp]
-\begin{minipage}{.45\textwidth}
-	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario2.tex}
-	\caption{Boxplot FinishOrders in Szenario 2}
-	\label{fig:boxplot_finishorders_scenario2}
-\end{minipage}\hspace{\fill}%
-\begin{minipage}{.45\textwidth}
-	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario2.tex}
-	\caption{Boxplot CancelOrders in Szenario 2}
-	\label{fig:boxplot_cancelorders_scenario2}
-\end{minipage}
-\end{figure}
-\FloatBarrier
 
-\subsection{Testszenario3}
 
-\begin{figure}[!htbp]
-\begin{minipage}{.45\textwidth}
-	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario3.tex}
-	\caption{Boxplot FinishOrders in Szenario 3}
-	\label{fig:boxplot_finishorders_scenario3}
-\end{minipage}\hspace{\fill}%
-\begin{minipage}{.45\textwidth}
-	\input{texes/ChapterVersuchsdurchführung/Laufzeitanalyse/CancelOrders_Scenario3.tex}
-	\caption{Boxplot CancelOrders in Szenario 3}
-	\label{fig:boxplot_cancelorders_scenario3}
-\end{minipage}
-\end{figure}
+
+
+
+
+
 
 
 

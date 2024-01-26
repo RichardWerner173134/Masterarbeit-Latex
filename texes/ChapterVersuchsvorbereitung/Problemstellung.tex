@@ -1,11 +1,6 @@
 \section{Problemstellung}
 
-% Netzwerkfehler sind ein Problem für LLTs
-% Saga-Pattern bietet Möglichkeit, auf Fehler zu reagieren
-% Fehler sind üblicherweise im Feld der BL-Fehler
-% können auch durch Netzwerkstörungen verursachte Fehler ins Saga-Modell einbezogen werden?
-
-In \ref{chapter_basic_saga} wurde das Saga-Pattern als ein Implementierungsmuster vorgestellt, welches ermöglichen soll, die ACID-Anforderungen in einem verteilten System nachzubilden. 
+In \cref{chapter:sagapattern} wurde das Saga-Pattern als ein Implementierungsmuster vorgestellt, welches ermöglichen soll, die ACID-Anforderungen in einem verteilten System nachzubilden. 
 
 Ein verteiltes System steht immer vor der Herausforderung von Netzwerkfehlern. Verwenden Transaktionsteilnehmer eines Systems die Request-Response-Kommunikation, so besteht immer die Möglichkeit, dass einzelne Nachrichten ihr Ziel nicht erreichen. Wenn eine solche Kommunikation deterministischer Natur ist, kann der Sender seinen Request ohne Gefahr wiederholen. Die im Saga-Pattern verwendeten lokalen Transaktion stellen jedoch keine deterministische Abfrage dar, sondern verfolgen das Ziel eines Zustandswechsels des Empfängers. Wiederholt der Sender seine Requests, führt dies zu ungewünschten Nebenwirkungen.
 

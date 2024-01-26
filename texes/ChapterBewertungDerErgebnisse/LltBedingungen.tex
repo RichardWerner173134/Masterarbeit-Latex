@@ -1,0 +1,5 @@
+\subsection{Leitfrage 1}
+Es ist die Frage zu beantworten, unter welchen Bedingungen ein Microservice-System, welches mittels Saga-Pattern implementiert wurde, eine LLT abbilden kann. 
+
+\paragraph*{Beantwortung} \mbox{} \\
+Damit eine LLT als Saga implementiert werden kann, muss die Transaktion in Teiloperationen aufteilbar sein. Das System, welche diese Teiloperationen ausführt, besteht aus verschiedenen Teilnehmerservices, die die Teiloperation ausführen, und einem Koordinator, der die LLT überwacht und den Prozessablauf steuert. Für auftretende Fehler kann der Koordinator eine Kompensierung aufrufen. 

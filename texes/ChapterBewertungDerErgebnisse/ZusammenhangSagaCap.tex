@@ -1,0 +1,10 @@
+\section{Zusammenhang zwischen CAP-Theorem und Saga-Pattern}
+In \cref{subsec:cap-theorem} wurde das CAP-Theorem vorgestellt. Es soll nun der Zusammenhang zwischen den Versuchsergebnissen und dem CAP-Theorem hergestellt werden. 
+
+Wenn die Kommunikation im Saga-Pattern zwischen dem Orchestrator und einem Teilnehmerservice ausfällt, dann entstehen zwei Partitionen. 
+
+Der dritte implementierte DEA SmBasicNetworkFailureUnlimitedRetries interpretierte die auftretenden Netzwerkfehler als Abbruchkriterium für die LLT. Dabei wurde sich für Verfügbarkeit gegenüber Konsistenz entschieden. Dieser DEA stellt also ein \textit{AP-System} (Verfügbarkeit und Partitionstoleranz) dar. 
+
+Im Rahmen des Versuchsbeispiels war dies ein nicht annehmbares Ergebnis, da der inkonsistente Ablauf eines Bestellprozesses kein zufriedenstellendes Ergebnis ist. Im Anschluss wurden die zwei idempotenten DEAs implementiert. Beide DEAs interpretierten einen Netzwerkfehler als ein Ergebnis, welches den Ablauf der LLT zum Pausieren zwingt. Solange die Netzwerkpartition vorliegt, konnte der Prozess nicht zum erfolgreichen oder erfolglosen Abschluss gelangen. Diese Implementierung legte den Fokus auf Konsistenz. Somit stellen die zwei DEAs SmIdempotencyBackwardRecovery und SmIdempotencyForwardRecovery \textit{CP-Systeme} (Konsistenz und Partitionstoleranz) dar. 
+
+Das CAP-Theorem bedingt somit das Design einer LLT mittels Saga-Pattern in einem verteilten System. Es müssen klare Entscheidungen für oder gegen Konsistenz und Verfügbarkeit getroffen werden. Diese Entscheidungen haben einen bedeutenden Einfluss auf das Design der verteilten Transaktion.

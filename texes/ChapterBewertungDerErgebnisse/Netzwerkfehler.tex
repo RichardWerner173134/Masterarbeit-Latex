@@ -1,0 +1,6 @@
+\subsection{Leitfrage 4}
+
+Es soll beantwortet werden, ob aufgrund Netzwerkpartitionen auftretende Fehler in die Fehlerbehandlung des Saga-Patterns integrierbar sind. 
+
+\paragraph*{Beantwortung} \mbox{} \\
+Im Versuch wurden Netzwerkfehler in das Saga-Pattern integriert. Es hat sich gezeigt, dass unter Verwendung idempotenter Schnittstellen eine Retry-Logik implementiert werden kann, ohne ein inkonsistenten Systemzustand zu erreichen. Es hat sich außerdem gezeigt, dass im Falle eines Netzwerkfehlers nicht mit der Verarbeitung der LLT fortgefahren werden kann, da der Verarbeitungszustand des fehlgeschlagenen Schrittes unklar ist. Wird fortgefahren bevor ein konkreter Verarbeitungszustand klar ist, treten unweigerlich Inkonsistenzen auf. 
