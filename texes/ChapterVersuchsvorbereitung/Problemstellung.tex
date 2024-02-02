@@ -1,7 +1,11 @@
-\section{Problemstellung}
+\section{Problemstellung} \label{sec:problemstellung}
 
 In \cref{chapter:sagapattern} wurde das Saga-Pattern als ein Implementierungsmuster vorgestellt, welches ermöglichen soll, die ACID-Anforderungen in einem verteilten System nachzubilden. 
 
 Ein verteiltes System steht immer vor der Herausforderung von Netzwerkfehlern. Verwenden Transaktionsteilnehmer eines Systems die Request-Response-Kommunikation, so besteht immer die Möglichkeit, dass einzelne Nachrichten ihr Ziel nicht erreichen. Wenn eine solche Kommunikation deterministischer Natur ist, kann der Sender seinen Request ohne Gefahr wiederholen. Die im Saga-Pattern verwendeten lokalen Transaktion stellen jedoch keine deterministische Abfrage dar, sondern verfolgen das Ziel eines Zustandswechsels des Empfängers. Wiederholt der Sender seine Requests, führt dies zu ungewünschten Nebenwirkungen.
 
-Es stellt sich die Frage, ob in Saga-Systemen, die Request-Response-Kommunikation verwenden, Konsistenz gewährleistet werden kann. 
+Es wird folgende These formuliert:
+
+\begin{thesis*} 
+	Mittels Saga-Pattern implementierte langlebige Transaktionen (LLT) ermöglichen ausfallsichere Konsistenz in Microservicesystemen, die per Request-Response Pattern kommunizieren. 	
+\end{thesis*}

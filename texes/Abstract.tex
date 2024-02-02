@@ -1,14 +1,3 @@
 \begin{abstract}
-	TODO
-	\begin{itemize}
-		\item Trend für Microservice-Architektur weg von monolithischer Architektur
-		\item Microservice-Architektur impliziert Verteiltes System
-		\item Transaktionelle Eigenschaften sind schwierig in verteilten Systemen
-		\item Saga-Pattern als Lösung für verteilte Transaktionen
-		\item Vorstellung des ursprünglichen (zentralisierte) Saga-Patterns \citeauthor{GarciaMolina.1987}
-		\item Beantwortung der Frage, ob Transaktionseigenschaften in verteilten Transaktionssystemen unter Verwendung des Saga-Patterns gewahrt werden können. 
-		\item Formalisierung für Saga-LLT
-		\item Vorstellung einer typischen LLT
-		\item Implementierung
-	\end{itemize}
+Atomare Transaktionen sind ein essentieller Bestandteil vieler moderner Anwendungen. In Architekturstilen wie Microservices besteht das Gesamtsystem aus mehreren in Kommunikation stehenden Komponenten. Dies stellt Systeme vor die Herausforderung, Transaktionen über die Grenzen einzelner Komponenten heraus abzubilden. Commitprotokolle wie der \acrfull{2pc} stellen zwar eine etablierte Möglichkeit dar, solche verteilten Transaktionen abzubilden, bringen jedoch auch Nachteile mit sich. Ein Nachteil ist das blockierende Verhalten während der Ausführung der Transaktion. Das von \citeauthor{GarciaMolina.1987} beschriebene Muster von Sagas bietet eine Möglichkeit, atomare Operationen in sequentieller Ausführung nachzubilden. Im Kontext verteilter Systeme wird dieses Muster verwendet, um Transaktionen sequentiell auszuführen und somit Atomarität und schließlich Konsistenz zu gewährleisten. In dieser Arbeit wird untersucht, ob das Konzept der Fehlerbehandlung in Sagas verwendet werden kann, um auf Netzwerkfehler während der Ausführung von verteilten Transaktionen zu reagieren. Es wird das Verhalten verschiedener Recoverymechanismen des Saga-Patterns unter Auftreten von Netzwerkpartitionen untersucht. Die Untersuchung findet im Rahmen eines praktischen Versuchs statt. Im Versuch wird ein exemplarischer Geschäftsprozess unter Verwendung des Saga-Patterns implementiert und iterativ optimiert. Jede Implementierung wird hinsichtlich Konsistenz und Durchsatz untersucht und bewertet. Schlussendlich sind Aussagen zu treffen, welche Voraussetzung eine Transaktion und deren Transaktionsteilnehmer erfüllen müssen, um mittels Saga-Pattern umgesetzt werden zu können.
 \end{abstract}

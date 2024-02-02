@@ -1,19 +1,22 @@
 \chapter{Einleitung}
-TODO
-\section{Microservicearchitektur}
 
-\section{Verteilte Transaktionen}
+Moderne Anwendungen bestehen häufig aus mehreren individuellen Komponenten, die an der Lösung einer gemeinsamen Aufgabe beteiligt sind. Dabei besteht die Aufgabe einer Komponente oft darin, eine Anfrage entgegenzunehmen, bestimmte Bedingungen zu prüfen, die Daten zu transformieren, in einer Datenbank zu speichern und auf den Aufrufer mit einem Ergebnis zu antworten. Solche modularen Komponenten tauchen besonders im Architekturstil der Microservices auf. Ein Ziel der Modularisierung ist eine möglichst geringe Bindung der Services, damit die Komplexität innerhalb einer Komponente gering gehalten wird und falls notwendig durch eine andere Komponente ausgetauscht werden kann. Deshalb arbeiten Microservices oft mit einer eigenen Datenbank, die nur von diesem Service erreichbar ist. 
 
-\section{Motivierendes Beispiel}
+Aufgrund der Verteilung der Daten über mehrere Datenbanken entstehen neue Herausforderungen, die das System bewältigen muss. Besonders die Verwendung von transaktionellen Operationen stellt die Herausforderung der verteilten Transaktionen. Die Mechanismen des Transaktionsinterfaces von \acrshort{acid}-Transaktionen einer relationalen Datenbank funktionieren nur dann, wenn alle auszuführenden Operationen in einem Transaktionskontextes ausgeführt werden. Prozesse, die atomare Veränderungen in mehreren Datenbanken bewirken sollen, werden als verteilte Transaktionen bezeichnet. 
 
-\section{Vorstellung der These}
+Commitprotokolle wie etwa der \acrfull{2pc} stellen eine mögliche Implementierung verteilter Transaktionen, die ACID-Eigenschaften gewährleisten können. Dabei werden jedoch die betroffenen Ressourcen blockiert, was zu einem geringen Durchsatz führen kann. In Fällen, die unter keinen Umständen Inkonsistenzen gewährleisten können, ist dies eine praktikable Lösung. In Systemen, die für einen Zeitraum einen inkonsistenten Systemzustand annehmen dürfen, können die Änderungen sequentiell prozessiert werden. Dies verspricht eine höhere Verfügbarkeit und höheren Durchsatz. Der Begriff der schlussendlichen Konsistenz (\textit{Eventual Consistency}) beschreibt dieses Verhalten. 
 
-Mittels Saga-Pattern implementierte langlebige Transaktionen (LLT) ermöglichen Konsistenz in Microservicesystemen, die per Request-Response Pattern kommunizieren. 
+\section{Fragestellung}
+Diese Arbeit verwendet das von \citeauthor{GarciaMolina.1987} vorgeschlagene Muster des Saga-Patterns im Kontext eines verteilten Systems. Das Muster verspricht atomares Verhalten mehrere Operationen in einer sequentiellen Ausführung. Dies erlaubt die Verwendung des Musters im Kontext verteilter Transaktionen. 
 
+Der zentrale Punkt des Musters befasst sich mit der Behandlung von Fehlern während der Transaktion. Es soll untersucht werden, ob Netzwerkausfälle in diese Fehlerbehandlung integrierbar sind.
 
 \section{Aufbau dieser Arbeit}
+\cref{chapter_grundlagen} befasst sich mit dem Begriff der Transaktion. Dabei werden damit verbundene Konzepte in zentralisierten und verteilten Systemen vorgestellt.
 
+In \cref{chapter_sagapattern} wird \citeauthor{GarciaMolina.1987}s Arbeit \citetitle{GarciaMolina.1987} referenziert. Außerdem wird das darin definierte Entwicklungsmuster in den Kontext verteilter Systeme eingeordnet. Zusätzlich wird eine Formalisierung vorgenommen, die die Beschreibung von mittels Saga-Pattern implementierter Transaktionen erlaubt. 
 
+Die Vermutung, dass die Fehlerbehandlung des Saga-Patterns Netzwerkausfälle integrieren kann, soll in einem Versuch überprüft werden. \cref{chapter_versuchsvorbereitung} bereitet den durchzuführenden Versuch vor. In diesem Kapitel wird das zu entwerfende System definiert indem ein imaginärer Geschäftsprozess definiert wird, der mittels Saga-Pattern umgesetzt werden soll. Es werden Metriken definiert, die der Beantwortung der These dienen sollen. Die Durchführung des Versuchs wird in \cref{chapter_versuchsdurchführung} erläutert. Die im Versuch gesammelten Messwerte, Ergebnisse und Zusammenhänge werden in \cref{chapter_versuchsergebnis} dargestellt. Die These und die dazugehörigen Leitfragen werden in diesem Kapitel beantwortet. 
 
 
 

@@ -1,10 +1,22 @@
 \section{Versuchsergebnisse}
 
-Unter Verwendung der im Versuch erbrachten Ergebnisse sollen nun die in \cref{sec:zielstellung} gestellten Leitfragen beantwortet werden.
+Im Rahmen dieser Arbeit wurden folgende Schritte beschriebe:
 
-\input{texes/ChapterBewertungDerErgebnisse/LltBedingungen.tex}
-\input{texes/ChapterBewertungDerErgebnisse/FehlerquellenUndInkonsistenzanomalien.tex}
-\input{texes/ChapterBewertungDerErgebnisse/TeilnehmerRealisierbarkeit.tex}
-\input{texes/ChapterBewertungDerErgebnisse/Netzwerkfehler.tex}
+\cref{chapter:sagapattern} wurde das von \citeauthor{GarciaMolina.1987} eingeführte Saga-Pattern und der Begriff der langlebigen Transaktionen vorgestellt. Die Möglichkeit, Transaktionen in Teiltransaktionen aufzuteilen und per neutralisierender Kompensierungen zurückzurollen, um die Atomaritätseigenschaft einer Transaktion nachzubilden wurde auf verteilte Transaktionen übertragen. Außerden wurde in \cref{sec_saga_formalisierung_dea} eine Formalisierung für Sagas vorgestellt, die eine LLT mit dem Modell der Zustandsautomaten verbindet. 
 
-\input{texes/ChapterBewertungDerErgebnisse/These.tex}
+In \cref{sec:problemstellung} wurde die These formulier, dass Netzwerkfehler in die Fehlerbehandlung des Saga-Patterns integrierbar sind, ohne Inkonsistenzen einzuführen. Anschließend wurde ein experimenteller Versuch geplant und durchgeführt. Ziel des Versuchs war die iterative Annäherung an ein verteiltes Saga-System, welches auch unter Auftreten von verschiedenen Netzwerkfehlern die LLT zum Abschluss kommen lässt, ohne das System in einen inkonsisten Zustand zu überführen.
+
+Dazu wurde ein Bestellprozess eines E-Shops als abzubildende LLT gewählt. Die Implementierung dieses Systems geschah unter Verwendung einer Orchestrierung und ermöglichte die Simulation verschiedener Netzwerkfehler sowie verschiedenes Idempotenzverhalten der Teilnehmerservices.
+
+In verschiedenen Testfällen und Testszenarios wurden Tests durchgeführt und gemessen. Die Ergebnisse dienten einer iterativen Verbesserung des ursprünglichen Systems. 
+
+\mbox{} \\
+Der Versuch adressierte folgende Herausforderungen:
+
+\begin{itemize}
+	\item Vorzeitiger Abbruch der LLT
+	\item Unbekannter Ausführungszustand der Teiltransaktion
+	\item Gefahrlose Wiederholbarkeit der Teiltransaktionen
+	\item Isolationsanomalien auf Ebene der Teilnehmerservices
+	\item Isolationsanomalien auf Ebene der LLT
+\end{itemize}

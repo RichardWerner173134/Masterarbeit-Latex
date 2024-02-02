@@ -1,8 +1,9 @@
-\subsection{These}
+\section{Beantwortung der These}
+
 Zu Beginn dieser Arbeit wurde folgende These gestellt:
 
 \begin{thesis*} 
-Mittels Saga-Pattern implementierte langlebige Transaktionen (LLT) ermöglichen Konsistenz in Microservicesystemen, die per Request-Response Pattern kommunizieren. 	
+Mittels Saga-Pattern implementierte langlebige Transaktionen (LLT) ermöglichen ausfallsichere Konsistenz in Microservicesystemen, die per Request-Response Pattern kommunizieren. 	
 \end{thesis*}
 
 Es wurde ein System entworfen, welches eine LLT abbildet. Dabei wurden alle Teiloperationen im Rahmen einer Teiltransaktion innerhalb des entsprechenden Teilnehmerservices durchführen kann. Nach Vorbild des Saga-Patterns wurden alle Schnittstellen mit jeweils einer Kompensierung ergänzt. 

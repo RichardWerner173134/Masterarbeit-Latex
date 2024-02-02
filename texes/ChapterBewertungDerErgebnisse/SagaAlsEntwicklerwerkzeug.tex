@@ -1,7 +1,8 @@
 \section{Bedeutung des Saga-Patterns für Entwickler}
-\begin{itemize}
-	\item Tradeoff 2pc, saga
-	\item Welche typischen Geschäftsprozesse sind gut/nicht gut geeignet für Saga-Pattern
-	\item Welche technischen Rahmenbedingungen sind gut/nicht gut geeignet für Saga-Pattern
-\end{itemize}
-asd
+In verteilten Systemen sind Partitionen unvermeidbar und müssen somit bei der Planung von LLT beachtet werden. Das Saga-Pattern wurde als Alternative für den \acrshort{2pc} vorgestellt. Beide Muster sind wertvolle Werkzeuge für die Entwicklung verteilter Transaktionen. Der Entwickler muss dabei die Wichtigkeit von Konsistenz und Verfügbarkeit abwägen. 
+
+Ist Konsistenz das wichtigste Kriterium des Systems, so ist ein \acrshort{2pc} (oder davon ableitende Commitprotokolle) die beste Wahl. 
+
+Wenn das System mit Inkonsistenzen umgehen kann, dürfen Atomarität und Isolation von der LLT aufgelöst werden und per Saga-Pattern implementiert werden. Der Versuch hat gezeigt, dass eine Saga sowohl als \textit{AP-System} mit hoher Verfügbarkeit sowie als \textit{CP-System} mit hoher Konsistenz implementiert werden kann. Diese Tatsache bietet dem Entwickler eine Flexibilität während des Entwicklungsprozesses. Der Aufwand für das Abändern eines Saga-Systems von AP auf CP ist wesentlich geringer als der Aufwand für den Umbau eines per \acrshort{2pc} implementierten Systems auf Saga. Somit stellt dieses Muster eine komfortable Implementierung zur Verfügung, bei der die Bindung der Teilnehmer mit dem Koordinator möglichst gering gehalten werden kann bei vergleichsweise hoher Konsistenz.
+
+In LLTs mit besonders geringer Abhängigkeit der einzelnen Schritte eignet sich das Saga-Pattern besonders gut. Es gibt Anwendungsfälle, in denen eine Reihe von Transaktionsteilnehmern integriert werden sollen und lediglich sichergestellt werden muss, dass der Aufruf atomar stattfindet. Aufgrund der Unabhängigkeit der Teilsysteme ist es außerdem sehr leicht, die fehlende Isolation zu vernachlässigen. In solchen Anwendungsfällen stellt das Saga-Pattern eine simple Möglichkeit der Integration dar. 

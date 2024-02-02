@@ -1,1 +1,6 @@
-\section{Gültigkeit in komplexeren Systemen}
+\section{Realisierbarkeit von Sagas in eng gekoppelten Systemen}
+Die im Versuch auftretenden Isolationsanomalien konnten sehr einfach verhindert werden, indem die Grenzen der Teilnehmerservices entsprechend ihrer Aufgabe innerhalb der fachlichen Domäne gewählt wurden. Dadurch existierten sehr wenige Stellen, an denen ein Service auf Ressourcen zugreifen muss, die auch für andere Transaktionen relevant sind. 
+
+In einem realen Produktivsystem können die Verantwortlichkeiten der Services weniger deutlich geschnitten sein oder sehr eng an andere geschäftsrelevante Prozesse gebunden sein. In diesen Systemen sind die durch die Verwendung des Saga-Patterns auftretenden Isolationsanomalien schwieriger zu identifizieren und zu verhindern. 
+
+Die Lösung des Problems der Isolationsanomalien auf Ebene der LLT waren in diesem Versuch systemische Einschränkungen der Ressourcen. Beispielsweise war der BankingService offen für Isolationsanomalien, falls während einer laufenden LLT ein Kunde sein Konto schließt. Die zusätzliche Prüfung beim Schließen des Kontos auf laufende LLTs stellt eine solche systemische Einschränkung dar. Diese Lösung koppelt die Transaktionsteilnehmer jedoch sehr eng aneinander. Somit stellt diese Lösung in einem wachsenden System eine Gefahr für versteckte Fehler dar. 

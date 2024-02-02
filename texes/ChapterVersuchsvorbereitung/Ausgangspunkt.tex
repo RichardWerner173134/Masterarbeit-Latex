@@ -2,6 +2,4 @@
 
 Es soll ein Geschäftsvorgang mittels Saga-Pattern in einem Microservicesystem entworfen, implementiert und bewertet werden. Die gewählte Geschäftsvorgang soll als LLT aufgefasst werden und eine verteilte Transaktion abbilden. 
 
-Es soll eine Implementierungsform des Saga-Patterns gewählt werden. In der Zielstellung wird ein System gefordert, welches Request-Response-Kommunikation verwendet. Somit kann die Verwendung von Messagingkomponenten ausgeschlossen werden. Die auf diese Komponenten ausgerichtete Implementierung per Choreografie wird deshalb nicht gewählt. 
-
-Als Implementierungsform des Saga-Patterns wird für diesen Versuch die Orchestrierung gewählt. 
+Es soll eine Implementierungsform des Saga-Patterns gewählt werden. In der Zielstellung wird ein System gefordert, welches Request-Response-Kommunikation verwendet. Somit kann die Verwendung von Messagingkomponenten ausgeschlossen werden. Choreografie ist besonders geeignet für eine asynchrone Kommunikation, bei der der Aufrufer und der Empfänger prinzipiell voneinander entkoppelt werden. Dies schließt eine Behandlung von Netzwerkfehlern aus, die im Mittelpunkt des Versuchs stehen soll. Deshalb wird im Versuch die Orchestrierung als Implementierungsform gewählt.

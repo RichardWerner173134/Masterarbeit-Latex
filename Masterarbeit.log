@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.11.20)  26 JAN 2024 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.11.20)  2 FEB 2024 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1938,13 +1938,7 @@ Package pdftex.def Info: misc/HTWK_Zusatz_de_V_Black.jpg  used on input line 11
 {C:/Users/richa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/2_Programm
 e/Office/latex/miktex/fonts/enc/dvips/base/8r.enc} <./misc/HTWK_Zusatz_de_V_Bla
 ck.jpg>])
-(texes/Abstract.tex
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 4
-.
-
-(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [2
+(texes/Abstract.tex [2
 
 
 ])
@@ -1991,33 +1985,47 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface.
 
-) (texes/ChapterGrundlagen.tex
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Grundlagen} [2
+l.17 I
+      n \cref{chapter_sagapattern} wird \citeauthor{GarciaMolina.1987}s Arbe...
+[2
 
-]
-chapter 2.
-(texes/ChapterGrundlagen/DBMS.tex) (texes/ChapterGrundlagen/Transaktionen.tex)
-(texes/ChapterGrundlagen/Konsistenzmodelle.tex
+]) (texes/ChapterGrundlagen.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.6 \paragraph
-              *{Atomarität} \mbox{} \\ [3
+l.1 \chapter
+            {Grundlagen} \label{chapter_grundlagen} [3]
+chapter 2.
+(texes/ChapterGrundlagen/DBMS.tex
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 8
+.
 
-]
+(C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+))
+(texes/ChapterGrundlagen/Transaktionen.tex)
+(texes/ChapterGrundlagen/Konsistenzmodelle.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.6 \paragraph
+              *{Atomarität} \mbox{} \\ [4
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.24 \paragraph
-               *{Weicher Zustand (S)} [4]
-<figures/ChapterGrundlagen/cap_theorem.png, id=308, 532.99126pt x 342.27875pt>
+               *{Weicher Zustand (S)} [5]
+<figures/ChapterGrundlagen/cap_theorem.png, id=312, 532.99126pt x 342.27875pt>
 File: figures/ChapterGrundlagen/cap_theorem.png Graphic file (type png)
 <use figures/ChapterGrundlagen/cap_theorem.png>
 Package pdftex.def Info: figures/ChapterGrundlagen/cap_theorem.png  used on inp
@@ -2025,29 +2033,23 @@ ut line 47.
 (pdftex.def)             Requested size: 221.53696pt x 142.26378pt.
 Package placeins Info: No floats held, on input line 51.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.57 
-      [5
-Package placeins Info: Float barrier, from input line 51, processed on page 5, 
-lands on page 5. 
- <./figures/ChapterGrundlagen/cap_theorem.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 \subsection
-                {Isolationsstufen} [6])
-(texes/ChapterGrundlagen/Lösungsstrategien.tex [7]
-<figures/ChapterGrundlagen/2pcSuccess-0.png, id=345, 211.79124pt x 421.575pt>
+l.57 
+      [6
+Package placeins Info: Float barrier, from input line 51, processed on page 6, 
+lands on page 6. 
+ <./figures/ChapterGrundlagen/cap_theorem.png>] [7])
+(texes/ChapterGrundlagen/Lösungsstrategien.tex [8]
+<figures/ChapterGrundlagen/2pcSuccess-0.png, id=350, 211.79124pt x 421.575pt>
 File: figures/ChapterGrundlagen/2pcSuccess-0.png Graphic file (type png)
 <use figures/ChapterGrundlagen/2pcSuccess-0.png>
 Package pdftex.def Info: figures/ChapterGrundlagen/2pcSuccess-0.png  used on in
 put line 27.
 (pdftex.def)             Requested size: 114.35587pt x 227.62204pt.
-<figures/ChapterGrundlagen/2pcFailure-0.png, id=346, 215.80624pt x 421.575pt>
+<figures/ChapterGrundlagen/2pcFailure-0.png, id=351, 215.80624pt x 421.575pt>
 File: figures/ChapterGrundlagen/2pcFailure-0.png Graphic file (type png)
 <use figures/ChapterGrundlagen/2pcFailure-0.png>
 Package pdftex.def Info: figures/ChapterGrundlagen/2pcFailure-0.png  used on in
@@ -2059,21 +2061,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[8
-Package placeins Info: Float barrier, from input line 40, processed on page 8, 
-lands on page 8. 
+[9
+Package placeins Info: Float barrier, from input line 40, processed on page 9, 
+lands on page 9. 
  <./figures/ChapterGrundlagen/2pcSuccess-0.png (PNG copy)> <./figures/ChapterGr
-undlagen/2pcFailure-0.png (PNG copy)>])) (texes/ChapterSaga.tex [9]
+undlagen/2pcFailure-0.png (PNG copy)>])) (texes/ChapterSaga.tex [10]
 chapter 3.
 (texes/ChapterSaga/PaperÜberblick.tex
-<figures/ChapterSaga/TransactionScopeNormal-0.png, id=363, 449.68pt x 114.4275p
+<figures/ChapterSaga/TransactionScopeNormal-0.png, id=368, 449.68pt x 114.4275p
 t>
 File: figures/ChapterSaga/TransactionScopeNormal-0.png Graphic file (type png)
 <use figures/ChapterSaga/TransactionScopeNormal-0.png>
 Package pdftex.def Info: figures/ChapterSaga/TransactionScopeNormal-0.png  used
  on input line 13.
 (pdftex.def)             Requested size: 204.85847pt x 52.12918pt.
-<figures/ChapterSaga/TransactionScopeSaga-0.png, id=364, 406.51875pt x 240.9pt>
+<figures/ChapterSaga/TransactionScopeSaga-0.png, id=369, 406.51875pt x 240.9pt>
 
 File: figures/ChapterSaga/TransactionScopeSaga-0.png Graphic file (type png)
 <use figures/ChapterSaga/TransactionScopeSaga-0.png>
@@ -2081,10 +2083,10 @@ Package pdftex.def Info: figures/ChapterSaga/TransactionScopeSaga-0.png  used o
 n input line 18.
 (pdftex.def)             Requested size: 204.85847pt x 121.39806pt.
 Package placeins Info: No floats held, on input line 23.
- [10
+ [11
 
-Package placeins Info: Float barrier, from input line 23, processed on page 10,
- lands on page 10. 
+Package placeins Info: Float barrier, from input line 23, processed on page 11,
+ lands on page 11. 
  <./figures/ChapterSaga/TransactionScopeNormal-0.png (PNG copy)> <./figures/Cha
 pterSaga/TransactionScopeSaga-0.png (PNG copy)>]) (texes/ChapterSaga/PaperFürV
 erteilteTransaktionen.tex
@@ -2098,7 +2100,7 @@ File: figures/ChapterSaga/TransactionScopeSaga-0.png Graphic file (type png)
 Package pdftex.def Info: figures/ChapterSaga/TransactionScopeSaga-0.png  used o
 n input line 18.
 (pdftex.def)             Requested size: 144.03912pt x 85.35826pt.
-<figures/ChapterSaga/TransactionScopeDistributedSaga-0.png, id=372, 551.05875pt
+<figures/ChapterSaga/TransactionScopeDistributedSaga-0.png, id=377, 551.05875pt
  x 310.15875pt>
 File: figures/ChapterSaga/TransactionScopeDistributedSaga-0.png Graphic file (t
 ype png)
@@ -2107,15 +2109,15 @@ Package pdftex.def Info: figures/ChapterSaga/TransactionScopeDistributedSaga-0.
 png  used on input line 24.
 (pdftex.def)             Requested size: 151.65514pt x 85.35826pt.
 Package placeins Info: Must dump some floats on input line 29.
-[11
-Package placeins Info: Float barrier, from input line 29, processed on page 11,
- lands on page 11. 
+[12
+Package placeins Info: Float barrier, from input line 29, processed on page 12,
+ lands on page 12. 
 ]
 Package placeins Info: Check again: on input line 29.
 Package placeins Info: No floats held, on input line 29.
-) (texes/ChapterSaga/S2.tex [12
-Package placeins Info: Float barrier, from input line 29, processed on page 12,
- lands on page 12. 
+) (texes/ChapterSaga/S2.tex [13
+Package placeins Info: Float barrier, from input line 29, processed on page 13,
+ lands on page 13. 
  <./figures/ChapterSaga/TransactionScopeDistributedSaga-0.png (PNG copy)>]
 (C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -2123,33 +2125,33 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 23.
 Package placeins Info: No floats held, on input line 38.
- [13
-Package placeins Info: Float barrier, from input line 38, processed on page 13,
- lands on page 13. 
+ [14
+Package placeins Info: Float barrier, from input line 38, processed on page 14,
+ lands on page 14. 
 ]
-[14]) (texes/ChapterSaga/Formalisierung.tex
+[15]) (texes/ChapterSaga/Formalisierung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[15] [16]
+[16] [17]
 Package placeins Info: Must dump some floats on input line 148.
- [17
-Package placeins Info: Float barrier, from input line 148, processed on page 17
-, lands on page 17. 
-]
-Package placeins Info: Check again: on input line 148.
-Package placeins Info: No floats held, on input line 148.
  [18
 Package placeins Info: Float barrier, from input line 148, processed on page 18
 , lands on page 18. 
+]
+Package placeins Info: Check again: on input line 148.
+Package placeins Info: No floats held, on input line 148.
+ [19
+Package placeins Info: Float barrier, from input line 148, processed on page 19
+, lands on page 19. 
 ]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
 211.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [19]
+) [20]
 Overfull \hbox (67.80429pt too wide) in paragraph at lines 221--222
 \T1/ppl/m/n/12 (-20) ward Re-co-ve-ry ver-sucht, bis die Sa-ga er-folg-reich is
 t oder das Ober-li-mit $\OML/zplm/m/it/12 maxSavepointExecutionCount$
@@ -2161,38 +2163,42 @@ Overfull \hbox (22.99355pt too wide) in paragraph at lines 251--252
  []
 
 Package placeins Info: No floats held, on input line 254.
-[20
-Package placeins Info: Float barrier, from input line 254, processed on page 20
-, lands on page 20. 
+[21
+Package placeins Info: Float barrier, from input line 254, processed on page 21
+, lands on page 21. 
 ]
 Package placeins Info: No floats held, on input line 326.
 Package placeins Info: No floats held, on input line 351.
- [21
-Package placeins Info: Float barrier, from input line 326, processed on page 21
-, lands on page 21. 
-Package placeins Info: Float barrier, from input line 351, processed on page 21
-, lands on page 21. 
-] [22] [23])) (texes/ChapterVersuchsvorbereitung.tex [24]
+ [22
+Package placeins Info: Float barrier, from input line 326, processed on page 22
+, lands on page 22. 
+Package placeins Info: Float barrier, from input line 351, processed on page 22
+, lands on page 22. 
+] [23] [24])) (texes/ChapterVersuchsvorbereitung.tex [25]
 chapter 4.
-(texes/ChapterVersuchsvorbereitung/Problemstellung.tex)
-(texes/ChapterVersuchsvorbereitung/Zielstellung.tex)
-(texes/ChapterVersuchsvorbereitung/Ausgangspunkt.tex [25
+(texes/ChapterVersuchsvorbereitung/Problemstellung.tex
+
+LaTeX Warning: Reference `chapter:sagapattern' on page 1 undefined on input lin
+e 3.
+
+) (texes/ChapterVersuchsvorbereitung/Zielstellung.tex)
+(texes/ChapterVersuchsvorbereitung/Ausgangspunkt.tex [26
 
 ])
 (texes/ChapterVersuchsvorbereitung/Methodik.tex
 (texes/ChapterVersuchsvorbereitung/SectionMethodik/GpEntwurfUndImplementierung.
 tex
-<figures/SimplifiedBusinessProcess.png, id=492, 1276.77pt x 202.7575pt>
+<figures/SimplifiedBusinessProcess.png, id=496, 1276.77pt x 202.7575pt>
 File: figures/SimplifiedBusinessProcess.png Graphic file (type png)
 <use figures/SimplifiedBusinessProcess.png>
 Package pdftex.def Info: figures/SimplifiedBusinessProcess.png  used on input l
 ine 12.
 (pdftex.def)             Requested size: 455.24417pt x 72.29343pt.
- [26 <./figures/SimplifiedBusinessProcess.png>])
-(texes/ChapterVersuchsvorbereitung/SectionMethodik/Messung.tex [27])
+ [27 <./figures/SimplifiedBusinessProcess.png>])
+(texes/ChapterVersuchsvorbereitung/SectionMethodik/Messung.tex [28])
 (texes/ChapterVersuchsvorbereitung/SectionMethodik/Analyse.tex)
 (texes/ChapterVersuchsvorbereitung/SectionMethodik/IterativesVorgehen.tex)))
-(texes/ChapterVersuchsdurchführung.tex [28] [29]
+(texes/ChapterVersuchsdurchführung.tex [29] [30]
 chapter 5.
 (texes/ChapterVersuchsdurchführung/Systemüberblick.tex
 (texes/ChapterVersuchsdurchführung/Systemüberblick/Services.tex
@@ -2200,17 +2206,17 @@ Overfull \hbox (10.97351pt too wide) in paragraph at lines 13--22
  [] 
  []
 
-[30
+[31
 
 ])
 (texes/ChapterVersuchsdurchführung/Systemüberblick/LokaleTransaktionen.tex
-[31]) (texes/ChapterVersuchsdurchführung/Systemüberblick/Kompensierungen.tex)
+[32]) (texes/ChapterVersuchsdurchführung/Systemüberblick/Kompensierungen.tex)
 
 (texes/ChapterVersuchsdurchführung/Systemüberblick/FachlicheKontextabgrenzung
-.tex [32] [33] [34])
+.tex [33] [34] [35])
 (texes/ChapterVersuchsdurchführung/Systemüberblick/TechnischeKontextabgrenzun
 g.tex
-<figures/DatabaseER/ArticleServiceTables.png, id=556, 261.97874pt x 101.37875pt
+<figures/DatabaseER/ArticleServiceTables.png, id=560, 261.97874pt x 101.37875pt
 >
 File: figures/DatabaseER/ArticleServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/ArticleServiceTables.png>
@@ -2218,9 +2224,9 @@ Package pdftex.def Info: figures/DatabaseER/ArticleServiceTables.png  used on i
 nput line 15.
 (pdftex.def)             Requested size: 130.98904pt x 50.68924pt.
 Package placeins Info: No floats held, on input line 18.
- [35
-Package placeins Info: Float barrier, from input line 18, processed on page 35,
- lands on page 35. 
+ [36
+Package placeins Info: Float barrier, from input line 18, processed on page 36,
+ lands on page 36. 
  <./figures/DatabaseER/ArticleServiceTables.png>]
 Package placeins Info: No floats held, on input line 36.
 
@@ -2228,7 +2234,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-<figures/DatabaseER/StockServiceTables.png, id=565, 753.81625pt x 362.35374pt>
+<figures/DatabaseER/StockServiceTables.png, id=569, 753.81625pt x 362.35374pt>
 File: figures/DatabaseER/StockServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/StockServiceTables.png>
 Package pdftex.def Info: figures/DatabaseER/StockServiceTables.png  used on inp
@@ -2240,27 +2246,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-[36
-Package placeins Info: Float barrier, from input line 36, processed on page 36,
- lands on page 36. 
-Package placeins Info: Float barrier, from input line 48, processed on page 36,
- lands on page 36. 
+[37
+Package placeins Info: Float barrier, from input line 36, processed on page 37,
+ lands on page 37. 
+Package placeins Info: Float barrier, from input line 48, processed on page 37,
+ lands on page 37. 
  <./figures/DatabaseER/StockServiceTables.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 83--83
 []|\T1/ppl/m/n/12 (+20) /api/blocked-articles-
  []
 
 Package placeins Info: No floats held, on input line 90.
-<figures/DatabaseER/BankingServiceTables.png, id=575, 804.00375pt x 362.35374pt
+<figures/DatabaseER/BankingServiceTables.png, id=580, 804.00375pt x 362.35374pt
 >
 File: figures/DatabaseER/BankingServiceTables.png Graphic file (type png)
 <use figures/DatabaseER/BankingServiceTables.png>
 Package pdftex.def Info: figures/DatabaseER/BankingServiceTables.png  used on i
 nput line 99.
 (pdftex.def)             Requested size: 402.0009pt x 181.17642pt.
-[37
-Package placeins Info: Float barrier, from input line 90, processed on page 37,
- lands on page 37. 
+[38
+Package placeins Info: Float barrier, from input line 90, processed on page 38,
+ lands on page 38. 
 ]
 Package placeins Info: No floats held, on input line 102.
 Package placeins Info: No floats held, on input line 119.
@@ -2279,11 +2285,11 @@ Overfull \hbox (23.37349pt too wide) in alignment at lines 6--36
  [] [] [] 
  []
 
-[38
-Package placeins Info: Float barrier, from input line 102, processed on page 38
-, lands on page 38. 
-Package placeins Info: Float barrier, from input line 119, processed on page 38
-, lands on page 38. 
+[39
+Package placeins Info: Float barrier, from input line 102, processed on page 39
+, lands on page 39. 
+Package placeins Info: Float barrier, from input line 119, processed on page 39
+, lands on page 39. 
  <./figures/DatabaseER/BankingServiceTables.png>]
 Package placeins Info: No floats held, on input line 38.
 
@@ -2296,25 +2302,25 @@ Overfull \hbox (23.37349pt too wide) in alignment at lines 42--67
  [] [] [] 
  []
 
-[39
-Package placeins Info: Float barrier, from input line 38, processed on page 39,
- lands on page 39. 
+[40
+Package placeins Info: Float barrier, from input line 38, processed on page 40,
+ lands on page 40. 
 ]
 Package placeins Info: No floats held, on input line 69.
-)) (texes/ChapterVersuchsdurchführung/SEC.tex [40
-Package placeins Info: Float barrier, from input line 69, processed on page 40,
- lands on page 40. 
-] [41]
+)) (texes/ChapterVersuchsdurchführung/SEC.tex [41
+Package placeins Info: Float barrier, from input line 69, processed on page 41,
+ lands on page 41. 
+] [42]
 Package placeins Info: No floats held, on input line 83.
 
 (C:\2_Programme\Office\latex\miktex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [42
-Package placeins Info: Float barrier, from input line 83, processed on page 42,
- lands on page 42. 
+) [43
+Package placeins Info: Float barrier, from input line 83, processed on page 43,
+ lands on page 43. 
 ]
-[43] [44] [45] [46]
-<figures/ChapterVersuchsdurchführung/sec_execution_flow.png, id=842, 818.05624
+[44] [45] [46] [47]
+<figures/ChapterVersuchsdurchführung/sec_execution_flow.png, id=846, 818.05624
 pt x 605.26125pt>
 File: figures/ChapterVersuchsdurchführung/sec_execution_flow.png Graphic file 
 (type png)
@@ -2322,11 +2328,11 @@ File: figures/ChapterVersuchsdurchführung/sec_execution_flow.png Graphic file
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/sec_execution_flo
 w.png  used on input line 309.
 (pdftex.def)             Requested size: 455.24417pt x 336.82904pt.
- [47]
+ [48]
 Package placeins Info: No floats held, on input line 313.
 )
 (texes/ChapterVersuchsdurchführung/PlanungDerDatenerfassung.tex
-<figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png, id=870, 270.00874pt x
+<figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png, id=874, 270.00874pt x
  213.79875pt>
 File: figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png Graphic file (typ
 e png)
@@ -2334,12 +2340,12 @@ e png)
 Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-0.pn
 g  used on input line 15.
 (pdftex.def)             Requested size: 182.09488pt x 144.19048pt.
- [48
-Package placeins Info: Float barrier, from input line 313, processed on page 48
-, lands on page 48. 
+ [49
+Package placeins Info: Float barrier, from input line 313, processed on page 49
+, lands on page 49. 
  <./figures/ChapterVersuchsdurchführung/sec_execution_flow.png (PNG copy)>]
 Package placeins Info: No floats held, on input line 19.
-<figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png, id=875, 270.00874pt x
+<figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png, id=880, 270.00874pt x
  184.69pt>
 File: figures/ChapterVersuchsvorbereitung/TestSzenarien-1.png Graphic file (typ
 e png)
@@ -2348,7 +2354,7 @@ Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-1.pn
 g  used on input line 26.
 (pdftex.def)             Requested size: 182.09488pt x 124.5589pt.
 Package placeins Info: No floats held, on input line 30.
-<figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png, id=876, 270.00874pt x
+<figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png, id=881, 270.00874pt x
  214.8025pt>
 File: figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png Graphic file (typ
 e png)
@@ -2356,11 +2362,11 @@ e png)
 Package pdftex.def Info: figures/ChapterVersuchsvorbereitung/TestSzenarien-2.pn
 g  used on input line 39.
 (pdftex.def)             Requested size: 182.09488pt x 144.86743pt.
- [49
-Package placeins Info: Float barrier, from input line 19, processed on page 49,
- lands on page 49. 
-Package placeins Info: Float barrier, from input line 30, processed on page 49,
- lands on page 49. 
+ [50
+Package placeins Info: Float barrier, from input line 19, processed on page 50,
+ lands on page 50. 
+Package placeins Info: Float barrier, from input line 30, processed on page 50,
+ lands on page 50. 
  <./figures/ChapterVersuchsvorbereitung/TestSzenarien-0.png (PNG copy)> <./figu
 res/ChapterVersuchsvorbereitung/TestSzenarien-1.png (PNG copy)>]
 Package placeins Info: No floats held, on input line 43.
@@ -2380,13 +2386,13 @@ Overfull \hbox (3.06725pt too wide) in paragraph at lines 60--60
  []
 
 Package placeins Info: No floats held, on input line 63.
-[50
-Package placeins Info: Float barrier, from input line 43, processed on page 50,
- lands on page 50. 
-Package placeins Info: Float barrier, from input line 63, processed on page 50,
- lands on page 50. 
+[51
+Package placeins Info: Float barrier, from input line 43, processed on page 51,
+ lands on page 51. 
+Package placeins Info: Float barrier, from input line 63, processed on page 51,
+ lands on page 51. 
  <./figures/ChapterVersuchsvorbereitung/TestSzenarien-2.png (PNG copy)>]
-[51]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 126--126
 []|\T1/ppl/m/n/12 (+20) failedWithCompensation-
  []
@@ -2412,9 +2418,9 @@ Overfull \hbox (53.65265pt too wide) in alignment at lines 119--131
  []
 
 Package placeins Info: No floats held, on input line 133.
-[52
-Package placeins Info: Float barrier, from input line 133, processed on page 52
-, lands on page 52. 
+[53
+Package placeins Info: Float barrier, from input line 133, processed on page 53
+, lands on page 53. 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 145--145
 []|\T1/ppl/m/n/12 (+20) diffRemoveMoney-
@@ -2452,13 +2458,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--152
 
 Package placeins Info: No floats held, on input line 156.
 Package placeins Info: No floats held, on input line 173.
-) (texes/ChapterVersuchsdurchführung/VermeidungVonAnomalien.tex [53
-Package placeins Info: Float barrier, from input line 156, processed on page 53
-, lands on page 53. 
-Package placeins Info: Float barrier, from input line 173, processed on page 53
-, lands on page 53. 
-] [54]
-<figures/ChapterVersuchsdurchführung/flawedRemoveMoney-0.png, id=959, 285.065p
+) (texes/ChapterVersuchsdurchführung/VermeidungVonAnomalien.tex [54
+Package placeins Info: Float barrier, from input line 156, processed on page 54
+, lands on page 54. 
+Package placeins Info: Float barrier, from input line 173, processed on page 54
+, lands on page 54. 
+] [55]
+<figures/ChapterVersuchsdurchführung/flawedRemoveMoney-0.png, id=964, 285.065p
 t x 282.05376pt>
 File: figures/ChapterVersuchsdurchführung/flawedRemoveMoney-0.png Graphic file
  (type png)
@@ -2467,14 +2473,14 @@ Package pdftex.def Info: figures/ChapterVersuchsdurchführung/flawedRemoveMoney
 -0.png  used on input line 60.
 (pdftex.def)             Requested size: 136.57463pt x 135.13033pt.
 
-[55]
+[56]
 Package placeins Info: No floats held, on input line 64.
-) (texes/ChapterVersuchsdurchführung/Implementierung1.tex [56
-Package placeins Info: Float barrier, from input line 64, processed on page 56,
- lands on page 56. 
+) (texes/ChapterVersuchsdurchführung/Implementierung1.tex [57
+Package placeins Info: Float barrier, from input line 64, processed on page 57,
+ lands on page 57. 
  <./figures/ChapterVersuchsdurchführung/flawedRemoveMoney-0.png (PNG copy)>]
 Package placeins Info: No floats held, on input line 23.
-<figures/ChapterVersuchsdurchführung/sm_basic.jpg, id=988, 1865.97125pt x 564.
+<figures/ChapterVersuchsdurchführung/sm_basic.jpg, id=992, 1865.97125pt x 564.
 1075pt>
 File: figures/ChapterVersuchsdurchführung/sm_basic.jpg Graphic file (type jpg)
 
@@ -2503,11 +2509,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
-[57
-Package placeins Info: Float barrier, from input line 23, processed on page 57,
- lands on page 57. 
-Package placeins Info: Float barrier, from input line 33, processed on page 57,
- lands on page 57. 
+[58
+Package placeins Info: Float barrier, from input line 23, processed on page 58,
+ lands on page 58. 
+Package placeins Info: Float barrier, from input line 33, processed on page 58,
+ lands on page 58. 
  <./figures/ChapterVersuchsdurchführung/sm_basic.jpg>]
 Package placeins Info: No floats held, on input line 58.
 Package placeins Info: No floats held, on input line 88.
@@ -2516,11 +2522,11 @@ Package placeins Info: No floats held, on input line 88.
 LaTeX Warning: Reference `tab:smbasic_stateanalysisresult_cancelorders' on page
  1 undefined on input line 91.
 
-[58
-Package placeins Info: Float barrier, from input line 58, processed on page 58,
- lands on page 58. 
-Package placeins Info: Float barrier, from input line 88, processed on page 58,
- lands on page 58. 
+[59
+Package placeins Info: Float barrier, from input line 58, processed on page 59,
+ lands on page 59. 
+Package placeins Info: Float barrier, from input line 88, processed on page 59,
+ lands on page 59. 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 104--104
 []|\T1/ppl/m/n/9 (+20) failedWithCompensation-
@@ -2543,21 +2549,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--108
 
 Package placeins Info: No floats held, on input line 111.
 Package placeins Info: No floats held, on input line 144.
-[59
-Package placeins Info: Float barrier, from input line 111, processed on page 59
-, lands on page 59. 
-Package placeins Info: Float barrier, from input line 144, processed on page 59
-, lands on page 59. 
+[60
+Package placeins Info: Float barrier, from input line 111, processed on page 60
+, lands on page 60. 
+Package placeins Info: Float barrier, from input line 144, processed on page 60
+, lands on page 60. 
 ]
 Package placeins Info: No floats held, on input line 161.
 Package placeins Info: No floats held, on input line 189.
-) (texes/ChapterVersuchsdurchführung/Implementierung2.tex [60
-Package placeins Info: Float barrier, from input line 161, processed on page 60
-, lands on page 60. 
-Package placeins Info: Float barrier, from input line 189, processed on page 60
-, lands on page 60. 
+) (texes/ChapterVersuchsdurchführung/Implementierung2.tex [61
+Package placeins Info: Float barrier, from input line 161, processed on page 61
+, lands on page 61. 
+Package placeins Info: Float barrier, from input line 189, processed on page 61
+, lands on page 61. 
 ]
-<figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg, id=1023, 1865.
+<figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg, id=1028, 1865.
 97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg Graphic fi
 le (type jpg)
@@ -2571,9 +2577,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[61
-Package placeins Info: Float barrier, from input line 24, processed on page 61,
- lands on page 61. 
+[62
+Package placeins Info: Float barrier, from input line 24, processed on page 62,
+ lands on page 62. 
  <./figures/ChapterVersuchsdurchführung/sm_basic_safe_retries.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 42--42
 []|\T1/ppl/m/n/9 (+20) failedWithCompensation-
@@ -2621,15 +2627,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--67
  []
 
 Package placeins Info: No floats held, on input line 70.
-[62
-Package placeins Info: Float barrier, from input line 49, processed on page 62,
- lands on page 62. 
-Package placeins Info: Float barrier, from input line 70, processed on page 62,
- lands on page 62. 
+[63
+Package placeins Info: Float barrier, from input line 49, processed on page 63,
+ lands on page 63. 
+Package placeins Info: Float barrier, from input line 70, processed on page 63,
+ lands on page 63. 
 ]
 Package placeins Info: No floats held, on input line 89.
 ) (texes/ChapterVersuchsdurchführung/Implementierung3.tex
-<figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg, id=1042, 
+<figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg, id=1046, 
 1865.97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg Graph
 ic file (type jpg)
@@ -2663,11 +2669,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
-[63
-Package placeins Info: Float barrier, from input line 89, processed on page 63,
- lands on page 63. 
-Package placeins Info: Float barrier, from input line 11, processed on page 63,
- lands on page 63. 
+[64
+Package placeins Info: Float barrier, from input line 89, processed on page 64,
+ lands on page 64. 
+Package placeins Info: Float barrier, from input line 11, processed on page 64,
+ lands on page 64. 
  <./figures/ChapterVersuchsdurchführung/sm_basic_unlimited_retries.jpg>]
 Package placeins Info: No floats held, on input line 37.
 
@@ -2697,27 +2703,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
 Package placeins Info: No floats held, on input line 59.
 Package placeins Info: No floats held, on input line 76.
-) (texes/ChapterVersuchsdurchführung/Wiederholbarkeitsproblem.tex [64
-Package placeins Info: Float barrier, from input line 37, processed on page 64,
- lands on page 64. 
-Package placeins Info: Float barrier, from input line 59, processed on page 64,
- lands on page 64. 
-Package placeins Info: Float barrier, from input line 76, processed on page 64,
- lands on page 64. 
+) (texes/ChapterVersuchsdurchführung/Wiederholbarkeitsproblem.tex [65
+Package placeins Info: Float barrier, from input line 37, processed on page 65,
+ lands on page 65. 
+Package placeins Info: Float barrier, from input line 59, processed on page 65,
+ lands on page 65. 
+Package placeins Info: Float barrier, from input line 76, processed on page 65,
+ lands on page 65. 
 ])
 (texes/ChapterVersuchsdurchführung/Implementierung4.tex
 <figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png, id=1
-061, 287.0725pt x 282.05376pt>
+065, 287.0725pt x 282.05376pt>
 File: figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png 
 Graphic file (type png)
 <use figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png>
 Package pdftex.def Info: figures/ChapterVersuchsdurchführung/SmIdempotencyBack
 wardRecovery-0.png  used on input line 6.
 (pdftex.def)             Requested size: 136.57463pt x 134.1878pt.
- [65]
+ [66]
 Package placeins Info: No floats held, on input line 11.
 <figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-1.png, id=1
-066, 287.0725pt x 315.1775pt>
+070, 287.0725pt x 315.1775pt>
 File: figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-1.png 
 Graphic file (type png)
 <use figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-1.png>
@@ -2726,7 +2732,7 @@ wardRecovery-1.png  used on input line 14.
 (pdftex.def)             Requested size: 136.57463pt x 149.94652pt.
 Package placeins Info: No floats held, on input line 18.
 <figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg, id=
-1068, 1865.97125pt x 604.2575pt>
+1072, 1865.97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg
  Graphic file (type jpg)
 <use figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg>
@@ -2739,13 +2745,13 @@ ckward_recovery.jpg  used on input line 33.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package placeins Info: Must dump some floats on input line 37.
-[66
-Package placeins Info: Float barrier, from input line 11, processed on page 66,
- lands on page 66. 
-Package placeins Info: Float barrier, from input line 18, processed on page 66,
- lands on page 66. 
-Package placeins Info: Float barrier, from input line 37, processed on page 66,
- lands on page 66. 
+[67
+Package placeins Info: Float barrier, from input line 11, processed on page 67,
+ lands on page 67. 
+Package placeins Info: Float barrier, from input line 18, processed on page 67,
+ lands on page 67. 
+Package placeins Info: Float barrier, from input line 37, processed on page 67,
+ lands on page 67. 
  <./figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery-0.png (P
 NG copy)> <./figures/ChapterVersuchsdurchführung/SmIdempotencyBackwardRecovery
 -1.png (PNG copy)>]
@@ -2802,11 +2808,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--82
 []|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
-[67
-Package placeins Info: Float barrier, from input line 37, processed on page 67,
- lands on page 67. 
-Package placeins Info: Float barrier, from input line 63, processed on page 67,
- lands on page 67. 
+[68
+Package placeins Info: Float barrier, from input line 37, processed on page 68,
+ lands on page 68. 
+Package placeins Info: Float barrier, from input line 63, processed on page 68,
+ lands on page 68. 
  <./figures/ChapterVersuchsdurchführung/sm_idempotency_backward_recovery.jpg>]
 Package placeins Info: No floats held, on input line 85.
 Package placeins Info: No floats held, on input line 102.
@@ -2814,21 +2820,21 @@ Package placeins Info: No floats held, on input line 102.
 
 LaTeX Warning: Reference `fig:fig' on page 1 undefined on input line 106.
 
-[68
-Package placeins Info: Float barrier, from input line 85, processed on page 68,
- lands on page 68. 
-Package placeins Info: Float barrier, from input line 102, processed on page 68
-, lands on page 68. 
+[69
+Package placeins Info: Float barrier, from input line 85, processed on page 69,
+ lands on page 69. 
+Package placeins Info: Float barrier, from input line 102, processed on page 69
+, lands on page 69. 
 ]
 Package placeins Info: No floats held, on input line 139.
- [69
-Package placeins Info: Float barrier, from input line 139, processed on page 69
-, lands on page 69. 
-] [70]
+ [70
+Package placeins Info: Float barrier, from input line 139, processed on page 70
+, lands on page 70. 
+] [71]
 Package placeins Info: No floats held, on input line 238.
 ) (texes/ChapterVersuchsdurchführung/Implementierung5.tex
 <figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg, id=1
-143, 1865.97125pt x 604.2575pt>
+147, 1865.97125pt x 604.2575pt>
 File: figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg 
 Graphic file (type jpg)
 <use figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg>
@@ -2840,11 +2846,11 @@ rward_recovery.jpg  used on input line 11.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package placeins Info: Must dump some floats on input line 15.
-[71
-Package placeins Info: Float barrier, from input line 238, processed on page 71
-, lands on page 71. 
-Package placeins Info: Float barrier, from input line 15, processed on page 71,
- lands on page 71. 
+[72
+Package placeins Info: Float barrier, from input line 238, processed on page 72
+, lands on page 72. 
+Package placeins Info: Float barrier, from input line 15, processed on page 72,
+ lands on page 72. 
 ]
 Package placeins Info: Check again: on input line 15.
 Package placeins Info: No floats held, on input line 15.
@@ -2899,11 +2905,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--60
 []|\T1/ppl/m/n/9 (+20) isSuccessfullTestInstance-
  []
 
-[72
-Package placeins Info: Float barrier, from input line 15, processed on page 72,
- lands on page 72. 
-Package placeins Info: Float barrier, from input line 41, processed on page 72,
- lands on page 72. 
+[73
+Package placeins Info: Float barrier, from input line 15, processed on page 73,
+ lands on page 73. 
+Package placeins Info: Float barrier, from input line 41, processed on page 73,
+ lands on page 73. 
  <./figures/ChapterVersuchsdurchführung/sm_idempotency_forward_recovery.jpg>]
 Package placeins Info: No floats held, on input line 63.
 
@@ -2914,13 +2920,13 @@ Package placeins Info: No floats held, on input line 80.
 ) (texes/ChapterVersuchsdurchführung/Laufzeitanalyse.tex
 Package placeins Info: No floats held, on input line 16.
 
-(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS1.tex [73
-Package placeins Info: Float barrier, from input line 63, processed on page 73,
- lands on page 73. 
-Package placeins Info: Float barrier, from input line 80, processed on page 73,
- lands on page 73. 
-Package placeins Info: Float barrier, from input line 16, processed on page 73,
- lands on page 73. 
+(texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS1.tex [74
+Package placeins Info: Float barrier, from input line 63, processed on page 74,
+ lands on page 74. 
+Package placeins Info: Float barrier, from input line 80, processed on page 74,
+ lands on page 74. 
+Package placeins Info: Float barrier, from input line 16, processed on page 74,
+ lands on page 74. 
 ]
 (texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario1.tex)
 
@@ -2935,9 +2941,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--14
  []
 
 Package placeins Info: No floats held, on input line 18.
-) (texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS2.tex [74
-Package placeins Info: Float barrier, from input line 18, processed on page 74,
- lands on page 74. 
+) (texes/ChapterVersuchsdurchführung/Laufzeitanalyse/TS2.tex [75
+Package placeins Info: Float barrier, from input line 18, processed on page 75,
+ lands on page 75. 
 ]
 (texes/ChapterVersuchsdurchführung/Laufzeitanalyse/FinishOrders_Scenario2.tex)
 
@@ -2965,34 +2971,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--13
 
  []
 
-[75
-Package placeins Info: Float barrier, from input line 29, processed on page 75,
- lands on page 75. 
+[76
+Package placeins Info: Float barrier, from input line 29, processed on page 76,
+ lands on page 76. 
 ]
 Package placeins Info: No floats held, on input line 17.
-))) (texes/ChapterBewertungDerErgebnisse.tex [76
-Package placeins Info: Float barrier, from input line 17, processed on page 76,
- lands on page 76. 
+))) (texes/ChapterBewertungDerErgebnisse.tex [77
+Package placeins Info: Float barrier, from input line 17, processed on page 77,
+ lands on page 77. 
 ]
 chapter 6.
 (texes/ChapterBewertungDerErgebnisse/Versuchsergebnisse.tex
-(texes/ChapterBewertungDerErgebnisse/LltBedingungen.tex)
-(texes/ChapterBewertungDerErgebnisse/FehlerquellenUndInkonsistenzanomalien.tex)
-(texes/ChapterBewertungDerErgebnisse/TeilnehmerRealisierbarkeit.tex)
-(texes/ChapterBewertungDerErgebnisse/Netzwerkfehler.tex [77
+
+LaTeX Warning: Reference `chapter:sagapattern' on page 1 undefined on input lin
+e 5.
+
+) (texes/ChapterBewertungDerErgebnisse/ZusammenhangSagaCap.tex [78
 
 ])
-(texes/ChapterBewertungDerErgebnisse/These.tex
-Overfull \hbox (3.6741pt too wide) in paragraph at lines 12--13
+(texes/ChapterBewertungDerErgebnisse/BeantwortungDerLeitfragenUndThese.tex
+(texes/ChapterBewertungDerErgebnisse/LltBedingungen.tex)
+(texes/ChapterBewertungDerErgebnisse/FehlerquellenUndInkonsistenzanomalien.tex
+[79]) (texes/ChapterBewertungDerErgebnisse/TeilnehmerRealisierbarkeit.tex)
+(texes/ChapterBewertungDerErgebnisse/Netzwerkfehler.tex)
+(texes/ChapterBewertungDerErgebnisse/These.tex [80]
+Overfull \hbox (3.6741pt too wide) in paragraph at lines 13--14
 []\T1/ppl/m/n/12 (-20) Diese L�-sung wur-de ite-ra-tiv er-wei-tert. Es wur-de d
 er Zu-sam-men-hang des CAP-Theorems
  []
 
-[78])) (texes/ChapterBewertungDerErgebnisse/ZusammenhangSagaCap.tex)
-(texes/ChapterBewertungDerErgebnisse/GültigkeitInChoreografie.tex)
-(texes/ChapterBewertungDerErgebnisse/GültigkeitKomplexerenSystemen.tex)
-(texes/ChapterBewertungDerErgebnisse/SagaAlsEntwicklerwerkzeug.tex)) [79]
-[80]
+)) (texes/ChapterBewertungDerErgebnisse/GültigkeitKomplexerenSystemen.tex)
+(texes/ChapterBewertungDerErgebnisse/SagaAlsEntwicklerwerkzeug.tex [81])
+(texes/ChapterBewertungDerErgebnisse/Ausblick.tex)) [82]
 Using TeX to sort glossary entries---this may take a while
 [1
 
@@ -3028,10 +3038,10 @@ Package logreq Info: Writing requests to 'Masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 66672 strings out of 476331
- 1546314 string characters out of 5792454
- 2874949 words of memory out of 5000000
- 84778 multiletter control sequences out of 15000+600000
+ 66685 strings out of 476331
+ 1546899 string characters out of 5792454
+ 2876439 words of memory out of 5000000
+ 84788 multiletter control sequences out of 15000+600000
  587624 words of font info for 372 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,106p,10909b,2882s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3047,9 +3057,9 @@ ex/miktex/fonts/type1/public/lm/lmssbx10.pfb><C:/2_Programme/Office/latex/mikte
 x/fonts/type1/urw/palatino/uplb8a.pfb><C:/2_Programme/Office/latex/miktex/fonts
 /type1/urw/palatino/uplr8a.pfb><C:/2_Programme/Office/latex/miktex/fonts/type1/
 urw/palatino/uplri8a.pfb>
-Output written on Masterarbeit.pdf (90 pages, 1478976 bytes).
+Output written on Masterarbeit.pdf (92 pages, 1488323 bytes).
 PDF statistics:
- 1856 PDF objects out of 2073 (max. 8388607)
+ 1861 PDF objects out of 2073 (max. 8388607)
  726 named destinations out of 1000 (max. 500000)
- 88640 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 88624 words of extra memory for PDF output out of 89155 (max. 10000000)
 

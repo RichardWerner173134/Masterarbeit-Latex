@@ -1,6 +1,6 @@
 \section{Herkunft des Saga-Patterns}\label{sec:section-garcia-paper}
 
-Das Implementierungsmuster einer Saga stammt aus dem \citeyear{GarciaMolina.1987} veröffentlichten Paper \citetitle{GarciaMolina.1987}. Darin adressieren \citeauthor{GarciaMolina.1987} die blockierende Eigenschaft von \acrfull{llt} und führen das Sagamuster als Problemlösung ein. 
+Das Implementierungsmuster einer Saga stammt aus dem \citeyear{GarciaMolina.1987} veröffentlichten Paper \citetitle{GarciaMolina.1987}. Darin adressieren \citeauthor{GarciaMolina.1987} die blockierende Eigenschaft von lang andauernden Transaktionen. Es wird die Begriffe \acrfull{llt} Sagamuster als Problemlösung eingeführt\cite{GarciaMolina.1987}. 
 
 \subsection{Langlebige Transaktionen}
 Damit die transaktionelle Implementierung eines Prozesses die ACID-Eigenschaften gewährleisten kann, werden Datenbanksperren verwendet. Ein solcher Lock sperrt ausgewählte Ressourcen für die Dauer der Transaktion. Eine LLT repräsentiert einen solchen transaktionellen Prozess, der eine sehr hohe Ausführungsdauer hat. Als Ursache für diese lange Dauer nennen \citeauthor{GarciaMolina.1987} viele langwierige Berechnungsschritte und die Pausierung zum Warten auf Benutzerinput \cite{GarciaMolina.1987}. 

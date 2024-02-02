@@ -59,7 +59,7 @@ Der Endpunkt \textit{/api/blocked-articles-compensation} stellt die Kompensierun
 \begin{enumerate}
 	\item Selektieren aller Elemente aus \textit{blocked-articles} mit der angefragten Vorgangsnummer
 	\item Löschen dieser Elemente
-	\item Erhöhen der Vorratsmengen in \textit{articlestock} für jede Artikelblockierunge
+	\item Erhöhen der Vorratsmengen in \textit{articlestock} für jede Artikelblockierung
 \end{enumerate}
 
 Der Endpunkt \textit{/api/start-shipment} erwartet die Vorgangsnummer als Argument. Die reservierten Artikel werden in eine Lieferung umgewandelt und versendet. Die Schritte der ablaufenden lokalen Transaktion sind:
@@ -69,9 +69,9 @@ Der Endpunkt \textit{/api/start-shipment} erwartet die Vorgangsnummer als Argume
 	\item Einfügen der Selektierungen in der Tabelle \textit{shippedarticles}
 \end{enumerate}
 
-Der Endpunkt \textit{/api/finish-shipment} wird ausschließlich vom Lieferanten verwendet und dient zur Bestätigung der Lieferung. Es wird lediglich der Status der entsprechenden ShipmentId in der Tabelle \textit{shipments} auf 1 gesetzt.
+Der Endpunkt \textit{/api/finish-shipment} wird ausschließlich vom Lieferanten verwendet und dient zur Bestätigung der Lieferung. Es wird der Status der entsprechenden ShipmentId in der Tabelle \textit{shipments} auf 1 gesetzt.
 
-Der Endpunkt \textit{/api/shipments} liefert lediglich den Status der angeforderten ShipmentId. Der Koordinator hat mit dem Aufruf von \textit{/api/start-shipments} die Lieferung ausgelöst. Der Koordinator hat mit der Schnittstelle \textit{/api/shipments} die Möglichkeit, den Status der Lieferung solange abzufragen, bis der Lieferant per Aufruf von \textit{/api/finish-shipment} den Lieferabschluss bestätigt. Die Kombination von \textit{/api/start-shipment}, \textit{/api/finish-shipment} und \textit{/api/shipments} können als Polling-Implementierung eines asynchronen Request-Response Musters aufgefasst werden. 
+Der Endpunkt \textit{/api/shipments} liefert den Status der angeforderten ShipmentId. Der Koordinator hat mit dem Aufruf von \textit{/api/start-shipments} die Lieferung ausgelöst. Der Koordinator hat mit der Schnittstelle \textit{/api/shipments} die Möglichkeit, den Status der Lieferung solange abzufragen, bis der Lieferant per Aufruf von \textit{/api/finish-shipment} den Lieferabschluss bestätigt. Die Kombination von \textit{/api/start-shipment}, \textit{/api/finish-shipment} und \textit{/api/shipments} können als Polling-Implementierung eines asynchronen Request-Response Musters aufgefasst werden. 
 
 Der letzte Endpunkt des StockServices ist \textit{/api/cancel-shipment} und bietet dem Koordinator die Möglichkeit, auf eine Stornierung zu reagieren. Bis die Lieferung abgegeben und bestätigt wurde, kann diese Schnittstelle verwendet werden, um die Lieferung abzubrechen. Als Argument wird die ShipmentId benötigt.
 
